@@ -1,0 +1,82 @@
+header{
+	.navbar-collapse{ 
+	  padding-left:0;
+	  padding-right:0;
+  }
+}
+
+#header-right{
+	margin-top:20px;
+	text-align:right;
+	.form-inline #search-box{
+	  width: 60%;
+	}
+	.dropdown-menu{
+	  text-align:left;
+	}
+	.btn-sm{
+	  font-size: 10px;
+
+	}
+}
+
+#header-left{
+	img{
+	  @media (min-width: @screen-sm-min) {
+	    padding-top:30px;
+	    margin:10px 0 15px 0px;
+	  }
+	   
+	   clear:both;
+	}
+}
+
+#form-eclipse-search{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+
+/* Breadcrumbs*/
+
+#breadcrumb{
+	background:url('../images/template/breadcrumbs-large-bg.jpg') center;
+	background-size:100%;
+	color:#fff;
+	text-align:center;
+  &.large-breadcrumbs{
+  
+  }
+	p{
+	  color:#bebebe;
+	  max-width:450px;
+	  margin:30px auto 20px auto;
+	  font-weight:400;
+	  &:last-child{
+	   padding-bottom:1.5em;
+	  }
+	  
+	}
+	
+	.btn{
+     min-width:150px;
+     margin-right:10px;
+     margin-left:10px;
+   }
+   
+	.breadcrumb{
+	  margin-top:15px;
+	  padding-left:0;
+	  text-align:left;
+	  margin-bottom:15px;
+	  text-transform:uppercase;
+	  background:none;
+	  &> .active {
+	    color:#fff;
+    }    
+	  a{
+	    color:#ababab;
+	  }
+	  
+	}
+}

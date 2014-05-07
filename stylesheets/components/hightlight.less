@@ -1,0 +1,68 @@
+.triangle{
+  width: 0; 
+  height: 0; 
+  border-style: solid;
+  border-width:  34px 300px 0 300px;
+  -moz-transform: scale(.9999);
+  border-color: @eclipse-highlight-grey transparent transparent transparent;
+  &.triangle-black{
+    border-color: #252525 transparent transparent transparent;
+  }
+  &.triangle-white{
+    border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) transparent;
+  }
+}
+
+.highlight{
+	.container{
+	  padding:6.6em 0 3em 0;
+	}
+
+	.highlight-content{
+	}
+	p, li{
+    font-size:1.2em;
+	}
+	a{
+	  font-weight:bold;
+	  color:#969696;
+	}
+	
+	h1{
+	 margin-bottom:0.5em;
+	}
+  
+  overflow:hidden;
+  position:relative;
+  color:#7d7d7d;
+  .triangle{
+    position:absolute;
+    right:17%;
+    top:0;
+  }
+ 
+    
+  p{
+    padding-bottom:1.35em;
+  }
+
+}
+.highlight-left{
+
+  .triangle{
+	  right:auto;
+	  left:17%;
+  }
+}
+
+.highlight-white{
+  background:#fff;
+}
+
+.highlight-black{
+  background:#252525;
+}
+
+.highlight-grey{
+  background:@eclipse-highlight-grey; 
+}

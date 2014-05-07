@@ -1,0 +1,144 @@
+//
+// Template: footer.less
+// --------------------------------------------------
+
+footer{
+	@media (max-width: @screen-sm-max) {
+    #copyright-text{
+      text-align: left;
+      clear:both;
+    }
+  }
+  @media (max-width: 450px) {
+    section.col-xs-11,
+    section.col-xs-14{
+      .make-xs-column(23);
+    }
+  }
+  @media (min-width: 451px) and (max-width: @screen-xs-max) {
+   
+   #footer-useful-links{
+      clear:left;
+    }
+    #copyright{
+      clear:both;
+    }
+   
+  }
+	background: url("../images/template/footer-bg.jpg") no-repeat center center; 
+	.background-size(cover);
+	padding-top:3.5em;
+	color:#a8a7a9; 
+	padding-bottom:26px;
+	h1{
+	 padding-top:0.5em;
+	 padding-bottom:0.7em;
+	 color:#737373;
+	 font-size:2em;
+	 strong{
+	   color:#C4C4C4;
+	 }
+	}
+	h2{
+	  color:#fff;
+	  padding-bottom:7px;
+	  margin-top:0;
+    font-size:2rem;
+    border-bottom:2px solid #6e6d71;
+    max-width:80%; 
+	}
+	
+	a:link,
+	a:active,
+	a:visited{
+	  color:#a8a7a9;
+	}
+	
+	.logo-eclipse-white{
+	  margin-bottom:15px;
+	}
+	.nav{
+	   margin-left:-15px;
+	   margin-bottom:25px;
+	   a{
+	     padding: 6px 15px 6px 20px;
+	     &:hover{
+        background:none;
+        color:#fff;
+	    }
+    }
+	}
+}
+#copyright{
+  padding-top:15px;
+  img{
+    float:left;
+    margin-top:20px;
+    margin-right:15px;
+    clear:both;
+  }	
+}
+#copyright-text{
+	 padding-top:15px;
+	 text-align:right;
+
+}
+.social-media{
+  margin-top:57px;
+	.social-media-icon{
+	  background-image: url("../images/template/social-media.png");
+	  background-repeat: no-repeat; 
+	  a{
+	    height:31px;
+      width: 30px;
+      display:block;
+	  }
+	}
+	.social-media-twitter{
+	  background-position:0px 0px;
+	  &:hover{
+	    background-position:0px -82px;
+	  }
+	}
+	
+	.social-media-google{
+    background-position:-43px 0px;
+    &:hover{
+      background-position:-43px -82px;
+    }
+  }
+  
+  .social-media-facebook{
+    background-position:-85px 0px;
+    &:hover{
+      background-position:-85px -82px;
+    }
+  }
+  
+  .social-media-youtube{
+    background-position:-128px 0px;
+    &:hover{
+      background-position:-128px -82px;
+    }
+  }
+}
+
+#back-to-top{
+	margin:0;
+	padding:0;
+  a{
+    border-top:1px solid #808080;
+    background-color: #666666;
+    color: #FFFFFF;
+    display: block;
+    padding: 4px 0 3px;
+    text-align: center;
+    width: 100%;
+    margin:0;
+    &:hover, &:focus{
+      text-decoration:none;
+      background:#dfdfe4;
+      color:#4a4a4a;     
+    }
+  }
+}
