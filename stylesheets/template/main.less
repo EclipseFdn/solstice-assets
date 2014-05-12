@@ -20,20 +20,30 @@ main{
 
 
 
-.sideitem{
+.sideitem,
+.region-sidebar-second .block{
 	color:#fff;
   background:@brand-info;
   padding:10px 20px;
+  margin-bottom:1em;
   a{
     color:#fff;
     font-weight:bold;
+    padding:0;
+            font-weight:300;
+    &:hover{
+      background:none;
+      text-decoration: underline;
+
+    }
   }
-  h6{
+
+  h2, h6{
     margin-top:0;
-    padding-top:10px;
+    padding:10px 0 3px 0;
     font-size:2rem;
     font-weight:bold;
-    
+    border-bottom:1px solid #ccc;
   }
 }
 
