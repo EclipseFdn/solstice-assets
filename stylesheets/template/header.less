@@ -1,83 +1,57 @@
+//
+// Header area
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
 header{
 	.navbar-collapse{ 
 	  padding-left:0;
 	  padding-right:0;
   }
+  li{
+    padding-bottom:0;
+  }
+}
+
+#btn-sign-in{
+  float:right;	
+  margin-left:10px;
+}
+
+#form-eclipse-search {
+  width:46%;
+  float:right;
+}
+
+#btn-call-for-action{
+	display:block;
+	margin-top:45px;
+	max-width:250px;
+	float:right;
 }
 
 #header-right{
-	margin-top:20px;
+  margin-top:30px;
 	text-align:right;
-	.form-inline #search-box{
-	  width: 60%;
-	}
 	.dropdown-menu{
 	  text-align:left;
 	}
 	.btn-sm{
 	  font-size: 10px;
-
 	}
 }
 
 #header-left{
 	img{
 	  @media (min-width: @screen-sm-min) {
-
 	    margin:40px 0 15px 0px;
-	  }
-	   
-	   clear:both;
+	  }   
+	  clear:both;
 	}
 }
 
-#form-eclipse-search,
-#search-block-form{
-	margin-top:10px;
-	margin-bottom:10px;
-}
+
 
 
 /* Breadcrumbs*/
-
-#breadcrumb{
-	background:url('../images/template/breadcrumbs-large-bg.jpg') center;
-	background-size:100%;
-	color:#fff;
-	text-align:center;
-  &.large-breadcrumbs{
-  
-  }
-	p{
-	  color:#bebebe;
-	  max-width:450px;
-	  margin:30px auto 20px auto;
-	  font-weight:400;
-	  &:last-child{
-	   padding-bottom:1.5em;
-	  }
-	  
-	}
-	
-	.btn{
-     min-width:150px;
-     margin-right:10px;
-     margin-left:10px;
-   }
-   
-	.breadcrumb{
-	  margin-top:15px;
-	  padding-left:0;
-	  text-align:left;
-	  margin-bottom:15px;
-	  text-transform:uppercase;
-	  background:none;
-	  &> .active {
-	    color:#fff;
-    }    
-	  a{
-	    color:#ababab;
-	  }
-	  
-	}
-}

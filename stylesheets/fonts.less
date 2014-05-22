@@ -1,6 +1,25 @@
+//
+// Fonts
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
 h1,h2,h3,h4,h5,h6 {
 	font-family: @font-family-heading;
 	font-weight: 300;
+}
+
+h1{
+  margin-bottom:30px;
+}
+
+a{
+	font-weight:bold;
+	color:@brand-primary;
+	&:hover{
+	  text-decoration:none;
+	  color:@eclipse-orange;
+	}
 }
 
 .nav {
@@ -15,22 +34,19 @@ p, li {
 .font-size-large{
 	font-size:58px;
 }
-#novaContent{
-	h1{
-	  margin-bottom:30px;
-	}
-	p + h3,
-	ul + h3{
-	 margin-top:2em;
-	}
 
-	li{
-    padding-bottom:7px;
-  }
-  ul{
-    ul{
-      margin-top:5px;
-    }
-  }
+
+p + h3,
+ul + h3{
+  margin-top:2em;
 }
 
+li{
+  padding-bottom:7px;
+}
+
+ul{
+  ul{
+    margin-top:5px;
+  }
+}

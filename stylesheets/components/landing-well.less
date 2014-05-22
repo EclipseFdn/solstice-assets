@@ -1,46 +1,39 @@
+//
+// Landing well
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
 .landing-well {
-	
-	@media ( min-width : @screen-md-min) {
-    padding-bottom: 0px;
-    text-align:left;
-    h1 {
-      margin-top: 0.76em;
-    }
-    .circle{
-      height: 130px;
-      margin:0 20px;
-      font-size:37px;
-      width: 130px;
-      h3{
-        font-size:12px;
-        top: 4em;
-        width: 74%;
-      }
-    }
-  }
-  
-	background-image:url("../images/components/landing-well/background.jpg");
+
 	background-repeat: no-repeat;
-	background-position: center middle; 
-	
+  background-position: center middle;   
  .background-size(cover);
   background-attachment:fixed; 
-	border-top: 1px solid #afbbdc;
-	border-bottom: 1px solid #afbbdc;
-	color: #000;
-	text-align: left;
-	position: relative;
-	width: 100%;
-	text-align: center;
+  border-top: 1px solid @eclipse-orange;
+  border-bottom: 1px solid @eclipse-orange;
+  color: #fff;
+  padding:30px 0;
+
+  
+
   h1 {
     font-size: 3.5em;
-   	padding-top: 0.2em;
-   	font-weight: 400;
+   	margin-bottom:10px;
+   	font-weight: 600;
   }
    
   p {
   	font-size: 1.2em;
-  	font-weight: 400;
+  	font-weight: 100;
+  	a{
+  	  color:@eclipse-orange;
+  	  font-weight:600;
+  	  text-decoration:none;
+  	  &:hover{
+  	    color:#fff;
+  	  }
+  	}
   }
   
   .landing-well-action {
@@ -50,5 +43,52 @@
   .list-glyphicon {
   	margin: 2em 0 0 0;
   	padding-bottom:1em;
+  }
+  
+  @media ( min-width : @screen-lg-min) {
+    li:last-child{
+      margin-top:-20px;
+    }
+  }
+  
+  @media ( min-width : @screen-md-min) {
+    text-align:left;
+    h1 {
+      margin-top: 0.76em;
+      padding-top: 1.3em;
+    }
+    
+    .list-glyphicon {
+      margin-left: 93px;
+    }
+    .circle{
+      height: 160px;
+      margin:0 5px;
+      font-size:40px;
+      width: 160px;
+      h3{
+        font-size:16px;
+        top: 3.4em;
+        margin-left:5px;
+        width: 74%;
+      }
+    }
+  }
+  
+  /* A/B/C Testing */
+  &.b1{
+    background-image:url("../images/components/landing-well/background2.jpg");
+  }
+  &.b2{
+    background-image:url("../images/components/landing-well/background3.jpg");
+  }
+  &.b3{
+    background-image:url("../images/components/landing-well/background2.jpg");
+    .circle{
+      color:@eclipse-orange;
+      h3{
+        color:#fff;
+      }
+    }
   }
 }

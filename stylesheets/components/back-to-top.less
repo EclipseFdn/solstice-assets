@@ -1,3 +1,9 @@
+//
+// Back to top
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
 .anchor{
   display: block; 
   position: relative; 
@@ -16,4 +22,27 @@
     display:none;
     text-indent:-9999px;
     background: url('../images/components/back-to-top/back-to-top.png') no-repeat;
+    &:focus{
+      outline:none;
+    }
+}
+
+#back-to-top{
+  margin:0;
+  padding:0;
+  a{
+    border-top:1px solid #808080;
+    background-color: #666666;
+    color: #FFFFFF;
+    display: block;
+    padding: 4px 0 3px;
+    text-align: center;
+    width: 100%;
+    margin:0;
+    &:hover, &:focus{
+      text-decoration:none;
+      background:#dfdfe4;
+      color:#4a4a4a;     
+    }
+  }
 }

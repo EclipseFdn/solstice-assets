@@ -1,3 +1,9 @@
+//
+// Classes
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
 .container-grey{
   background:@eclipse-highlight-grey;
 }
@@ -35,7 +41,18 @@
 	font-weight:700;
 }
 
+.emphasis{
+  color:@eclipse-orange;
+  font-weight:700;	
+}
+.text-left{
+	text-align:left;
+}
 
+.reset{
+	padding:0;
+	margin:0;
+}
 
 /* Other */
 .header-row{
@@ -53,6 +70,12 @@
 }
 
 /* Custom buttons */
+
+.btn{
+	text-transform:uppercase;
+	font-weight:700;
+}
+
 .btn-white{
 	background:#fff;
 	border:1px solid #0b0a0f;
@@ -63,8 +86,6 @@
 }
 
 .btn-huge{
-  text-transform: uppercase;
-  font-weight:bold;
   font-size:1.1em;
   padding:10px 35px;
   i{
@@ -72,6 +93,23 @@
   }
 }
 
+.btn-transparent{
+    background:transparent;
+    border-color:#fff;
+    color:#fff;
+    font-size:11px;
+    padding:7px 15px;
+
+    &:hover{
+      color:@brand-primary;
+      border-color: @brand-primary;
+      background:#ccc;
+    }
+    .caret{
+      margin-left:6px;
+    }
+  }
+  
 /* Shapes */
 .circle{
   border-radius: 50%;
@@ -113,6 +151,21 @@
 .circle-gray{
 	color:##262626;
 	background:#ccc;
+}
+
+.triangle{
+  width: 0; 
+  height: 0; 
+  border-style: solid;
+  border-width:  34px 300px 0 300px;
+  -moz-transform: scale(.9999);
+  border-color: @eclipse-highlight-grey transparent transparent transparent;
+  &.triangle-black{
+    border-color: #252525 transparent transparent transparent;
+  }
+  &.triangle-white{
+    border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) transparent;
+  }
 }
 
 /* Colors */
@@ -158,4 +211,32 @@
   -ms-transition: opacity .15s ease-in-out;
   -o-transition: opacity .15s ease-in-out;
   transition: opacity .15s ease-in-out;
+}
+
+/* List checkmark*/
+.list-checkmark{
+	 > li{
+    padding-right:40px;
+    padding-left:0;  
+  }
+  a{
+	   &:link, 
+	   &:visited {
+	    font-weight:bold;
+	    color:#969696;
+	  }
+	  &:hover{
+	    color:@eclipse-orange;
+	  }
+  }
+}
+
+/* Offset */
+.breadcrumbs-offset{
+  margin-top:-2em;
+}
+
+.footer-offset{
+  padding-bottom:0;
+  margin-bottom:-48px;
 }

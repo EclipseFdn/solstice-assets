@@ -1,54 +1,40 @@
-.triangle{
-  width: 0; 
-  height: 0; 
-  border-style: solid;
-  border-width:  34px 300px 0 300px;
-  -moz-transform: scale(.9999);
-  border-color: @eclipse-highlight-grey transparent transparent transparent;
-  &.triangle-black{
-    border-color: #252525 transparent transparent transparent;
-  }
-  &.triangle-white{
-    border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) transparent;
-  }
-}
+//
+// Hightlight
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
 
 .highlight{
+	overflow:hidden;
+	position:relative;
 	.container{
-	  padding:6.6em 0 3em 0;
+	  padding:7em 0 4em 0;
+	}
+	h1{
+	 color:#333;
 	}
 
-	.highlight-content{
-	}
 	p, li{
-    font-size:1.2em;
-	}
-	a{
-	  font-weight:bold;
-	  color:#969696;
+    font-size:1.1em;
 	}
 	
 	h1{
-	 margin-bottom:0.5em;
+	  margin-top:0;
+	  margin-bottom:0.5em;
 	}
   
-  overflow:hidden;
-  position:relative;
-  color:#7d7d7d;
   .triangle{
     position:absolute;
     right:17%;
     top:0;
   }
- 
-    
-  p{
-    padding-bottom:1.35em;
+  
+  .list-inline{
+    padding-top:1.7em;
   }
-
 }
-.highlight-left{
 
+.highlight-left{
   .triangle{
 	  right:auto;
 	  left:17%;
@@ -60,7 +46,11 @@
 }
 
 .highlight-black{
-  background:#252525;
+  background:#252525;  
+  color:#7d7d7d;
+  h1{
+   color:#7d7d7d;
+  }
 }
 
 .highlight-grey{

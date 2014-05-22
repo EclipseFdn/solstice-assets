@@ -1,8 +1,9 @@
-#main-menu{
-	a{
-	  font-weight:400;
-	}
-}
+//
+// Menu
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
 @media (max-width: @screen-xs-max) {
   #main-menu{
     background:#efeef2;
@@ -61,6 +62,7 @@
 @media (min-width: @screen-sm-min) {
 	#main-menu{
 		left:-15px;
+		font-size:0.9em;
 		margin-bottom:5px;
 	  ul li {
 	    text-transform:uppercase;  
@@ -74,7 +76,7 @@
 	  
 	  li{
 	    a{
-	      margin-left:0px;
+	      margin-right:0px;
 	      color: #787878;
 	      &:hover,
 	      &:active{
@@ -103,7 +105,6 @@
 		  padding-left:0;
 		  margin-left:0;
 		  > li {
-
 		    list-style:none;
 		    margin-bottom:0.45em;
 			  &.separator,
@@ -118,40 +119,56 @@
 			  &.separator{
 			    border-top:1px solid #D4D4DD;
 			    padding-top:8px;
+			    a{
+			      font-weight:700;
+			    }
 			  }
 			  
 			  &.separator:first-child{
 			    border-top:none;
 			  } 
 		    > a{
-		      /*padding: 6px 15px 6px 20px;
-		      background:url('../images/lists/bullet-ul-left-nav.png') 5px 12px no-repeat;*/
 		      color:#545454;
-		      display:inline;		    
+		      font-weight:400; 
+		      &:hover{
+		        color:@eclipse-orange;
+		      }  
 	    }
 	  }
 	}
 }
 
 @media (min-width: @screen-md-min) {
-	 #main-menu{
-	   margin-bottom:10px;
-	    left:-35px;
-	    li{
-	      a{
-	        margin-left:10px;
+  #main-menu{
+	  font-size:1em;
+	  margin-bottom:10px;
+	  li{
+	    a{
+	      margin-right:10px;
 	    }
     }
   }
 }
 
 @media (min-width: @screen-lg-min) {
-   #main-menu{
-     margin-bottom:20px;
-      li{
-        a{
-          margin-left:21px;
+  #main-menu{
+    li{
+      a{
+        margin-right:21px;
       }
     }
+  }
+}
+
+#main-menu{
+	li{
+	  padding-bottom:0;
+	}
+  a{
+    font-weight:400;
+    &:active{
+      color:@eclipse-orange;
+      background:none;
+    } 
   }
 }
