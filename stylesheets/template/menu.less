@@ -61,7 +61,6 @@
 
 @media (min-width: @screen-sm-min) {
 	#main-menu{
-		left:-15px;
 		font-size:0.9em;
 		margin-bottom:5px;
 	  ul li {
@@ -140,6 +139,12 @@
 
 @media (min-width: @screen-md-min) {
   #main-menu{
+	  .dropdown-menu{
+	    li{
+	      padding-bottom:2px;
+	    }  
+	  }
+	  
 	  font-size:1em;
 	  margin-bottom:10px;
 	  li{
@@ -170,5 +175,9 @@
       color:@eclipse-orange;
       background:none;
     } 
+  }
+  .dropdown-menu{
+    max-width: 630px;
+    
   }
 }
