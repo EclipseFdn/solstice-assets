@@ -8,7 +8,11 @@
 	overflow:hidden;
 	position:relative;
 	.container{
-	  padding:7em 0 4em 0;
+	  padding:4em 0 3em 0;
+	  @media ( min-width : @screen-md-min) {
+	    padding:7em 0 5em 0;
+	  }
+	   position:relative;
 	}
 	h1{
 	 color:#333;
@@ -25,34 +29,27 @@
   
   .triangle{
     position:absolute;
-    right:17%;
+    right:0;
     top:0;
   }
   
   .list-inline{
     padding-top:1.7em;
   }
+  &.background-charcoal{
+    background:#252525;  
+    color:#7d7d7d;
+    h1{
+     color:#7d7d7d;
+    }
+  }
 }
-
+.highlight-img img{
+	margin:auto;
+}
 .highlight-left{
   .triangle{
 	  right:auto;
-	  left:17%;
+	  left:-115px;
   }
-}
-
-.highlight-white{
-  background:#fff;
-}
-
-.highlight-black{
-  background:#252525;  
-  color:#7d7d7d;
-  h1{
-   color:#7d7d7d;
-  }
-}
-
-.highlight-grey{
-  background:@eclipse-highlight-grey; 
 }
