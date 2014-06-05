@@ -4,54 +4,47 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-
 #breadcrumb{
-  background:url('../images/template/breadcrumbs-large-bg.jpg') center #1b1732;
-  background-size:100%;
-  color:#fff;
-  text-align:center;
- 
-  p{
-    color:#bebebe;
-    max-width:450px;
-    margin:30px auto 20px auto;
-    font-weight:400;
-    &:last-child{
-     padding-bottom:1.5em;
-    }   
-  }
-  
-  .btn{
-     min-width:150px;
-     margin-right:10px;
-     margin-left:10px;
-   }
-   
-  .breadcrumb{
-    background:none;
-    margin:15px 0;
-    padding-left:0;
-    padding-bottom:0;
-    text-align:left;
-    text-transform:uppercase;
-    
-    li{
-      padding-bottom:3px;
+    background:url('../images/template/breadcrumbs-large-bg.jpg') center #1b1732;
+    background-size:100%;
+    color:#fff;
+    text-align:center;
+    p{
+        color:#bebebe;
+        max-width:450px;
+        margin:30px auto 20px auto;
+        font-weight:400;
+        &:last-child{
+            padding-bottom:1.5em;
+        }
     }
-    
-    .active{
-      color:#fff;
+    .btn{
+        min-width:150px;
+        margin-right:10px;
+        margin-left:10px;
     }
-    
-    a{
-      font-weight:600;
-      &:link, 
-      &:visited{
-       color:#ababab;
-      }
-      &:hover{
-        color:@eclipse-orange;
-      }
-    }   
-  }
+    .breadcrumb{
+        background:none;
+        margin:15px 0;
+        padding-left:0;
+        padding-bottom:0;
+        text-align:left;
+        text-transform:uppercase;
+        li{
+            padding-bottom:3px;
+        }
+        .active{
+            color:#fff;
+        }
+        a{
+            font-weight:600;
+            &:link,
+            &:visited{
+                color:#ababab;
+            }
+            &:hover{
+                color:@eclipse-orange;
+            }
+        }
+    }
 }

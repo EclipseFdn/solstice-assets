@@ -5,102 +5,99 @@
 // -------------------------------------------------------
 
 .getting-started{
-	margin-bottom:1.5em;
-	h1{
-	   background:url('../images/components/getting-started/getting-started-default.png') no-repeat #a3a3a3;	   
-	   color:#fff;
-	   font-size:1.3em;
-	   height:68px;
-	   padding-left:15px;
-	   position:relative;
-     padding-top:1.4em;
-     span{
-       font-weight:bold;
-       width:100%;
-       margin-left:-7px;
-       text-align:center;
-       position:absolute;
-
-     }
-	   &.current{
-	     background:url('../images/components/getting-started/getting-started-current.png') no-repeat @eclipse-orange;
-	   }
-	   &.one:before{
-	     content:"1 ";
-	   }
-	   &.two:before{
-       content:"2 ";
-     }
-     &.three:before{
-       content:"3 ";
-     }
-     &.four:before{
-       content:"4 ";
-     }
-    
-  } 
-}
-
-.timeline{
-	margin: 35px auto;
-  .gs-item{
-    padding-bottom:4em;
-  }
-  .circle{
-    background:#c3efff;
-    color:#fff;
-    border:2px solid #fff;
-    height:47px;
-    width:47px;
-    font-size:20px;
-    float:left;
-    padding-top:6px;
-    padding-left:1px;
-    font-weight:700;
-  }
-  .two .circle{
-    background:#cbdeff;
-  }
-  .three .circle{
-    background:#d2d7ec;
-  }
-  .four .circle{
-    background:#afbbdc;
-  }
-  h1{
-    color:#afbbdc;
-    font-size:2em;
-    text-align:left;
-    padding:9px 0 0 62px;
-    margin-bottom:24px;
-  }
-  ul{
-    padding-left:1px;
-  }
-  li{
-    margin-bottom:1em;
-    padding-left:14px;   
-    list-style:none;
-    &:before{
-      content: "\00BB";
-      color:@eclipse-orange;
-      margin-left:-16px;
-      margin-right:10px;
-      display:block;
-      float:left;
+    margin-bottom:1.5em;
+    h1{
+        background:url('../images/components/getting-started/getting-started-default.png') no-repeat #a3a3a3;
+        color:#fff;
+        font-size:1.3em;
+        height:68px;
+        padding-left:15px;
+        position:relative;
+        padding-top:1.4em;
+        span{
+            font-weight:bold;
+            width:100%;
+            margin-left:-7px;
+            text-align:center;
+            position:absolute;
+        }
+        &.current{
+            background:url('../images/components/getting-started/getting-started-current.png') no-repeat @eclipse-orange;
+        }
+        &.one:before{
+            content:"1 ";
+        }
+        &.two:before{
+            content:"2 ";
+        }
+        &.three:before{
+            content:"3 ";
+        }
+        &.four:before{
+            content:"4 ";
+        }
     }
-  }
-  @media ( min-width : @screen-md-min) {
-    border-top:1px dotted #c2cbe4;
-    position: relative;
+}
+.timeline{
+    margin: 35px auto;
+    .gs-item{
+        padding-bottom:4em;
+    }
     .circle{
-      margin:-25px auto 0 auto;
-      float:none;
+        background:#c3efff;
+        color:#fff;
+        border:2px solid #fff;
+        height:47px;
+        width:47px;
+        font-size:20px;
+        float:left;
+        padding-top:6px;
+        padding-left:1px;
+        font-weight:700;
+    }
+    .two .circle{
+        background:#cbdeff;
+    }
+    .three .circle{
+        background:#d2d7ec;
+    }
+    .four .circle{
+        background:#afbbdc;
     }
     h1{
-      padding-top:15px;
-      float:none;
-      padding-left:0;
+        color:#afbbdc;
+        font-size:2em;
+        text-align:left;
+        padding:9px 0 0 62px;
+        margin-bottom:24px;
     }
-  } 
+    ul{
+        padding-left:1px;
+    }
+    li{
+        margin-bottom:1em;
+        padding-left:14px;
+        list-style:none;
+        &:before{
+            content: "\00BB";
+            color:@eclipse-orange;
+            margin-left:-16px;
+            margin-right:10px;
+            display:block;
+            float:left;
+        }
+    }
+    @media ( min-width : @screen-md-min) {
+        border-top:1px dotted #c2cbe4;
+        position: relative;
+        .circle{
+            margin:-25px auto 0 auto;
+            float:none;
+        }
+        h1{
+            padding-top:15px;
+            float:none;
+            padding-left:0;
+        }
+    }
 }
