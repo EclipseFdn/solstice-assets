@@ -101,3 +101,20 @@ ul{
     text-align:left;
 }
 
+/* List checkmark*/
+.list-checkmark{
+    > li{
+        padding-right:40px;
+        padding-left:0;
+    }
+    a{
+        &:link,
+        &:visited {
+            font-weight:bold;
+            color:#969696;
+        }
+        &:hover{
+            color:@eclipse-orange;
+        }
+    }
+}

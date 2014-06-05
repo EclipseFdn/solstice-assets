@@ -4,6 +4,7 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
+/* Float */
 .float-right{
     float:right;
 }
@@ -12,6 +13,7 @@
     float:left;
 }
 
+/* Spacing */
 .padding-top{
     padding-top:3em;
 }
@@ -23,59 +25,6 @@
 .reset{
     padding:0;
     margin:0;
-}
-
-/* Other */
-.header-row{
-    padding:4px 6px;
-    h2{
-        margin:0.6em 0;
-        font-size:1.4em;
-    }
-    &.pink{
-        background:#fad9d9;
-        border-top:1px solid #808080;
-        border-bottom:1px solid #808080;
-    }
-}
-
-/* Custom buttons */
-.btn{
-    text-transform:uppercase;
-    font-weight:700;
-}
-
-.btn-white{
-    background:#fff;
-    border:1px solid #0b0a0f;
-    color:#0b0a0f;
-    &:hover{
-        background:transparent;
-    }
-}
-
-.btn-huge{
-    font-size:1.1em;
-    padding:10px 35px;
-    i{
-        margin-right:2px
-    }
-}
-
-.btn-transparent{
-    background:transparent;
-    border-color:#fff;
-    color:#fff;
-    font-size:11px;
-    padding:7px 15px;
-    &:hover{
-        color:@brand-primary;
-        border-color: @brand-primary;
-        background:#ccc;
-    }
-    .caret{
-        margin-left:6px;
-    }
 }
 
 /* Shapes */
@@ -195,24 +144,6 @@
     -ms-transition: opacity .15s ease-in-out;
     -o-transition: opacity .15s ease-in-out;
     transition: opacity .15s ease-in-out;
-}
-
-/* List checkmark*/
-.list-checkmark{
-    > li{
-        padding-right:40px;
-        padding-left:0;
-    }
-    a{
-        &:link,
-        &:visited {
-            font-weight:bold;
-            color:#969696;
-        }
-        &:hover{
-            color:@eclipse-orange;
-        }
-    }
 }
 
 /* Offset */
