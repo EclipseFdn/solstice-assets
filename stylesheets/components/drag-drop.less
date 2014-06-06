@@ -1,0 +1,32 @@
+//
+// Drag-drop install button
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+.drag_installbutton {
+    position:relative;
+    clear:both;
+    display:inline;
+    .tooltip {
+        opacity:1;
+        display:none;
+        background:url(../images/components/drag-drop/mpcdrag.png) no-repeat scroll 110% 60% #a285c5;
+        position:absolute;
+        top:0;
+        left:64px;
+        width:325px;
+        color:#000;
+        border:1px solid #ae00ce;
+        z-index:99;
+        padding:5px 50px 5px 5px;
+        h3 {
+            margin-top:0;
+            color:#000;
+        }
+    }
+    a.drag:hover .tooltip {
+      display:block;
+    }
+}
+
