@@ -75,3 +75,20 @@ header{
         }
     }
 }
+
+@media (min-width: @screen-sm-min) {
+  #header-left.thin-header{
+    #navbar-collapse-1{
+      .pull-right;
+    }
+    .logo-eclipse-default,
+    #main-menu{
+      margin-top:20px;
+      margin-bottom:14px;
+      .dropdown-menu{
+        right:0;
+        left:auto;
+      }
+    }
+  }
+}
