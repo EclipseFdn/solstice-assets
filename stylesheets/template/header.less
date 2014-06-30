@@ -77,17 +77,36 @@ header{
 }
 
 @media (min-width: @screen-sm-min) {
-  #header-left.thin-header{
+  .thin-header{
+    #breadcrumb{
+      .breadcrumb{
+        margin-top:4px;
+        margin-bottom:7px;
+        font-size:12px;
+      }
+    }
+    #row-toolbar{
+      position:absolute;
+      right:0;
+    }
     #navbar-collapse-1{
       .pull-right;
     }
-    .logo-eclipse-default,
-    #main-menu{
-      margin-top:20px;
-      margin-bottom:14px;
-      .dropdown-menu{
-        right:0;
-        left:auto;
+     #header-left{
+      .logo-eclipse-default{
+        max-width: 186px;
+      }
+      .logo-eclipse-default{
+        margin-top:20px;
+        margin-bottom:14px;   
+      }
+      #main-menu{
+        margin-top:17px;
+        margin-bottom:12px;  
+        .dropdown-menu{
+          right:0;
+          left:auto;
+        }
       }
     }
   }
