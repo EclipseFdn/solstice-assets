@@ -6,8 +6,13 @@
 
 main{
     position:relative;
-    padding-top:2em;
     padding-bottom:2em;
+    &.no-promo{
+      padding-top:2em;
+      .breadcrumbs-offset{
+        margin-top:-2em;
+      }
+    }
 }
 
 .container{
