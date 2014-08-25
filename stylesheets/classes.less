@@ -164,6 +164,11 @@
     color:#fff;
 }
 
+.background-blue{
+    background:@eclipse-donation-blue;
+    color:#FFF;
+}
+
 .background-white{
     background:#fff;
 }
@@ -210,13 +215,54 @@
   }
 }
 
+/* Five Column Bootstrap Implementation */
+.col-xs-5-eclipse,
+.col-sm-5-eclipse,
+.col-md-5-eclipse,
+.col-lg-5-eclipse{
+  position:relative;
+  min-height:1px;
+  padding-right:10px;
+  padding-left:10px;
+}
+.col-xs-5-eclipse{
+  width:20%;
+  float:left;
+}
+@media(min-width:768px){
+  .col-sm-5-eclipse{
+    width:20%;
+    float:left;
+  }
+}
+@media(min-width:992px){
+  .col-md-5-eclipse{
+    width:20%;
+    float:left;
+  }
+}
+@media(min-width: 1200px){
+  .col-lg-5-eclipse{
+    width:20%;
+    float:left;
+  }
+}
+
+/* Donation Button */
+.donation-button {
+  padding-top:0.75em;
+  padding-bottom:0.75em;
+  padding-left:3.5em;
+  padding-right:3.5em;
+}
+
 /* Box-sizing resets
  *
  * Reset individual elements or override regions to avoid conflicts due to
  * global box model settings of Bootstrap. Two options, individual overrides and
  * region resets, are available as plain CSS and uncompiled Less formats.
  */
- 
+
 .reset-box-sizing,
 .reset-box-sizing *,
 .reset-box-sizing *:before,
