@@ -209,3 +209,19 @@
     padding-right:62px;
   }
 }
+
+/* Box-sizing resets
+ *
+ * Reset individual elements or override regions to avoid conflicts due to
+ * global box model settings of Bootstrap. Two options, individual overrides and
+ * region resets, are available as plain CSS and uncompiled Less formats.
+ */
+ 
+.reset-box-sizing,
+.reset-box-sizing *,
+.reset-box-sizing *:before,
+.reset-box-sizing *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
