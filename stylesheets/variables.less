@@ -292,6 +292,10 @@
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
 
+// Shortcuts
+@tablet:  ~"screen and (min-width: @{screen-tablet})";
+@normal:  ~"screen and (min-width: @{screen-desktop})";
+@wide:    ~"screen and (min-width: @{screen-lg-desktop})";
 
 //== Grid system
 //
