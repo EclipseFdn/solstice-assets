@@ -156,7 +156,7 @@
     background:#2f2f31;
     color:#fff;
     select{
-        color:#2f2f31;
+      color:#2f2f31;
     }
 }
 
@@ -167,6 +167,9 @@
 .background-purple{
     background:#2c2255;
     color:#fff;
+    select{
+        color:#2f2f31;
+    }
 }
 
 .background-blue{
@@ -268,11 +271,11 @@
  * region resets, are available as plain CSS and uncompiled Less formats.
  */
 
-.reset-box-sizing,
-.reset-box-sizing *,
-.reset-box-sizing *:before,
-.reset-box-sizing *:after {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+.reset-box-sizing {
+  &,
+  *,
+  *:before,
+  *:after {
+    .box-sizing(content-box);
+  }
 }
