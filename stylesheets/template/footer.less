@@ -4,13 +4,15 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-footer{
+footer,
+footer#solstice-footer{
     background: url("../images/template/footer-bg.jpg") no-repeat center center #242426;
+    font-family: @font-family-base;
     .background-size(cover);
     padding-top:3.5em;
     color:#a8a7a9;
     padding-bottom:26px;
-    
+    font-size: @font-size-base;
     h1{
         padding-top:0.5em;
         padding-bottom:0.7em;
@@ -25,7 +27,8 @@ footer{
         color:#fff;
         padding-bottom:7px;
         margin-top:0;
-        font-size:2rem;
+        font-weight:300;
+        font-size:21px;
         border-bottom:2px solid #6e6d71;
         max-width:80%;
     }
@@ -35,6 +38,7 @@ footer{
     a:visited{
         color:#a8a7a9;
         font-weight:400;
+        text-decoration: none;
     }
     
     #logo-eclipse-white{
