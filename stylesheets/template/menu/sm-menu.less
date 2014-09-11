@@ -1,0 +1,38 @@
+//
+// Menu
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+@media (min-width: @screen-sm-min) {
+    #main-menu{
+        font-size:0.9em;
+        margin-bottom:5px;
+        ul li {
+            text-transform:uppercase;
+        }
+        .dropdown{
+            li{
+                text-transform:none;
+            }
+        }
+        li{
+            a{
+                margin-right:0px;
+                color: #787878;
+                &:hover,
+                &:active{
+                    background:none;
+                    color:@brand-primary;
+                }
+            }
+        }
+        .dropdown-menu {
+            left: 0;
+            width: 100%;
+            a{
+                margin:0;
+            }
+        }
+    }
+}

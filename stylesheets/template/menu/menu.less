@@ -1,0 +1,66 @@
+//
+// Menu/me
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+#main-menu{
+    li{
+        padding-bottom:0;
+    }
+    a{
+        font-weight:400;
+        &:active{
+            color:@eclipse-orange;
+            background:none;
+        }
+    }
+}
+
+.dropdown-toggle:hover{
+    cursor:pointer;
+}
+
+.promo-link{
+    img{
+        margin:auto;
+    }
+}
+
+.ul-left-nav{
+    padding-left:0;
+    margin-left:0;
+     > li {
+         list-style:none;
+         margin-bottom:0.45em;
+         &.active a{
+             font-weight:600;
+         }
+         &.separator,
+         &.about{
+             padding-left:0px;
+             font-weight:bold;
+             img{
+                 position:absolute;
+                 top:6px;
+             }
+         }
+         &.separator{
+              border-top:1px solid #D4D4DD;
+              padding-top:8px;
+              a{
+                  font-weight:700;
+              }
+          }
+          &.separator:first-child{
+              border-top:none;
+          }
+          > a{
+             color:#545454;
+             font-weight:400;
+             &:hover{
+                 color:@eclipse-orange;
+             }
+        }
+    }
+}
