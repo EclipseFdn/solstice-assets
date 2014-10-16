@@ -1,0 +1,56 @@
+//
+// Header-nav
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+.header_nav{
+  padding-bottom:35px;
+  img{
+    margin:20px 0;
+  }
+  ul{
+    background:#f4f4f4;
+    padding:0;
+    text-transform: uppercase;
+    color:#7b778e;
+    margin:0;
+    font-size:16px;
+    li{       
+      list-style:none;
+      clear:right;
+      padding-bottom:0;
+      &:nth-child(odd) {
+        clear:left;
+      } 
+    }
+    a{
+      padding:20px;
+      display:block;
+      &:active,
+      &:visited,
+      &:link{
+        color:#7b778e;
+      }
+      &:hover{
+        color:@eclipse-orange;
+      }
+      i{
+        font-size:30px;
+        padding:4px 0 0 0;
+        text-align: center;
+        font-weight: 700;
+      }
+      font-weight:600;
+    }
+    span{
+      padding:0 0px 0 5px;
+      p{
+        font-size:11px;
+        text-transform: none;
+        font-weight:400;
+        margin:0;
+      }
+    }
+  }
+}
