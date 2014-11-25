@@ -15,6 +15,7 @@
         position:absolute;
         top:0;
         left:64px;
+        text-align:left;
         width:325px;
         color:#000;
         border:1px solid #ae00ce;
@@ -27,6 +28,20 @@
     }
     a.drag:hover .tooltip {
       display:block;
+    }
+    &.drag_installbutton_v2{
+      .btn:hover{
+        cursor: move;
+      }
+      .tooltip {
+         left:100px;
+         margin-top:-6px;
+         border:1px solid @gray-light;
+         background-color: @gray-lighter;
+         h3{
+           font-size:18px;
+         }
+      }
     }
 }
 
