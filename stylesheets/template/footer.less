@@ -108,5 +108,11 @@ footer#solstice-footer{
         color:@eclipse-orange;
     }
 }
-  
-   
+
+// Footer links are not clickable on xs-screens without an z-index
+#footer-eclipse-foundation,
+#footer-legal,
+#footer-useful-links,
+#footer-other{
+    z-index:99;
+}
