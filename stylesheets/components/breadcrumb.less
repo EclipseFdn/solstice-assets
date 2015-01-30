@@ -6,10 +6,11 @@
 
 .defaut-breadcrumbs,
 .default-breadcrumbs{
-    background:url('@{image-path}/template/breadcrumbs-large-bg.jpg') center #1b1732;
+    background:@breadcrumb-background;
     background-size:100%;
-    color:#fff;
+    color:@breadcrumb-color;
     text-align:center;
+    border-bottom:@breadcrumb-border-bottom;
     p{
         color:#bebebe;
         max-width:450px;
@@ -35,17 +36,17 @@
             padding-bottom:3px;
         }
         .active{
-            color:#fff;
+            color:@breadcrumb-color;
         }
         a{
             font-weight:600;
             text-decoration:none;
             &:link,
             &:visited{
-                color:#ababab;
+                color:@breadcrumb-link;
             }
             &:hover{
-                color:@eclipse-orange;
+                color:@breadcrumb-hover;
             }
         }
     }

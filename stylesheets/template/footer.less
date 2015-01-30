@@ -6,41 +6,34 @@
 
 footer,
 footer#solstice-footer{
-    background: url("@{image-path}/template/footer-bg.jpg") no-repeat center center #242426;
+    background: @footer-background;
     font-family: @font-family-base;
     .background-size(cover);
     padding-top:3.5em;
-    color:#a8a7a9;
+    color:@footer-color;
     padding-bottom:26px;
     font-size: @font-size-base;
-    h1{
-        padding-top:0.5em;
-        padding-bottom:0.7em;
-        color:#737373;
-        font-size:2em;
-        strong{
-            color:#C4C4C4;
-        }
-    }
-    
+    border-top:@footer-border-top;
+
     h2{
-        color:#fff;
-        padding-bottom:7px;
+        color:@footer-h2-color;
+        padding:@footer-h2-padding;
         margin-top:0;
-        font-weight:300;
-        font-size:21px;
-        border-bottom:2px solid #6e6d71;
+        font-weight:@footer-h2-font-weight;
+        font-size:@footer-h2-font-size;
+        border-bottom:@footer-h2-border-bottom;
         max-width:80%;
     }
     
     a:link,
     a:active,
     a:visited{
-        color:#a8a7a9;
-        font-weight:400;
-        text-decoration: none;
+        color:@footer-link-color;
+        font-weight:@footer-link-font-weight;
     }
-    
+    a:hover{
+      color:@footer-link-hover;
+    }
     #logo-eclipse-white{
         margin-bottom:15px;
     }
@@ -49,10 +42,10 @@ footer#solstice-footer{
         margin-left:-15px;
         margin-bottom:25px;
         a{
-            padding: 6px 15px 6px 20px;
+            padding: @footer-nav-link-padding;
             &:hover{
                 background:none;
-                color:@eclipse-orange;
+                color:@footer-link-hover;
             }
         }
     }
@@ -105,7 +98,7 @@ footer#solstice-footer{
     margin-top:57px;
     font-size:2.3em;
     a:hover{
-        color:@eclipse-orange;
+        color:@footer-link-hover;
     }
 }
 
@@ -115,4 +108,32 @@ footer#solstice-footer{
 #footer-useful-links,
 #footer-other{
     z-index:99;
+}
+
+.footer-other-working-groups{
+  font-weight:300;
+  font-size:11px;
+  .social-media{
+    margin-top:20px;
+  }
+  .img-responsive{
+    padding-right:20px;
+    max-width:235px;
+  }
+  .footer-working-group-col{
+    padding:55px 0 0px 0;
+  }
+  @media (min-width: @screen-md-min) {
+    .img-responsive{
+      max-width:100%;
+      padding-right:30px;
+    }
+    .footer-working-group-col{
+      padding:0px
+    }
+    background: @footer-working-group-background;
+  }
+  @media (min-width: @screen-sm-min) {
+   
+  }
 }

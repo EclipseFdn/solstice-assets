@@ -20,7 +20,6 @@
 }
 
 #header-right-container{
-    /*max-width:190px;*/
     float:right;
 }
 
@@ -76,17 +75,25 @@ header{
 
 #header-left{
     .logo-eclipse-default{
-        max-width: 213px;
+        max-width: @logo-max-width;
         clear: both;
         @media (min-width: @screen-sm-min) {
-            margin: 8px 0 24px;
+            margin: @logo-margin;
         }
     }
 }
 
 .thin-header{
+    @media (max-width: @screen-xs-max) {
+        #page-header-logo > .container{
+            padding:0;
+        }
+    }
     #main-menu li a.dropdown-toggle{
         margin-right:0;
+    }
+    #main-menu{
+      padding-right:0;
     }
     .visible-thin{
         .show;
@@ -113,11 +120,10 @@ header{
     }
      #header-left{
       .logo-eclipse-default{
-        max-width: 186px;
+        max-width: @thin-logo-max-width;
       }
       .logo-eclipse-default{
-        margin-top:20px;
-        margin-bottom:14px;   
+        margin:@thin-logo-margin;
       }
       #main-menu{
         margin-top:17px;

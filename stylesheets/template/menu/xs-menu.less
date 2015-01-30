@@ -15,7 +15,7 @@
         }
         &.navbar{
             border:0;
-            border-bottom:1px solid #ccc;
+            border-bottom:1px solid @gray-mid-light;
         }
         .navbar-toggle {
             margin-top: 11px;
@@ -26,31 +26,51 @@
         }
         .nav {
             margin:0;
-            background:#2c2255;
+            background:@mobile-menu-background;
             & > li {
-                border:1px solid #534b74;
+                border:1px solid lighten(@mobile-menu-background, 4%);
                 &.open{
                     & .dropdown-toggle{
-                        color:#000;
-                        background:#efeef2;
+                        color:@mobile-menu-open-active-color;
+                        background:@mobile-menu-open-active-background;
                     }
                 }
                 & > a {
-                    color:#fff;
+                    color:@mobile-menu-color;
                     text-transform: uppercase;
-                    &:hover, &:focus{
-                        background-color:@eclipse-orange;
+                    &:hover, &:focus,
+                    &.active-trail.dropdown-toggle {
+                        background-color:@mobile-menu-hover;
                     }
                 }
                 .dropdown-menu {
-                    background:#2a2a2c;
+                    background:@mobile-menu-dropdown-menu-background;
                     padding:0;
-                    > li > a{
-                        padding: 5px 20px 5px 30px;
-                        color:#fff;
-                        &:hover{
-                            color:#000;
+
+                    > li {
+                      &.active{
+                        a{
+                          &:link,
+                          &:visited{
+                            background:@mobile-menu-dropdown-menu-active-background;
+                            color:@mobile-menu-dropdown-menu-active-color;
+                          }
+                          &:hover,
+                          &:focus{
+                            color:@mobile-menu-dropdown-menu-active-hover;
+                            background:@mobile-menu-dropdown-menu-active-hover-background;
+                          }
                         }
+                      }
+                      > a{
+                        padding: 5px 20px 5px 30px;
+                        color:@mobile-menu-dropdown-menu-color;
+                        &:hover,
+                        &:focus{
+                            color:@mobile-menu-dropdown-menu-hover;
+                            background:@mobile-menu-dropdown-menu-hover-background;
+                        }
+                      }
                     }
                 }
             }
