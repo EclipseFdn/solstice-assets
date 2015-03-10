@@ -217,8 +217,8 @@
 /* Grid/Columns */
 .border-left-col{
   @media (min-width: @screen-sm-min) {
-	  border-left:1px solid #ccc;
-	  padding-left:62px;
+    border-left:1px solid #ccc;
+    padding-left:62px;
   }
 }
 
@@ -321,4 +321,25 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.no-border{
+  border:none !important;
+}
+
+img.desaturate { 
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/* TABLE */
+.table.table-solstice{
+  th{
+    background:@brand-info;
+    color:#fff;
+    vertical-align: middle;
+    &:nth-child(even){
+      background:#40bbdc;
+    }
+  }
 }
