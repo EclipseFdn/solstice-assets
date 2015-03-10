@@ -6,8 +6,11 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-weight: 300;
+    color:@brand-primary;
 }
-
+h1{
+  margin-bottom:25px;
+}
 a{
   font-weight:bold;
 }
@@ -56,12 +59,24 @@ ul{
     font-size:10px;
 }
 
+.text-highlight{
+  background:#eee;
+  padding:12px 24px;
+}
+
 .required{
     color:red;
 }
 
 blockquote{
   font-size: @font-size-base;
+}
+
+.fa-ul-2x{
+  margin-left:3.14286em;
+  li{
+    padding-bottom:28px;
+  }
 }
 
 /* List checkmark*/
@@ -82,3 +97,22 @@ blockquote{
     }
 }
 
+.block-heading{
+  background: none repeat scroll 0 0 #afbbdc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.fa-li{
+  top:0.23em;
+}
+
+.list-padding{
+	li{
+	  padding-bottom:25px;
+	}
+}
