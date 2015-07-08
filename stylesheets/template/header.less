@@ -70,6 +70,7 @@ header{
 }
 
 #custom-search-form{
+  min-height:33px;
     #search-box,
     .input-group-btn button{
         height:30px;
@@ -131,7 +132,7 @@ header{
       }
       #main-menu{
         margin-top:17px;
-        margin-bottom:12px;  
+        margin-bottom:12px;
         .dropdown-menu{
           right:0;
           left:auto;
@@ -151,16 +152,6 @@ header{
   height : inherit;
 }
 
-input.gsc-input,
-.gsc-input-box,
-.gsc-input-box-hover,
-.gsc-input-box-focus,
-.gsc-search-button, input.gsc-search-button-v2 {
-  box-sizing  : content-box;
-  line-height : normal;
-  margin-top  : 0px;
-}
-
 .gsc-input-box{
   -webkit-box-shadow: none!important;
   -moz-box-shadow: none!important;
@@ -169,6 +160,9 @@ input.gsc-input,
   top: -1px;
   input.gsc-input{
     font-size: 12px;
+    height:25px!important;
+    background-position:0px 5px!important;
+    background-color:transparent!important;
   }
   transition: border-color 0.15s ease-in-out 0s;
   &:hover{
