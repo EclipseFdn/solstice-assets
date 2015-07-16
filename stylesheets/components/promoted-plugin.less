@@ -5,75 +5,77 @@
 // -------------------------------------------------------
 
 .promoted-plugin {
-    border:1px solid #e0e0e0;
     background-color:#fff;
+    .drag{
+        display:block;
+        border:1px solid #e0e0e0;
+        text-decoration:none !important;
+        &:hover{
+            background:#fbf7fb;
+           .tooltip{
+                display:block;
+           }
+       }
+    }
     .header {
         background:#F7941E none repeat scroll 0% 0%;
-        .fa {
-            padding:10px;
-            font-size:18px;
-            color:#fff;
-        }
-        div.row div:last-child {
-          padding-left:0;
-        }
+        display:block;
+        padding:0 10px;
+        text-align:center;
         h3 {
-          padding: 8px 0;
-          color:#fff;
-          font-size:18px;
-          text-align:center;
-          margin:0;
+            padding: 8px 0;
+            color:#fff;
+            font-size:18px;
+            margin:0;
        }
     }
     .content {
-        padding:10px;
-        img {
-            width:100%;
-        }
-        p {
+        padding:10px 0;
+        display:block;
+        .pp-content {
             font-size:12px;
             margin-bottom:0;
             line-height:1.5;
+            padding:0 5px;
         }
-        div.row {
-            div:first-child {
-                padding-right:5px;
-            }
-            div:last-child {
-                padding-left:5px;
-            }
+        .pp-image{
+          padding:0 5px 0 10px;
+        }
+        .pp-title{
+          display:block;
+          clear:both;
+        }
+        .pp-text{
+          font-weight:normal
         }
     }
     .download {
-        background-color:#333333;
-        text-align:center;
-        color:#fff;
-        display:block;
-        & .drag:hover{
-          cursor:move;
-        }
-        font-weight:100;
-        .download-icon{
-          padding-left:0;
-        }
-        .download-text{
-          padding-left:0;
-          padding-top:8px
-        }
-        .fa {
-            font-size:18px;
-            padding:10px;
-            background-color:#282828;
-        }
-        a {
-            color:#fff;
-            font-weight:normal;
-        }
-        a:hover {
-            color:#fff;
-        }
-        div.row div:last-child{
-          padding-left:0;
-        }
-    }
+          background-color:#333333;
+          text-align:center;
+          color:#fff;
+          display:block;
+          & .drag:hover{
+              cursor:move;
+          }
+          font-weight:100;
+          .download-icon{
+            padding-left:0;
+          }
+          .download-text{
+              padding-left:0;
+              padding-top:8px
+          }
+          .fa {
+              font-size:18px;
+              padding:10px;
+              background-color:#282828;
+          }
+          a {
+              color:#fff;
+              font-weight:normal;
+              &:hover{
+                  color:#fff;
+              }
+          }
+     }
 }
