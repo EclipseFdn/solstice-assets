@@ -14,7 +14,17 @@ footer#solstice-footer{
     padding-bottom:26px;
     font-size: @font-size-base;
     border-top:@footer-border-top;
-
+    @media (min-width: @screen-sm-min) {
+      padding-top:3.5em;
+    }
+    @media (max-width: @screen-sm-max) {
+      text-align:center;
+      padding-top:1.5em;
+      #footer-working-group-right{
+        margin-top:1.5em;
+      }
+    }
+    
     h2{
         color:@footer-h2-color;
         padding:@footer-h2-padding;
@@ -22,7 +32,9 @@ footer#solstice-footer{
         font-weight:@footer-h2-font-weight;
         font-size:@footer-h2-font-size;
         border-bottom:@footer-h2-border-bottom;
-        max-width:80%;
+        @media (min-width: @screen-sm-min) {
+          max-width:80%;
+        }
     }
     
     a:link,
@@ -39,15 +51,22 @@ footer#solstice-footer{
     }
     
     .nav{
+      @media (min-width: @screen-sm-min) {
         margin-left:-15px;
-        margin-bottom:25px;
-        a{
-            padding: @footer-nav-link-padding;
-            &:hover{
-                background:none;
-                color:@footer-link-hover;
-            }
+      }
+      margin-bottom:25px;
+      a{
+        @media (min-width: @screen-sm-min) {
+          padding: @footer-nav-link-padding;
         }
+        @media (max-width: @screen-sm-max) {
+          padding: 4px 0;
+        }
+        &:hover{
+          background:none;
+          color:@footer-link-hover;
+        }
+      }
     }
     
     li{
@@ -120,10 +139,10 @@ footer#solstice-footer{
     padding-right:20px;
     max-width:235px;
   }
-  .footer-working-group-col{
-    padding:55px 0 0px 0;
-  }
   @media (min-width: @screen-md-min) {
+    .footer-working-group-col{
+      padding:55px 0 0px 0;
+    }
     .img-responsive{
       max-width:100%;
       padding-right:30px;
@@ -132,8 +151,5 @@ footer#solstice-footer{
       padding:0px
     }
     background: @footer-working-group-background;
-  }
-  @media (min-width: @screen-sm-min) {
-   
   }
 }
