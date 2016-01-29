@@ -28,15 +28,19 @@
 }
 
 .btn-transparent{
-    background:transparent;
-    border-color:#fff;
-    color:#fff;
-    font-size:11px;
-    padding:7px 15px;
-    &:hover{
-        color:@brand-primary;
-        border-color: @brand-primary;
-        background:#ccc;
+    &:visited,
+    &:link{
+      background:@btn-transparent-background;
+      border-color:@btn-transparent-border-color;
+      color:@btn-transparent-color;
+      font-size:@btn-transparent-font-size;
+      padding:@btn-transparent-padding;
+    }
+    &:hover,
+    &:active{
+        color:@btn-transparent-color-hover;
+        border-color: @btn-transparent-color-hover-border-color;
+        background:@btn-transparent-color-hover-background;
     }
     .caret{
         margin-left:6px;

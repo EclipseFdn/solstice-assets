@@ -19,11 +19,11 @@
         li{
             a{
                 margin-right:0px;
-                color: #787878;
+                color: @main-menu-link-color;
                 &:hover,
                 &:active{
                     background:none;
-                    color:@brand-primary;
+                    color:@main-menu-link-active-color;
                 }
             }
         }
@@ -32,6 +32,13 @@
             width: 100%;
             a{
                 margin:0;
+                color:@main-menu-dropdown-link-color;
+                &:hover{
+                  color:@main-menu-dropdown-link-hover-color;
+                }
+                &:active{
+                  color:@main-menu-dropdown-link-active-color;
+                }
             }
         }
     }

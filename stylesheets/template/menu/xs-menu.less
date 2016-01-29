@@ -6,7 +6,7 @@
 
 @media (max-width: @screen-xs-max) {
     #main-menu{
-        background:#efeef2;
+        background:@mobile-menu-background;
         margin-bottom:0;
         .navbar-header{
           padding-top:15px;
@@ -25,13 +25,13 @@
             margin:0;
             padding:10px 15px 10px 0;
             .icon-bar {
-                background:@brand-primary;
+                background:@navbar-toggle-icon-background;
                 height:3px;
             }
         }
         .nav {
             margin:0;
-            background:@mobile-menu-background;
+            background:@mobile-menu-nav-background;
             & > li {
                 border:1px solid lighten(@mobile-menu-background, 4%);
                 &.open{
@@ -43,15 +43,10 @@
                 & > a {
                     color:@mobile-menu-color;
                     text-transform: uppercase;
-                    &:hover, &:focus,
-                    &.active-trail.dropdown-toggle {
-                        //background-color:@mobile-menu-hover;
-                    }
                 }
                 .dropdown-menu {
                     background:@mobile-menu-dropdown-menu-background;
                     padding:0;
-
                     > li {
                       &.active{
                         a{
