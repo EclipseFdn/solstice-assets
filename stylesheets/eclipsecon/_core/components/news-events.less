@@ -1,0 +1,42 @@
+//
+// EclipseCon News and Events Styles
+//
+// author: Eric Poirier <eric@eclipse.org>
+// -------------------------------------------------------
+
+// News, Videos, Blogs on home page
+
+h2.eclipsecon-news-title,
+h2.eclipsecon-video-title{
+  background-size:cover;
+  padding:10px;
+  position:relative;
+  color:@white;
+  font-size:24px;
+  margin-bottom:0;
+  &:before{
+    float:left;
+    margin-right:20px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    display:block;
+    font-size: 30px;
+    top: -2px;
+    position: relative;
+  }
+}
+
+h2.eclipsecon-news-title{
+  background-image:url(../images/news-header-bg.jpg);
+  &:before{
+    content:"\f1ea";
+  }
+}
+
+h2.eclipsecon-video-title{
+  background-image:url(../images/news-header-bg.jpg);
+  &:before{
+    content:"\f03d";
+  }
+}

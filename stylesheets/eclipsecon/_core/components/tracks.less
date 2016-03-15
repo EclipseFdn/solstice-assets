@@ -1,0 +1,191 @@
+//
+// EclipseCon Tracks styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+/* Track colors */
+
+@track-color-triangle-size:50px;
+@track-bg-lighten-percent:25%;
+
+.track-mixin(@color) {
+  background-color:lighten(@color, @track-bg-lighten-percent);
+  &:after{
+    border-top: @track-color-triangle-size solid @color; 
+  }
+}
+
+td.track-col{
+  position:relative;
+  &:after {
+    position:absolute;
+    top:0;
+    right:0;
+    width: 0;
+    height: 0;
+    border-left: @track-color-triangle-size solid transparent;
+    content:"";
+  }
+}
+
+.track-mobile-and-web-development,
+.track-mobile-development{
+  .track-mixin(#C0FF83);
+}
+
+.track-eclipse4{
+  .track-mixin(#8e5ceb);
+}
+
+/*.track-vertx-day:after{
+  border-top: @track-color-triangle-size solid $alertColor;
+}*/
+
+.track-other-cool-stuff{
+  .track-mixin(#00dedb);
+}
+
+/*.track-alm-connect:after{
+  border-top: @track-color-triangle-size solid $darkgreen;
+}*/
+
+.track-m2m-day,
+.track-iot-and-embedded{
+  .track-mixin(#e88c09);
+}
+
+.track-community{
+  .track-mixin(#dec100);
+}
+
+.track-eclipsert{
+  .track-mixin(#f1baff);
+}
+
+.track-modeling{
+  .track-mixin(#a08d75);
+}
+
+.track-web-development{
+  .track-mixin(#abffb7);
+}
+
+.track-tools{
+  .track-mixin(#696969);
+}
+
+.track-eclipse-rcp---eclipse-4,
+.track-eclipse-technology{
+  .track-mixin(#B56BDB);
+}
+
+.track-java{
+  .track-mixin(#fc6c85);
+}
+
+.track-java-development,
+.track-osgi{
+  .track-mixin(#F7CC66);
+}
+
+.track-lifecycle-tools{
+  .track-mixin(#BEBEBE);
+}
+
+.track-javascript-development{
+  .track-mixin(#F0FABA);
+}
+
+.track-iot---embedded{
+  .track-mixin(#42f0c9);
+}
+
+.track-industry-solutions{
+  .track-mixin(#b5d5f3);
+}
+
+.track-eclipse-rt,
+.track-project-quality-day{
+  .track-mixin(#A8D1AC);
+}
+
+.track-web-technology{
+  .track-mixin(#a58857);
+}
+
+.track-java8-day{
+  .track-mixin(#99CCFF);
+}
+
+.track-polarsys-day{
+  .track-mixin(#FDD700);
+}
+
+.track-c-c-development,
+.track-tools-in-action{
+  .track-mixin(#FFAFAF);
+}
+
+.track-iot-day{
+  .track-mixin(#FFFF00);
+}
+
+.track-web-technology-and-cloud-development{
+  .track-mixin(#7FFF00);
+}
+
+.track-science{
+  .track-mixin(#00BFFF);
+}
+
+.track-introduction-to-the-eclipse-ecosystem{
+  .track-mixin(#FF69B4);
+}
+
+.track-keynote{
+  .track-mixin(#ff5f6a);
+}
+
+.track-locationtech-day{
+  .track-mixin(#D2B48C);
+}
+
+.track-eclipse-technologies-and-community{
+  .track-mixin(#FFA144);
+}
+
+.track-modern-technologies-and-methodologies{
+  .track-mixin(#77ED6B);
+}
+
+.track-eclipse-in-the-industry{
+  .track-mixin(#FF5F6A);
+}
+
+.track-polarsys{
+  .track-mixin(#F9F44E);
+}
+
+.track-embedded-amp-iot{
+  .track-mixin(#A96DF5);
+}
+
+.track-science-amp-locationtech{
+  .track-mixin(#6ACFE8);
+}
+
+.track-eclipse-in-other-industries{
+  .track-mixin(#a08d75);
+}
+
+.track-modern-applications-amp-technologies{
+  .track-mixin(#77ED6B);
+}
+
+.track-cloud-amp-devops{
+  .track-mixin(#7983CE);
+}
+
+.track-eclipse-technologies-amp-community{
+  .track-mixin(#FFA144);
+}

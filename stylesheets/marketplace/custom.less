@@ -1,0 +1,99 @@
+//
+// Custom
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+h1{
+  font-size:27px;
+  color:@blue-dark;
+  font-weight: 400;
+}
+
+.feed-icon {
+  top:5px;
+}
+
+.thin-header{
+  #header-left {
+    .logo-eclipse-default{
+      margin-top:0;
+      max-width: none;
+    }
+  }
+  #main-menu{
+    @media (min-width: @screen-sm-min) {
+      margin-top:35px;
+    }
+    .dropdown-menu{
+      width:630px;
+    }
+  }
+  #row-toolbar{
+    position:static;
+  }
+}
+
+.popover{
+  color:@text-color;
+}
+
+.highlighted-title{
+  strong{
+    color:@blue-dark;
+  }
+}
+
+.page-frontpage{
+  h1.page-header-hack{
+    background:@blue-light;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:16px;
+    padding:10px;
+    font-weight: 600;
+    margin:0;
+  }
+  .feed-icon{
+    right:10px;
+    color:#fff;
+    &:hover{
+      color:@brand-primary;
+    }
+  }
+}
+
+.solstice-tabs{
+  margin-bottom:0;
+}
+
+.box-container{
+  padding:10px;
+  margin-bottom:8px;
+  h4{
+    margin-top:0;
+    font-weight:600;
+    padding-left:2px;
+    font-size:1.20em;
+    line-height:1.3em;
+  }
+}
+
+.box-container-odd{
+  border-top:1px solid #eee;
+  background:@gray-lighter;
+}
+
+// Logo is not clickable otherwise
+#header-left{
+  z-index:99;
+}
+
+@media (min-width: @screen-sm-min) {
+    #main-menu{
+        .eclipse-more .dropdown-menu{
+          right:0;
+          left:initial;
+        }
+    }
+}

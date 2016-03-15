@@ -1,0 +1,90 @@
+//
+// Default blocks
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// additional author: Edouard Poitras <edouard@eclipse.org>
+// -------------------------------------------------------
+
+.block-region-sidebar-second,
+.block-region-sidebar-first{
+  margin-bottom:2em;
+  &.block-solstice-collapse{
+    h2.block-title{
+      padding-right:30px;
+    }
+  }
+  
+  h2.block-title{
+    background:@blue-light;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:16px;
+    padding:10px;
+    font-weight: 600;
+    margin:0;
+  }
+
+  a{
+    &:link,
+    &:visited{
+      color: @gray;
+      font-weight:400;
+    }
+    &:hover{
+      color:#3e3e3e;
+      font-weight:600;
+    }
+  }
+}
+
+.block{
+  .view-footer{
+    border-bottom:1px solid #efefef;
+    .btn-more{
+      background:#e9eef4;
+      float:right;
+      padding:4px 8px;
+      color:#a2a2a2 ;
+      font-weight:400;
+      &:hover{
+        background:#d5d6d9;
+        color:#000;
+      }
+    }
+  }
+}
+
+.block-solstice-collapse{
+  position:relative;
+}
+
+.solstice-menu-nojs-collapsed + ul,
+.block-solstice-nojs-collapsed .block-content{
+  display:none;
+}
+
+.block-solstice-callapse-angle{
+  position:absolute;
+  top:12px;
+  right:10px;
+  color:#fff;
+  font-size:16px;
+}
+
+// Pretty grey block
+.pretty-block {
+  .block-title{
+    margin-bottom:2px;
+  }
+  .block-content {
+    padding: 10px;
+    background-color: @eclipse-highlight-grey;
+  }
+}
+
+// Split blocks
+.front .region-content.solstice-region-element-multiple {
+  .block{
+    .make-md-column(12);
+  }
+}

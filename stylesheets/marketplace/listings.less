@@ -1,0 +1,129 @@
+//
+// Listing Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+.node-teaser{
+  position:relative;
+  .listing-badge-container,
+  h2.listing-title{
+    margin-top:30px;
+    
+  }
+  .marketplace-badges-container{
+    margin-top:-1px;
+  }
+}
+.marketplace-badges-container{
+  position:absolute;
+  right:0px;
+  top:0;
+}
+.marketplace-spotlight {
+  .marketplace-badges-container{
+    display:none;
+  }
+}
+
+.listing-image{
+  height:80px;
+  max-width: 110px;
+  display:block;
+  img{
+    vertical-align: middle;
+  }
+}
+
+.content-teaser{
+  color:@gray;
+  font-size:14px;
+}
+
+.content-categories{
+  font-size:12.5px;
+}
+
+.content-categories,
+.content-last-updated{
+  a {
+    font-weight: 600;
+
+  }
+}
+
+.listing-badge-container{
+  max-width: 110px;
+  margin:auto;
+}
+.content-last-updated{
+  color:@gray-light;
+  font-size:11px;
+}
+.listing-title {
+  &.eclipse-foundation-member-listing,
+  &.lts-provider-listing{
+    padding-right: 35px;
+  }
+  &.eclipse-foundation-member-listing.lts-provider-listing{
+    padding-right: 70px;
+  }
+}
+.listing-title.eclipse-foundation-member-listing.lts-provider-listing{
+  padding-right: 70px;
+}
+h2.listing-title{
+  font-size:18px;
+  line-height:21px;
+  margin-top:10px;
+  a {
+    &:link,
+    &:visited{
+      color:@blue-dark;
+    }
+    &:hover,
+    &:active{
+      color:@eclipse-orange;
+    }
+  }
+}
+
+.listing-icons{
+  color:@blue-lighter;
+  i{
+    padding:0 5px 0 5px;
+  }
+  font-size:20px;
+  a{
+    &:link,
+    &:visited{
+      color:@eclipse-orange;
+    }
+    &:hover,
+    &:active{
+      color:@brand-primary;
+    }
+  }
+}
+
+.field-name-field-screenshot{
+  .colorbox{
+    .thumbnail;
+    &:hover{
+      background:@gray-lighter;
+    }
+  }
+}
+
+.chart{
+  padding:0 0 45px;
+  .img-responsive;
+}
+
+.horizontal-tabs fieldset.horizontal-tabs-pane{
+  padding:10px 15px 0 10px;
+}
+
+
+.marketplace-badges{
+  margin-left:5px;
+}

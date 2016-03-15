@@ -1,0 +1,38 @@
+//
+// EclipseCon Session styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+.fivestar-plusone{
+  background:@white;
+  padding:4px 6px;
+  border:1px solic darken(@white, 10%);
+}
+
+.node-session{
+  .input-group-addon{
+    display:none;
+  }
+  #community-tags-form{
+    .btn{
+      margin:20px 0 0;
+    }
+  }
+  .fieldset-wrapper{
+    .list-inline{
+      margin-left:0;
+      li{
+        a{
+          background-color:@brand-secondary;
+          padding:3.5px 7px;
+          color:@white;
+          font-weight:normal;
+          font-size:0.8em;
+          &:hover{
+            background-color:lighten(@brand-secondary, 20%);
+          }
+        }
+      }
+    }
+  }
+}

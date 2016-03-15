@@ -1,0 +1,44 @@
+//
+// EclipseCon Menu Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+#main-menu {
+  display:block;
+  clear:both;
+  li.dropdown:not(.eclipse-more){
+    .dropdown-menu {
+      max-width:unset;
+      width:auto;
+      left:inherit;
+    }
+  }
+}
+#main-menu {
+  .navbar-brand{
+    padding-top:10px;
+  }
+}
+@media (max-width: @screen-xs-max) {
+  #main-menu {
+    .navbar-brand{
+      padding-top:10px;
+    }
+    .navbar-header {
+      border-top:1px solid #fff;
+    }
+    .navbar-collapse.in{
+      margin-bottom:0;
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+    #main-menu{
+        .eclipse-more .dropdown-menu{
+          right:0;
+          left:initial;
+        }
+    }
+}

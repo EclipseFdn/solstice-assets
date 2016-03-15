@@ -1,0 +1,20 @@
+.field-name-field-latest-releases {
+  table {
+    tr {
+      td + td + td {
+        a.release-review-link {
+          &:before {
+            font-family: FontAwesome;
+            font-size: 1.1em;
+            color: lighten(@brand-primary, 25%);
+            content: "\f06e";
+            padding-left: 6%;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+//
+// EclipseCon Session-list styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+.view-eclipsecon-sessions {
+  .table-responsive{
+    .table{
+      thead, tbody, tfoot{
+        th, td{
+          white-space:inherit;
+        }
+      }
+    }
+  }
+  .views-field-field-session-track{
+      text-align: center;
+  }
+  td{
+    border-top:8px solid darken(@white, 10%);
+    padding:5px;
+    h3{
+      margin-bottom:0;
+      margin-top:0;
+      @media (max-width: @screen-sm-max) {
+        font-size:1.4em;
+      }
+    }
+    .list-speakers{
+      font-size: 11px;
+    }
+    p.community-voting{
+      margin-right:5px;
+      margin-bottom:0;
+    }
+    form.fivestar-widget{
+      clear:none;
+      top: 5px;
+      position: relative;
+    }
+  }
+  td.track-col{
+    padding-right:20px;
+    p{
+      font-weight: bold;
+      @media (min-width: @screen-md-min) {
+        font-size:1.2em;
+      }
+      a:link,
+      a:active,
+      a:visited{
+        color:@black;
+      }
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+  td.track-col p{
+    a:link,
+    a:active,
+    a:visited{
+      color:@black;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.view-eclipsecon-session-list {
+  .schedule-action-button{
+    position:absolute;
+    right:0;
+  }
+}
+

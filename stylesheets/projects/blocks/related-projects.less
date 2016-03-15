@@ -1,0 +1,33 @@
+#block-project-blocks-related-projects {
+  h4 {
+    color: darken(@brand-info, 10%);
+    font-weight: bold;
+  }
+  a {
+    margin-left : 5px;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 10px;
+  }
+  ul.related-projects-block-related-list > li {
+    font-weight: 600;
+    &:before {
+      content: "";
+    }
+  }
+  li {
+    font-weight: 400;
+    &.hierarchy-1 { }
+    &.hierarchy-2 { margin-left: 10px; }
+    &.hierarchy-3 { margin-left: 20px; }
+    &:before {
+      content: "\00BB";
+      color: @eclipse-orange;
+      font-family: FontAwesome;
+    }
+  }
+}
+

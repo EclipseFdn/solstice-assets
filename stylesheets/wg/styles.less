@@ -1,0 +1,97 @@
+//
+// Working Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+// Core variables and mixins
+@import "../projects/styles.less";
+
+@import "_variables.less";
+
+.front {
+  .page-header{
+    .hide;
+  }
+  main{
+    background:#fff;
+    padding:0;
+  }
+}
+
+#toolbar-container-wrapper{
+  background:#f1f1f1;
+  color:#7c7c7c;
+  .list-inline{
+    margin-top:10px;
+    li{
+      padding-bottom:0;
+    }
+  }
+  a{
+    font-weight:300;
+    &:link,
+    &:visited{
+      color:#7c7c7c;
+    }
+    &:hover{
+      color:@brand-info;
+    }
+  }
+}
+
+#main-menu{
+  &.navbar{
+     margin-bottom:0;
+  }
+}
+
+// Can't remove .navbar-nav class since we are using the main-menu
+.block-menu-block {
+  .navbar-nav {
+   float:none;
+    > li {
+      float:none;
+    }
+  }
+}
+
+#page-header-logo{
+  border-top:@page-header-logo-border-top;
+  @media (min-width: @screen-sm-min) {
+    padding:17px 0 0 0;
+    border-bottom:@page-header-logo-border-bottom;
+  }
+}
+.thin-header{
+  #row-toolbar{
+    position:static;
+  }
+}
+
+.block-region-sidebar-second,
+.block-region-sidebar-first{
+  &.pretty-block{
+    .block-content{
+      background:#fff;
+      h2{
+        font-size:19px;
+        margin-top:0;
+        padding-top:20px;
+        &:first-of-type{
+          padding-top:0;
+        }
+      }
+    }
+    a{
+      font-weight:bold;
+      color:@brand-primary;
+      &:hover{
+        color:@brand-info;
+      }
+    }
+    h3,h4,h5,h6{
+      font-size:17px;
+    }
+  }
+}

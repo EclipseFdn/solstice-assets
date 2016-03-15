@@ -1,0 +1,47 @@
+//
+// Locationtech Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+// Solstice drupal specific styles
+@import "../wg/styles.less";
+@import "_variables.less";
+
+@import "components/profile.less";
+@import "menu.less";
+@import "header.less";
+
+.front #novaContent{
+  padding-top:2em;
+}
+
+#page-header-logo{
+  background:@brand-primary;
+}
+
+#btn-call-for-action{
+  margin-top:7px;
+}
+
+@media (min-width: @screen-lg-min) {
+  #page-header-logo{
+    padding-top:20px;
+  }
+}
+
+// Align the logo
+@media (min-width: @screen-md-min) {
+  #header-left{
+    padding:44px 0 0 30px;
+  }
+}
+
+.region-sidebar-first,
+.region-sidebar-second{
+  section.block.pretty-block{
+    .block-title{
+      background: url('../images/more-members-bg.jpg');
+    }
+  }
+}

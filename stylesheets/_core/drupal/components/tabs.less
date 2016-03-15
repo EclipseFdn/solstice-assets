@@ -1,0 +1,57 @@
+//
+// Default tabs
+//
+// author: Edouard Poitras <edouard@eclipse.org>
+// -------------------------------------------------------
+
+.solstice-tabs{
+  &.solstice-horizontal-tabs-list{
+    margin-bottom:0;
+  }
+  + .region-content {
+    padding: 20px;
+    border: @solstice-tabs-border;
+    border-top: none;
+  }
+  background-color: @solstice-tabs-background;
+  margin-bottom:0px;
+  li {
+    margin-bottom: 0px;
+    strong{
+      font-weight: @solstice-tabs-font-weight;
+    }
+    a {
+      margin: 0;
+      padding: 1.4em;
+      border: none;
+      border-radius: 0;
+      font-weight: @solstice-tabs-font-weight;
+      color: @solstice-tabs-color;
+      background-color: @solstice-tabs-background;
+      &:hover {
+        color:  @solstice-tabs-hover-color;
+        background-color: @solstice-tabs-hover;
+      }
+    }
+    &.selected a,
+    a.active,
+    a.active:hover{
+      border: none;
+      font-weight: @solstice-tabs-active-font-weight;
+      color: @solstice-tabs-hover-color;
+      background-color: @solstice-tabs-hover;
+      background-image: @solstice-tabs-chevron;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      cursor: default;
+      strong{
+        font-weight: @solstice-tabs-active-font-weight;
+      }
+    }
+    a:focus {
+      border: none;
+      color: @solstice-tabs-hover-color;
+      background-color: @solstice-tabs-hover;
+    }
+  }
+}

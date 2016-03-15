@@ -1,0 +1,68 @@
+//
+// Polarsys Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+// Solstice drupal specific styles
+@import "../wg/styles.less";
+@import "_variables.less";
+
+#row-logo-search{
+  background:url("../images/header-bg-icons.png") right 20px top 0 no-repeat;
+}
+
+#btn-call-for-action{
+  padding:5px 20px;
+  max-width:175px;
+  float:right;
+}
+
+#breadcrumb > .container{
+  padding:0;
+}
+
+#header-left{
+  padding-top:15px;
+}
+
+.solstice-support-slideshow-frontpage{
+  padding-top:60px;
+}
+.region-sidebar-first,
+.region-sidebar-second{
+  section.block.pretty-block{
+    .block-title{
+      background: url('../images/block-title-bg.jpg');
+    }
+  }
+}
+.table{
+  border:1px solid #ddd;
+  th{
+    background:#2e3f6e;
+    color:#fff;
+    text-transform: uppercase;
+  }
+  td{
+    background:#fff;
+  }
+  
+}
+
+// From solstice_wg
+@media (min-width: @screen-sm-min) {
+  #navbar-collapse-1{
+    .pull-right;
+  }
+}
+
+#main-menu{
+  li a{
+    margin-right:0;
+  }
+}
+
+h1.page-header{
+  font-weight:700;
+}

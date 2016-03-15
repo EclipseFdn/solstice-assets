@@ -1,0 +1,40 @@
+//
+// Panels Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// author: Edouard Poitras <edouard@eclipse.org>
+// -------------------------------------------------------
+.panel{
+  > .panel-heading {
+    text-transform: uppercase;
+  }
+}
+
+.panel-body{
+  > h1, > h2, > h3{
+    margin-top:0;
+  }
+}
+
+.horizontal-tabs-pane {
+  background:#fff;
+}
+
+// Drop down arrow
+fieldset.collapsible > legend.panel-heading > a:after {
+  float: right;
+  content: "\f103";
+  font-family: FontAwesome;
+}
+
+fieldset.collapsed > legend.panel-heading > a:after {
+  float: right;
+  content: "\f101";
+  font-family: FontAwesome;
+}
+
+
+.panel-default > .panel-heading{
+  font-weight:bold;
+}
+

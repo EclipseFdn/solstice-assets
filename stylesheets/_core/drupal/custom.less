@@ -1,0 +1,58 @@
+/* Header Padding */
+@media @tablet {
+  .header-padding {
+    padding-top: 35px;
+  }
+}
+.region-search{
+  clear:both;
+}
+
+.page-header {
+  margin-top:0;
+}
+
+#maint-content-area{
+  position:relative;
+}
+
+.feed-icon{
+  position:absolute;
+  top:10px;
+  right:0;
+  &:link,
+  &:visited{
+    color:@eclipse-orange;
+  }
+  &:hover{
+    color:@brand-primary;
+  }
+}
+
+.sharethis-buttons{
+  .reset-box-sizing();
+}
+
+.navbar-collapse.in {
+  overflow-y: inherit;
+  margin-bottom:10px;
+  .dropdown-menu{
+    border-radius:0;
+    margin-bottom:5px;
+  }
+}
+
+.thin-header{
+  li:last-child{
+    &.dropdown{
+      ul.dropdown-menu{
+        right:0;
+        left:inherit;
+      }
+    }
+  }
+}
+
+.table-responsive {
+  overflow-x: visible;
+}
