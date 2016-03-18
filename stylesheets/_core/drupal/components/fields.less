@@ -27,3 +27,28 @@
     }
   }
 }
+
+// Add spaces between fields
+form>div>div.form-item {
+  margin-bottom: 15px;
+}
+
+//Fix layout of date_select
+.container-inline-date{
+  label{
+    margin-bottom:0;
+    span.form-required{
+      display:none;
+    }
+  }
+  .date-padding{
+    padding-left:0;
+  }
+  .form-type-select{
+    padding-right:5px;
+  }
+  label,.help-block{
+    clear:both;
+    display:block;
+  }
+}
