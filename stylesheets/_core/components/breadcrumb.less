@@ -4,50 +4,54 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-.defaut-breadcrumbs,
-.default-breadcrumbs{
-    background:@breadcrumb-background;
-    background-size:100%;
-    color:@breadcrumb-color;
-    text-align:center;
-    border-bottom:@breadcrumb-border-bottom;
-    p{
-        color:#bebebe;
-        max-width:450px;
-        margin:30px auto 20px auto;
-        font-weight:400;
-        &:last-child{
-            padding-bottom:1.5em;
-        }
+.default-breadcrumbs {
+  background: @breadcrumb-background;
+  background-size: 100%;
+  color: @breadcrumb-color;
+  text-align: center;
+  border-bottom: @breadcrumb-border-bottom;
+  p {
+    color: #bebebe;
+    max-width: 450px;
+    margin: 30px auto 20px auto;
+    font-weight: 400;
+    &:last-child {
+      padding-bottom: 1.5em;
     }
-    .btn{
-        min-width:150px;
-        margin-right:10px;
-        margin-left:10px;
+  }
+
+  .btn {
+    min-width: 150px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .breadcrumb {
+    background: none;
+    margin: 15px 0 14px 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: left;
+    text-transform: uppercase;
+    li {
+      padding-bottom: 3px;
     }
-    .breadcrumb{
-        background:none;
-        margin:15px 0 14px 0;
-        padding-left:0;
-        padding-bottom:0;
-        text-align:left;
-        text-transform:uppercase;
-        li{
-            padding-bottom:3px;
-        }
-        .active{
-            color:@breadcrumb-color;
-        }
-        a{
-            font-weight:600;
-            text-decoration:none;
-            &:link,
-            &:visited{
-                color:@breadcrumb-link;
-            }
-            &:hover{
-                color:@breadcrumb-hover;
-            }
-        }
+
+    .active {
+      color: @breadcrumb-color;
     }
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+      &:link , &:visited {
+        color: @breadcrumb-link;
+      }
+
+      &:hover {
+        color: @breadcrumb-hover;
+      }
+    }
+  }
 }
+

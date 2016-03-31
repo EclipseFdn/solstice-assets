@@ -5,45 +5,64 @@
 // -------------------------------------------------------
 
 @media (min-width: @screen-sm-min) {
-    #main-menu{
-        font-size:0.9em;
-        margin-bottom:5px;
-        ul li {
-            text-transform:uppercase;
-        }
-        .dropdown{
-            li{
-                text-transform:none;
-            }
-        }
-        li{
-            a{
-                margin-right:0px;
-                color: @main-menu-link-color;
-                &:hover,
-                &:active{
-                    background:none;
-                    color:@main-menu-link-active-color;
-                }
-            }
-        }
-        li.eclipse-more .dropdown-menu{
-           width: 100%;
-        }
-        li.dropdown:last-child .dropdown-menu{
-          right: 0;
-        }
-        .dropdown-menu {
-            a{
-                margin:0;
-                color:@main-menu-dropdown-link-color;
-                &:hover{
-                  color:@main-menu-dropdown-link-hover-color;
-                }
-                &:active{
-                  color:@main-menu-dropdown-link-active-color;
-                }
-            }
-        }
+  #main-menu {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    ul li {
+      text-transform: uppercase;
     }
+
+    .dropdown {
+      li {
+        text-transform: none;
+      }
+    }
+
+    li {
+      a {
+        margin-right: 0px;
+        color: @main-menu-link-color;
+        &:hover , &:active {
+          background: none;
+          color: @main-menu-link-active-color;
+        }
+      }
+    }
+
+   li.dropdown .dropdown-menu {
+      left: auto;
+      right: auto;
+    }
+
+    li.dropdown.eclipse-more .dropdown-menu {
+      width: 100%;
+      right: initial;
+      left: 0;
+    }
+    
+    .navbar-right li.dropdown:last-child .dropdown-menu {
+      left: initial;
+      right: 0;
+    }
+    
+    .navbar-right li.dropdown.eclipse-more .dropdown-menu {
+      width: 100%;
+
+    }
+
+    .dropdown-menu {
+      a {
+        margin: 0;
+        color: @main-menu-dropdown-link-color;
+        &:hover {
+          color: @main-menu-dropdown-link-hover-color;
+        }
+
+        &:active {
+          color: @main-menu-dropdown-link-active-color;
+        }
+      }
+    }
+  }
 }
+

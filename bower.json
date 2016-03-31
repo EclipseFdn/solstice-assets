@@ -1,0 +1,26 @@
+{
+  "name": "solstice",
+  "version": "0.0.1",
+  "authors": [
+    "Christopher Guindon <chris.guindon@eclipse.org>"
+  ],
+  "description": "Solstice is a responsive theme for eclipse.org.",
+  "license": "EPL",
+  "homepage": "http://www.chrisguindon.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "3.3.6",
+    "yamm3": "git://github.com/chrisguindon/yamm3#69ba4a32b3b7228421920d6300011745be374029",
+    "fontawesome": "4.4.0",
+    "bootstrapValidator": "~0.5.3"
+    "jquery-migrate": "1.2.1",
+    "matchHeight": "~0.5.2"
+  }
+}

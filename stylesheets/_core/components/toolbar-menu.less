@@ -3,33 +3,37 @@
 //
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
+.toolbar-menu {
+  #gradient > .vertical-three-colors (#fff;
+  #f0efef;
+  70%;
+  #dbdbdb);
+  margin-bottom: 25px;
+  .breadcrumb {
+    margin-bottom: 0;
+    padding-left: 0;
+    background: none;
+    li {
+      padding-bottom: 0;
+    }
 
-.toolbar-menu{
-    #gradient > .vertical-three-colors(#fff; #f0efef; 70%; #dbdbdb);
-    margin-bottom:25px;  
-    .breadcrumb{
-        margin-bottom:0;
-        padding-left:0;
-        background:none;
+    > li + li:before {
+      content: " | ";
+    }
 
-        li{
-            padding-bottom:0;
-           
-        } 
-        > li + li:before{
-             content: " | ";
-        }
-        a:link,
-        a:visited{
-          color:@gray;
-          font-weight:600;
-        }
-        a:hover{
-          color:@eclipse-orange;
-        }
-        a.active{
-            color:#371e1d;
-            font-weight:bold;
-        }
-    }   
+    a:link , a:visited {
+      color: @gray;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: @eclipse-orange;
+    }
+
+    a.active {
+      color: #371e1d;
+      font-weight: bold;
+    }
+  }
 }
+

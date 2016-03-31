@@ -1,0 +1,31 @@
+//
+// Barebone with footer
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+@import "styles.less";
+@import '../../../bower_components/fontawesome/less/font-awesome.less';
+
+footer , footer#solstice-footer , .thin-header {
+  * {
+    .box-sizing (border-box);
+  }
+
+  *:before , *:after {
+    .box-sizing (border-box);
+  }
+
+  .list-inline {
+    .list-unstyled ();
+    margin-left: -5px;
+    > li {
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+
+@import '../../_core/components/back-to-top.less';
+@import '../../_core/template/footer.less';

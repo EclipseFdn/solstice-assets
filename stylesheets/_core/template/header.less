@@ -3,199 +3,72 @@
 //
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
-
-#row-toolbar{
-    padding:8px 0 0 0;
-    font-size:12px;
-    color:#666;
-    font-weight:300;
-    a{
-        font-weight:300;
-        padding-left:4px;
-        color:#666;
-        &:hover{
-            color:@brand-warning;
-        }
+.toolbar-row {
+  padding: 8px 0 0 0;
+  font-size: 12px;
+  color: #666;
+  font-weight: 300;
+  a {
+    font-weight: 300;
+    padding-left: 4px;
+    color: #666;
+    &:hover {
+      color: @brand-warning;
     }
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
 }
 
-#header-right-container{
-    float:right;
-}
-
-header{
-    .navbar-collapse{
-        padding-left:0;
-        padding-right:0;
+// Alternative style
+.toolbar-contrast {
+  background: #f1f1f1;
+  color: #7c7c7c;
+  a {
+    font-weight: 300;
+    &:link , &:visited {
+      color: #7c7c7c;
     }
-    li{
-        padding-bottom:0;
+
+    &:hover {
+      color: @brand-info;
     }
+  }
 }
 
-@media ( max-width : @screen-xs-max) {
-    #row-toolbar-col{
-        padding:0;
-    }
+#header-row {
+  .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  li {
+    padding-bottom: 0;
+  }
 }
 
-@media ( max-width : @screen-sm-max) {
-    .no-breadcrumbs-with-promo{
-        .promo-link{
-          padding-top:15px;
-        }
-    }
+.page-header-logo-bordered{
+  border-top:@page-header-logo-border-top;
+  @media (min-width: @screen-sm-min) {
+    border-bottom:@page-header-logo-border-bottom;
+  }
 }
 
-#btn-sign-in{
-    float:right;
-    margin-left:10px;
+#header-right {
+  text-align: right;
 }
 
-#btn-call-for-action{
-    margin-top:14px;
+.thin-header {
+  .visible-thin {
+    .show;
+  }
 }
 
-#header-right{
-    margin-top:35px;
-    text-align:right;
-    .btn-sm{
-        font-size: 10px;
-    }
-}
-
-.hidden-cfa-button #header-right{
-  margin-top:90px;
+.logo-eclipse-default-mobile{
+  max-height:50px;
 }
 
 #custom-search-form{
-    min-height:33px;
-    #search-box,
-    .input-group-btn button{
-        height:30px;
-        font-size:12px;
-    }
-}
-
-#header-left{
-    .logo-eclipse-default{
-        max-width: @logo-max-width;
-        clear: both;
-        @media (min-width: @screen-sm-min) {
-            margin: @logo-margin;
-        }
-    }
-}
-
-.thin-header{
-    #main-menu li a.dropdown-toggle{
-        margin-right:0;
-    }
-    .visible-thin{
-        .show;
-        visibility: visible !important;
-    }
-}
-
-@media (max-width: @screen-sm-max) {
-  .thin-header{
-    #breadcrumb{
-      .breadcrumb{
-        font-size:0.8em;
-      }
-    }
-  }
-}
-
-@media (min-width: @screen-sm-min) {
-  .thin-header{
-    #breadcrumb{
-      .breadcrumb{
-        font-size:12px;
-      }
-    }
-    #main-menu{
-      float:right;
-      clear:initial;
-    }
-    #row-toolbar{
-      position:absolute;
-      right:0;
-      z-index:99;
-    }
-    #navbar-collapse-1{
-      .pull-right;
-    }
-     #header-left{
-      .logo-eclipse-default{
-        max-width: @thin-logo-max-width;
-      }
-      .logo-eclipse-default{
-        margin:@thin-logo-margin;
-      }
-      #main-menu{
-        margin-top:17px;
-        margin-bottom:12px;
-      }
-    }
-  }
-}
-
-/* Google search bar */
-.gsc-control-cse .gsc-table-result {
-  font-family : inherit;
-}
-
-.gsc-control-cse .gsc-input-box {
-  height : inherit;
-}
-
-.gsc-input-box{
-  -webkit-box-shadow: none!important;
-  -moz-box-shadow: none!important;
-  box-shadow: none!important;
-  position: relative;
-  top: -1px;
-  input.gsc-input{
-    font-size: 12px;
-    height:25px!important;
-    background-position:0px 5px!important;
-    background-color:transparent!important;
-  }
-  transition: border-color 0.15s ease-in-out 0s;
-  &:hover{
-    border-color:#F7941E;
-  }
-}
-
-.gsc-input-box-hover{
-  border:1px;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.gsc-search-box-tools .gsc-search-box .gsc-input {
-  padding-right: 0px!important;
-}
-
-input.gsc-search-button{
-  border-bottom-left-radius: 0px!important;
-  border-top-left-radius: 0px!important;
-  font-size: 12px!important;
-  margin-left:0!important;
-  position: relative;
-  left: -1px;
-  padding:6px 15px!important;
-}
-
-.gsib_a{
-  padding-top:0!important;
-}
-
-/*the x in the search bar*/
-.gsst_a .gscb_a{
-  color:#F7941E!important;
-  position: relative;
-  top: 2px;
+  height:34px;
 }

@@ -4,135 +4,133 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-footer#solstice-footer{
-    background: @footer-background;
-    font-family: @font-family-base;
-    .background-size(cover);
-    padding-top:3.5em;
-    color:@footer-color;
-    padding-bottom:26px;
-    font-size: @font-size-base;
-    border-top:@footer-border-top;
-
-    h2{
-        color:@footer-h2-color;
-        padding:@footer-h2-padding;
-        margin-top:0;
-        font-weight:@footer-h2-font-weight;
-        font-size:@footer-h2-font-size;
-        border-bottom:@footer-h2-border-bottom;
-        max-width:80%;
-    }
-    
-    a:link,
-    a:active,
-    a:visited{
-        color:@footer-link-color;
-        font-weight:@footer-link-font-weight;
-    }
-    a:hover{
-      color:@footer-link-hover;
-    }
-    #logo-eclipse-white{
-        margin-bottom:15px;
-    }
-    
-    .nav{
-        margin-left:-15px;
-        margin-bottom:25px;
-        a{
-            padding: @footer-nav-link-padding;
-            &:hover{
-                background:none;
-                color:@footer-link-hover;
-            }
-        }
-    }
-    
-    li{
-        padding-bottom:0;
-    }
-    
-    @media (max-width: @screen-sm-max) {
-        #copyright-text,
-        #footer-other{
-            text-align: left;
-            clear:both;
-        }
-    }
-    
-    @media (max-width: 450px) {
-        section.col-xs-11,
-        section.col-xs-14{
-            .make-xs-column(23);
-        }
-    }
-    
-    @media (min-width: 451px) and (max-width: @screen-xs-max) {
-        #footer-useful-links{
-            clear:left;
-        }
-        #copyright{
-            clear:both;
-        }
-    }
-}
-
-#copyright{
-    padding-top:15px;
-    img{
-        float:left;
-        margin-top:10px;
-        margin-right:15px;
-        clear:both;
-    }
-}
-
-#copyright-text{
-    padding-top:21px;
-    text-align:right;
-}
-
-.social-media{
-    margin-top:57px;
-    font-size:2.3em;
-    a:hover{
-        color:@footer-link-hover;
-    }
-}
-
-// Footer links are not clickable on xs-screens without an z-index
-#footer-eclipse-foundation,
-#footer-legal,
-#footer-useful-links,
-#footer-other{
-    z-index:99;
-}
-
-.footer-other-working-groups{
-  font-weight:300;
-  font-size:11px;
-  .social-media{
-    margin-top:20px;
+footer#solstice-footer {
+  background: @footer-background;
+  font-family: @font-family-base;
+  .background-size (cover);
+  padding-top: 3.5em;
+  color: @footer-color;
+  padding-bottom: 26px;
+  font-size: @font-size-base;
+  border-top: @footer-border-top;
+  h2 {
+    color: @footer-h2-color;
+    padding: @footer-h2-padding;
+    margin-top: 0;
+    font-weight: @footer-h2-font-weight;
+    font-size: @footer-h2-font-size;
+    border-bottom: @footer-h2-border-bottom;
+    max-width: 80%;
   }
-  .img-responsive{
-    padding-right:20px;
-    max-width:235px;
+
+  a:link , a:active , a:visited {
+    color: @footer-link-color;
+    font-weight: @footer-link-font-weight;
   }
-  .footer-working-group-col{
-    padding:55px 0 0px 0;
+
+  a:hover {
+    color: @footer-link-hover;
   }
+
+  .logo-eclipse-white {
+    margin-bottom: 15px;
+  }
+
+  .nav {
+    margin-left: -15px;
+    margin-bottom: 25px;
+    a {
+      padding: @footer-nav-link-padding;
+      &:hover {
+        background: none;
+        color: @footer-link-hover;
+      }
+    }
+  }
+
+  li {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    #copyright-text , #footer-other {
+      text-align: left;
+      clear: both;
+    }
+  }
+
+  @media (max-width: 450px) {
+    section.col-xs-11 , section.col-xs-14 {
+      .make-xs-column (23);
+    }
+  }
+
+  @media (min-width: 451px) and (max-width: @screen-xs-max) {
+    #footer-useful-links {
+      clear: left;
+    }
+
+    #copyright {
+      clear: both;
+    }
+  }
+}
+
+#copyright {
+  padding-top: 15px;
+  img {
+    float: left;
+    margin-top: 10px;
+    margin-right: 15px;
+    clear: both;
+  }
+}
+
+#copyright-text {
+  padding-top: 21px;
+  text-align: right;
+}
+
+.social-media {
+  margin-top: 57px;
+  font-size: 2.3em;
+  a:hover {
+    color: @footer-link-hover;
+  }
+}
+
+// The links won't work in xs without this
+#footer-eclipse-foundation , #footer-legal , #footer-useful-links , #footer-other {
+  z-index: 99;
+}
+
+.footer-other-working-groups {
+  font-weight: 300;
+  font-size: 11px;
+  .social-media {
+    margin-top: 20px;
+  }
+
+  .img-responsive {
+    padding-right: 20px;
+    max-width: 235px;
+  }
+
+  .footer-working-group-col {
+    padding: 55px 0 0px 0;
+  }
+
   @media (min-width: @screen-md-min) {
-    .img-responsive{
-      max-width:100%;
-      padding-right:30px;
+    .img-responsive {
+      max-width: 100%;
+      padding-right: 30px;
     }
-    .footer-working-group-col{
-      padding:0px
+
+    .footer-working-group-col {
+      padding: 0px
     }
+
     background: @footer-working-group-background;
   }
-  @media (min-width: @screen-sm-min) {
-   
-  }
 }
+

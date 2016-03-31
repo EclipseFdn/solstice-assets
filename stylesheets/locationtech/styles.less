@@ -5,52 +5,41 @@
 // -------------------------------------------------------
 
 // Solstice drupal specific styles
-@import "../wg/styles.less";
+@import '../_core/styles.less';
+@import "../wg/_variables.less";
 @import "_variables.less";
 
-@import "components/profile.less";
-@import "menu.less";
-@import "header.less";
+@image-path: "../images";
+@icon-font-path: "../fonts/";
+@fa-font-path: "../fonts";
 
-.front #novaContent{
-  padding-top:2em;
-}
-
-#page-header-logo{
+#header-wrapper{
   background:@brand-primary;
 }
 
-#btn-call-for-action{
-  margin-top:7px;
-}
-
-@media (min-width: @screen-lg-min) {
-  #page-header-logo{
-    padding-top:20px;
-  }
-}
-
 // Align the logo
-@media (min-width: @screen-md-min) {
-  #header-left{
+@media (min-width: @screen-sm-min) {
+  #header-left .wrapper-logo-default img{
     padding:44px 0 0 30px;
   }
 }
 
-.region-sidebar-first,
-.region-sidebar-second{
-  section.block.pretty-block{
-    .block-title{
-      background: url('@{image-path}/locationtech/more-members-bg.jpg');
-    }
-  }
+#header-right{
+  padding-top:15px;
 }
 
-.thin-layout{
+#main-menu li a{
+  margin-right:0;
+}
+
+.thin-header{
+  padding:10px;
   #header-left{
-    padding:0;
+    .wrapper-logo-default img{
+      padding:10px 0 0 0;
+    }
   }
-  #page-header-logo{
-    padding-top:0;
+  #main-menu{
+    padding-top:3px;
   }
 }

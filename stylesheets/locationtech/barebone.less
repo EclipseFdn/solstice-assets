@@ -3,18 +3,14 @@
 //
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 
-@import "../eclipse_org/barebone/styles.less";
+@import "../_core/barebone/styles.less";
 @import "_variables.less";
 
-#page-header-logo{
+.barebone-layout{
   background:@brand-primary;
+  .wrapper-logo-default{
+    padding-top:5px;
+    padding-bottom:5px;
+  }
 }
 
-.barebone-layout{
-  #header-left .logo-eclipse-default{
-    margin-top:25px;
-  }
-  .navbar-brand>img{
-    margin-top:10px;
-  }
-}

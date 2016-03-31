@@ -8,74 +8,31 @@
 @import "../wg/styles.less";
 @import "_variables.less";
 
-#row-logo-search{
-  background:url("@{image-path}/polarsys/header-bg-icons.png") right 20px top 0 no-repeat;
-}
+@image-path: "../images";
+@icon-font-path: "../fonts/";
+@fa-font-path: "../fonts";
 
-#btn-call-for-action{
-  padding:5px 20px;
-  float:right;
-}
 
-#breadcrumb > .container{
-  padding:0;
+#header-row{
+  background:url("@{image-path}/polarsys/header-bg-icons.png") right 20px top 20px no-repeat;
 }
 
 #header-left{
   padding-top:15px;
 }
 
-.solstice-support-slideshow-frontpage{
-  padding-top:60px;
-}
-.region-sidebar-first,
-.region-sidebar-second{
-  section.block.pretty-block{
-    .block-title{
-      background: url('@{image-path}/polarsys/block-title-bg.jpg');
-    }
-  }
-}
-.table{
-  border:1px solid #ddd;
-  th{
-    background:#2e3f6e;
-    color:#fff;
-    text-transform: uppercase;
-  }
-  td{
-    background:#fff;
-  }
-
+#header-right{
+  padding-top:50px;
 }
 
-// From solstice_wg
-@media (min-width: @screen-sm-min) {
-  #navbar-collapse-1{
-    .pull-right;
-  }
-}
-
-#main-menu{
-  li a{
-    margin-right:0;
-  }
-}
-
-h1.page-header{
-  font-weight:700;
-}
-
-.thin-layout{
-  #row-logo-search{
-    background-position: right 5px top 0;
+.thin-header{
+  #main-menu-wrapper{
+     padding-top:15px;
   }
   #header-left{
-    padding-top:10px;
-    padding-bottom:10px;
-    #main-menu{
-      margin-top:27px;
-      margin-bottom:0;
-    }
+    padding-bottom:15px;
+  }
+  #main-menu{
+    padding-top:15px;
   }
 }

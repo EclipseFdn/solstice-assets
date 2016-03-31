@@ -5,75 +5,85 @@
 // -------------------------------------------------------
 
 @media (max-width: @screen-xs-max) {
-    #main-menu{
-        background:@mobile-menu-background;
-        margin-bottom:0;
-        .navbar-header{
-          padding-top:15px;
-          padding-bottom:15px;
-        }
-        .navbar-brand{
-            height:auto;
-            padding:0;
-            padding-left:15px;
-        }
-        &.navbar{
-            border:0;
-            border-bottom:1px solid @gray-mid-light;
-        }
-        .navbar-toggle {
-            margin:0;
-            padding:10px 15px 10px 0;
-            .icon-bar {
-                background:@navbar-toggle-icon-background;
-                height:3px;
-            }
-        }
-        .nav {
-            margin:0;
-            background:@mobile-menu-nav-background;
-            & > li {
-                border:1px solid lighten(@mobile-menu-background, 4%);
-                &.open{
-                    & .dropdown-toggle{
-                        color:@mobile-menu-open-active-color;
-                        background:@mobile-menu-open-active-background;
-                    }
-                }
-                & > a {
-                    color:@mobile-menu-color;
-                    text-transform: uppercase;
-                }
-                .dropdown-menu {
-                    background:@mobile-menu-dropdown-menu-background;
-                    padding:0;
-                    > li {
-                      &.active{
-                        a{
-                          &:link,
-                          &:visited{
-                            background:@mobile-menu-dropdown-menu-active-background;
-                            color:@mobile-menu-dropdown-menu-active-color;
-                          }
-                          &:hover,
-                          &:focus{
-                            color:@mobile-menu-dropdown-menu-active-hover;
-                            background:@mobile-menu-dropdown-menu-active-hover-background;
-                          }
-                        }
-                      }
-                      > a{
-                        padding: 5px 20px 5px 30px;
-                        color:@mobile-menu-dropdown-menu-color;
-                        &:hover,
-                        &:focus{
-                            color:@mobile-menu-dropdown-menu-hover;
-                            background:@mobile-menu-dropdown-menu-hover-background;
-                        }
-                      }
-                    }
-                }
-            }
-        }
+  #main-menu-wrapper{
+    padding:0;
+    margin:0;
+  }
+  #main-menu {
+    background: @mobile-menu-background;
+    margin-bottom: 0;
+    .navbar-header {
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
+
+    .navbar-brand {
+      height: auto;
+      padding: 0;
+      padding-left: 15px;
+    }
+
+    &.navbar {
+      border: 0;
+      border-bottom: 1px solid @gray-mid-light;
+    }
+
+    .navbar-toggle {
+      margin: 0;
+      padding: 10px 15px 10px 0;
+      .icon-bar {
+        background: @navbar-toggle-icon-background;
+        height: 3px;
+      }
+    }
+
+    .nav {
+      margin: 0;
+      background: @mobile-menu-nav-background;
+      & > li {
+        border: 1px solid lighten(@mobile-menu-background, 4%);
+        &.open {
+          & .dropdown-toggle {
+            color: @mobile-menu-open-active-color;
+            background: @mobile-menu-open-active-background;
+          }
+        }
+
+        & > a {
+          color: @mobile-menu-color;
+          text-transform: uppercase;
+        }
+
+        .dropdown-menu {
+          background: @mobile-menu-dropdown-menu-background;
+          padding: 0;
+          > li {
+            &.active {
+              a {
+                &:link , &:visited {
+                  background: @mobile-menu-dropdown-menu-active-background;
+                  color: @mobile-menu-dropdown-menu-active-color;
+                }
+
+                &:hover , &:focus {
+                  color: @mobile-menu-dropdown-menu-active-hover;
+                  background: @mobile-menu-dropdown-menu-active-hover-background;
+                }
+              }
+            }
+
+            > a {
+              padding: 5px 20px 5px 30px;
+              color: @mobile-menu-dropdown-menu-color;
+              &:hover , &:focus {
+                color: @mobile-menu-dropdown-menu-hover;
+                background: @mobile-menu-dropdown-menu-hover-background;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
