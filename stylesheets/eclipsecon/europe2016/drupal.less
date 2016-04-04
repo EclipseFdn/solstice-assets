@@ -5,6 +5,14 @@
 // -------------------------------------------------------
 
 // Solstice drupal specific styles
-@import "../_core/styles.less";
+@import "../_core/drupal.less";
 @import "_variables.less";
-@import "_custom.less";
+
+.btn-quinary{
+  .button-variant(@white, lighten(@brand-quaternary, 10%), lighten(@brand-quaternary, 10%));
+}
+
+.navbar-brand>img {
+  width: 205px;
+  margin-top: 6px;
+}

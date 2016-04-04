@@ -1,0 +1,358 @@
+//
+// Marketplace Styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+@import "../_drupal/styles.less";
+
+@icon-font-path: "../../../../public/fonts/";
+@fa-font-path: "../../../../public/fonts";
+@image-path: "../../../../public/images";
+
+#block-marketplace-blocks-marketplace-blocks-mpc-count{
+  .block-title{
+    display:none;
+  }
+  .block-content{
+    text-align: center;
+    h2{
+      margin-top:0px;
+      margin-bottom:30px;
+    }
+  }
+}
+
+#block-marketplace-blocks-marketplace-blocks-spotlight{
+  padding-bottom:35px;
+  h2.block-title{
+    background:@blue-light;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:16px;
+    padding:10px;
+    font-weight: 600;
+    margin:0;
+  }
+}
+
+.listing-description{
+  h2.listing-title{
+    font-size: 15px;
+    .ellipsis;
+  }
+}
+
+.listing-column:first-child{
+  border-right:1px solid #ccc;
+}
+
+.listing-column.odd{
+  .drag_installbutton {
+    &.drag_installbutton_v2{
+      .tooltip {
+         left:-330px;
+      }
+    }
+  }
+}
+
+.carousel-inner{
+  border: 1px solid #ddd;
+  height:210px;
+  .item{
+    padding: 20px 10px;
+  }
+}
+
+.carousel-control {
+  color:#fff;
+  top:0;
+  width:38px;
+  height:38px;
+  background:@gray-dark;
+  text-shadow:none;
+  opacity:1;
+  text-align:center;
+  &.right,
+  &.left{
+    background-image:none !important;
+    top:-38px;
+  }
+  &:hover{
+    color: @eclipse-orange;
+  }
+  &.right{
+    i{
+      margin-left:4px;
+    }
+  }
+  &.left{
+    left:auto;
+    right:39px;
+  }
+  i{
+    margin-top:9px;
+  }
+}
+
+.carousel-indicators {
+  bottom:-30px;
+
+  li {
+    border-radius:0;
+    width:10px;
+    height:10px;
+    background:#ccc;
+    border:1px solid #ccc;
+  }
+  .active {
+    width:12px;
+    height:12px;
+    background:#3276b1;
+    border-color:#3276b1;
+  }
+}
+
+// Search
+.front .search-form{
+  .highlighted-title {
+    display:block;
+  }
+  .panel-warning{
+    margin-bottom:0;
+  }
+}
+
+.search-form {
+  border:1px solid #ccc;
+  padding:20px;
+  margin-bottom:25px;
+  .highlighted-title{
+    margin-top:0;
+  }
+  .form-autocomplete,
+  .form-inline .input-group {
+    width:100%;
+    display:table;
+  }
+  .form-autocomplete .input-group-addon{
+    width: 20px;
+  }
+  .intro-text{
+    color:@blue-light;
+    margin-bottom:15px;
+  }
+  .dropdown{
+    display: table;
+  }
+}
+
+.marketplace-apachesolr-search {
+  h2.block-title{
+    display:none;
+  }
+}
+
+.block-facetapi{
+  .block-content{
+    padding:10px;
+  }
+  .facetapi-facetapi-links{
+    padding-left:10px;
+  }
+}
+.search-result.odd{
+  background:#f9f9f9;
+}
+
+//views
+.views-row-odd{
+  background:#f9f9f9;
+}
+
+.views-row {
+  border-top:1px solid @gray-lighter;
+}
+
+
+// Fields
+
+.node{
+  .field-name-body,
+  .field-name-field-consultingdesc,
+  .field-name-field-trainingdesc{
+    color:@gray;
+    line-height:1.5em;
+     margin-bottom:15px;
+  }
+  .field-name-field-lts-company-url,
+  .field-name-shared-flag-outofdate{
+    margin-bottom:15px;
+  }
+
+  .field-name-taxonomy-vocabulary-1{
+    margin-top:25px;
+    padding-bottom:10px;
+  }
+  
+  .group-additional-details .field{
+    margin-bottom:3px;
+  }
+  .field{
+    color:@gray;
+  }
+}
+.node-form{
+  .help-popover{
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 22px;
+    top: 18px;
+    :hover{
+      cursor:pointer;
+    }
+  }
+  .field-name-field-resource-listing-release{
+    &.field-widget-field-collection-embed{
+      .field-multiple-table{
+        border:1px solid #ccc;
+      }
+    }
+  }
+}
+
+// Listings
+.node-teaser{
+  position:relative;
+  .listing-badge-container,
+  h2.listing-title{
+    margin-top:30px;
+    
+  }
+  .marketplace-badges-container{
+    margin-top:-1px;
+  }
+}
+.marketplace-badges-container{
+  position:absolute;
+  right:0px;
+  top:0;
+}
+.marketplace-spotlight {
+  .marketplace-badges-container{
+    display:none;
+  }
+}
+
+.listing-image{
+  height:80px;
+  max-width: 110px;
+  display:block;
+  img{
+    vertical-align: middle;
+  }
+}
+
+.content-teaser{
+  color:@gray;
+  font-size:14px;
+}
+
+.content-categories{
+  font-size:12.5px;
+}
+
+.content-categories,
+.content-last-updated{
+  a {
+    font-weight: 600;
+
+  }
+}
+
+.listing-badge-container{
+  max-width: 110px;
+  margin:auto;
+}
+.content-last-updated{
+  color:@gray-light;
+  font-size:11px;
+}
+.listing-title {
+  &.eclipse-foundation-member-listing,
+  &.lts-provider-listing{
+    padding-right: 35px;
+  }
+  &.eclipse-foundation-member-listing.lts-provider-listing{
+    padding-right: 70px;
+  }
+}
+.listing-title.eclipse-foundation-member-listing.lts-provider-listing{
+  padding-right: 70px;
+}
+h2.listing-title{
+  font-size:18px;
+  line-height:21px;
+  margin-top:10px;
+  a {
+    &:link,
+    &:visited{
+      color:@blue-dark;
+    }
+    &:hover,
+    &:active{
+      color:@eclipse-orange;
+    }
+  }
+}
+
+.listing-icons{
+  color:@blue-lighter;
+  i{
+    padding:0 5px 0 5px;
+  }
+  font-size:20px;
+  a{
+    &:link,
+    &:visited{
+      color:@eclipse-orange;
+    }
+    &:hover,
+    &:active{
+      color:@brand-primary;
+    }
+  }
+}
+
+.field-name-field-screenshot{
+  .colorbox{
+    .thumbnail;
+    &:hover{
+      background:@gray-lighter;
+    }
+  }
+}
+
+.chart{
+  padding:0 0 45px;
+  .img-responsive;
+}
+
+.horizontal-tabs fieldset.horizontal-tabs-pane{
+  padding:10px 15px 0 10px;
+}
+
+.marketplace-badges{
+  margin-left:5px;
+}
+
+// Nodes
+.node-error-report,
+.node-mpc-ads,
+.node-mpc-stats,
+.node-mpc-catalog{
+  .field{
+    margin-bottom:15px;
+  }
+}

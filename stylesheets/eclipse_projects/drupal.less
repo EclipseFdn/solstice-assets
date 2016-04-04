@@ -1,3 +1,22 @@
+//
+// Eclipse Projects Drupal Styles
+// --------------------------------------------------
+@import "../projects/drupal.less";
+
+@icon-font-path: "../../../../public/fonts/";
+@fa-font-path: "../../../../public/fonts";
+@image-path: "../../../../public/images";
+
+.panel {
+  .panel-heading {
+    color: @eclipse-light-grey;
+    font-weight: 600;
+    .panel-title {
+      padding: 15px 15px;
+    }
+  }
+}
+
 .field-name-field-source-repo {
   padding-bottom: 0px;
   .field-item {
@@ -20,5 +39,12 @@
         }
       }
     }
+  }
+}
+
+
+#block-project-blocks-projects-committer-commands {
+  ul {
+    padding-left: 10px;
   }
 }

@@ -1,5 +1,5 @@
 //
-// Locationtech Styles
+// OPENMDM Styles
 //
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
@@ -7,92 +7,4 @@
 // Solstice drupal specific styles
 @import "../wg/styles.less";
 @import "_variables.less";
-
-@import "components/profile.less";
-@import "menu.less";
-@import "header.less";
-
-.front #novaContent{
-  padding-top:2em;
-}
-
-#btn-call-for-action{
-  margin-top:7px;
-}
-
-@media (min-width: @screen-lg-min) {
-  #header-row{
-    padding-top:20px;
-  }
-}
-
-// Align the logo
-@media (min-width: @screen-md-min) {
-  #header-left{
-    padding:0 0 0 30px;
-  }
-}
-
-.region-sidebar-first,
-.region-sidebar-second{
-  section.block.pretty-block{
-    .block-title{
-      background: @brand-tertiary;
-    }
-  }
-}
-
-.view-solstice-slideshow{
-  .solstice-slideshow-content{
-    text-align:left;
-  }
-}
-
-
-.view-solstice-slideshow {
-  color:#333;
-  h2{
-    color:@brand-tertiary;
-  }
-}
-
-.solstice-support-slideshow-frontpage{
-  border-top:1px solid #ccc;
-}
-
-.view-solstice-highlight{
-  background-color:@brand-tertiary;
-  border-top:none;
-  border-bottom:4px solid darken(@brand-tertiary, 10%);
-  margin-bottom:3em;
-  text-align:center;
-  .views-row{
-    border-left:1px solid darken(@brand-tertiary, 10%);
-    padding:40px 20px;
-  }
-  @media (max-width: @screen-xs-max) {
-    .views-row-1, .views-row-2{
-      border-bottom:1px solid darken(@brand-tertiary, 10%);
-    }
-  }
-  i{
-    color:@white;
-    font-size:3.8em;
-  }
-  .views-row.views-row-last{
-    border-right:1px solid darken(@brand-tertiary, 10%);
-  }
-}
-
-.solstice-support-highlight-link-container{
-  a{
-    color:@white;
-    &:hover{
-      color:@white;
-    }
-  }
-  &:hover{
-    cursor:pointer;
-    background:darken(@brand-tertiary, 10%);
-  }
-}
+@import "template.less";

@@ -5,13 +5,9 @@
 // -------------------------------------------------------
 
 // Solstice drupal specific styles
-@import "../../wg/styles.less";
+@import "../../wg/drupal.less";
 @import "_variables.less";
 
-
-@import "menu.less";
-@import "header.less";
-@import "footer.less";
 @import "components/attendees.less";
 @import "components/comments.less";
 @import "components/other-events.less";
@@ -50,5 +46,76 @@ main{
 .not-front{
   main{
     background:@white;
+  }
+}
+
+
+#header-right{
+  margin-top:0;
+  #header-custom-content{
+    @media (min-width: @screen-md-min) {
+      padding-top:20px;
+    }
+  }
+}
+.block-eclipsecon-support-event-info{
+  h2.block-title{
+    display:none;
+  }
+}
+.event_info{
+  text-align:right;
+  text-transform:uppercase;
+  font-size:1.3em;
+  padding-top:5px;
+}
+
+.event_location{
+  font-weight:300;
+}
+
+.event_date{
+  font-weight:bold;
+}
+
+#header-row{
+  @media (min-width: @screen-sm-min) {
+    padding:20px 0 0;
+  }
+  @media (min-width: @screen-md-min) {
+    padding:40px 0 0;
+  }
+}
+
+#main-menu {
+  li.dropdown:not(:last-child){
+    .dropdown-menu {
+      max-width:unset;
+      width:auto;
+      left:inherit;
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+    #main-menu{
+        .eclipse-more .dropdown-menu{
+          right:0;
+          left:initial;
+        }
+    }
+}
+
+footer#solstice-footer{
+  background:@footer-bg-color;
+  .nav a:hover,
+   a:hover{
+    color:@footer-hover-color;
+  }
+}
+
+article{
+  footer{
+    margin-top:20px;
   }
 }

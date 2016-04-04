@@ -8,38 +8,9 @@
 @import '../_core/styles.less';
 @import "../wg/_variables.less";
 @import "_variables.less";
+@import "template.less";
 
 @image-path: "../images";
 @icon-font-path: "../fonts/";
 @fa-font-path: "../fonts";
 
-#header-wrapper{
-  background:@brand-primary;
-}
-
-// Align the logo
-@media (min-width: @screen-sm-min) {
-  #header-left .wrapper-logo-default img{
-    padding:44px 0 0 30px;
-  }
-}
-
-#header-right{
-  padding-top:15px;
-}
-
-#main-menu li a{
-  margin-right:0;
-}
-
-.thin-header{
-  padding:10px;
-  #header-left{
-    .wrapper-logo-default img{
-      padding:10px 0 0 0;
-    }
-  }
-  #main-menu{
-    padding-top:3px;
-  }
-}
