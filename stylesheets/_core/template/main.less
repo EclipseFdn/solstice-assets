@@ -8,8 +8,11 @@ main {
   position: relative;
   padding-bottom: 2em;
   background: @main-background;
-  padding-top:2em;
-  .breadcrumbs-offset{
-    margin-top:-2em;
+  &.no-promo {
+    padding-top: 2em;
+    .breadcrumbs-offset {
+      margin-top: -2em;
+    }
   }
 }
+
