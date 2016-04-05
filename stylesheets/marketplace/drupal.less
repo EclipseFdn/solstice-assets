@@ -4,6 +4,7 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 @import "../_drupal/styles.less";
+@import "template.less";
 
 @icon-font-path: "../../../../public/fonts/";
 @fa-font-path: "../../../../public/fonts";
@@ -354,5 +355,17 @@ h2.listing-title{
 .node-mpc-catalog{
   .field{
     margin-bottom:15px;
+  }
+}
+
+#admin-menu .dropdown .admin-menu-toolbar-category > a, 
+#admin-menu {
+  .dropdown{
+    .admin-mpc-stats{
+      font-size:1.4em;
+      a{
+        display:inline;
+      }
+    }
   }
 }
