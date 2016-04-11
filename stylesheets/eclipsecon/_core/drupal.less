@@ -7,6 +7,7 @@
 // Solstice drupal specific styles
 @import "../../wg/drupal.less";
 @import "_variables.less";
+@import "template.less";
 
 @import "components/attendees.less";
 @import "components/comments.less";
@@ -64,9 +65,15 @@ main{
   }
 }
 .event_info{
-  text-align:right;
   text-transform:uppercase;
-  font-size:1.3em;
+  @media (min-width: @screen-sm-min) {
+    font-size:1.3em;
+    text-align:right;
+  }
+  @media (max-width: @screen-sm-max) {
+    font-size:1.2em;
+    text-align:center;
+  }
   padding-top:5px;
 }
 
