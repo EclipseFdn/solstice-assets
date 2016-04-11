@@ -1,87 +1,80 @@
-.views-row-odd, .search-result.odd {
-  .node-project-project-collapse {
-    .collapsible-item.collapsed {
-      background-color:@project-list-collapse-odd-background-color;
-    }
+//
+// Collapsible-list styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+
+.collapsible-list-content{
+  h4{
+    margin-top:0;
+  }
+  .field-name-body{
+    overflow:hidden;
   }
 }
 
-.views-row-even, .search-result.even {
-  .node-project-project-collapse {
-    .collapsible-item.collapsed {
-      background-color:white;
-    }
-  }
-}
-
-.collapsible-item {
-  cursor: pointer;
-  color:@project-list-text;
-  background-color:@project-list-background-color;
-  &.collapsed {
-    &:hover {
-      background-color:@project-list-background-color!important;
-    }
-    .collapse-header-icon {
-      .glyphicon-chevron-right;
-    }
-  }
-  .collapse-header-icon {
-    float: left;
-    margin-top:8px;
-    color:@brand-info;
-    .glyphicon;
-    .glyphicon-chevron-down;
-  }
-  .collapse-header-title {
-    font-weight:bold;
-  }
-  .collapse-header-website,
-  .collapse-header-code,
-  .collapse-header-download {
-    text-align: center;
-    font-size: 1.4em;
-    padding-top:3px;
-    &.inactive {
-      i {
-        cursor: auto;
+.collapsible-list-teaser-row{
+  h3{
+    margin:0;
+    font-size:17px;
+    font-weight:400;
+    .fa{
+      position:relative;
+      top:2px;
+      &:before {
+        content: "\f078";
       }
-      color:@project-list-icon-disabled;
     }
-    a {
-      color:@project-list-icon-enabled;
+  }
+  
+  &.collapsed h3 .fa:before{
+    content: "\f054";
+  }
+ 
+  &:hover{
+    cursor:pointer;
+    h3, h3 .fa {
+      color:@brand-warning;
     }
+  }
+  .fa {
+    color:#666;
+    font-size:17px;
+    position:relative;
+    top:2px;
+    &:hover{
+      color:@brand-warning;
+    }
+  }
+ 
+  .inactive{
+    color:#dfe2ed
   }
 }
-.collapsible-item-content {
-  background-color:white;
-  border: solid;
-  border-color:@blue-lighter;
-  border-width:2px;
-  padding-top:2em;
-  padding-bottom:3em;
-  @media (max-width: @screen-sm-max) {
-    text-align: center;
-    .collapse-body {
-      text-align: left;
+
+#search-form{
+  .field-search-key,
+  #edit-submit{
+    width:100%;
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .collapsible-list-content{
+    .field-name-body{
+      padding-bottom:15px;
+      text-align:center;
     }
-    .collapse-learn-more-container {
-      padding-top: 15px;
+    h4{
+      text-align:center;
+    }
+    .project-collapse-logo{
+      padding-bottom:10px;
     }
   }
-  .collapse-logo img {
-    min-width: 40%;
-    max-width: 100%;
-  }
-  .project_state { // Overriding project_state module css
-    width: 20.83%;
-  }
-  .collapse-title {
-    
-  }
-  .collapse-learn-more {
-    button {
-      width: 10em;
+  .collapsible-list-teaser-row{
+    h3{
+      font-size:15px;
     }
   }
 }
