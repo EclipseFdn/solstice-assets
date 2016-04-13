@@ -55,7 +55,7 @@ main{
   margin-top:0;
   #header-custom-content{
     @media (min-width: @screen-md-min) {
-      padding-top:20px;
+      padding-top:10px;
     }
   }
 }
@@ -66,15 +66,14 @@ main{
 }
 .event_info{
   text-transform:uppercase;
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-xs-min) {
     font-size:1.3em;
     text-align:right;
   }
-  @media (max-width: @screen-sm-max) {
+  @media (max-width: @screen-xs-max) {
     font-size:1.2em;
     text-align:center;
   }
-  padding-top:5px;
 }
 
 .event_location{
@@ -88,9 +87,6 @@ main{
 #header-row{
   @media (min-width: @screen-sm-min) {
     padding:20px 0 0;
-  }
-  @media (min-width: @screen-md-min) {
-    padding:40px 0 0;
   }
 }
 
