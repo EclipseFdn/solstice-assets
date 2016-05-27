@@ -4,44 +4,28 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-.view-eclipsecon-sessions {
-  .table-responsive{
-    .table{
-      thead, tbody, tfoot{
-        th, td{
-          white-space:inherit;
-        }
-      }
-    }
+.node-session.node-teaser{
+  border-top:1px solid #ccc;
+  margin-top:40px;
+  .session-list-header{
+    background-color: #384b5e;
+    color: #ffffff;
   }
-  .views-field-field-session-track{
-      text-align: center;
-  }
-  td{
-    border-top:8px solid darken(@white, 10%);
-    padding:5px;
-    h3{
-      margin-bottom:0;
-      margin-top:0;
-      @media (max-width: @screen-sm-max) {
-        font-size:1.4em;
-      }
-    }
-    .list-speakers{
-      font-size: 11px;
-    }
-    p.community-voting{
-      margin-right:5px;
-      margin-bottom:0;
-    }
-    form.fivestar-widget{
-      clear:none;
-      top: 5px;
-      position: relative;
-    }
-  }
-  td.track-col{
+
+  .track-col{
     padding-right:30px;
+    min-height:100px;
+    padding:20px;
+    position:relative;
+    &:after {
+      position:absolute;
+      top:0;
+      right:0;
+      width: 0;
+      height: 0;
+      border-left: @track-color-triangle-size solid transparent;
+      content:"";
+    }
     p{
       font-weight: bold;
       @media (min-width: @screen-md-min) {
@@ -57,17 +41,25 @@
       text-decoration: underline;
     }
   }
-  td.track-col p{
-    a:link,
-    a:active,
-    a:visited{
-      color:@black;
-    }
-    a:hover{
-      text-decoration: underline;
+
+  .list-speakers{
+    font-size: 11px;
+    font-weight:bold;
+  }
+  p.community-voting{
+    margin-right:5px;
+    margin-bottom:0;
+  }
+  form.fivestar-widget{
+    clear:none;
+    top: 5px;
+    position: relative;
+    .control-label{
+      display:inline;
     }
   }
 }
+
 .view-eclipsecon-session-list {
   .schedule-action-button{
     position:absolute;
