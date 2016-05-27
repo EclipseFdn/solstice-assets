@@ -11,20 +11,7 @@
 .track-mixin(@color) {
   background-color:lighten(@color, @track-bg-lighten-percent);
   &:after{
-    border-top: @track-color-triangle-size solid @color; 
-  }
-}
-
-td.track-col{
-  position:relative;
-  &:after {
-    position:absolute;
-    top:0;
-    right:0;
-    width: 0;
-    height: 0;
-    border-left: @track-color-triangle-size solid transparent;
-    content:"";
+    border-top: @track-color-triangle-size solid @color;
   }
 }
 
@@ -166,11 +153,11 @@ td.track-col{
   .track-mixin(#F9F44E);
 }
 
-.track-embedded-amp-iot{
+.track-embedded--iot{
   .track-mixin(#A96DF5);
 }
 
-.track-science-amp-locationtech{
+.track-science--locationtech{
   .track-mixin(#6ACFE8);
 }
 
@@ -178,23 +165,23 @@ td.track-col{
   .track-mixin(#a08d75);
 }
 
-.track-modern-applications-amp-technologies{
+.track-modern-applications--technologies{
   .track-mixin(#77ED6B);
 }
 
-.track-cloud-amp-devops{
+.track-cloud--devops{
   .track-mixin(#7983CE);
 }
 
-.track-eclipse-technologies-amp-community{
+.track-eclipse-technologies--community{
   .track-mixin(#FFA144);
 }
 
-.track-web-amp-cloud-development-amp-operations{
+.track-web-amp-cloud-development--operations{
   .track-mixin(#7FFF00);
 }
 
-.track-tools-ide-amp-devops{
+.track-tools-ide--devops{
   .track-mixin(#FF5F6A);
 }
 
