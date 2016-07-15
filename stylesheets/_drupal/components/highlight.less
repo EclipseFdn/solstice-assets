@@ -5,27 +5,38 @@
 // ----------------------------------------------------
 
 .view-solstice-highlight{
-  border-top:1px solid #c7c9cf;
-  border-bottom:1px solid #c7c9cf;
-  margin-bottom:3em;
-  text-align:center;
+  background:@highlight-background;
+  border-top:@highlight-border-top;
+  border-bottom:@highlight-border-bottom;
+  margin-bottom:@highlight-margin-bottom;
+  text-align:@highlight-text-align;
   .views-row{
-    border-left:1px solid #c7c9cf;
-
-    padding:40px 20px;
+    border-left:@highlight-vertical-borders;
+    padding:@highlight-items-padding;
   }
   i{
-    color:darken(@brand-info, .5);
-    font-size:3.8em;
+    color:@highlight-icon-color;
+    font-size:@highlight-icon-font-size;
   }
   .views-row.views-row-last{
-    border-right:1px solid #c7c9cf;
+    border-right:@highlight-vertical-borders;
+  }
+  h3 {
+    font-size:@highlight-h3-font-size;
+    color:@highlight-h3-color;
+    a {
+      color:@highlight-h3-color;
+      &:hover {
+        color:@highlight-h3-color-hover;
+      }
+    }
   }
 }
 
 .solstice-support-highlight-link-container{
+  background:@highlight-background;
   &:hover{
     cursor:pointer;
-    background:#f2f2f2;
+    background:@highlight-background-hover;
   }
 }
