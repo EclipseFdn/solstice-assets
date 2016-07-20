@@ -120,3 +120,18 @@ blockquote{
     padding-bottom:25px;
   }
 }
+
+.header-short-underline {
+  font-size:18px;
+  font-weight:bold;
+  &:after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 3px;
+    border-bottom: 2px solid;
+    margin: 0 auto;
+    top: 5px;
+  }
+}
