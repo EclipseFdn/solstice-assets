@@ -6,7 +6,7 @@
 /* Track colors */
 
 @track-color-triangle-size:50px;
-@track-bg-lighten-percent:25%;
+@track-bg-lighten-percent:22%;
 
 .track-mixin(@color) {
   background-color:lighten(@color, @track-bg-lighten-percent);
@@ -126,7 +126,7 @@
 }
 
 .track-introduction-to-the-eclipse-ecosystem{
-  .track-mixin(#FF69B4);
+  .track-mixin(lighten(#032b4c, 30%));
 }
 
 .track-keynote{
