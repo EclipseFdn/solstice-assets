@@ -134,3 +134,39 @@ footer#solstice-footer {
   }
 }
 
+// Bug 499502 - [drupal] - Allow admin to use a different footer on certain pages
+.footer-min{
+  background:@eclipse-highlight-grey;
+  border-top: 1px solid darken(@eclipse-highlight-grey, 25%);
+  position: absolute;
+  width:100%;
+  bottom:0px;
+  a{
+    font-weight:normal;
+    font-size:0.8em;
+  }
+  padding:10px 0;
+  p, ul{
+    margin-bottom:0;
+    font-size:0.8em;
+  }
+  ul{
+    text-align:right;
+    li{
+      padding-bottom:0;
+    }
+  }
+  @media screen and ( max-width: @screen-xs-max) {
+    p, ul{
+      text-align:center;
+    }
+  }
+}
+
+body.solstice-footer-min{
+  margin-bottom:36px;
+  position:initial;
+  @media screen and ( max-width: @screen-xs-max) {
+    margin-bottom:51px;
+  }
+}
