@@ -5,32 +5,26 @@
 // additional author: Edouard Poitras <edouard@eclipse.org>
 // -------------------------------------------------------
 
-.block-region-sidebar-second,
-.block-region-sidebar-first{
+.solstice-block{
   margin-bottom:2em;
   &.block-solstice-collapse{
     h2.block-title{
       padding-right:30px;
     }
   }
-
-  h2.block-title{
-    background:@blue-light;
-    color:#fff;
-    text-transform: uppercase;
-    font-size:16px;
-    padding:10px;
-    font-weight: 600;
-    margin:0;
-  }
-
   &.block-solstice-support-twitter{
     h2.block-title{
       background:@sidebar-twitter-h2-background;
     }
   }
-
-  a{
+   h2.block-title{
+    text-transform: uppercase;
+    font-size:16px;
+    padding:10px;
+    font-weight: 600;
+    margin:0;
+   }
+   a{
     &:link,
     &:visited{
       color: @gray;
@@ -40,6 +34,13 @@
       color:#3e3e3e;
       font-weight:600;
     }
+  }
+}
+
+.solstice-block-default{
+  h2.block-title{
+    background:@blue-light;
+    color:#fff;
   }
 }
 
@@ -94,3 +95,14 @@
     .make-md-column(12);
   }
 }
+
+.solstice-block-white-bg{
+    background:#fff;
+    border: 1px solid @gray-mid-light;
+    padding:15px;
+    h2.block-title{
+      background:transparent;
+      color:@solstice-block-white-bg-title-color;
+      border-bottom: 1px solid @solstice-block-white-bg-title-border-color;
+    }
+  }

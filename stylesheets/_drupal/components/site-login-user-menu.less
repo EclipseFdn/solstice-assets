@@ -1,0 +1,33 @@
+//
+// Site login user menu styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// -------------------------------------------------------
+.block-site-login-user-menu{
+  // offset content padding
+  margin-top:-20px;
+  margin-bottom:20px;
+}
+
+.solstice-sub-menu{
+  background:@site-login-user-menu-background;
+  color:@site-login-user-menu-color;
+  li {
+    padding-bottom:0;
+    a{
+      border-radius:0;
+      &:link,
+      &:visited{
+        color:@site-login-user-menu-color;
+        font-weight:300;
+      }
+      &:active,
+      &.active{
+      background: darken(@site-login-user-menu-background, 20%);
+      }
+      &:hover{
+       background: lighten(@site-login-user-menu-background, 20%);
+      }
+    }
+  }
+}
