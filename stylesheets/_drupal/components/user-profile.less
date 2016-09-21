@@ -4,6 +4,11 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // ----------------------------------------------------
 .solstice-user-profile{
+  @media (max-width: @screen-xs-max) {
+    .user-picture{
+      margin-bottom:15px;
+    }
+  }
   hr{
     margin-top:0;
   }
@@ -15,6 +20,9 @@
     ul{
       margin-bottom:0;
     }
+  }
+  li:last-child{
+    padding-bottom:0;
   }
   .social-media-links{
     a{
