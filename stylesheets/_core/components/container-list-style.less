@@ -1,0 +1,35 @@
+//
+// Ordered list styles
+//
+// author: Darrell Armstrong <darrell.armstrong@eclipse.org>
+// ------------------------------------------------------
+.container-list {
+  counter-reset: list;
+  padding-left: 55px;
+  > .list-row {
+     margin-top: 12px;
+     position: relative;
+    min-height: 3em;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -2em;
+      width: 1.8em;
+      height: 1.8em;
+      font-size: 1.2em;
+      padding: 6px 4px;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: bold;
+      color: #f5f5f5;
+      border-radius: 50%;
+      background-color: #b1b9de;
+      content: counter(list);
+      counter-increment: list;
+      display:block;
+    }
+    > div:first-child {
+      padding-left: .5em;
+    }
+  }
+}

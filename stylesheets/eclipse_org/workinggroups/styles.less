@@ -3,6 +3,7 @@
 @import '../../_core/_mixins.less';
 @import "../../../../bootstrap/less/variables.less";
 @import "../../_core/_variables.less";
+@import "../../_core/components/container-list-style.less";
 
 h1.heading {
   text-transform: capitalize;
@@ -24,35 +25,47 @@ h1.heading {
   padding:0;
   font-size:15px;
   cursor:pointer;
-  
+
   .container{
-     background: url("../images/globe.png") right bottom no-repeat;
-     min-height:401px;
+     background: url("../images/globe-md.png") right bottom no-repeat;
+     min-height:242px;
   }
-  
+
   .content{
     background: url("../images/jumbotron-arrow.gif") @blue-dark center top no-repeat;
-    margin-top:85px;
     padding:10px 20px;
   }
-  
+
   h1, h2{
     color:#fff;
     border:none;
   }
-  
+
   h1{
     font-size:34px;
     padding-bottom:0;
   }
-  
+
   h2{
     font-size: 18px;
     padding-top:0;
     font-weight: normal;
     line-height: 22px;
   }
-  
+}
+a.join-btn {
+  width:100%;
+  font-size: 14px;
+  margin:20px 0px;
+  background-color:#94c94c;
+  color:#fff;
+  &:hover{
+    background-color:#82b143;
+    color:#fff;
+  }
+  &:visited{
+    color:#fff;
+  }
 }
 
 /* Sub page */
@@ -67,7 +80,6 @@ h1.heading {
     .content{
       margin-top:15px;
       margin-bottom:15px;
-
     }
   }
 
@@ -80,7 +92,6 @@ h1.heading {
       span{
          color:@green-light;
          font-weight: bold;
-        
       }
     }
     p,li{
@@ -96,10 +107,10 @@ h1.heading {
 #services{
   text-align:center;
   .circle{
-    width: 120px;
-    height: 120px;
-    font-size:5.6em;
-    margin:0.5em auto;
+    width: 52px;
+    height: 52px;
+    font-size:2.3em;
+    margin:0.3em auto 0.4em;
     padding:0;
     .fa{
       font-size:0.8em;
@@ -114,12 +125,13 @@ h1.heading {
       background:#0c0c0c;
     }
     p.readmore{
-      padding-bottom:2em;
+      padding-bottom:.5em;
     }
   }
   h3{
+    margin-top:0;
     border-bottom:0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color:@green-light;
     clear:both;
   }
@@ -139,11 +151,11 @@ h1.heading {
   li{
    width:20%;
    padding-left:3%;
-   font-size:13px;  
+   font-size:13px;
    a:link,
    a:visited{
      color: @green-light;
-     font-weight:normal;   
+     font-weight:normal;
    }
    span{
     display:block;
@@ -155,9 +167,9 @@ h1.heading {
   .more-space{
     width:23%;
   }
-  .glyphicon{         
+  .glyphicon{
     float:left;
-  }  
+  }
 }
 /* Sub page separator */
 .content-sep{
@@ -330,7 +342,7 @@ h1.heading {
   .container{
      padding:0;
   }
-  
+
   a:link,
   a:visited{
      color:#777777;
@@ -340,26 +352,43 @@ h1.heading {
     color:#b0b0b0;
   }
 }
-
+/* Modern larger screen mobile */
+@media (min-width: 400px) {
+  a.join-btn{
+    font-size:18px;
+  }
+}
+/* Modern larger screen mobile & ipad */
+@media (min-width: 768px) {
+  #services{
+    .highlights{
+      height:144px;
+      margin-right:30px;
+      .readmore{
+        bottom:0;
+      }
+    }
+  }
+  .last-highlight{
+    margin-right:0 !important;
+  }
+  a.join-btn{
+    margin:20px 0px 0px 0px;
+  }
+}
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .black-section{
+  #services{
      .highlights{
        text-align:center;
+       margin-right:40px;
      }
   }
   .circle{
       margin-left:0;
       margin-right:0;
   }
-  #services{
-    .highlights{
-      height:535px;
-      .readmore{
-        bottom:0;
-      }
-    }
-  }
+
   h1.heading {
     margin-bottom: 1em;
   }
@@ -378,12 +407,16 @@ h1.heading {
       width: 410px;
     }
   }
+   a.join-btn {
+     width: 410px;
+   }
 }
+/* Medium devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #services{
-    .highlights{
-      height:465px;
-    }
+#services{
+     .highlights{
+       height:136px;
+       margin-right:48px;
+     }
   }
 }
-
