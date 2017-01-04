@@ -1,47 +1,19 @@
-.field-name-field-project-build-description {
-  font-size: 16px;
-}
-
-.field-name-field-project-build-technologies,
-.field-name-field-project-build-doc {
-  float: left;
-  width: 35%;
-}
-
 .field-name-field-project-build-url {
-  float: left;
-  width: 90%;
-  padding-left: 10%;
   table {
-    border-color: @project-build-border-color;
-    border-width: 1px;
-    border-style: solid;
-    width: 100%;
     tr {
-      th {
-        width: 80%;
-        text-transform: uppercase;
-        border-color: @project-build-border-color;
-        border-width: 1px;
-        border-style: solid;
-        background-color: @project-build-header-background-color;
-        color: @eclipse-light-grey;
-        padding: 10px;
-      }
       td {
-        border-color: @project-build-border-color;
-        border-width: 1px;
-        border-style: solid;
-        padding: 10px;
         &.build-status {
           text-align: center;
+        }
+        &.build-url {
+          width: 75%;
         }
         i {
           font-size: 18px;
           &.build-none {
             display: none;
           }
-          &.build-in_progress {
+          &.build-in-progress {
             color: blue;
           }
           &.build-success {
@@ -53,8 +25,11 @@
           &.build-unstable{
             color: yellow;
           }
-          &.build-failure{
+          &.build-failed{
             color: red;
+          }
+          &.build-status-code{
+            font-size: 12px;
           }
         }
       }
@@ -62,8 +37,13 @@
   }
 }
 
+.field-name-field-project-build-technologies,
+.field-name-field-project-build-doc,
+.field-name-field-project-build-description {
+  padding-bottom: 15px;
+}
+
 .field-name-field-project-build-technologies {
-  margin-left: 15%;
   .field-label {
     padding-bottom: 10px;
   }
