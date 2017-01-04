@@ -1,64 +1,16 @@
-div.block-content > div.field-name-field-project-bugzilla {
-  margin-bottom: 20px;
-  margin-right: -20px;
-  margin-left: -20px;
-  margin-top: -30px;
-  height: 70px;
-  background-color: @eclipse-highlight-grey;
-  ul {
-    position: relative;
-    right: 30px;
-    li {
-      text-align: center;
-      list-style: none;
-      list-style-image: none!important;
-      padding-top: 25px;
-      float: left;
-      width: 25%;
-      span {
-        a {
-          color: grey;
-          padding: 10px;
-          border-radius: 25px;
-          &:hover {
-            background-color: white;
-          }
-        }
-        &.bugzilla-bug-add a:before {
-          content: "\f188";
-          padding-right: 5px;
-          color: @brand-info;
-          font-family: FontAwesome;
-        }
-        &.bugzilla-bug-helpwanted a:before {
-          content: "\f059";
-          padding-right: 5px;
-          color: @brand-info;
-          font-family: FontAwesome;
-        }
-        &.bugzilla-bug-find a:before {
-          content: "\f002";
-          padding-right: 5px;
-          color: @brand-info;
-          font-family: FontAwesome;
-        }
-        &.bugzilla-bug-summary a:before {
-          content: "\f080";
-          padding-right: 5px;
-          color: @brand-info;
-          font-family: FontAwesome;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 490px) {
-  div.block-content > div.field-name-field-project-bugzilla {
-    height : 145px;
-    ul {
-      li {
-        width: 50%;
+//
+// Bugzilla Field navbar styles
+//
+// author: Darrell Armstrong <darrell.armstrong@eclipse.org>
+// -------------------------------------------------------
+.navbar-bugzilla {
+  li {
+    display: inline-block;
+    float: none;
+    > a {
+      color: @main-menu-link-color;
+      > i {
+        color: @brand-info;
       }
     }
   }
