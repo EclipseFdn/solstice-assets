@@ -9,6 +9,7 @@
     overflow-x: scroll;
     > .table > tbody > tr > td {
       white-space: inherit;
+      border-top:1px solid #666;
     }
     > .fixed-column {
       position: absolute;
@@ -41,7 +42,7 @@
     padding:10px;
     background:lighten(@gray, 30%);
     color:#fff;
-    max-width:107px;
+    width:107px;
   }
   .view-header{
     h2:after {
@@ -96,6 +97,7 @@
       }
       .speakers{
         font-size: 11px;
+        max-width:200px;
       }
     }
   }
