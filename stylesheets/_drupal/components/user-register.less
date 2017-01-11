@@ -1,0 +1,53 @@
+//
+// User register form
+//
+// author: Christopher Guindon <chris.guindon@eclipse.org>
+// ----------------------------------------------------
+
+.page-user-register h1{
+  margin-bottom:40px;
+}
+
+.solstice-user-register-form{
+  background:@eclipse-highlight-grey;
+  border: 1px solid darken(@eclipse-highlight-grey, 25%);
+  padding:30px;
+
+  .has-feedback label~.form-control-feedback{
+    top:48px;
+  }
+
+  .field-type-addressfield .panel-body{
+    padding:0;
+  }
+
+  .hidden-label label{
+    .sr-only;
+  }
+
+  .row,
+  .form-item-pass .form-item {
+    padding-bottom:15px;
+  }
+
+  .row.padding-bottom-0{
+    padding-bottom:0;
+  }
+
+  .form-group{
+   margin-bottom:0;
+  }
+
+  i{
+    padding-top:3px;
+  }
+
+  h3{
+    margin-top:0;
+    margin-bottom:20px;
+  }
+
+  #edit-actions{
+    margin-bottom:0;
+  }
+}
