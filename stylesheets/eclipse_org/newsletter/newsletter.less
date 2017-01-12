@@ -16,6 +16,9 @@
   @media (max-width: 1200px) {
     height:205px;
   }
+  @media (max-width: 768px) {
+    margin-bottom:15px;
+  }
   &:before {
     content: '';
     display: inline-block;
@@ -42,9 +45,19 @@
 
 .centered-hover-item {
   position:absolute;
-  display:none;
+  opacity:0;
+  display:table;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  &:hover {
+    opacity:1;
+    text-decoration:none;
+  }
   z-index:9;
   top:0;
+  left:0;
   height:260px;
   @media (max-width: 1200px) {
     height:205px;
@@ -54,16 +67,28 @@
   padding: 20px;
   white-space: normal;
   color:#fff;
-  h3{
+  .item-title, .item-description{
     color:#fff;
+    display:block;
+    margin-bottom:10px;
+  }
+  .item-title {
+    text-transform: uppercase;
+    font-size:18px;
+    font-weight:300;
+  }
+  .item-description {
+    @media (max-width: 1200px) {
+      display:none;
+    }
   }
   .arrow {
     font-size:2em;
     color:#fff;
-    &:hover {
-      color:darken(#fff, 20%);
-      text-decoration:none;
-    }
+  }
+  .centered-vertical-item {
+    display:table-cell;
+    vertical-align:middle;
   }
 }
 
@@ -72,7 +97,6 @@
   padding:15px 0;
   .sponsored-by-neon{
     margin-bottom:0;
-    margin-top:10px;
     color:#9e9e9e;
     @media (max-width: 768px) {
       text-align:center;
@@ -80,7 +104,9 @@
     }
   }
   .neon-logo{
-    width:100px;
+    max-width:150px;
+    max-height:50px;
+    margin-left: 10px;
   }
   .google-search-archive {
     margin-bottom:0;
@@ -97,15 +123,8 @@
 .featured-container {
   background-image:url('/community/eclipse_newsletter/assets/public/images/featured-newsletter-bg.jpg');
   background-size:cover;
-  @media (min-width: 992px) {
-    //height:260px * 2;
-  }
-  @media (max-width: 1200px) {
-    //height:205px * 2;
-  }
-  h2, h3 {
+  h2, h3, .item-title {
     color:#fff;
-    text-transform: uppercase;
   }
   h2 {
     font-size:3em;
@@ -137,9 +156,6 @@
       display: inline-block;
       vertical-align: middle;
       width: 260px;
-      @media (min-width: 992px) {
-        
-      }
     }
   }
   .featured-title-container {
@@ -169,6 +185,7 @@
     }
     @media (max-width: 991px) {
       margin-bottom:50px;
+      text-align:center;
     }
   }
 }
