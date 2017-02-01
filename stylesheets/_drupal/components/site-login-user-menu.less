@@ -3,7 +3,7 @@
 //
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
-.block-site-login-user-menu{
+.block-sld-user-menu{
   // offset content padding
   margin-top:-20px;
   margin-bottom:20px;
@@ -27,6 +27,12 @@
       }
       &:hover{
        background: lighten(@site-login-user-menu-background, 20%);
+      }
+      &.item-danger{
+        background:@brand-danger;
+      }
+      &.item-success{
+        background:@brand-success;
       }
     }
   }
