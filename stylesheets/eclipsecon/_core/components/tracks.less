@@ -6,12 +6,19 @@
 /* Track colors */
 
 @track-color-triangle-size:50px;
-@track-bg-lighten-percent:22%;
+@track-bg-percent:22%;
 
 .track-mixin(@color) {
-  background-color:lighten(@color, @track-bg-lighten-percent);
+  background-color:lighten(@color, @track-bg-percent);
   &:after{
     border-top: @track-color-triangle-size solid @color;
+  }
+}
+
+.track-mixin-dark-corner(@color) {
+  background-color:@color;
+  &:after{
+    border-top: @track-color-triangle-size solid darken(@color, @track-bg-percent);
   }
 }
 
@@ -222,25 +229,25 @@
 }
 
 .track-data-big-little-and-everything-in-between {
-  .track-mixin(#77ed6b);
+  .track-mixin-dark-corner(#77ed6b);
 }
 
 .track-gis-case-studies {
-  .track-mixin(#545eab);
+  .track-mixin-dark-corner(#a1acff);
 }
 
 .track-uavs---drones {
-  .track-mixin(#fb7085);
+  .track-mixin-dark-corner(#ffb6c1);
 }
 
 .track-esri-knowledge-sharing {
-  .track-mixin(#d1e07f);
+  .track-mixin-dark-corner(#f0faba);
 }
 
 .track-open-source-tools-and-technology-innovations {
-  .track-mixin(#e88c09);
+  .track-mixin-dark-corner(#e88c09);
 }
 
 .track-mobile-geo {
-  .track-mixin(#ff69b4);
+  .track-mixin-dark-corner(#ff69b4);
 }
