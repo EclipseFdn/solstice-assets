@@ -281,8 +281,62 @@
 }
 
 // Colors
+.brand-primary{
+  color:@brand-primary;
+}
+
+.brand-secondary{
+  color:@brand-secondary;
+}
+
+.brand-success{
+  color:@brand-success;
+}
+
+.brand-info{
+  color:@brand-info;
+}
+
+.brand-warning{
+  color:@brand-warning;
+}
+
+.brand-danger{
+  color:@brand-danger;
+}
+
 .orange {
-  color: @eclipse-orange;
+  color: @orange;
+}
+
+.background-orange {
+  background: @orange;
+  color: @black;
+  select {
+    color: @black;
+  }
+}
+
+tr.background-orange{
+  background: lighten(@orange, 20%);
+}
+
+.table-hover>tbody>tr.background-orange:hover{
+   background: @orange;
+}
+
+.background-blue {
+  /* @todo: consider user @blue */ 
+  background: @brand-info;
+  color: @white;
+}
+
+.blue{
+  color: @blue;
+}
+
+.darkblue{
+  color: darken(@blue, 20%);
 }
 
 .yellow {
@@ -290,29 +344,36 @@
 }
 
 .red {
-  color: red;
+  color: @red;
+}
+
+.lightred {
+  color: lighten(@red, 25%);
+}
+
+.darkred {
+  color: darken(@red, 20%);
 }
 
 .green {
   color: green;
 }
 
+.black{
+  color:@black;
+}
+
 .gray-light {
   color: @gray-light;
 }
 
-// Background colors
-.background-orange {
-  background: @eclipse-orange;
-  color: #000;
-  select {
-    color: #000;
-  }
+.gray{
+  color: darken(#f5f5f5, 35%);
 }
 
 .background-charcoal {
   background: #2f2f31;
-  color: #fff;
+  color: @white;
   select {
     color: #2f2f31;
   }
@@ -323,21 +384,17 @@
 }
 
 .background-purple {
-  background: #2c2255;
-  color: #fff;
+  background: @purple;
+  color: @white;
   select {
     color: #2f2f31;
   }
 }
 
-.background-blue {
-  background: @brand-info;
-  color: #FFF;
+.background-white {
+  background: @white;
 }
 
-.background-white {
-  background: #fff;
-}
 
 #novaContent.background-image-none {
   background-image: none;
@@ -494,7 +551,7 @@ img.desaturate {
 .table.table-solstice {
   th {
     background: @brand-info;
-    color: #fff;
+    color: @white;
     vertical-align: middle;
     &:nth-child(even) {
       background: #40bbdc;
