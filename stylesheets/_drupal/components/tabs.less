@@ -23,12 +23,13 @@
     a {
       margin: 0;
       padding: 1.4em;
-      border: none;
+      border: 1px solid @solstice-tabs-background;
       border-radius: 0;
       font-weight: @solstice-tabs-font-weight;
       color: @solstice-tabs-color;
       background-color: @solstice-tabs-background;
       &:hover {
+        border: 1px solid @solstice-tabs-hover;
         color:  @solstice-tabs-hover-color;
         background-color: @solstice-tabs-hover;
       }
@@ -36,7 +37,7 @@
     &.selected a,
     a.active,
     a.active:hover{
-      border: none;
+      border: 1px solid @solstice-tabs-hover;
       font-weight: @solstice-tabs-active-font-weight;
       color: @solstice-tabs-hover-color;
       background-color: @solstice-tabs-hover;
@@ -49,7 +50,7 @@
       }
     }
     a:focus {
-      border: none;
+      border: 1px solid @solstice-tabs-hover;
       color: @solstice-tabs-hover-color;
       background-color: @solstice-tabs-hover;
     }
