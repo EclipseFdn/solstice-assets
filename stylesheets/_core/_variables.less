@@ -155,14 +155,16 @@
 
 //== Tabs
 
-@solstice-tabs-background: #000;
-@solstice-tabs-color: grey;
+@solstice-tabs-background: lighten(@gray, 75%);
+@solstice-tabs-color: @gray;
 @solstice-tabs-font-weight: normal;
-@solstice-tabs-hover: @brand-warning;
-@solstice-tabs-hover-color: #fff;
-@solstice-tabs-active-font-weight: bold;
-@solstice-tabs-chevron: url('@{image-path}/components/tabs-menu/chevron.png');
-@solstice-tabs-border: 1px solid #dfdfdf;
+@solstice-tabs-hover: lighten(@gray, 65%);
+@solstice-tabs-active-hover: @white;
+@solstice-tabs-active-color:@gray;
+@solstice-tabs-hover-color: @gray;
+@solstice-tabs-active-font-weight: normal;
+@solstice-tabs-border: 1px solid lighten(@gray, 75%);
+@solstice-tabs-pane-background-color:transparent;
 
 //== About Author
 
