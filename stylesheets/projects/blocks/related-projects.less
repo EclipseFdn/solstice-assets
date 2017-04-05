@@ -1,8 +1,4 @@
-#block-project-blocks-related-projects {
-  h4 {
-    color: darken(@brand-info, 10%);
-    font-weight: bold;
-  }
+.block-related-projects {
   a {
     margin-left : 5px;
   }
@@ -12,7 +8,7 @@
     margin-bottom: 0px;
     padding-left: 10px;
   }
-  ul.related-projects-block-related-list > li {
+  ul.related-projects-block-related-list li.item-container {
     font-weight: 600;
     &:before {
       content: "";
@@ -23,7 +19,8 @@
     &.hierarchy-1 { }
     &.hierarchy-2 { margin-left: 10px; }
     &.hierarchy-3 { margin-left: 20px; }
-    &:before {
+    
+    &.ellipsis:before, &:before {
       content: "\00BB";
       color: @brand-warning;
       font-family: FontAwesome;
