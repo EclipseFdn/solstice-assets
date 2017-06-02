@@ -4,20 +4,34 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-
-.solstice-modal {
-  .modal-content {
-    padding: 10px;
-  }
-
-  .modal-title {
-    font-weight: 600;
-    font-size: 22px;
-  }
-
-  .modal-content-container {
-    border: 1px solid #eee;
-    padding: 0px 20px;
+.modal{
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+    }
   }
 }
 
+.modal-title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.modal-content{
+  border-radius: 0;
+}
+
+.modal-content-container {
+  border: 1px solid #eee;
+  padding: 0px 20px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
