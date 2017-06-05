@@ -80,7 +80,10 @@ body {
   background-repeat:no-repeat;
   background-size:contain;
   height:340px;
-  padding:60px 0;
+  padding:30px 0 60px;
+  @media (min-width: @min-width-tablet) {
+    padding:60px 0;
+  }
   position:relative;
   @media (max-width: @max-width-mobile) {
     height:200px;
@@ -94,6 +97,18 @@ body {
     @media (min-width: @min-width-tablet) and (max-width: @max-width-tablet) {
       .container-after(@oxygen-header-logo-url, 100%, 150px, 0, auto);
       background-position: -375px 30px;
+    }
+  }
+  .release-date {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    @media (min-width: @min-width-tablet) {
+      font-size: 55px;
+      padding-top: 70px;
+    }
+    @media (max-width: @max-width-mobile) {
+      padding-left:20px;
     }
   }
 }
