@@ -241,8 +241,12 @@ body {
   .webinars-icon-wrapper{
     border-radius: 115px;
     overflow: hidden;
-    margin-bottom: 20px;
     border:8px solid @oxygen-link-color;
+    @media (max-width: @max-width-tablet) {
+      width: 175px;
+      height: 175px;
+    }
+    margin: 0 auto 20px;
   }
   .webinars-icon-text {
     color:darken(#fff, 20%);
@@ -250,7 +254,6 @@ body {
   }
   .webinars-icon {
     @media (max-width: 1023px) {
-      width:100px;
       margin-bottom:30px;
     }
   }
