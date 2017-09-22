@@ -33,11 +33,21 @@
       }
     }
   }
+  .alert {
+    .form-group, 
+    .help-block{
+      margin-bottom:0;
+    }
+    .btn{
+      width:100%;
+    }
+  }
 }
 
 .form-credit-card-processing{
   background-color:#fff;
 }
+
 
 .column-credit-card-info-right{
   label{
@@ -53,4 +63,14 @@
   .submit-button {
     margin-left:15px;
   }
+}
+
+
+// This element is created with javascript.
+// We could override the .js from the stripe module
+// but that could become problematic if the JS change 
+// in the future.
+.stripe-errors{
+  .alert;
+  .alert-danger;
 }
