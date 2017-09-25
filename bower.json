@@ -21,6 +21,6 @@
     "fontawesome": "4.7.0",
     "bootstrapValidator": "~0.5.3",
     "jquery-migrate": "1.2.1",
-    "matchHeight": "~0.5.2"
+    "matchHeight": "~0.7.2"
   }
 }
