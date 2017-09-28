@@ -28,6 +28,24 @@ html {
   ul {
     margin-bottom: 0;
   }
+  .toolbar-left-content {
+    span {
+      font-size:18px;
+      @media (max-width : 767px) {
+        padding-top:10px;
+        text-align:center;
+        display:block;
+      }
+      @media (min-width : 768px) {
+        border-left: 5px solid #f7941e;
+        padding-left:10px;
+      }
+    }
+    a {
+      font-weight:bold;
+      color:@brand-warning;
+    }
+  }
 }
 
 // Alternative style
