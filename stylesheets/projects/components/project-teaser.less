@@ -4,36 +4,35 @@
 // author: Christopher Guindon <chris.guindon@eclipse.org>
 // -------------------------------------------------------
 
-.view-list-of-projects .view-filters{
-  padding-bottom:20px;
-  margin-bottom:30px;
-  border-bottom:1px solid fade(@black, 10%);
-  text-align:center;
+.solstice-list-of-projects{
   form {
+    padding-bottom:20px;
+    margin-bottom:30px;
+    border-bottom:1px solid fade(@black, 10%);
     text-align:center;
   }
   .views-exposed-widgets {
     display: inline-block;
   }
-  .views-exposed-form .views-exposed-widget{
+  .views-exposed-widget{
     @media (max-width: @screen-sm-min) {
       float:none;
     }
     .btn{
       margin-top:0;
     }
-    &.views-widget-filter-field_archived_projects {
-      .form-item-field-archived-projects {
-        label {
-          margin-bottom:13px;
-        }
+  }
+  .views-widget-filter-field_archived_projects {
+    .form-item-field-archived-projects {
+      label {
+        margin-bottom:13px;
       }
     }
-    &.views-submit-button {
-      @media (min-width: @screen-sm-min) {
-        margin-top:25px;
-        padding-right:0;
-      }
+  }
+  @media (min-width: @screen-sm-min) {
+    .views-submit-button {
+      margin-top:25px;
+      padding-right:0;
     }
   }
 }
