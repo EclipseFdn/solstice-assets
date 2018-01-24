@@ -18,7 +18,10 @@
     strong{
       font-weight: @solstice-tabs-font-weight;
     }
-    a {
+    span {
+      display:block;
+    }
+    a, span {
       position:relative;
       border: 1px solid @solstice-tabs-background;
       border-right:none;
@@ -28,12 +31,12 @@
       font-weight: @solstice-tabs-font-weight;
       color: @solstice-tabs-color;
       background-color: @solstice-tabs-background;
-      &:hover {
-        border: 1px solid @solstice-tabs-background;
-        border-right:none;
-        color:  @solstice-tabs-hover-color;
-        background-color: @solstice-tabs-hover;
-      }
+    }
+    a:hover {
+      border: 1px solid @solstice-tabs-background;
+      border-right:none;
+      color:  @solstice-tabs-hover-color;
+      background-color: @solstice-tabs-hover;
     }
     &.active > a,
     &.selected a,
