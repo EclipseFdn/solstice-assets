@@ -164,48 +164,74 @@
   h3 {
     clear:both;
   }
-  .schedule-items {
-    margin-bottom:40px;
-    padding:5px;
-    border:1px solid #ccc;
-    border-top:5px solid #ccc;
-    .views-field-title, .views-field-name {
-      margin-bottom:10px;
+}
+
+.eclipsecon-schedule-items {
+  margin-bottom:40px;
+  padding:5px;
+  border:1px solid #ccc;
+  border-top:5px solid #ccc;
+  .flag {
+    &:before {
+      font-family: FontAwesome;
+      position:absolute;
+      display:block;
+      left:-20px;
+      width:20px;
+      height:20px;
     }
-    .views-field-title {
-      a {
-        font-size:16px;
-        font-weight:normal;
-        text-transform:uppercase;
-      }
+  }
+  .flag-action {
+    &:before {
+      content: "\f067";
+      color:green;
     }
-    .views-field-field-speakers {
-      .field-content {
-        padding:5px;
-        background-color:@brand-secondary;
-        color:#fff;
-        a {
-          font-weight:normal;
-          color:#fff;
-          &:hover {
-            text-decoration:underline;
-          }
-        }
-      }
+  }
+  .unflag-action {
+    &:before {
+      content: "\f00d";
+      color:red;
     }
-    .views-field-name .field-content {
-      position:relative;
-      margin-left:15px;
-      &:before {
-        font-family: FontAwesome;
-        content: "\f041";
-        left:-20px;
-        position:absolute;
-        top:-1px;
-        display:block;
-        width:20px;
-        height:20px;
-      }
+  }
+}
+
+.eclipsecon-schedule-items-title, .eclipsecon-schedule-items-room {
+  margin-bottom:10px;
+}
+.eclipsecon-schedule-items-title {
+  display:block;
+  a {
+    font-size:16px;
+    font-weight:normal;
+    text-transform:uppercase;
+  }
+}
+
+.eclipsecon-schedule-items-room {
+  position:relative;
+  display:inline-block;
+  margin-left:15px;
+  &:before {
+    font-family: FontAwesome;
+    content: "\f041";
+    left:-20px;
+    position:absolute;
+    top:-1px;
+    display:block;
+    width:20px;
+    height:20px;
+  }
+}
+
+.eclipsecon-schedule-items-speakers {
+  padding:5px;
+  background-color:@brand-secondary;
+  color:#fff;
+  a {
+    font-weight:normal;
+    color:#fff;
+    &:hover {
+      text-decoration:underline;
     }
   }
 }
