@@ -23,6 +23,23 @@
   }
 }
 
+.eclipsecon-taxonomy-term-tracks {
+  &:hover {
+    cursor:pointer;
+    a {
+      color:@brand-tertiary;
+      border-bottom:1px solid @brand-tertiary;
+    }
+  }
+  .field-name-field-track-icon {
+    margin-bottom:10px;
+  }
+  a {
+    text-transform:uppercase;
+    font-weight:normal;
+  }
+}
+
 .eclipsecon-schedule-tracks {
   text-align:center;
   ul {
@@ -41,16 +58,6 @@
       cursor:pointer;
       margin-bottom:30px;
       display:inline-grid;
-      .views-field-name {
-        margin-top:10px;
-        .field-content {
-          text-transform:uppercase;
-          &:hover {
-            color:@brand-tertiary;
-            border-bottom:1px solid @brand-tertiary;
-          }
-        }
-      }
     }
   }
 }
