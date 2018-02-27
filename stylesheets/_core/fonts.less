@@ -12,8 +12,16 @@ h1,h2,h3,h4,h5,h6 {
 h1{
   margin-bottom:25px;
 }
+
+// Apply this on all the links except the buttons
 a{
-  font-weight:bold;
+  color:@brand-links-color;
+  &:hover {
+    color:darken(@brand-links-color, 10%);
+  }
+  &:visited {
+    color:@brand-links-visited-color;
+  }
 }
 
 a[name], a[name]:hover {

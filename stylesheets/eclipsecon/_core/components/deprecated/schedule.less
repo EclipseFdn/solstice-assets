@@ -72,6 +72,7 @@
     font-size:1.2em;
     display:block;
     white-space:normal;
+    color:@brand-primary;
   }
   td.node-type-schedule-item{
     vertical-align:middle;
@@ -84,7 +85,13 @@
   }
   td {
     div.session-details{
-    display:block;
+      display:block;
+      a {
+        color:@brand-primary;
+        &:visited {
+          color:@brand-primary;
+        }
+      }
       span{
         display:block;
         clear:both;

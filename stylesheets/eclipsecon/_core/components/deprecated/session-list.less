@@ -11,6 +11,15 @@
     background-color: #384b5e;
     color: #ffffff;
   }
+  h3 {
+    a {
+      color:@brand-primary;
+      font-weight:bold;
+      &:visited {
+        color:@brand-primary;
+      }
+    }
+  }
 
   .track-col{
     padding-right:30px;
@@ -37,6 +46,12 @@
         color:@black;
       }
     }
+    a {
+      color:@brand-primary;
+      &:hover, &:visited {
+        color:@brand-primary;
+      }
+    }
     a:hover{
       text-decoration: underline;
     }
@@ -45,6 +60,12 @@
   .list-speakers{
     font-size: 11px;
     font-weight:bold;
+     a {
+      color:@brand-primary;
+      &:hover, &:visited {
+        color:@brand-primary;
+      }
+    }
   }
   p.community-voting{
     margin-right:5px;

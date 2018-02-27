@@ -8,6 +8,15 @@
 .btn {
   text-transform: uppercase;
   font-weight: 700;
+  &:visited {
+    color:@white;
+  }
+}
+
+.btn-default {
+  &:visited {
+    color:#333;
+  }
 }
 
 .btn-white {
@@ -16,6 +25,9 @@
   color: #0b0a0f;
   &:hover {
     background: transparent;
+  }
+  &:visited {
+    color:#333;
   }
 }
 
@@ -59,6 +71,9 @@
 .btn-simple {
   border: 1px solid #ccc;
   text-transform: capitalize;
+  &:visited {
+    color:inherit;
+  }
   &:hover , &:active {
     border: 1px solid @gray-light;
     background: @gray-lighter;
@@ -97,6 +112,9 @@
   text-align:center;
   padding:10px 15px;
   font-weight:normal;
+  &:visited {
+    color:#2d2252;
+  }
   &:hover {
     text-decoration:none;
     background:#2d2252;

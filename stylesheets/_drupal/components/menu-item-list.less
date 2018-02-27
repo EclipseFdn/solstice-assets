@@ -12,7 +12,6 @@
       width:100%;
       display:block;
       outline:none;
-      text-decoration: none;
     }
   }
   .fa{
@@ -21,6 +20,12 @@
   li{
     list-style:none;
     font-size:16px;
+    a {
+      color:@brand-primary;
+      &:visited {
+        color:@brand-primary;
+      }
+    }
   }
   ul{
     padding:0 0 0 8px;
