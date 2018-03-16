@@ -1,0 +1,404 @@
+//
+// eclipse.org/org/workinggroups styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+//-------------------------------------------------------------------
+
+@import '../../_core/_mixins.less';
+@import "../../../../bootstrap/less/variables.less";
+@import "../../_core/_variables.less";
+
+h1.heading {
+  text-transform: capitalize;
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+  border-bottom:0;
+  text-align: center;
+  background: #fff;
+  color:#434868;
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+/* Landing page banner */
+.jumbotron {
+  background: url("../images/bg-wave.jpg") center bottom repeat-x #fff;
+  margin-bottom: 0;
+  padding:0;
+  font-size:15px;
+  cursor:pointer;
+  
+  .container{
+     background: url("../images/globe.png") right bottom no-repeat;
+     min-height:401px;
+  }
+  
+  .content{
+    background: url("../images/jumbotron-arrow.gif") @blue-dark center top no-repeat;
+    margin-top:85px;
+    padding:10px 20px;
+  }
+  
+  h1, h2{
+    color:#fff;
+    border:none;
+  }
+  
+  h1{
+    font-size:34px;
+    padding-bottom:0;
+  }
+  
+  h2{
+    font-size: 18px;
+    padding-top:0;
+    font-weight: normal;
+    line-height: 22px;
+  }
+  
+}
+
+/* Sub page */
+.subpage {
+   background:#fff;
+  .jumbotron{
+    border-bottom:3px solid @gray-mid-light;
+    .container{
+      background: url("../images/globe-sm.png") 90% top no-repeat;
+      min-height:140px;
+    }
+    .content{
+      margin-top:15px;
+      margin-bottom:15px;
+
+    }
+  }
+
+  /* About intro */
+  .intro{
+    h1#wg-intro{
+      font-size:23px;
+      line-height: 29px;
+      font-weight: normal;
+      span{
+         color:@green-light;
+         font-weight: bold;
+      }
+    }
+    p,li{
+      color:#696969;
+    }
+    ol{
+     margin-bottom:20px;
+    }
+  }
+}
+
+/* Home page hightlights */
+#services{
+  text-align:center;
+  .circle{
+    width: 120px;
+    height: 120px;
+    font-size:5.6em;
+    margin:8px auto;
+    padding:0;
+    .fa{
+      font-size:0.8em;
+    }
+  }
+  .highlights{
+    font-size: 1em;
+    position:relative;
+    cursor:pointer;
+    padding-top:10px;
+    &:hover{
+      background:#0c0c0c;
+    }
+    p.readmore{
+      padding-bottom:32px;
+    }
+  }
+  h3{
+    border-bottom:0;
+    font-size: 1.2em;
+    color:@green-light;
+    clear:both;
+  }
+  p{
+    color:#b0b0b0;
+  }
+}
+
+#navbar-workinggroup{
+  .navbar-nav > li > a{
+   padding:10px 0;
+   background:none;
+  }
+  .navbar-collapse{
+   padding:0;
+  }
+  li{
+   width:20%;
+   padding-left:3%;
+   font-size:13px;  
+   a:link,
+   a:visited{
+     color: @green-light;
+     font-weight:normal;   
+   }
+   span{
+    display:block;
+   }
+  }
+  .less-space{
+    width:19%;
+  }
+  .more-space{
+    width:23%;
+  }
+  .glyphicon{         
+    float:left;
+  }  
+}
+/* Sub page separator */
+.content-sep{
+  background:url("../images/bg-content-sep.png")  repeat-x;
+  height: 13px;
+  span{
+   display:block;
+   height:13px;
+   width:26px;
+   margin:auto;
+   background:url("../images/purple-arrow.png");
+  }
+}
+
+/* Lines on each side of landing page title */
+.page-heading-row.row{
+  background: url("../images/bg-heading-side.gif") 50% repeat-x;
+}
+
+.content-block{
+   padding:20px 0;
+   h1, h2{
+     border-bottom:0;
+     margin-top:0;
+  }
+  h2{
+    font-size:18px;
+    font-weight: bold;
+  }
+  .circle{
+    width: 33px;
+    height: 33px;
+    margin-top: 5px;
+    margin-right:10px;
+    padding-top: 7px;
+    font-size:17px;
+    float:left;
+  }
+}
+
+.sectors{
+  background:#ffffff;
+  color:#696969;
+  h2{
+   padding-top:0;
+  }
+  font-weight:normal;
+  hr{
+   margin:0 15px;
+   border-color:#eaeaea;
+  }
+}
+
+
+/* Home page Working groups */
+.wg-item {
+  padding-bottom: 32px;
+  h2, h3 {
+  border-bottom: 0;
+  }
+
+  .gemoc-rc {
+    .content{
+      background-image:url("../images/wg-bg-gemoc-rc.png");
+    }
+  }
+
+  .machine-to-machine{
+      .content{
+        background-image:url("../images/wg-bg-m2m.gif");
+      }
+  }
+  .capella-ic{
+    .content{
+      background-image:url("../images/wg-bg-capella.gif");
+    }
+  }
+  .polarsys{
+      .content{
+        background-image:url("../images/wg-bg-polarsys.gif");
+      }
+  }
+  .long-term-support{
+      .content{
+        background-image:url("../images/wg-bg-lts.gif");
+      }
+  }
+  .automotive{
+      .content{
+        background-image:url("../images/wg-bg-automotive.gif");
+      }
+  }
+  .locationtech{
+      .content{
+        background-image:url("../images/wg-bg-locationtech.gif");
+      }
+  }
+  .openmdm{
+      .content{
+        background-image:url("../images/wg-bg-mdm.png");
+      }
+  }
+  .science{
+    .content{
+      background-image:url("../images/wg-bg-science.jpg");
+    }
+  }
+  .internet-of-things{
+    .content{
+      background-image:url("../images/wg-bg-iot.jpg");
+    }
+  }
+  .papyrus-ic{
+    .content{
+      background-image:url("../images/wg-bg-paryrus.gif");
+    }
+  }
+  .content{
+     background-color:#fff;
+     background-repeat:repeat-y;
+     background-position:right;
+     line-height:1.8em;
+     font-size:15px;
+     padding:10px 40px 1px 20px;
+  }
+  p.readmore{
+    border-top:1px solid #e8e8e8;
+    padding:0 3px;
+    a:link,
+    a:visited{
+      color:#777777;
+      display: block;
+      padding-top:11px;
+      font-size: 13px;
+    }
+  }
+  .logo{
+    img{
+      padding-bottom:15px;
+  }
+    text-align: center;
+  }
+  h3{
+    margin-top:5px;
+    margin-bottom:15px;
+    color:#434868;
+    font-weight:normal;
+    font-size:23px
+  }
+  .g-body {
+    min-height: 100px;
+  }
+  img {
+    text-align: center;
+  }
+}
+
+.content{
+  font-size:15px;
+  font-family:Arial;
+  line-height:1.45em;
+  a{
+    font-weight:bold;
+  }
+  ul{
+     margin-bottom:26px;
+     padding-left:0;
+
+  }
+  li{
+    margin-bottom:5px;
+    margin-left:35px;
+    padding-left:15px;
+    list-style: none;
+    background:url("../images/bullet.png") 0 9px no-repeat;
+  }
+}
+
+/* Black navigation bar */
+.black-section{
+  background:#262626;
+  .container{
+     padding:0;
+  }
+  
+  a:link,
+  a:visited{
+     color:#777777;
+  }
+  a:hover,
+  a:active{
+    color:#b0b0b0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .black-section{
+     .highlights{
+       text-align:center;
+     }
+  }
+  .circle{
+      margin-left:0;
+      margin-right:0;
+  }
+  #services{
+    .highlights{
+      height:535px;
+      .readmore{
+        bottom:0;
+      }
+    }
+  }
+  h1.heading {
+    margin-bottom: 15px;
+  }
+  .content-block{
+    h2{
+     .text{
+       position:absolute;
+       line-height:1.2em;
+       top:10px;
+     }
+    }
+  }
+
+  .jumbotron{
+    .content{
+      width: 410px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #services{
+    .highlights{
+      height:465px;
+    }
+  }
+}
+

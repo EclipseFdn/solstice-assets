@@ -1,0 +1,82 @@
+//
+// Timeline styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+//-------------------------------------------------------------------
+
+.timeline {
+  margin: 35px auto;
+  a {
+    font-weight:bold;
+  }
+  .gs-item {
+    padding-bottom: 4em;
+  }
+
+  .circle {
+    background: #c3efff;
+    color: #fff;
+    border: 2px solid #fff;
+    height: 47px;
+    width: 47px;
+    font-size: 20px;
+    float: left;
+    padding-top: 6px;
+    padding-left: 1px;
+    font-weight: 700;
+  }
+
+  .two .circle {
+    background: #cbdeff;
+  }
+
+  .three .circle {
+    background: #d2d7ec;
+  }
+
+  .four .circle {
+    background: @brand-info;
+  }
+
+  h1 {
+    color: @brand-info;
+    font-size: 2em;
+    text-align: left;
+    padding: 9px 0 0 62px;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    padding-left: 1px;
+  }
+
+  li {
+    margin-bottom: 1em;
+    padding-left: 14px;
+    list-style: none;
+    &:before {
+      content: "\00BB";
+      color: @brand-warning;
+      margin-left: -16px;
+      margin-right: 10px;
+      display: block;
+      float: left;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    border-top: 1px dotted #c2cbe4;
+    position: relative;
+    .circle {
+      margin: -25px auto 0 auto;
+      float: none;
+    }
+
+    h1 {
+      padding-top: 15px;
+      float: none;
+      padding-left: 0;
+    }
+  }
+}
+

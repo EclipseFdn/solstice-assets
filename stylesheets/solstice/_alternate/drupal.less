@@ -1,0 +1,51 @@
+//
+// Solstice alternate Drupal styles
+//
+// These styles are used for working groups and conference sites.
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+// -------------------------------------------------------------------
+
+@import "../../drupal.less";
+@import '../_default/template.less';
+@import "_variables.less";
+
+@icon-font-path: "../../../../public/fonts/";
+@fa-font-path: "../../../../public/fonts";
+@image-path: "../../../../public/images";
+@panel-default-heading-bg: #353535;
+
+.front {
+  main{
+    background:#fff;
+    padding:0;
+  }
+}
+
+.block-region-sidebar-second,
+.block-region-sidebar-first{
+  &.pretty-block{
+    .block-content{
+      background:#fff;
+      h2{
+        font-size:19px;
+        margin-top:0;
+        padding-top:20px;
+        &:first-of-type{
+          padding-top:0;
+        }
+      }
+    }
+    a{
+      font-weight:bold;
+      color:@brand-primary;
+      &:hover{
+        color:@brand-info;
+      }
+    }
+    h3,h4,h5,h6{
+      font-size:17px;
+    }
+  }
+}
+

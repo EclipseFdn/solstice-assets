@@ -1,0 +1,82 @@
+//
+// Solstice default menu styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+// ------------------------------------------------------------------
+
+#main-menu {
+  margin-bottom:0;
+  li {
+    padding-bottom: 0;
+  }
+  a {
+    font-weight: 400;
+    &:active, &:focus {
+      color: @main-menu-link-active-color;
+    }
+  }
+  .nav {
+    > li {
+      > a {
+        &:hover, &:focus {
+          background-color:@main-menu-link-hover-bg-color;
+        }
+      } 
+    }
+    .open {
+      a {
+        background-color:@main-menu-link-hover-bg-color;
+        &:hover, &:focus {
+          background-color:@main-menu-link-hover-bg-color;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-toggle:hover {
+  cursor: pointer;
+}
+
+// Left nav from Nav()
+.ul-left-nav {
+  padding-left: 0;
+  margin-left: 0;
+  > li {
+    list-style: none;
+    margin-bottom: 0.45em;
+    &.active a {
+      font-weight: 600;
+    }
+
+    &.separator , &.about {
+      padding-left: 0px;
+      font-weight: bold;
+      img {
+        position: absolute;
+        top: 6px;
+      }
+    }
+
+    &.separator {
+      border-top: 1px solid #D4D4DD;
+      padding-top: 8px;
+      a {
+        font-weight: 700;
+      }
+    }
+
+    &.separator:first-child {
+      border-top: none;
+    }
+
+    > a {
+      color: #545454;
+      font-weight: 400;
+      &:hover {
+        color: @main-menu-link-hover-color;
+      }
+    }
+  }
+}
+

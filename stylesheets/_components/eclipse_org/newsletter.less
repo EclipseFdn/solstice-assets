@@ -1,0 +1,236 @@
+//
+// eclipse.org/community/eclipse_newsletter
+//
+// author: author: Eric Poirier <eric@eclipse.org>
+//-------------------------------------------------------------------
+
+.newsletter-container {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.centered-item-container {
+  height:260px;
+  text-align: center;
+  white-space: nowrap;
+  position:relative;
+  @media (max-width: 1200px) {
+    height:205px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom:15px;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .centered-item {
+    display: inline-block;
+    vertical-align: middle;
+    @media (max-width: 1200px) {
+      width:205px;
+      padding:20px;
+    }
+    @media (max-width: 480px) {
+      width: 165px;
+      padding:20px;
+    }
+    img {
+      display:inherit;
+    }
+  }
+}
+
+.centered-hover-item {
+  position:absolute;
+  opacity:0;
+  display:table;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  &:hover {
+    opacity:1;
+    text-decoration:none;
+  }
+  z-index:9;
+  top:0;
+  left:0;
+  height:260px;
+  @media (max-width: 1200px) {
+    height:205px;
+  }
+  background-color:rgba(0,0,0,0.8);
+  width:100%;
+  padding: 20px;
+  white-space: normal;
+  color:#fff;
+  .item-title, .item-description{
+    color:#fff;
+    display:block;
+    margin-bottom:10px;
+  }
+  .item-title {
+    text-transform: uppercase;
+    font-size:18px;
+    font-weight:300;
+  }
+  .item-description {
+    @media (max-width: 1200px) {
+      display:none;
+    }
+  }
+  .arrow {
+    font-size:2em;
+    color:#fff;
+  }
+  .centered-vertical-item {
+    display:table-cell;
+    vertical-align:middle;
+  }
+}
+
+.sponsored-by-neon-container {
+  background-color:#1f1f1f;
+  padding:15px 0;
+  .sponsored-by-neon{
+    margin-bottom:0;
+    color:#9e9e9e;
+    @media (max-width: 768px) {
+      text-align:center;
+      margin-bottom:15px;
+    }
+  }
+  .neon-logo{
+    max-width:150px;
+    max-height:50px;
+    margin-left: 10px;
+  }
+  .google-search-archive {
+    margin-bottom:0;
+    text-transform:uppercase;
+    font-weight:200;
+    color:#9e9e9e;
+    text-align:right;
+    @media (max-width: 768px) {
+      text-align:center;
+    }
+  }
+}
+
+.featured-container {
+  background-image:url('/community/eclipse_newsletter/assets/public/images/featured-newsletter-bg.jpg');
+  background-size:cover;
+  h2, h3, .item-title {
+    color:#fff;
+  }
+  h2 {
+    font-size:3em;
+    @media (max-width: 991px) {
+      text-align:center;
+    }
+  }
+
+  .no-padding {
+    padding:0;
+  }
+  .no-margin {
+    margin:0;
+  }
+  .featured-item {
+    height:260px;
+    @media (max-width: 1200px) {
+      height:205px;
+    }
+    text-align: center;
+    white-space: nowrap;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .centered-item {
+      display: inline-block;
+      vertical-align: middle;
+      width: 260px;
+    }
+  }
+  .featured-title-container {
+    height:260px * 2;
+    @media (max-width: 1200px) {
+      height:205px * 2;
+    }
+    @media (max-width: 992px) {
+      height:inherit;
+    }
+    white-space: nowrap;
+    @media (min-width: 992px) {
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+    
+  }
+  .featured-title-item{
+    @media (min-width: 992px) {
+      width: 260px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @media (max-width: 991px) {
+      margin-bottom:50px;
+      text-align:center;
+    }
+  }
+}
+
+.featured-articles-container {
+  text-align:center;
+}
+
+.featured-articles-more {
+  padding:50px 0;
+}
+
+.newsletter-contact-us {
+  text-align:center;
+  padding-bottom:50px;
+  background-color:#e6e7e8;
+  h2 {
+    text-align:center;
+  }
+   .newsletter-contact-us-list {
+     border-right:1px solid;
+     &:last-child{
+       border:none;
+     }
+   }
+}
+
+.link-underlined {
+  font-weight:200;
+  text-decoration:underline;
+  &:hover {
+    text-decoration:none;
+  }
+}
+
+.h2-underline {
+  position:relative;
+  font-size:2em;
+  text-transform: uppercase;
+  font-weight:200;
+  margin:50px 0 20px;
+  &:after {
+    border-bottom:4px solid #f7941d;
+    content:"";
+    display:block;
+    width:100px;
+    margin:10px auto 0;
+  }
+}

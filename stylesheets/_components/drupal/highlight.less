@@ -1,0 +1,40 @@
+//
+// Drupal Highlight styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+//-------------------------------------------------------------------
+
+.view-solstice-highlight{
+  background:@highlight-background;
+  border-top:@highlight-border-top;
+  border-bottom:@highlight-border-bottom;
+  margin-bottom:@highlight-margin-bottom;
+  .views-row.views-row-last .solstice-support-highlight{
+    border-right:@highlight-vertical-borders;
+  }
+}
+
+.solstice-support-highlight{
+  background:@highlight-background;
+  border-left:@highlight-vertical-borders;
+  padding:@highlight-items-padding;
+  text-align:@highlight-text-align;
+  &:hover{
+    cursor:pointer;
+    background:@highlight-background-hover;
+  }
+  i{
+    color:@highlight-icon-color;
+    font-size:@highlight-icon-font-size;
+  }
+  h3 {
+    font-size:@highlight-h3-font-size;
+    color:@highlight-h3-color;
+    a {
+      color:@highlight-h3-color;
+      &:hover {
+        color:@highlight-h3-color-hover;
+      }
+    }
+  }
+}

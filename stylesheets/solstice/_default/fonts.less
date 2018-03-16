@@ -1,0 +1,121 @@
+//
+// Solstice default fonts styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+// ------------------------------------------------------------------
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  color:@brand-primary;
+}
+
+h1{
+  margin-bottom:25px;
+}
+
+// Apply this on all the links except the buttons
+a{
+  color:@brand-links-color;
+  &:hover {
+    color:darken(@brand-links-color, 10%);
+  }
+  &:visited {
+    color:@brand-links-visited-color;
+  }
+}
+
+a[name], a[name]:hover {
+  font-weight: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  a {
+    font-weight:bold;
+    color:@brand-primary;
+    &:hover, &:visited {
+      color:@brand-primary;
+    }
+  }
+}
+
+/* Font-size */
+.font-size-large{
+    font-size:58px;
+}
+
+ul{
+    ul{
+        margin-top:5px;
+    }
+}
+
+blockquote{
+  font-size: @font-size-base;
+}
+
+.fa-ul-2x{
+  margin-left:3.14286em;
+  li{
+    padding-bottom:28px;
+  }
+}
+
+/* List checkmark*/
+.list-checkmark{
+    > li{
+        padding-right:40px;
+        padding-left:0;
+    }
+    a{
+        &:link,
+        &:visited {
+            font-weight:bold;
+            color:#969696;
+        }
+        &:hover{
+            color:@brand-warning;
+        }
+    }
+}
+
+.block-heading{
+  background: none repeat scroll 0 0 #afbbdc;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.fa-li{
+  top:0.23em;
+}
+
+.list-padding{
+  li{
+    padding-bottom:25px;
+  }
+}
+
+.header-short-underline {
+  font-size:18px;
+  font-weight:bold;
+  &:after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 3px;
+    border-bottom: 2px solid;
+    margin: 0 auto;
+    top: 5px;
+  }
+}
+
+.underlined {
+  text-decoration:underline;
+}

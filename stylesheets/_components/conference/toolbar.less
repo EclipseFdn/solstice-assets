@@ -1,0 +1,34 @@
+//
+// Conference toolbar styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+//-------------------------------------------------------------------
+
+// Solstice drupal specific styles
+.block-eclipsecon-support-next-up{
+  @media (min-width: @screen-sm-min) {
+    float:left;
+  }
+  @media (max-width: @screen-sm-max) {
+    text-align:center;
+  }
+  color: @block-eclipsecon-support-next-up-color;
+  font-weight:bold;
+  font-size:18px;
+  a{
+   font-weight:300;
+    color:@block-eclipsecon-support-next-up-link-color;
+    &:hover{
+      color: @block-eclipsecon-support-next-up-color;
+    }
+  }
+}
+
+.site_login_toolbar{
+  @media (min-width: @screen-sm-min) {
+    float:right;
+  }
+  @media (max-width: @screen-sm-max) {
+    text-align:center;
+  }
+}
