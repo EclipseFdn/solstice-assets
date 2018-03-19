@@ -14,9 +14,11 @@ footer#solstice-footer {
   border-top: @footer-border-top;
   h2 {
     color: @footer-h2-color;
+    padding: @footer-h2-padding;
     margin-top: 0;
     font-weight: @footer-h2-font-weight;
     font-size: @footer-h2-font-size;
+    border-bottom: @footer-h2-border-bottom;
     max-width: 80%;
   }
 
@@ -27,6 +29,15 @@ footer#solstice-footer {
 
   a:hover {
     color: @footer-link-hover;
+  }
+
+  .social-media {
+     a:link , a:active , a:visited {
+      color: @footer-social-link-color;
+    }
+    a:hover {
+      color: @footer-link-hover;
+    }
   }
 
   .logo-eclipse-white {
@@ -48,6 +59,13 @@ footer#solstice-footer {
 
   li {
     padding-bottom: 0;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    #copyright-text , #footer-other {
+      text-align: left;
+      clear: both;
+    }
   }
 
   @media (max-width: 450px) {
@@ -78,14 +96,15 @@ footer#solstice-footer {
 }
 
 #copyright-text {
-  @media (max-width: @screen-sm-max) {
-    margin-bottom:20px;
-  }
+  padding-top: 21px;
+  text-align: right;
 }
 
 .social-media {
-  @media (min-width: @screen-md-min) {
-    text-align:right;
+  margin-top: 57px;
+  font-size: 2.3em;
+  a:hover {
+    color: @footer-link-hover;
   }
 }
 
