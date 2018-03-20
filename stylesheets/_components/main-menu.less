@@ -1,0 +1,246 @@
+//
+// Default main-menu styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+// ------------------------------------------------------------------
+
+// Menu xs
+@media (max-width: @screen-xs-max) {
+  #main-menu-wrapper{
+    padding:0;
+    margin:0;
+  }
+  #main-menu {
+    background: @mobile-menu-background;
+    margin-bottom: 0;
+    .navbar-header {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .navbar-brand {
+      height: auto;
+      padding: 0;
+      padding-left: 15px;
+    }
+
+    &.navbar {
+      border: 0;
+      border-bottom: 1px solid @gray-mid-light;
+    }
+
+    .navbar-toggle {
+      margin: 0;
+      padding: 10px 15px 10px 0;
+      .icon-bar {
+        background: @navbar-toggle-icon-background;
+        height: 3px;
+      }
+    }
+
+    .nav {
+      margin: 0;
+      background: @mobile-menu-nav-background;
+      & > li {
+        border: 1px solid lighten(@mobile-menu-background, 4%);
+        &.open {
+          & .dropdown-toggle {
+            color: @mobile-menu-open-active-color;
+            background: @mobile-menu-open-active-background;
+          }
+        }
+
+        & > a {
+          color: @mobile-menu-color;
+          text-transform: uppercase;
+        }
+
+        .dropdown-menu {
+          background: @mobile-menu-dropdown-menu-background;
+          padding: 0;
+          > li {
+            &.active {
+              a {
+                &:link , &:visited {
+                  background: @mobile-menu-dropdown-menu-active-background;
+                  color: @mobile-menu-dropdown-menu-active-color;
+                }
+
+                &:hover , &:focus {
+                  color: @mobile-menu-dropdown-menu-active-hover;
+                  background: @mobile-menu-dropdown-menu-active-hover-background;
+                }
+              }
+            }
+
+            > a {
+              padding: 5px 20px 5px 30px;
+              color: @mobile-menu-dropdown-menu-color;
+              &:hover , &:focus {
+                color: @mobile-menu-dropdown-menu-hover;
+                background: @mobile-menu-dropdown-menu-hover-background;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Menu sm
+@media (min-width: @screen-sm-min) {
+  #main-menu {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    ul li {
+      text-transform: uppercase;
+    }
+
+    .dropdown {
+      li {
+        text-transform: none;
+      }
+    }
+
+    li {
+      a {
+        margin-right: 0px;
+        color: @main-menu-link-color;
+        &:hover , &:active {
+          color: @main-menu-link-active-color;
+        }
+      }
+    }
+
+   li.dropdown .dropdown-menu {
+      left: auto;
+      right: auto;
+    }
+
+    li.dropdown.eclipse-more .dropdown-menu {
+      width: 100%;
+      right: initial;
+      left: 0;
+    }
+    
+    .navbar-right li.dropdown:last-child .dropdown-menu {
+      left: initial;
+      right: 0;
+    }
+    
+    .navbar-right li.dropdown.eclipse-more .dropdown-menu {
+      width: 100%;
+
+    }
+
+    .dropdown-menu {
+      a {
+        margin: 0;
+        color: @main-menu-dropdown-link-color;
+        &:hover {
+          color: @main-menu-dropdown-link-hover-color;
+        }
+
+        &:active {
+          color: @main-menu-dropdown-link-active-color;
+        }
+      }
+    }
+  }
+}
+
+// Menu MD
+@media (min-width: @screen-md-min) {
+  #main-menu {
+    .dropdown-menu {
+      max-width: 630px;
+      li {
+        padding-bottom: 2px;
+      }
+    }
+    font-size: 1em;
+  }
+}
+
+// Menu default
+#main-menu {
+  margin-bottom:0;
+  li {
+    padding-bottom: 0;
+  }
+  a {
+    font-weight: 400;
+    &:active, &:focus {
+      color: @main-menu-link-active-color;
+    }
+  }
+  .nav {
+    > li {
+      > a {
+        &:hover, &:focus {
+          background-color:@main-menu-link-hover-bg-color;
+        }
+      } 
+    }
+    .open {
+      a {
+        background-color:@main-menu-link-hover-bg-color;
+        &:hover, &:focus {
+          background-color:@main-menu-link-hover-bg-color;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-toggle:hover {
+  cursor: pointer;
+}
+
+// Left nav from Nav()
+.ul-left-nav {
+  padding-left: 0;
+  margin-left: 0;
+  > li {
+    list-style: none;
+    margin-bottom: 0.45em;
+    &.active a {
+      font-weight: 600;
+    }
+
+    &.separator , &.about {
+      padding-left: 0px;
+      font-weight: bold;
+      img {
+        position: absolute;
+        top: 6px;
+      }
+    }
+
+    &.separator {
+      border-top: 1px solid #D4D4DD;
+      padding-top: 8px;
+      a {
+        font-weight: 700;
+      }
+    }
+
+    &.separator:first-child {
+      border-top: none;
+    }
+
+    > a {
+      color: #545454;
+      font-weight: 400;
+      &:hover {
+        color: @main-menu-link-hover-color;
+      }
+    }
+  }
+}
+
+// Mobile logo
+.logo-eclipse-default-mobile{
+  max-height:50px;
+}
