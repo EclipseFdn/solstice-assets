@@ -7,10 +7,7 @@
 
 // Example of polygon value: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)
 // To easily create shapes: https://bennettfeely.com/clippy
-.clip-path-shape(@width, @height, @polygon) {
+.clip-path-shape(@polygon) {
   -webkit-clip-path: @polygon;
   clip-path: @polygon;
-  width:@width;
-  position:relative;
-  top:-@height;
 }

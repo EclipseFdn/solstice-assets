@@ -1,0 +1,41 @@
+//
+// Newsletter
+//
+// author: Eric Poirier <eric.poirier@eclipse-foundation.org>
+// --------------------------------------------------
+
+.featured-footer{
+  background-color:@featured-footer-bg-color;
+  padding:@featured-footer-padding;
+  text-align:@featured-footer-text-align;
+  .clip-path-shape(@featured-footer-shape);
+  h2, p {
+    color:@featured-footer-text-color;
+  }
+  h2 {
+    margin-top:10px;
+  }
+  .feather {
+    width:@featured-footer-icon-size;
+    height:@featured-footer-icon-size;
+  }
+  .textfield-underline {
+    border-color:darken(@featured-footer-input-color, 20%);
+    color:@featured-footer-input-color;
+    text-align: @featured-footer-text-align;
+    width:300px;
+    // Do not group these rules
+    &:-moz-placeholder { /* Firefox 18- */
+      color: @featured-footer-input-color;
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: @featured-footer-input-color;
+    }
+    &:-ms-input-placeholder {
+      color: @featured-footer-input-color;
+    }
+    &::-webkit-input-placeholder {
+      color: @featured-footer-input-color;
+    }
+  }
+}
