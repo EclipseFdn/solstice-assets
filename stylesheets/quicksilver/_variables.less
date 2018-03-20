@@ -4,11 +4,11 @@
 
 //== Colors
 
-@brand-primary:         #2c2255;
-@brand-secondary:       #afbbdc;
-@brand-tertiary:        #be3b69;
-@brand-quaternary:      #342343;
-@brand-quinary:         #bed247;
+@brand-primary:         @brand-warning; // Orange
+@brand-secondary:       #6d6193; // Purple
+@brand-tertiary:        #707070; // Grey
+@brand-quaternary:      #0077AA; // Blue
+@brand-quinary:         lighten(@brand-primary, 30%);
 @brand-info:            #afbbdc;
 @brand-info-light:      #dbe3f8;
 @brand-warning:         #f7941e;
@@ -312,6 +312,18 @@
 @featured-story-ad-shape:polygon(0 0, 100% 0, 100% 100%, 0 100%, 37% 51%);
 @featured-story-ad-p-color:#9b9b9b;
 @featured-story-ad-p-size:12px;
+
+//== Featured
+@featured-news-list-bg-color:#f5f8fd;
+@featured-news-list-h2-color:@brand-secondary;
+@featured-news-list-icon-color:@brand-primary;
+@featured-news-list-media-link-bg-color:@white;
+@featured-news-list-media-link-color:#484848;
+@featured-news-list-media-heading-size:19px;
+@featured-news-list-media-heading-weight:bold;
+@featured-news-list-media-heading-color:@featured-news-list-media-link-color;
+@featured-news-list-media-text-color:@featured-news-list-media-link-color;
+@featured-news-list-links-color:#c9cbcd;
 
 //== Drupal/components/site-login-user-menu.less
 @site-login-user-menu-color: #fff;
