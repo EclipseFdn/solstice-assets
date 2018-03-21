@@ -4,12 +4,13 @@
 // author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
 // ------------------------------------------------------------------
 
-// Menu xs
+// Mobile menu (collapse)
 @media (max-width: @screen-xs-max) {
   #main-menu-wrapper{
     padding:0;
     margin:0;
   }
+
   #main-menu {
     background: @mobile-menu-background;
     margin-bottom: 0;
@@ -22,6 +23,10 @@
       height: auto;
       padding: 0;
       padding-left: 15px;
+    }
+
+    #navbar-main-menu {
+      float:none;
     }
 
     &.navbar {
@@ -40,6 +45,7 @@
 
     .nav {
       margin: 0;
+      padding: 0;
       background: @mobile-menu-nav-background;
       & > li {
         border: 1px solid lighten(@mobile-menu-background, 4%);
@@ -88,7 +94,16 @@
   }
 }
 
-// Menu sm
+// Use fluid container for xs, sm and md screens.
+@media (max-width: @screen-md-max) {
+  #header-wrapper, .toolbar-container-wrapper{
+    .container{
+      width:auto;
+    }
+  }
+}
+
+// Default menu (not-collapsed)
 @media (min-width: @screen-sm-min) {
   #main-menu {
     font-size: 0.9em;
@@ -123,15 +138,14 @@
       right: initial;
       left: 0;
     }
-    
+
     .navbar-right li.dropdown:last-child .dropdown-menu {
       left: initial;
       right: 0;
     }
-    
+
     .navbar-right li.dropdown.eclipse-more .dropdown-menu {
       width: 100%;
-
     }
 
     .dropdown-menu {
@@ -141,7 +155,6 @@
         &:hover {
           color: @main-menu-dropdown-link-hover-color;
         }
-
         &:active {
           color: @main-menu-dropdown-link-active-color;
         }
@@ -150,7 +163,7 @@
   }
 }
 
-// Menu MD
+// Menu on medium screens and up
 @media (min-width: @screen-md-min) {
   #main-menu {
     .dropdown-menu {
@@ -163,18 +176,20 @@
   }
 }
 
-// Menu default
+// Default menu styles (Overrides and compliment styles previously set)
 #main-menu {
   margin-bottom:0;
   li {
     padding-bottom: 0;
   }
+ 
   a {
     font-weight: 400;
     &:active, &:focus {
       color: @main-menu-link-active-color;
     }
   }
+
   .nav {
     > li {
       > a {
@@ -183,6 +198,7 @@
         }
       } 
     }
+
     .open {
       a {
         background-color:@main-menu-link-hover-bg-color;
@@ -202,9 +218,11 @@
 .ul-left-nav {
   padding-left: 0;
   margin-left: 0;
+
   > li {
     list-style: none;
     margin-bottom: 0.45em;
+
     &.active a {
       font-weight: 600;
     }
@@ -240,7 +258,7 @@
   }
 }
 
-// Mobile logo
+// Set a max-high on mobile logo
 .logo-eclipse-default-mobile{
   max-height:50px;
 }
