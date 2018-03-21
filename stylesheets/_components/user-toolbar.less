@@ -11,21 +11,26 @@
 .toolbar-row {
   padding: 8px 0;
   font-size: 12px;
-  color: #666;
+  color: @header-toolbar-color;
   font-weight: 300;
   a {
     font-weight: 300;
     padding-left: 4px;
-    color: #666;
+    color: @header-toolbar-color;
     &:hover {
-      color: @brand-warning;
+      color: @header-toolbar-color-hover;
     }
     &:visited {
-      color: #666;
+      color: @header-toolbar-color;
     }
   }
   ul {
     margin-bottom: 0;
+    li {
+      &:last-child {
+        padding-right:0;
+      }
+    }
   }
   .toolbar-left-content {
     span {

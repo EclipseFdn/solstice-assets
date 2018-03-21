@@ -6,7 +6,7 @@
 
 @brand-primary:         @brand-warning; // Orange
 @brand-secondary:       #6d6193; // Purple
-@brand-tertiary:        #707070; // Grey
+@brand-tertiary:        #3e3e3f; // Grey
 @brand-quaternary:      #0077AA; // Blue
 @brand-quinary:         lighten(@brand-primary, 30%);
 @brand-info:            #afbbdc;
@@ -40,7 +40,9 @@
 @eclipse-highlight-grey: #f5f5f5;
 
 //== /_core/template/header.less
-@header-background:#fff;
+@header-background:@brand-tertiary;
+@header-toolbar-color:@white;
+@header-toolbar-color-hover: darken(@white, 20%);
 
 //== Text color
 @text-color:#4c4d4e;
@@ -49,7 +51,7 @@
 
 // Main colors for the menu
 @mobile-menu-background: #2c2255;
-@mobile-menu-nav-background: @brand-primary;
+@mobile-menu-nav-background: lighten(@brand-tertiary, 15%);
 @mobile-menu-hover: @brand-warning;
 @mobile-menu-color:#fff;
 
@@ -58,18 +60,20 @@
 @mobile-menu-open-active-color: #000;
 
 // Default Menu
-@main-menu-link-color: #787878;
-@main-menu-link-active-color: @brand-warning;
-@main-menu-link-hover-color: @brand-warning;
+@main-menu-link-color: @white;
+@main-menu-link-active-color: darken(@white, 20%);
+@main-menu-link-hover-color: darken(@white, 20%);
 @main-menu-link-hover-bg-color:transparent;
+@main-menu-link-transform:none;
+@main-menu-link-size:17px;
 @main-menu-dropdown-link-color: #787878;
 @main-menu-dropdown-link-active-color: @brand-warning;
 @main-menu-dropdown-link-hover-color: @brand-warning;
 
 // Default dropdown link colors
-@mobile-menu-background: #efeef2;
+@mobile-menu-background: @header-background;
 @navbar-toggle-icon-background: @brand-primary;
-@mobile-menu-dropdown-menu-background: #2a2a2c;
+@mobile-menu-dropdown-menu-background: @white;
 @mobile-menu-dropdown-menu-color: #fff;
 @mobile-menu-dropdown-menu-hover: #000;
 @mobile-menu-dropdown-menu-hover-background: #f5f5f5;
@@ -294,9 +298,17 @@
 @highlight-h3-color-hover:@brand-info;
 @highlight-items-padding:30px 15px;
 
+//== Jumbotron
+@jumbotron-bg-color:@brand-tertiary;
+@jumbotron-color:@white;
+@jumbotron-text-align:center;
+@jumbotron-h1-size:52px;
+@jumbotron-h1-weight:bold;
+@jumbotron-icon-size:60px;
+
 //== Featured Footer
 @featured-footer-shape:polygon(0 8%, 100% 0, 100% 100%, 0 91%);
-@featured-footer-bg-color:#707070;
+@featured-footer-bg-color:@brand-tertiary;
 @featured-footer-padding:50px 0;
 @featured-footer-text-align:center;
 @featured-footer-text-color:@white;

@@ -5,9 +5,40 @@
 // More menu should be on the right
 @media (min-width: @screen-sm-min) {
   #main-menu {
-    li.dropdown.eclipse-more .dropdown-menu {
-      right: 0;
-      left: auto;
+    li.dropdown.eclipse-more {
+      &.open {
+        background-color:@mobile-menu-dropdown-menu-background;
+        a {
+          color:@brand-tertiary;
+          &:hover {
+            color:@brand-tertiary;
+          }
+        }
+      }
+      .dropdown-menu {
+        background-color:@mobile-menu-dropdown-menu-background;
+        right: 15px;
+        left: auto;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+}
+
+header{
+  background-color:@header-background;
+  @media (min-width: @screen-sm-min) {
+    padding-top:20px;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  #main-menu {
+    &.navbar {
+      border: 0;
+      border-bottom: none;
     }
   }
 }
