@@ -40,8 +40,9 @@
 @eclipse-highlight-grey: #f5f5f5;
 
 //== /_core/template/header.less
-@header-background:@brand-tertiary;
-@header-toolbar-color:@white;
+@header-background:@white;
+@header-toolbar-background-color:@white;
+@header-toolbar-color:#76858a;
 @header-toolbar-color-hover: darken(@white, 20%);
 
 //== Text color
@@ -56,13 +57,13 @@
 @mobile-menu-color:#fff;
 
 // Colors for active link
-@mobile-menu-open-active-background: #efeef2;
-@mobile-menu-open-active-color: #000;
+@mobile-menu-open-active-background: #787878;
+@mobile-menu-open-active-color: #fff;
 
 // Default Menu
-@main-menu-link-color: @white;
-@main-menu-link-active-color: darken(@white, 20%);
-@main-menu-link-hover-color: darken(@white, 20%);
+@main-menu-link-color: #76858a;
+@main-menu-link-active-color: darken(#76858a, 20%);
+@main-menu-link-hover-color: darken(#76858a, 20%);
 @main-menu-link-hover-bg-color:transparent;
 @main-menu-link-transform:none;
 @main-menu-link-size:17px;
@@ -74,13 +75,24 @@
 @mobile-menu-background: @header-background;
 @navbar-toggle-icon-background: @brand-primary;
 @mobile-menu-dropdown-menu-background: @white;
-@mobile-menu-dropdown-menu-color: #fff;
-@mobile-menu-dropdown-menu-hover: #000;
+@mobile-menu-dropdown-menu-color: #787878;
+@mobile-menu-dropdown-menu-hover: darken(#787878, 20%);
 @mobile-menu-dropdown-menu-hover-background: #f5f5f5;
 @mobile-menu-dropdown-menu-active-background: @brand-warning;
 @mobile-menu-dropdown-menu-active-color: #fff;
-@mobile-menu-dropdown-menu-active-hover: #000;
+@mobile-menu-dropdown-menu-active-hover: #fff;
 @mobile-menu-dropdown-menu-active-hover-background: #f5f5f5;
+
+//== Alternate styles
+@alternate-header-background:@brand-tertiary;
+@alternate-header-toolbar-background-color:@header-background;
+@alternate-header-toolbar-color:@header-toolbar-color;
+@alternate-header-toolbar-color-hover:@header-toolbar-color-hover;
+@alternate-main-menu-link-size:@main-menu-link-size;
+@alternate-main-menu-link-transform:@main-menu-link-transform;
+@alternate-main-menu-link-color:@white;
+@alternate-main-menu-link-active-color:darken(@white, 20%);
+@alternate-mobile-menu-background:@brand-tertiary;
 
 //== Bugzilla menu
 @bugzilla-menu-link-color: @main-menu-link-color;

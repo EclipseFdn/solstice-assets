@@ -5,7 +5,7 @@
 //-------------------------------------------------------------------
 
 .toolbar-container-wrapper{
-  background:@header-background;
+  background:@header-toolbar-background-color;
 }
 
 .toolbar-row {
@@ -64,6 +64,25 @@
 
     &:hover {
       color: @brand-info;
+    }
+  }
+}
+
+// Front page style
+.alternate-layout {
+  .toolbar-container-wrapper{
+    background:@alternate-header-toolbar-background-color;
+  }
+  .toolbar-row {
+    color: @alternate-header-toolbar-color;
+    a {
+      color: @alternate-header-toolbar-color;
+      &:hover {
+        color: @alternate-header-toolbar-color-hover;
+      }
+      &:visited {
+        color: @alternate-header-toolbar-color;
+      }
     }
   }
 }

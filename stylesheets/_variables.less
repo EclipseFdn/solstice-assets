@@ -42,6 +42,7 @@
 
 //== /template/header.less
 @header-background:#fff;
+@header-toolbar-background-color:@header-background;
 @header-toolbar-color:#666;
 @header-toolbar-color-hover:@brand-warning;
 
@@ -55,7 +56,7 @@
 
 // Colors for active link
 @mobile-menu-open-active-background: #efeef2;
-@mobile-menu-open-active-color: #000;
+@mobile-menu-open-active-color: #fff;
 
 // Default Menu
 @main-menu-link-color: #787878;
@@ -79,6 +80,17 @@
 @mobile-menu-dropdown-menu-active-color: #fff;
 @mobile-menu-dropdown-menu-active-hover: #000;
 @mobile-menu-dropdown-menu-active-hover-background: #f5f5f5;
+
+//== Alternate styles
+@alternate-header-background:@header-background;
+@alternate-header-toolbar-background-color:@header-background;
+@alternate-header-toolbar-color:@header-toolbar-color;
+@alternate-header-toolbar-color-hover:@header-toolbar-color-hover;
+@alternate-main-menu-link-size:@main-menu-link-size;
+@alternate-main-menu-link-transform:@main-menu-link-transform;
+@alternate-main-menu-link-color:@main-menu-link-color;
+@alternate-main-menu-link-active-color:@main-menu-link-active-color;
+@alternate-mobile-menu-background:@header-background;
 
 //== Bugzilla menu
 @bugzilla-menu-link-color: @main-menu-link-color;

@@ -48,7 +48,6 @@
       padding: 0;
       background: @mobile-menu-nav-background;
       & > li {
-        border: 1px solid lighten(@mobile-menu-background, 4%);
         &.open {
           & .dropdown-toggle {
             color: @mobile-menu-open-active-color;
@@ -58,7 +57,7 @@
 
         & > a {
           color: @mobile-menu-color;
-          text-transform: uppercase;
+          text-transform: @main-menu-link-transform;
         }
 
         .dropdown-menu {
@@ -172,7 +171,7 @@
         padding-bottom: 2px;
       }
     }
-    font-size: 1em;
+    font-size: @main-menu-link-size;
   }
 }
 
@@ -262,3 +261,32 @@
 .logo-eclipse-default-mobile{
   max-height:50px;
 }
+@media (min-width: @screen-sm-min) {
+  .alternate-layout {
+    #main-menu {
+      font-size: @alternate-main-menu-link-size;
+      ul li {
+        text-transform: @alternate-main-menu-link-transform;
+      }
+      li {
+        a {
+          color: @alternate-main-menu-link-color;
+          &:hover , &:active {
+            color: @alternate-main-menu-link-active-color;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .alternate-layout {
+    #main-menu {
+      background: @alternate-mobile-menu-background;
+    }
+  }
+}
+
+
