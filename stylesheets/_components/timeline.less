@@ -7,16 +7,16 @@
 //-------------------------------------------------------------------
 
 .timeline {
-  margin: 35px auto;
+  margin: 35px auto 0 auto;
   a {
     font-weight:bold;
   }
   .gs-item {
-    padding-bottom: 4em;
+    padding-bottom: 20px;
   }
 
   .circle {
-    background: #c3efff;
+    background: lighten(@brand-primary, 25%);
     color: #fff;
     border: 2px solid #fff;
     height: 47px;
@@ -29,19 +29,19 @@
   }
 
   .two .circle {
-    background: #cbdeff;
+    background: lighten(@brand-primary, 20%);
   }
 
   .three .circle {
-    background: #d2d7ec;
+   background: lighten(@brand-primary, 10%);
   }
 
   .four .circle {
-    background: @brand-info;
+   background: @brand-primary;
   }
 
   h1 {
-    color: @brand-info;
+    color: @brand-tertiary;
     font-size: 2em;
     text-align: left;
     padding: 9px 0 0 62px;
