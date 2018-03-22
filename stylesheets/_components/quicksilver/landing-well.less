@@ -9,7 +9,12 @@
   text-align:@jumbotron-text-align;
   color:@jumbotron-color;
   h1 {
-    font-size:@jumbotron-h1-size;
+    @media (min-width: @screen-md-min) {
+      font-size:@jumbotron-h1-size;
+    }
+    @media (max-width: @screen-sm-max) {
+      font-size:@jumbotron-h1-size - 10px;
+    }
     font-weight:@jumbotron-h1-weight;
     margin-bottom:40px;
     margin-top:0;
@@ -23,11 +28,32 @@
     }
   }
 
+  @media (max-width: @screen-xs-max) {
+    .btn {
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 0;
+    }
+  }
+
   .jumbotron-icon {
     margin-bottom:10px;
-    .feather {
-      width:@jumbotron-icon-size;
+    @media (min-width: @screen-sm-min) {
       height:@jumbotron-icon-size;
+      .feather {
+        width:@jumbotron-icon-size;
+        height:@jumbotron-icon-size;
+      }
+    }
+    @media (max-width: @screen-xs-max) {
+      height:@jumbotron-icon-size - 15px;
+      .feather {
+        @media (max-width: @screen-xs-max) {
+          width:@jumbotron-icon-size - 15px;
+          height:@jumbotron-icon-size - 15px;
+        }
+      }
     }
   }
 }

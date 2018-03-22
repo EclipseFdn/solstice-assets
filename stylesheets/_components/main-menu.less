@@ -105,7 +105,7 @@
 // Default menu (not-collapsed)
 @media (min-width: @screen-sm-min) {
   #main-menu {
-    font-size: @main-menu-link-size;
+    font-size: @mobile-main-menu-link-size;
     margin-bottom: 5px;
     ul li {
       text-transform: @main-menu-link-transform;
@@ -264,7 +264,7 @@
 @media (min-width: @screen-sm-min) {
   .alternate-layout {
     #main-menu {
-      font-size: @alternate-main-menu-link-size;
+      font-size: @alternate-mobile-main-menu-link-size;
       ul li {
         text-transform: @alternate-main-menu-link-transform;
       }
@@ -277,6 +277,14 @@
         }
       }
       
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .alternate-layout {
+    #main-menu {
+      font-size: @alternate-main-menu-link-size;
     }
   }
 }
