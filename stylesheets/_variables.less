@@ -4,6 +4,7 @@
 // author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
 // ------------------------------------------------------------------
 //== Colors
+@import "../../bootstrap/less/variables.less";
 
 @brand-primary:         #2c2255;
 @brand-secondary:       #afbbdc;
@@ -137,13 +138,17 @@
 
 
 //== Breadcrumbs
+@breadcrumb-padding-vertical:   20px;
+@breadcrumb-padding-horizontal: 30px;
 
 @breadcrumb-background: url('@{image-path}/template/breadcrumbs-large-bg.jpg') center #1b1732;
-@breadcrumb-color: #fff;
-@breadcrumb-link: #ababab;
+@breadcrumb-color: #ababab;
+@breadcrumb-active-color: #fff;
 @breadcrumb-hover: @brand-warning;
 @breadcrumb-border-bottom: none;
 @breadcrumb-font-size:inherit;
+@breadcrumb-text-transform: uppercase;
+@breadcrumb-sharethis-padding: 15px 0 0 0;
 
 //== Logo
 
@@ -162,6 +167,7 @@
 //== Footer
 
 @footer-background: no-repeat center center #242426;
+@footer-padding-top: 3.5em;
 @footer-working-group-background: url('@{image-path}/template/footer-working-group-separator.png') center repeat-y;
 @footer-color: #a8a7a9;
 @footer-border-top: 1px solid @brand-warning;
@@ -280,6 +286,8 @@
 @btn-transparent-color-hover-border-color:@brand-primary;
 @btn-transparent-font-size:11px;
 @btn-transparent-padding:7px 15px;
+@btn-font-weight: 700;
+@btn-text-transform: uppercase;
 
 //== Solstice Highlight
 @highlight-background:@white;
@@ -335,7 +343,6 @@
 @featured-story-ad-p-size:12px;
 
 //== Featured
-@featured-news-list-bg-color:#f5f8fd;
 @featured-news-list-h2-color:@brand-secondary;
 @featured-news-list-icon-color:@brand-primary;
 @featured-news-list-media-link-bg-color:@white;

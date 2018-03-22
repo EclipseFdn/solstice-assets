@@ -1,0 +1,43 @@
+//
+// Breadcrumb styles
+//
+// Default breadcrumbs styles
+//
+// author: Christopher Guindon <chris.guindon@eclipse-foundation.org>
+//-------------------------------------------------------------------
+
+.default-breadcrumbs {
+  background: @breadcrumb-background;
+  background-size: 100%;
+  color: @breadcrumb-color;
+  border-bottom: @breadcrumb-border-bottom;
+  font-size:@breadcrumb-font-size;
+}
+
+.breadcrumb {
+  background: none;
+  margin-bottom:0;
+  text-transform: @breadcrumb-text-transform;
+  a {
+    font-weight: 600;
+    text-decoration: none;
+    &:link , &:visited {
+      color: @breadcrumb-color;
+    }
+
+    &:hover {
+      color: @breadcrumb-hover;
+    }
+  }
+}
+
+.breadcrumbs-sharethis{
+  padding: @breadcrumb-sharethis-padding;
+}
+
+
+// ShareThis buttons located in the breadcrumbs
+// This fixes the layout of the popup of the extra buttons
+body #st-el-4 .st-btns {
+  overflow:auto;
+}
