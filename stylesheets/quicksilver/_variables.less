@@ -107,6 +107,8 @@
 //== Typography
 @font-family-sans-serif:  "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+@headings-color: @text-color;
+
 //== Forms
 
 //** Placeholder text color
@@ -126,7 +128,7 @@
 @panel-inner-border:          transparent;
 
 @panel-default-border:        transparent;
-@panel-default-heading-bg:    @blue-light;
+@panel-default-heading-bg:    @brand-tertiary;
 @panel-default-text:          @white;
 
 //== Image Path
@@ -324,6 +326,29 @@
 @highlight-h3-color:inherit;
 @highlight-h3-color-hover:@brand-info;
 @highlight-items-padding:30px 15px;
+
+//== Sidebar
+@sideitem-bg:#fff;
+@sideitem-color:@text-color;
+@sideitem-margin: 0 0 2em 0;
+@sideitem-padding: 15px;
+@sideitem-border: 1px solid #e0e0e0;
+@sideitem-heading-bg:none;
+@sideitem-heading-color:@sideitem-color;
+@sideitem-heading-color-hover:@sideitem-color;
+@sideitem-heading-margin:0 0 10px 0;
+@sideitem-heading-padding:0 0 10px 0;
+@sideitem-heading-transform:inherit;
+@sideitem-heading-weight:600;
+@sideitem-heading-size:15px;
+@sideitem-p-padding:0;
+
+@main-sidebar-color:@white;
+@main-sidebar-bg:#61a3b9;
+@main-sidebar-shape:polygon(0 0, 0% 100%, 100% 0);
+@main-sidebar-heading-size:24px;
+@main-sidebar-heading-weight:400;
+@main-sidebar-list-border:1px solid #4b8092;
 
 //== Jumbotron
 @jumbotron-bg-color:@brand-tertiary;

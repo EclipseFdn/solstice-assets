@@ -33,23 +33,23 @@
   }
 }
 
-
 // Usefully in the sidebar
 .block-box , .sideitem {
-  background: #f6f6f6;
-  color: #202020;
-  margin-bottom: 2em;
-  padding-bottom: 5px;
+  background: @sideitem-bg;
+  color: @sideitem-color;
+  margin: @sideitem-margin;
+  padding: @sideitem-padding;
+  border:@sideitem-border;
   h2 , h3 , h6 {
-    background: @brand-info;
-    color: #fff;
-    margin: 0 0 15px 0;
-    padding: 15px 20px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 15px;
+    background: @sideitem-heading-bg;
+    color: @sideitem-heading-color;
+    margin: @sideitem-heading-margin;
+    padding: @sideitem-heading-padding;
+    text-transform: @sideitem-heading-transform;
+    font-weight: @sideitem-heading-weight;
+    font-size: @sideitem-heading-size;
     a:hover {
-      color: #fff;
+      color: @sideitem-heading-color-hover;
     }
   }
 
@@ -70,13 +70,13 @@
   }
 
   p {
-    padding: 0 15px 15px;
+    padding: @sideitem-p-padding;
   }
 
   .list-heading {
-    font-weight: 600;
+    font-weight: @sideitem-heading-weight;
     margin-bottom: 4px;
-    font-size: 16px;
+    font-size: @sideitem-heading-size;
   }
 
   ul {
