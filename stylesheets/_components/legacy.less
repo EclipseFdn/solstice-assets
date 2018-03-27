@@ -61,33 +61,16 @@ div#novaContent {
 
 #midcolumn {
   .make-md-column (17);
-  padding-right: 30px;
   #maincontent, #midcolumn {
     width: 100%;
   }
 }
 
 #midcolumn.no-right-sidebar {
-  .make-md-column (20);
-}
-
-#midcolumn.no-left-nav {
-  .make-md-column (18);
+  .make-md-column (24);
 }
 
 // Hack to overrides some projects default overides for Nova
 main #rightcolumn {
   .make-md-column (7);
-}
-
-@media (max-width: @screen-sm-max) {
-  main {
-    #midcolumn, #rightcolumn {
-      padding-left:0;
-      padding-right:0;
-    }
-    #midcolumn {
-      margin-bottom:2em;
-    }
-  }
 }
