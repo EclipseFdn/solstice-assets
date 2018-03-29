@@ -96,6 +96,13 @@ a[name], a[name]:hover {
   background-color: inherit;
 }
 
+.a-underline {
+  text-decoration:underline;
+  &:hover {
+    text-decoration:none;
+  }
+}
+
 blockquote{
   font-size: @font-size-base;
 }
@@ -121,3 +128,18 @@ blockquote{
   }
 }
 
+// Example: eclipse.org/community/eclipse_newsletter/
+.heading-underline {
+  position:relative;
+  font-size:2em;
+  text-transform: uppercase;
+  font-weight:200;
+  margin:50px 0 20px;
+  &:after {
+    border-bottom:4px solid #f7941d;
+    content:"";
+    display:block;
+    width:100px;
+    margin:10px auto 0;
+  }
+}

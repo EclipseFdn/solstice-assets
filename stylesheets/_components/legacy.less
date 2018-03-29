@@ -59,18 +59,18 @@ div#novaContent {
   padding-top: 0;
 }
 
-#midcolumn {
+.legacy-page #midcolumn {
   .make-md-column (17);
   #maincontent, #midcolumn {
     width: 100%;
   }
 }
 
-#midcolumn.no-right-sidebar {
+.legacy-page #midcolumn.no-right-sidebar {
   .make-md-column (24);
 }
 
 // Hack to overrides some projects default overides for Nova
-main #rightcolumn {
+.legacy-page #rightcolumn {
   .make-md-column (7);
 }
