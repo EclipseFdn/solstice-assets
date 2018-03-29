@@ -49,14 +49,16 @@
     padding-left:0;
     position:relative;
     background-color:@featured-story-ad-bg-color;
-    padding-left:50px;
     padding-bottom:50px;
     @media (max-width: @screen-xs-max) {
-      text-align:center;
       .clip-path-shape(@featured-story-shape);
     }
     @media (min-width: @screen-sm-min) {
       text-align:right;
+      .eclipsefnd-ad{
+        float: right;
+        clear: both;
+      }
       &:before, &:after {
         content: "";
         position: absolute;
@@ -80,6 +82,26 @@
       color:@featured-story-ad-p-color;
       font-size:@featured-story-ad-p-size;
       margin-top:5px;
+      clear:both;
+      padding-top:10px;
     }
   }
+  .eclipsefnd-ad{
+    clear: both;
+  }
+}
+
+.eclipsefnd-ad a{
+  .box-shadow(3px 4px 46px -6px rgba(0,0,0,0.51));
+  background: #fff 50% no-repeat;
+  height: 200px;
+  width: 200px;
+  display: block;
+  text-align: center;
+  text-indent: -9999px; 
+  margin:auto;
+}
+
+.ad-strategic-default a{
+  background-size: 200px 200px;
 }

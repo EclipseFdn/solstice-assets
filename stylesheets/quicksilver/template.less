@@ -160,6 +160,24 @@ header {
   background-image: linear-gradient(top, @brand-primary, @brand-primary) !important;
 }
 
+.main-page-title {
+  background-color:@brand-quaternary;
+  padding:20px 0;
+  margin-bottom:20px;
+  h1 {
+    color:@white;
+    margin:0;
+    padding:0;
+    font-weight:200;
+  }
+  #main-sidebar {
+    position:absolute;
+    width: 100%;
+    padding-left:15px;
+    padding-right:15px;
+  }
+}
+
 #main-sidebar {
   color:@main-sidebar-color;
   position:relative;
@@ -222,4 +240,13 @@ header {
   @media (min-width: @screen-md-min) {
     margin-top:-20px;
   }
+}
+
+footer#solstice-footer{
+   @media (max-width: @screen-xs-max) {
+     text-align: center;
+     .nav{
+       margin-left:0;
+     }
+   }
 }

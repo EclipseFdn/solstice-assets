@@ -9,10 +9,10 @@
 //== Colors
 
 @brand-primary:         @brand-warning; // Orange
-@brand-secondary:       #6d6193; // Purple
-@brand-tertiary:        #3e3e3f; // Grey
-@brand-quaternary:      #0077AA; // Blue
-@brand-quinary:         lighten(@brand-primary, 30%);
+@brand-secondary:       #61a3b9; // Blue teal
+@brand-tertiary:        #3e3e3f; // Dark Grey 
+@brand-quaternary:      #405369; // Dark Blue
+@brand-quinary:         #676767; // Lighter Grey
 @brand-info:            #afbbdc;
 @brand-info-light:      #dbe3f8;
 @brand-warning:         #f7941e;
@@ -46,7 +46,7 @@
 //== /_core/template/header.less
 @header-background:@white;
 @header-toolbar-background-color:@white;
-@header-toolbar-color:#76858a;
+@header-toolbar-color:#6b655f;
 @header-toolbar-color-hover: darken(@white, 20%);
 
 //== Text color
@@ -65,14 +65,14 @@
 @mobile-menu-open-active-color: #fff;
 
 // Default Menu
-@main-menu-link-color: #76858a;
-@main-menu-link-active-color: darken(#76858a, 20%);
-@main-menu-link-hover-color: darken(#76858a, 20%);
+@main-menu-link-color: #6b655f;
+@main-menu-link-active-color: darken(#6b655f, 20%);
+@main-menu-link-hover-color: darken(#6b655f, 20%);
 @main-menu-link-hover-bg-color:transparent;
 @main-menu-link-transform:none;
 @main-menu-link-size:17px;
 @main-menu-dropdown-menu-background:@white;
-@main-menu-dropdown-link-color: #76858a;
+@main-menu-dropdown-link-color: #6b655f;
 @main-menu-dropdown-link-active-color: @brand-warning;
 @main-menu-dropdown-link-hover-color: @brand-warning;
 
@@ -151,7 +151,7 @@
 @breadcrumb-padding-vertical:   10px;
 @breadcrumb-padding-horizontal: 30px;
 
-@breadcrumb-background: lighten(@brand-tertiary, 30%);
+@breadcrumb-background: lighten(@brand-tertiary, 15%);
 @breadcrumb-color: #dedede;
 @breadcrumb-active-color: #fff;
 @breadcrumb-hover: lighten(@brand-primary, 30%);
@@ -180,13 +180,14 @@
 @footer-background: #FFFFFF;
 @footer-padding-top: 60px;
 @footer-working-group-background: url('@{image-path}/template/footer-working-group-separator.png') center repeat-y;
-@footer-color: #8c82a5;
+@footer-color: @brand-tertiary;
 @footer-border-top: none;
-@footer-h2-color: #66607c;
+@footer-h2-color: #000;
+@footer-h2-max-width: auto;
 @footer-h2-font-weight: 400;
 @footer-h2-font-size: 18px;
 
-@footer-link-color: #928bac;
+@footer-link-color: @brand-tertiary;
 @footer-link-font-weight:400;
 @footer-link-hover: darken(@footer-link-color, 30%);
 @footer-nav-link-padding: 6px 15px;
@@ -344,9 +345,9 @@
 @sideitem-p-padding:0;
 
 @main-sidebar-color:@white;
-@main-sidebar-bg:#61a3b9;
+@main-sidebar-bg:@brand-secondary;
 @main-sidebar-shape:polygon(0 0, 0% 100%, 100% 0);
-@main-sidebar-heading-size:24px;
+@main-sidebar-heading-size:18px;
 @main-sidebar-heading-weight:400;
 @main-sidebar-list-border:1px solid #4b8092;
 
@@ -370,7 +371,7 @@
 // Featured Story
 @featured-story-bg-color:@white;
 @featured-story-shape:polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
-@featured-story-h2-color:#6d6193;
+@featured-story-h2-color:@brand-tertiary;
 @featured-story-p-size:21px;
 @featured-story-ad-bg-color:#eaeaeb;
 @featured-story-ad-shape:polygon(0 0, 100% 0, 100% 100%, 0 100%, 37% 51%);
@@ -378,7 +379,7 @@
 @featured-story-ad-p-size:12px;
 
 //== Featured
-@featured-news-list-h2-color:@brand-secondary;
+@featured-news-list-h2-color:@brand-tertiary;
 @featured-news-list-icon-color:@brand-primary;
 @featured-news-list-media-link-bg-color:@white;
 @featured-news-list-media-link-color:#484848;
