@@ -1,0 +1,53 @@
+//
+// Highlights
+//
+// author: Eric Poirier <eric.poirier@eclipse-foundation.org>
+// --------------------------------------------------
+
+.section-highlights {
+  background-color:@section-highlights-bg-color;
+  .featured-highlights-item {
+    text-align:@section-highlights-text-align;
+    padding:25px;
+    &:last-child {
+      border:none;
+    }
+    h3 {
+      font-size:@section-highlights-h3-size;
+      font-weight:@section-highlights-h3-weight;
+      margin-top:10px;
+    }
+    .feather {
+      stroke:@section-highlights-icon-color;
+      width:@section-highlights-icon-size;
+      height:@section-highlights-icon-size;
+    }
+  }
+  .featured-highlights-item:not(:last-child) {
+    &:after {
+      border-right:@section-highlights-items-right-border;
+      display:block;
+      content:"";
+      width:1px;
+      height:200px;
+      position:absolute;
+      top:0;
+      right:0;
+    }
+  }
+}
+
+.section-top-angle {
+  &:before {
+    background-color:@section-highlights-bg-color;
+    .clip-path-shape(@section-top-angle);
+    display:block;
+    content:"";
+    position:absolute;
+    top:-79px;
+    width:100%;
+    height:80px;
+  }
+  background-color:@section-highlights-bg-color;
+  position:relative;
+}
