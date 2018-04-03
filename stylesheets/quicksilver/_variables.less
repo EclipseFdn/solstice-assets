@@ -8,18 +8,26 @@
 
 //== Colors
 
-@brand-primary:         @brand-warning; // Orange
-@brand-secondary:       #61a3b9; // Blue teal
-@brand-tertiary:        #3e3e3f; // Dark Grey 
-@brand-quaternary:      #405369; // Dark Blue
-@brand-quinary:         #676767; // Lighter Grey
-@brand-info:            #afbbdc;
-@brand-info-light:      #dbe3f8;
-@brand-warning:         #f7941e;
+@brand-primary:         #f7941e; // Orange
+@brand-secondary:       #404040; // Gray
+@brand-tertiary:        #3f7b96; // Blue
+@brand-quaternary:      #efefef; // Light Gray 
+@brand-quinary:         @brand-quaternary; // Light Gray (Breadcrumbs)
+
+@brand-info:            @brand-tertiary;
+@brand-info-light:      lighten(@brand-info, 20%);
+@brand-warning:         @brand-primary;
+
 
 //== Links
-@brand-links-color:         #337ab7;
-@brand-links-visited-color: #9e55d2;
+//** Global textual link color.
+@link-color:            #337ab7;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 10%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
+//** Link visited color
+@link-visited-color: #9e55d2;
 
 
 //== Static colors
@@ -44,11 +52,14 @@
 @eclipse-highlight-grey: #f5f5f5;
 
 //== /_core/template/header.less
-@header-background:@white;
-@header-toolbar-background-color:@white;
-@header-toolbar-color:#6b655f;
-@header-toolbar-color-hover: darken(@white, 20%);
-
+@header-background:@brand-secondary;
+@header-toolbar-background-color:@brand-secondary;
+@header-toolbar-color:@white;
+@header-toolbar-color-hover: darken(@header-toolbar-color, 20%);
+@alternate-header-background:#fff;
+@alternate-header-toolbar-background-color:@alternate-header-background;
+@alternate-header-toolbar-color:@header-background;
+@alternate-header-toolbar-color-hover:lighten(@alternate-header-toolbar-color, 15%);
 //== Text color
 @text-color:#4c4d4e;
 
@@ -56,7 +67,7 @@
 
 // Main colors for the menu
 @mobile-menu-background: #2c2255;
-@mobile-menu-nav-background: lighten(@brand-tertiary, 15%);
+@mobile-menu-nav-background: lighten(@brand-secondary, 15%);
 @mobile-menu-hover: @brand-warning;
 @mobile-menu-color:#fff;
 
@@ -65,21 +76,32 @@
 @mobile-menu-open-active-color: #fff;
 
 // Default Menu
-@main-menu-link-color: #6b655f;
-@main-menu-link-active-color: darken(#6b655f, 20%);
+@main-menu-link-color: @white;
+@alternate-main-menu-link-color:#6b655f;
+@main-menu-link-active-color: darken(@white, 20%);
+@alternate-main-menu-link-active-color: darken(#6b655f, 20%);
 @main-menu-link-hover-color: darken(#6b655f, 20%);
 @main-menu-link-hover-bg-color:transparent;
 @main-menu-link-transform:none;
+@alternate-main-menu-link-transform:@main-menu-link-transform;
+
 @main-menu-link-size:17px;
+@alternate-main-menu-link-size:@main-menu-link-size;
+
 @main-menu-dropdown-menu-background:@white;
 @main-menu-dropdown-link-color: #6b655f;
 @main-menu-dropdown-link-active-color: @brand-warning;
 @main-menu-dropdown-link-hover-color: @brand-warning;
 
+
 // Default dropdown link colors
-@mobile-menu-background: @header-background;
-@navbar-toggle-icon-background: @brand-primary;
+@mobile-menu-background: @brand-secondary;
+@alternate-mobile-menu-background:@header-background;
+
 @mobile-main-menu-link-size:14px;
+@alternate-mobile-main-menu-link-size:@mobile-main-menu-link-size;
+
+@navbar-toggle-icon-background: @brand-primary;
 @mobile-menu-dropdown-menu-background: @white;
 @mobile-menu-dropdown-menu-color: #787878;
 @mobile-menu-dropdown-menu-hover: darken(#787878, 20%);
@@ -88,18 +110,6 @@
 @mobile-menu-dropdown-menu-active-color: #fff;
 @mobile-menu-dropdown-menu-active-hover: #fff;
 @mobile-menu-dropdown-menu-active-hover-background: #f5f5f5;
-
-//== Alternate styles
-@alternate-header-background:@brand-tertiary;
-@alternate-header-toolbar-background-color:@header-background;
-@alternate-header-toolbar-color:@header-toolbar-color;
-@alternate-header-toolbar-color-hover:@header-toolbar-color-hover;
-@alternate-main-menu-link-size:@main-menu-link-size;
-@alternate-main-menu-link-transform:@main-menu-link-transform;
-@alternate-main-menu-link-color:@white;
-@alternate-main-menu-link-active-color:darken(@white, 20%);
-@alternate-mobile-menu-background:@brand-tertiary;
-@alternate-mobile-main-menu-link-size:@mobile-main-menu-link-size;
 
 //== Bugzilla menu
 @bugzilla-menu-link-color: @main-menu-link-color;
@@ -128,7 +138,7 @@
 @panel-inner-border:          transparent;
 
 @panel-default-border:        transparent;
-@panel-default-heading-bg:    @brand-tertiary;
+@panel-default-heading-bg:    @brand-secondary;
 @panel-default-text:          @white;
 
 //== Image Path
@@ -148,15 +158,16 @@
 
 
 //== Breadcrumbs
-@breadcrumb-padding-vertical:   10px;
-@breadcrumb-padding-horizontal: 30px;
+@breadcrumb-padding-vertical:   8px;
+@breadcrumb-padding-horizontal: 0px;
 
-@breadcrumb-background: lighten(@brand-tertiary, 15%);
-@breadcrumb-color: #dedede;
-@breadcrumb-active-color: #fff;
-@breadcrumb-hover: lighten(@brand-primary, 30%);
+@breadcrumb-background: @brand-quinary;
+@breadcrumb-color: lighten(@text-color, 10%);
+@breadcrumb-active-color: @text-color;
+@breadcrumb-hover: @text-color;
 @breadcrumb-border-bottom: none;
-@breadcrumb-font-size:inherit;
+@breadcrumb-border-top: @breadcrumb-border-bottom;
+@breadcrumb-font-size:0.85em;
 @breadcrumb-font-weight:300;
 @breadcrumb-text-transform: inherit;
 @breadcrumb-sharethis-padding: 5px 0 0 0;
@@ -180,14 +191,14 @@
 @footer-background: #FFFFFF;
 @footer-padding-top: 60px;
 @footer-working-group-background: url('@{image-path}/template/footer-working-group-separator.png') center repeat-y;
-@footer-color: @brand-tertiary;
+@footer-color: @brand-secondary;
 @footer-border-top: none;
 @footer-h2-color: #000;
 @footer-h2-max-width: auto;
 @footer-h2-font-weight: 400;
 @footer-h2-font-size: 18px;
 
-@footer-link-color: @brand-tertiary;
+@footer-link-color: @brand-secondary;
 @footer-link-font-weight:400;
 @footer-link-hover: darken(@footer-link-color, 30%);
 @footer-nav-link-padding: 6px 15px;
@@ -256,7 +267,7 @@
 
 //== Tables
 
-@tables-background-color: @brand-secondary;
+@tables-background-color: @brand-tertiary;
 @tables-color: @white;
 
 //==  Slideshow
@@ -264,7 +275,7 @@
 @slideshow-background-image: none;
 @slideshow-content-background: rgba(255, 255, 255, 0.85);
 @slideshow-content-padding: 60px 40px 60px 40px;
-@slideshow-link-color: @brand-tertiary;
+@slideshow-link-color: @brand-secondary;
 @slideshow-link-color-hover: darken(@slideshow-link-color, 20%);
 @slideshow-text-color: @white;
 @slideshow-h2-fw: 300;
@@ -292,7 +303,6 @@
 @page-header-logo-border-bottom:1px solid @gray-mid-light;
 
 //== Button Bootstrap
-@btn-default-color:@white;
 @btn-border-radius-base:0;
 @btn-primary-color:@white;
 @btn-warning-border: @btn-warning-bg;
@@ -347,14 +357,14 @@
 @sideitem-p-padding:0;
 
 @main-sidebar-color:@white;
-@main-sidebar-bg:@brand-secondary;
+@main-sidebar-bg: @brand-tertiary;
 @main-sidebar-shape:polygon(0 0, 0% 100%, 100% 0);
 @main-sidebar-heading-size:18px;
 @main-sidebar-heading-weight:400;
-@main-sidebar-list-border:1px solid #4b8092;
+@main-sidebar-list-border:1px solid lighten(@main-sidebar-bg, 10%);
 
 //== Jumbotron
-@jumbotron-bg-color:@brand-tertiary;
+@jumbotron-bg-color:@brand-secondary;
 @jumbotron-color:@white;
 @jumbotron-text-align:center;
 @jumbotron-h1-size:52px;
@@ -363,7 +373,7 @@
 
 //== Featured Footer
 @featured-footer-shape:polygon(0 8%, 100% 0, 100% 100%, 0 91%);
-@featured-footer-bg-color:@brand-tertiary;
+@featured-footer-bg-color:@brand-secondary;
 @featured-footer-padding:50px 0;
 @featured-footer-text-align:center;
 @featured-footer-text-color:@white;
@@ -373,7 +383,7 @@
 // Featured Story
 @featured-story-bg-color:@white;
 @featured-story-shape:polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
-@featured-story-h2-color:@brand-tertiary;
+@featured-story-h2-color:@brand-secondary;
 @featured-story-p-size:21px;
 @featured-story-ad-bg-color:#eaeaeb;
 @featured-story-ad-shape:polygon(0 0, 100% 0, 100% 100%, 0 100%, 37% 51%);
@@ -381,7 +391,7 @@
 @featured-story-ad-p-size:12px;
 
 //== Featured
-@featured-news-list-h2-color:@brand-tertiary;
+@featured-news-list-h2-color:@brand-secondary;
 @featured-news-list-icon-color:@brand-primary;
 @featured-news-list-media-link-bg-color:@white;
 @featured-news-list-media-link-color:#484848;

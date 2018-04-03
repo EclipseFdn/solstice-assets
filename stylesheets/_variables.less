@@ -7,8 +7,8 @@
 @import "../../bootstrap/less/variables.less";
 
 @brand-primary:         #2c2255; // Eclipse purple
-@brand-secondary:       #afbbdc; // Baby blue
-@brand-tertiary:        #868685; // Grey
+@brand-secondary:       #868685; // Grey
+@brand-tertiary:        #afbbdc; // Baby blue
 @brand-quaternary:      #342343; // Dark purple
 @brand-quinary:         #bed247; // lime green
 @brand-info:            #afbbdc; // Baby blue
@@ -16,8 +16,14 @@
 @brand-warning:         #f7941e; // Orange
 
 //== Links
-@brand-links-color:         #337ab7;
-@brand-links-visited-color: #9e55d2;
+//** Global textual link color.
+@link-color:            #337ab7;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 10%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
+//** Link visited color
+@link-visited-color: #9e55d2;
 
 
 //== Static colors
@@ -152,6 +158,7 @@
 @breadcrumb-active-color: #fff;
 @breadcrumb-hover: @brand-warning;
 @breadcrumb-border-bottom: none;
+@breadcrumb-border-top: @breadcrumb-border-bottom;
 @breadcrumb-font-size:inherit;
 @breadcrumb-font-weight:600;
 @breadcrumb-text-transform: uppercase;
@@ -252,7 +259,7 @@
 
 //== Tables
 
-@tables-background-color: @brand-secondary;
+@tables-background-color: @brand-tertiary;
 @tables-color: @white;
 
 //==  Slideshow
@@ -260,7 +267,7 @@
 @slideshow-background-image: none;
 @slideshow-content-background: rgba(255, 255, 255, 0.85);
 @slideshow-content-padding: 60px 40px 60px 40px;
-@slideshow-link-color: @brand-tertiary;
+@slideshow-link-color: @brand-secondary;
 @slideshow-link-color-hover: darken(@slideshow-link-color, 20%);
 @slideshow-text-color: @white;
 @slideshow-h2-fw: 300;
@@ -342,7 +349,7 @@
 @label-purple-bg: @brand-primary;
 
 //== Jumbotron
-@jumbotron-bg-color:@brand-tertiary;
+@jumbotron-bg-color:@brand-secondary;
 @jumbotron-color:#2c2255;
 @jumbotron-text-align:center;
 @jumbotron-h1-size:52px;
@@ -351,7 +358,7 @@
 
 //== Featured Footer
 @featured-footer-shape:polygon(0 8%, 100% 0, 100% 100%, 0 91%);
-@featured-footer-bg-color:@brand-tertiary;
+@featured-footer-bg-color:@brand-secondary;
 @featured-footer-padding:50px 0;
 @featured-footer-text-align:center;
 @featured-footer-text-color:@white;
@@ -370,7 +377,7 @@
 @featured-story-ad-p-size:12px;
 
 //== Featured
-@featured-news-list-h2-color:@brand-secondary;
+@featured-news-list-h2-color:@brand-tertiary;
 @featured-news-list-icon-color:@brand-primary;
 @featured-news-list-media-link-bg-color:@white;
 @featured-news-list-media-link-color:#484848;

@@ -78,14 +78,11 @@
     top: 5px;
   }
 }
+
 // Apply this on all the links except the buttons
 a{
-  color:@brand-links-color;
-  &:hover {
-    color:darken(@brand-links-color, 10%);
-  }
   &:visited {
-    color:@brand-links-visited-color;
+    color:@link-visited-color;
   }
 }
 
@@ -109,7 +106,7 @@ blockquote{
 
 // Example: eclipse.org/artwork
 .top-level-heading {
-  background: @brand-tertiary;
+  background: @brand-secondary;
   position:relative;
   padding:20px;
   margin-bottom:30px;
@@ -119,7 +116,7 @@ blockquote{
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid @brand-tertiary;
+    border-top: 20px solid @brand-secondary;
     position:absolute;
     content: "";
     bottom: -20px;
