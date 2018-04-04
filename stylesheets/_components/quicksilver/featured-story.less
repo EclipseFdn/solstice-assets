@@ -4,7 +4,7 @@
 // author: Eric Poirier <eric.poirier@eclipse-foundation.org>
 // --------------------------------------------------
 
-.featured-story-ad-shape {
+.featured-story-shape {
   .clip-path-shape(@featured-story-shape);
   background-color:@featured-story-bg-color;
   @media (min-width: @screen-sm-min) {
@@ -17,11 +17,21 @@
   }
 }
 
-.featured-story-ad {
+.featured-story {
   overflow:hidden;
   @media (max-width: @screen-xs-max) {
     text-align:center;
   }
+
+  .featured-story-description {
+    color:@featured-story-ad-p-color;
+    font-size:@featured-story-ad-p-size;
+    margin-top:5px;
+    clear:both;
+    padding-top:10px;
+    margin-bottom:10px;
+  }
+
   .featured-story, .featured-ad{
     padding-top:50px;
     @media (min-width: @screen-sm-min) {
@@ -29,6 +39,10 @@
     }
   }
   .featured-story {
+    .featured-story-description {
+      font-size:1.1em;
+      margin-bottom:10px;
+    }
     background-position:top right;
     background-repeat:no-repeat;
     background-color:@featured-story-bg-color;
@@ -38,6 +52,7 @@
     }
     h2 {
       color:@featured-story-h2-color;
+      margin-top:0;
     }
     p {
       font-size:@featured-story-p-size;
@@ -78,18 +93,12 @@
         left: 0;
       }
     }
-    p {
-      color:@featured-story-ad-p-color;
-      font-size:@featured-story-ad-p-size;
-      margin-top:5px;
-      clear:both;
-      padding-top:10px;
-    }
   }
   .eclipsefnd-ad{
     clear: both;
   }
 }
+
 
 .eclipsefnd-ad a{
   .box-shadow(3px 4px 46px -6px rgba(0,0,0,0.51));

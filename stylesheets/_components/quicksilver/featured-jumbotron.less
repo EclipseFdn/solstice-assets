@@ -4,10 +4,14 @@
 // author: Eric Poirier <eric.poirier@eclipse-foundation.org>
 // --------------------------------------------------
 
-.jumbotron {
+.featured-jumbotron {
   background-color:@jumbotron-bg-color;
   text-align:@jumbotron-text-align;
   color:@jumbotron-color;
+  .btn{
+    padding-left: 20px;
+    padding-right:20px;
+  }
   h1 {
     @media (min-width: @screen-md-min) {
       font-size:@jumbotron-h1-size;
@@ -39,6 +43,8 @@
 
   .jumbotron-icon {
     margin-bottom:10px;
+    display:block;
+    color:inherit;
     @media (min-width: @screen-sm-min) {
       height:@jumbotron-icon-size;
       .feather {
