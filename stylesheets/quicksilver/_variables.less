@@ -52,13 +52,14 @@
 @eclipse-highlight-grey: #f5f5f5;
 
 //== /_core/template/header.less
-@header-background:@brand-secondary;
-@header-toolbar-background-color:@brand-secondary;
+@header-background:@brand-secondary top right no-repeat;
+@header-default-bg-img:url('../images/components/landing-well/eclipse_home_bg.jpg');
+@header-toolbar-background-color:transparent;
 @header-toolbar-color:@white;
 @header-toolbar-color-hover: darken(@header-toolbar-color, 20%);
 @alternate-header-background:#fff;
 @alternate-header-toolbar-background-color:@alternate-header-background;
-@alternate-header-toolbar-color:@header-background;
+@alternate-header-toolbar-color:@brand-secondary;
 @alternate-header-toolbar-color-hover:lighten(@alternate-header-toolbar-color, 15%);
 //== Text color
 @text-color:#4c4d4e;

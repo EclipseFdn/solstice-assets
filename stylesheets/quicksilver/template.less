@@ -61,11 +61,19 @@
   }
 }
 
-header {
-  background-color: @header-background;
+.header-wrapper {
+  background: @header-background;
+  background-size:cover;
   @media (min-width: @screen-sm-min) {
     padding-bottom: 20px;
   }
+  .featured-jumbotron {
+    background-color:transparent;
+  }
+}
+
+.header-default-bg-img {
+  background-image:@header-default-bg-img;
 }
 
 .alternate-layout {
