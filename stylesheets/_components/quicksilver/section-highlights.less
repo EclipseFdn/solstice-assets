@@ -9,6 +9,7 @@
   .featured-highlights-item {
     text-align:@section-highlights-text-align;
     padding:25px;
+    border-right:@section-highlights-items-right-border;
     &:last-child {
       border:none;
     }
@@ -21,18 +22,6 @@
       stroke:@section-highlights-icon-color;
       width:@section-highlights-icon-size;
       height:@section-highlights-icon-size;
-    }
-  }
-  .featured-highlights-item:not(:last-child) {
-    &:after {
-      border-right:@section-highlights-items-right-border;
-      display:block;
-      content:"";
-      width:1px;
-      height:200px;
-      position:absolute;
-      top:0;
-      right:0;
     }
   }
 }

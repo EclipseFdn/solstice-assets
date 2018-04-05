@@ -8,19 +8,23 @@
   background-color:@jumbotron-bg-color;
   text-align:@jumbotron-text-align;
   color:@jumbotron-color;
+  padding-top:10px;
   .btn{
     padding-left: 20px;
     padding-right:20px;
+    @media (max-width: @screen-sm-max) {
+      margin-bottom:25px;
+    }
   }
   h1 {
     @media (min-width: @screen-md-min) {
       font-size:@jumbotron-h1-size;
     }
     @media (max-width: @screen-sm-max) {
-      font-size:@jumbotron-h1-size - 10px;
+      font-size: @jumbotron-h1-mobile-size;
     }
     font-weight:@jumbotron-h1-weight;
-    margin-bottom:40px;
+    margin-bottom:30px;
     margin-top:0;
     &:after {
       border-bottom:3px solid @jumbotron-color;

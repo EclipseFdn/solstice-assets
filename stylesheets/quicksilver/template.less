@@ -4,6 +4,13 @@
 
 @media (min-width: @screen-sm-min) {
   #main-menu {
+    li > a {
+      padding:0 0 2px;
+      margin:10px 15px;
+      &:hover {
+        border-bottom:1px solid @main-menu-link-active-color;
+      }
+    }
     li.dropdown.eclipse-more {
       &.open {
         > a {
@@ -59,14 +66,24 @@
       }
     }
   }
+  
+  .toolbar-row {
+    a {
+      padding-bottom:1px;
+      &:hover {
+        border-bottom:1px solid @header-toolbar-color-hover;
+      }
+    }
+  }
+}
+
+#header-row {
+  padding-bottom:20px;
 }
 
 .header-wrapper {
   background: @header-background;
   background-size:cover;
-  @media (min-width: @screen-sm-min) {
-    padding-bottom: 20px;
-  }
   .featured-jumbotron {
     background-color:transparent;
   }
