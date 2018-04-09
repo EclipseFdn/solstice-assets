@@ -83,6 +83,20 @@ img.desaturate {
   border-radius:0;
   box-shadow:none;
   margin:10px auto;
+  color: inherit;
+  // Do not group these rules
+  &:-moz-placeholder { /* Firefox 18- */
+    color: inherit;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: inherit;
+  }
+  &:-ms-input-placeholder {
+    color: inherit;
+  }
+  &::-webkit-input-placeholder {
+    color: inherit;
+  }
 }
 
 .hidden-label{
