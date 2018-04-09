@@ -20,6 +20,18 @@
 // Container
 .downloads-container {
   overflow:hidden;
+  background-color:#fff;
+  h2{
+    font-size: 16px;
+  }
+  
+  h2 span.downloads-title{
+    color:#828282;
+    padding:6px 30px;
+    position:relative;
+    border: 1px solid #DADADA;
+    width: 150px;
+  }
 }
 
 // Top Header
@@ -27,7 +39,6 @@
   background-image:url('../images/downloads-header-bg.jpg');
   background-repeat:repeat-x;
   border-bottom: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
   @media (min-width: 768px) {
     background-position:top left;
   }
@@ -304,19 +315,6 @@
   }
 }
 
-// Classes
-h2{
-  font-size: 16px;
-}
-
-h2 span.downloads-title{
-  color:#828282;
-  padding:6px 30px;
-  position:relative;
-  border: 1px solid #DADADA;
-  width: 150px;
-}
-
 .grey-link{
   color:#9692a8;
   font-weight:300;
@@ -347,13 +345,16 @@ h2 span.downloads-title{
 }
 
 #all-projects{
-  background-color:#efefef;
+  background-color:#f9f9f9;
   border-top: 1px solid #E8E8E8;
-  .container{
-    background-image:url('/eclipse.org-common/themes/solstice/public/images/components/discover-search/discover-search-bg.jpg');
-    background-repeat:no-repeat;
-    background-position:bottom right;
+  @media (min-width: 992px) {
+    .container{
+      background-image:url('/eclipse.org-common/themes/solstice/public/images/components/discover-search/discover-search-bg.jpg');
+      background-repeat:no-repeat;
+      background-position:bottom right;
+    }
   }
+  
 }
 
 .downloads-all-projects-items {
@@ -385,6 +386,13 @@ h2 span.downloads-title{
     width: 20%;
     float: left;
 }
+
+@media (min-width: 992px) {
+  .jetty-margin {
+    margin-left:9.7%;
+  }
+}
+
 
 @media (min-width: 768px) {
     .col-sm-5th {
