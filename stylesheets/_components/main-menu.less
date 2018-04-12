@@ -58,11 +58,14 @@
         & > a {
           color: @mobile-menu-color;
           text-transform: @main-menu-link-transform;
+          padding: @mobile-main-menu-link-padding;
+          border-bottom: @mobile-main-menu-link-border-bottom;
         }
 
         .dropdown-menu {
           background: @mobile-menu-dropdown-menu-background;
           padding: 0;
+          border-radius:0;
           > li {
             &.active {
               a {
@@ -79,13 +82,40 @@
             }
 
             > a {
-              padding: 5px 20px 5px 30px;
+              padding: @mobile-main-menu-link-padding;
               color: @mobile-menu-dropdown-menu-color;
               &:hover , &:focus {
                 color: @mobile-menu-dropdown-menu-hover;
                 background: @mobile-menu-dropdown-menu-hover-background;
               }
             }
+          }
+        }
+      }
+      & > li.main-menu-search {
+        .dropdown-toggle {
+          display:none;
+        }
+        .dropdown-menu {
+          position: static;
+          float: none;
+          width: auto;
+          margin-top: 0;
+          background-color: transparent;
+          border: 0;
+          box-shadow: none;
+          display:block;
+          p {
+            color:@mobile-menu-color;
+          }
+          .yamm-content {
+            padding:15px;
+          }
+          .gsc-input {
+            background-color:#fff;
+          }
+          .gsc-input-box {
+            border:none;
           }
         }
       }
