@@ -2,9 +2,11 @@
 // Eclipse Downloads Page
 // --------------------------------------------------
 
-.neon{
-  font-family:'clipregular', Arial, sans-serif;
-  font-size:1.4em;
+.oxygen {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #69c1bd;
 }
 
 @orange:#f7941e;
@@ -20,98 +22,25 @@
 // Container
 .downloads-container {
   overflow:hidden;
-  background-color:#fff;
   h2{
     font-size: 16px;
   }
   
   h2 span.downloads-title{
-    color:#828282;
+    color:#545454;
     padding:6px 30px;
     position:relative;
-    border: 1px solid #DADADA;
-    width: 150px;
+    border: 1px solid #bdbdbd;
   }
 }
 
 // Top Header
 .downloads-header {
-  background-image:url('../images/downloads-header-bg.jpg');
-  background-repeat:repeat-x;
-  border-bottom: 1px solid #E6E6E6;
-  @media (min-width: 768px) {
-    background-position:top left;
-  }
-  @media (min-width: 992px) {
-    background-position:top right;
-  }
-  @media (min-width: 1200px) {
-    background-position:top right;
-  }
   .h1-container{
     border-left:5px solid @orange; // orange
     padding-left:10px;
-    margin-top:60px;
+    margin-top:75px;
   }
-  h1{
-    color:#fff;
-    position:relative;
-    margin:0;
-  }
-}
-.downloads-header-white-shape {
-
-  min-height:240px;
-  padding-right:0;
-  @media (min-width: 992px) and (max-width: 1199px) {
-    border-right:5px solid #dbdbdb;
-  }
-  @media (min-width: 1200px) {
-    background-image:url('../images/downloads-header-white-shape-bg.png');
-    background-position:top right;
-    background-repeat:no-repeat;
-  }
-}
-
-.downloads-header-white-content{
-  background-color:#fff;
-  min-height:240px;
-  position:relative;
-  @media (min-width: 1200px){
-    padding-left:0;
-  }
-  @media (min-width: 992px){
-    &:after{
-      content:"";
-      position:absolute;
-      width:1000px;
-      height:240px;
-      z-index:1;
-      left:0;
-      background-color:#f6f6f6;
-    }
-  }
-  @media (max-width: 992px){
-    margin-top:10px;
-  }
-
-}
-
-.downloads-header-box-ad{
-  text-align: center;
-  width: 100%;
-  @media (min-width: 992px) {
-    position:absolute;
-  }
-  z-index:999;
-  @media (min-width: 768px) and (max-width: 992px){
-    padding:0 10px;
-  }
-}
-
-.downloads-header-padding{
-  padding-top:20px;
-  padding-bottom:20px;
 }
 
 .downloads-content-padding{
@@ -124,34 +53,10 @@
 
 // Page sections
 .downloads-section{
-  -moz-box-shadow:    inset 0 -33px 109px -23px #E0E0E0;
-  -webkit-box-shadow: inset 0 -33px 109px -23px #E0E0E0;
-  box-shadow:         inset 0 -33px 109px -23px #E0E0E0;
+  background-color:#f9f9f9;
+  border-top:1px solid darken(#f9f9f9, 30%);
+  padding:30px 0;
   text-align:center;
-  .fa-angle-down{
-    color:@orange;
-    font-size: 24px;
-    border: 2px solid @orange;
-    border-radius: 100px;
-    width: 27px;
-    height: 27px;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 10px;
-    background-color:#fff;
-    z-index:1;
-    &:after{
-      z-index:-1;
-      position:relative;
-      border-bottom:2px solid @orange;
-      content:"";
-      width: 100px;
-      height: 2px;
-      display: block;
-      margin-left: -40px;
-      top: -13px;
-    }
-  }
 }
 
 .downloads-logo{
@@ -167,7 +72,6 @@
 }
 
 .downloads-items {
-  //height:160px;
   margin-bottom:20px;
   padding:30px 15px 30px;
   position:relative;
@@ -344,21 +248,12 @@
   }
 }
 
-#all-projects{
-  background-color:#f9f9f9;
-  border-top: 1px solid #E8E8E8;
-  @media (min-width: 992px) {
-    .container{
-      background-image:url('/eclipse.org-common/themes/solstice/public/images/components/discover-search/discover-search-bg.jpg');
-      background-repeat:no-repeat;
-      background-position:bottom right;
-    }
-  }
-  
-}
-
 .downloads-all-projects-items {
   padding: 30px 15px 0;
+}
+
+.featured-story-block, .featured-ad {
+  min-height:270px;
 }
 
 // 5 column grid
@@ -425,14 +320,4 @@
         width: 40%;
         float: left;
     }
-}
-
-@media (min-width: 768px) {
-
-}
-@media (min-width: 992px) {
-
-}
-@media (min-width: 1200px) {
-
 }

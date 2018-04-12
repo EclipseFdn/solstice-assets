@@ -7,10 +7,9 @@
 //-------------------------------------------------------------------
 
 .toolbar-menu {
-  #gradient > .vertical-three-colors (#fff;
-  #f0efef;
-  70%;
-  #dbdbdb);
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
   margin-bottom: 25px;
   .breadcrumb {
     margin-bottom: 0;
@@ -18,6 +17,7 @@
     background: none;
     li {
       padding-bottom: 0;
+      font-size:1.1em;
     }
 
     > li + li:before {
@@ -26,7 +26,6 @@
 
     a:link , a:visited {
       color: @gray;
-      font-weight: 600;
     }
 
     a:hover {
@@ -35,7 +34,7 @@
 
     a.active {
       color: #371e1d;
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 }
