@@ -19,6 +19,20 @@
   -webkit-transition: visibility 0s, opacity 0.2s ease-in-out; /*safari and chrome */
 }
 
+#tool-platforms {
+  @media (max-width: 767px) {
+    border-top:none;
+    margin-top: -50px;
+    padding-top: 75px;
+  }
+}
+
+.jetty-spacing {
+  @media (min-width: 768px) {
+    margin-left:9.7%;
+  }
+}
+
 // Container
 .downloads-container {
   overflow:hidden;
@@ -37,9 +51,17 @@
 // Top Header
 .downloads-header {
   .h1-container{
+    margin-top:30px;
+    margin-bottom:20px;
     border-left:5px solid @orange; // orange
     padding-left:10px;
-    margin-top:75px;
+    text-align:left;
+    @media (min-width: 768px) {
+      margin-top:60px;
+    }
+    @media (min-width: 992px) {
+      margin-top:75px;
+    }
   }
 }
 
@@ -57,6 +79,11 @@
   border-top:1px solid darken(#f9f9f9, 30%);
   padding:30px 0;
   text-align:center;
+  @media (max-width: 767px) {
+    &:first-child {
+      border-top:none;
+    }
+  }
 }
 
 .downloads-logo{
@@ -253,7 +280,9 @@
 }
 
 .featured-story-block, .featured-ad {
-  min-height:270px;
+  @media (min-width: 768px) {
+    min-height:270px;
+  }
 }
 
 // 5 column grid
