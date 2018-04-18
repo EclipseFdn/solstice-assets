@@ -4,20 +4,9 @@
 // author: Eric Poirier <eric.poirier@eclipse-foundation.org>
 // --------------------------------------------------
 
-.featured-story-shape {
-  .clip-path-shape(@featured-story-shape);
-  background-color:@featured-story-bg-color;
-  @media (min-width: @screen-sm-min) {
-    margin-top:-60px;
-    margin-bottom:-30px;
-  }
-  @media (max-width: @screen-sm-max) {
-    margin-top:-80px;
-    margin-bottom:-40px;
-  }
-}
-
 .featured-story {
+  position:relative;
+  z-index:1;
   background-color:@white;
   overflow:hidden;
   @media (max-width: @screen-xs-max) {
@@ -35,8 +24,9 @@
 }
 
 .featured-story-block, .featured-ad{
-  padding-top:50px;
+  padding-top:25px;
   @media (min-width: @screen-sm-min) {
+    padding-top:50px;
     min-height:340px;
   }
 }
@@ -73,7 +63,7 @@
   background-color:@featured-story-ad-bg-color;
   padding-bottom:50px;
   @media (max-width: @screen-xs-max) {
-    .clip-path-shape(@featured-story-shape);
+    //.clip-path-shape(@featured-story-shape);
   }
   @media (min-width: @screen-sm-min) {
     text-align:right;
