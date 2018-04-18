@@ -40,6 +40,16 @@
   h2 {
     color:inherit;
   }
+  
+  a:not(.btn) {
+    color:@jumbotron-link-color;
+    &:hover {
+      color:@jumbotron-link-color-hover;
+    }
+    &:visited {
+      color:@jumbotron-link-color-visited;
+    }
+  }
 
   @media (max-width: @screen-xs-max) {
     .btn {
