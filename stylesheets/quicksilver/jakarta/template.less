@@ -9,16 +9,18 @@ main {
   border-bottom:1px solid @brand-secondary;
 }
 
-h2.jakarta-h2 {
-  border-bottom:1px solid lighten(@text-color, 50%);
-  margin-bottom:25px;
-  position:relative;
-  top:-15px;
-  span {
-    background-color:@body-bg;
-    padding:0 50px;
+ @media (min-width: @screen-sm-min) {
+  .heading-line {
+    border-bottom:1px solid lighten(@text-color, 50%);
+    margin-bottom:25px;
     position:relative;
-    top:15px;
+    top:-15px;
+    span {
+      background-color:@body-bg;
+      padding:0 50px;
+      position:relative;
+      top:15px;
+    }
   }
 }
 
@@ -33,7 +35,7 @@ h2.jakarta-h2 {
 }
 
 .jakarta-events {
-  h2.jakarta-h2 {
+  .heading-line {
     span {
       background-color:@brand-secondary;
       padding:0 50px;
@@ -54,5 +56,15 @@ h2.jakarta-h2 {
   .feather {
     width:60px;
     height:60px;
+  }
+}
+
+.jakarta-members {
+  ul{
+    padding-top:10px;
+  }
+  li{
+    padding:0px 20px 40px 20px;
+
   }
 }
