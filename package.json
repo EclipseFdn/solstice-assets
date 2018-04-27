@@ -1,27 +1,35 @@
 {
   "name": "solstice-assets",
-  "version": "0.0.2",
   "description": "Solstice is a responsive theme for eclipse.org.",
   "main": "Gruntfile.js",
   "author": "Christopher Guindon",
-  "license": "EPL",
+  "license": "EPL-2.0",
+  "version": "0.0.3",
   "bugs": {
-    "url": "https://bugs.eclipse.org/bugs/buglist.cgi?component=Website&list_id=8318814&product=Community&resolution=---"
+    "url": "https://github.com/EclipseFdn/solstice-assets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eclipsefdn/solstice-assets.git"
   },
   "scripts": {
-    "grunt": "node_modules/.bin/grunt",
-    "bower": "node_modules/.bin/bower",
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "readmeFilename": "README.md",
+  "dependencies": {
+    "Yamm": "github:geedmo/yamm3",
+    "bootstrap": "^3.3.7",
+    "feather-icons": "^4.7.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.9.1",
+    "jquery-match-height": "^0.7.2",
+    "laravel-mix": "github:JeffreyWay/laravel-mix#master"
+  },
   "devDependencies": {
-    "bower": "^1.4.1",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "less": "^3.0.2",
+    "less-loader": "^4.1.0"
   }
 }
