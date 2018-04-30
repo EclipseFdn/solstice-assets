@@ -4,7 +4,7 @@
   "main": "Gruntfile.js",
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "bugs": {
     "url": "https://github.com/EclipseFdn/solstice-assets/issues"
   },
@@ -25,10 +25,10 @@
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
     "jquery": "^1.9.1",
-    "jquery-match-height": "^0.7.2",
-    "laravel-mix": "github:JeffreyWay/laravel-mix#master"
+    "jquery-match-height": "^0.7.2"
   },
   "devDependencies": {
+    "laravel-mix": "^2.1.11",
     "less": "^3.0.2",
     "less-loader": "^4.1.0"
   }
