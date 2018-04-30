@@ -1,6 +1,6 @@
 {
-  "name": "solstice-assets",
-  "description": "Solstice is a responsive theme for eclipse.org.",
+  "name": "eclipsefdn-solstice-assets",
+  "description": "Solstice is a responsive look and feel for eclipse.org.",
   "main": "Gruntfile.js",
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
@@ -35,7 +35,6 @@
     "laravel-mix": "^2.1.11",
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
-    "load-grunt-config": "^0.19.2",
     "napa": "^3.0.0"
   }
 }
