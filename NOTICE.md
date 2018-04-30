@@ -5,9 +5,10 @@ This content is produced and maintained by the Eclipse Foundation.
 * Project home: https://github.com/EclipseFdn/solstice-assets
 
 ## Trademarks
-Jakarta and Jakarta EE are Trademarks of the Eclipse Foundation, Inc.
-Eclipse® is a Trademark of the Eclipse Foundation, Inc.
-Eclipse Foundation is a Trademark of the Eclipse Foundation, Inc.
+
+* Jakarta and Jakarta EE are Trademarks of the Eclipse Foundation, Inc.
+* Eclipse® is a Trademark of the Eclipse Foundation, Inc.
+* Eclipse Foundation is a Trademark of the Eclipse Foundation, Inc.
 
 ## Copyright
 
@@ -70,13 +71,3 @@ The project maintains the following source code repositories:
 ### jquery.matchHeight.js (^0.7.2)
 
 * License: The MIT License (MIT)
-
-
-## Cryptography
-
-Content may contain encryption software. The country in which you are currently
-may have restrictions on the import, possession, and use, and/or re-export to
-another country, of encryption software. BEFORE using any encryption software,
-please check the country's laws, regulations and policies concerning the import,
-possession, or use, and re-export of encryption software, to see if this is
-permitted.

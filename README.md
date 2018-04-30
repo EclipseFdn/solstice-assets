@@ -32,9 +32,9 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 
 ## Trademarks
 
-Jakarta and Jakarta EE are Trademarks of the Eclipse Foundation, Inc.
-Eclipse® is a Trademark of the Eclipse Foundation, Inc.
-Eclipse Foundation is a Trademark of the Eclipse Foundation, Inc.
+* Jakarta and Jakarta EE are Trademarks of the Eclipse Foundation, Inc.
+* Eclipse® is a Trademark of the Eclipse Foundation, Inc.
+* Eclipse Foundation is a Trademark of the Eclipse Foundation, Inc.
 
 ## Copyright and license
 
