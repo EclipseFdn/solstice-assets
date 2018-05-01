@@ -4,6 +4,7 @@ dist: trusty
 install:
   - sudo apt-get --yes install autoconf libtool nasm
   - npm install
+  - npm run drupal
 
 script:
   - npm run production
