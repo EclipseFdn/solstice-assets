@@ -29,6 +29,10 @@ mix.less('less/solstice/polarsys/styles.less', 'dist/css/polarsys.css');
 mix.less('less/solstice/polarsys/barebone.less', 'dist/css/polarsys-barebone.css');
 mix.less('less/solstice/styles.less', 'dist/css/solstice.css');
 
+// Copy cookieconsent files
+mix.copy('node_modules/cookieconsent/build/cookieconsent.min.css', 'dist/css/vendor/cookieconsent.min.css');
+mix.copy('node_modules/cookieconsent/build/cookieconsent.min.js', 'dist/js/vendor/cookieconsent.min.js');
+
 // Drupal sites
 mix.less('less/solstice/drupal.less', 'dist/css/drupal-solstice.css');
 
