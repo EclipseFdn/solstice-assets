@@ -1,7 +1,16 @@
 # solstice-assets
+
 Assets for the Eclipse Foundation look and feel called Solstice. 
 
 [![Build Status](https://travis-ci.org/EclipseFdn/solstice-assets.svg?branch=master)](https://travis-ci.org/EclipseFdn/solstice-assets)
+
+## Getting started
+
+Install dependencies, build assets and watch for changes:
+
+```bash
+npm install && npm run drupal && npm run watch
+```
 
 ## Contributing
 
@@ -38,4 +47,4 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 
 ## Copyright and license
 
-Copyright 2018 the [Eclipse Foundation, Inc.](https://www.eclipse.org) and the [solstice-assets authors](https://github.com/eclipsefdn/solstice-assets/graphs/contributors). Code released under the [Eclipse Public License Version 2.0 (EPL-2.0)](https://github.com/EclipseFdn/solstice-assets/blob/src/LICENSE). 
+Copyright 2018 the [Eclipse Foundation, Inc.](https://www.eclipse.org) and the [solstice-assets authors](https://github.com/eclipsefdn/solstice-assets/graphs/contributors). Code released under the [Eclipse Public License Version 2.0 (EPL-2.0)](https://github.com/eclipsefdn/solstice-assets/blob/src/LICENSE).

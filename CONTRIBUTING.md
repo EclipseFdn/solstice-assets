@@ -4,7 +4,7 @@ Thanks for your interest in this project.
 
 ## Project description
 
-Solstice-assets is a project to regroup assets for the Eclipse Foundation look and feel. 
+solstice-assets is a project to regroup assets for the Eclipse Foundation look and feel. 
 
 * https://github.com/eclipsefdn/solstice-assets
 
@@ -32,4 +32,4 @@ https://www.eclipse.org/projects/handbook/#resources-commit
 
 ## Contact
 
-Contact the Eclipse Foundation Webdev team via webdev@eclispe-foundtion.org.
+Contact the Eclipse Foundation Webdev team via webdev@eclipse-foundation.org.

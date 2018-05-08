@@ -33,6 +33,7 @@
     "napa": "^3.0.0",
     "laravel-mix": "^2.1.11",
     "less": "^3.0.2",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "cookieconsent": "^3.0.6"
   }
 }
