@@ -93,6 +93,22 @@
   $('.solstice-collapse').click(function() {
     $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
   });
+  
   feather.replace();
+  
+  $('.featured-highlights-item').matchHeight();
+  $('.featured-story-block').matchHeight();
+  $('.news-list-match-height .media-link').matchHeight({byRow: false});
+
+  // Focus on the Google search bar when dropdown menu is being shown
+  $('.main-menu-search').on('shown.bs.dropdown', function () {
+    $('.gsc-input').focus();
+  });
+  
+  // Hide search on ESC key.
+  // @todo: Find a way to make it work when focus is on an input field.
+  $(document).bind('keydown', '27', function (e) {
+    $('.eclipse-search a').dropdown("toggle");
+  });
+
 })(jQuery, document);
-;
