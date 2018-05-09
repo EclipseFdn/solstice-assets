@@ -4,7 +4,7 @@
   "main": "webpack.min.js",
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "bugs": {
     "url": "https://github.com/EclipseFdn/solstice-assets/issues"
   },
@@ -26,14 +26,14 @@
   "dependencies": {
     "Yamm": "github:geedmo/yamm3",
     "bootstrap": "^3.3.7",
+    "cookieconsent": "^3.0.6",
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
-    "napa": "^3.0.0",
     "laravel-mix": "github:JeffreyWay/laravel-mix",
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
-    "cookieconsent": "^3.0.6"
+    "napa": "^3.0.0"
   }
 }
