@@ -12,30 +12,87 @@
 */
 
 window.addEventListener("load", function() {
+  /**
+   * Override revokeChoice()
+   * 
+   * Avoid cookie resets when the user
+   * clicks on cookie settings
+   */
+  window.cookieconsent.Popup.prototype.revokeChoice = function(preventOpen) {
+    this.options.enabled = true;
+    this.options.onRevokeChoice.call(this);
+    if (!preventOpen) {
+      this.autoOpen();
+    }
+    this.open();
+  };
+
+  /**
+   * Remove Cookies 
+   * 
+   * Remove cookies except whitelist
+   */
+  window.cookieconsent.Popup.prototype.removeCookies = function() {
+    var whitelist = ["eclipse_cookieconsent_status", "has_js"];
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      var cookie_index = cookie.indexOf("=");
+      var cookie_name = cookie_index > -1 ? cookie.substr(0, cookie_index) : cookie;
+      if (whitelist === undefined || whitelist.length == 0 || whitelist.indexOf(cookie_name) == -1) {
+        console.log(cookie_name);
+        document.cookie = cookie_name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;';
+      }
+    }
+  };
+
+  /**
+   * Initialise cookieconsent
+   */
   window.cookieconsent.initialise({
-    "type": "opt-in",
-    "position": "bottom",
-    "revokable": true,
-    "cookie": {
-      "name": "eclipse_cookieconsent_status",
-      "expiryDays": 30,
+    type: "opt-in",
+    position: "bottom",
+    revokable: true,
+    enabled: true,
+   //animateRevokable: false,
+    cookie: {
+      name: "eclipse_cookieconsent_status",
+      expiryDays: 90,
     },
-    "palette": {
-      "popup": {
-        "background": "#353434",
-        "text": "#ffffff"
-      },
-      "button": {
-        "background": "#da7a08",
-        "text": "#ffffff"
+    compliance: {
+      "opt-in": '<div class="cc-compliance cc-highlight">{{deny}}{{allow}}</div>',
+    },
+    onStatusChange: function(status, chosenBefore) {
+      // Cookies are not allowed, delete them
+      if (status !== 'allow') {
+        this.removeCookies();
       }
     },
-    "content": {
-      "href": "https://www.eclipse.org/legal/privacy.php",
-      "dismiss": "Dismiss",
-      "link": "click here.",
-      "message": "Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy"
+    onInitialise: function(status, options) {
+      setTimeout(function() {
+        document.getElementsByClassName("cc-revoke")[0].style.display = "block";
+      });
+    },
+    revokeBtn: '<div class="cc-revoke {{classes}}">Cookie settings</div>',
+    palette: {
+      popup: {
+        background: "#353434",
+        text: "#ffffff"
+      },
+      highlight: {
+        background: "#fff",
+        text: "#000000"
+      },
+      button: {
+        background: "#da7a08",
+        text: "#ffffff"
+      }
+    },
+    content: {
+      href: "https://www.eclipse.org/legal/privacy.php",
+      dismiss: "Dismiss",
+      link: "click here.",
+      message: "Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy"
     }
   })
 });
-
