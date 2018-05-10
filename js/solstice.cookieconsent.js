@@ -39,8 +39,8 @@ window.addEventListener("load", function() {
       var cookie = cookies[i];
       var cookie_index = cookie.indexOf("=");
       var cookie_name = cookie_index > -1 ? cookie.substr(0, cookie_index) : cookie;
+      cookie_name.trim();
       if (whitelist === undefined || whitelist.length == 0 || whitelist.indexOf(cookie_name) == -1) {
-        console.log(cookie_name);
         document.cookie = cookie_name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;';
       }
     }
