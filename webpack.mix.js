@@ -38,8 +38,13 @@ mix.less('less/solstice/drupal.less', 'dist/css/drupal-solstice.css');
 
 // JavaScript
 mix.scripts([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    './node_modules/feather-icons/dist/feather.min.js',
-    './js/solstice.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/cookieconsent/build/cookieconsent.min.js',
+    'node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
+    'node_modules/feather-icons/dist/feather.min.js',
+    'js/solstice.cookieconsent.js',
+    'js/solstice.cookies.js',
+    'js/solstice.js',
+    'js/solstice.donate.js'
 ], 'dist/js/solstice.js');
