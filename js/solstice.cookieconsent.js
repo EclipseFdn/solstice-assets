@@ -10,7 +10,6 @@
  * 
  * SPDX-License-Identifier: EPL-2.0
 */
-
 window.addEventListener("load", function() {
   /**
    * Override revokeChoice()
@@ -26,7 +25,7 @@ window.addEventListener("load", function() {
     }
     this.open();
   };
-
+  
   /**
    * Remove Cookies 
    * 
@@ -58,17 +57,20 @@ window.addEventListener("load", function() {
     cookie: {
       name: "eclipse_cookieconsent_status",
       expiryDays: 90,
+      domain: "." + location.hostname.split('.').reverse()[1] + "." + location.hostname.split('.').reverse()[0]
     },
     compliance: {
       "opt-in": '<div class="cc-compliance cc-highlight">{{deny}}{{allow}}</div>',
     },
     onStatusChange: function(status, chosenBefore) {
       // Cookies are not allowed, delete them
+      document.cookie = 'eclipse_cookieconsent_status=' + status +'; expires=0; path=/;';
       if (status !== 'allow') {
         this.removeCookies();
       }
     },
     onInitialise: function(status, options) {
+      console.log(status);
       setTimeout(function() {
         document.getElementsByClassName("cc-revoke")[0].style.display = "block";
       });
