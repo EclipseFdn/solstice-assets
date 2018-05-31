@@ -111,4 +111,6 @@
     $('.eclipse-search a').dropdown("toggle");
   });
 
+  eclipseFdnVideos.replace();
+
 })(jQuery, document);
