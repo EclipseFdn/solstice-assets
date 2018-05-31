@@ -30,8 +30,8 @@ mix.less('less/solstice/polarsys/barebone.less', 'dist/css/polarsys-barebone.css
 mix.less('less/solstice/styles.less', 'dist/css/solstice.css');
 
 // Copy cookieconsent files
-mix.copy('node_modules/cookieconsent/build/cookieconsent.min.css', 'dist/css/vendor/cookieconsent.min.css');
-mix.copy('node_modules/cookieconsent/build/cookieconsent.min.js', 'dist/js/vendor/cookieconsent.min.js');
+ mix.copy('node_modules/cookieconsent/build/cookieconsent.min.css', 'dist/css/vendor/cookieconsent.min.css');
+ mix.copy('node_modules/cookieconsent/src/cookieconsent.js', 'dist/js/vendor/cookieconsent.min.js');
 
 // Drupal sites
 mix.less('less/solstice/drupal.less', 'dist/css/drupal-solstice.css');
@@ -40,9 +40,10 @@ mix.less('less/solstice/drupal.less', 'dist/css/drupal-solstice.css');
 mix.scripts([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/cookieconsent/build/cookieconsent.min.js',
+    'node_modules/cookieconsent/src/cookieconsent.js',
     'node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
     'node_modules/feather-icons/dist/feather.min.js',
+    'js/eclipsefdn.videos.js',
     'js/solstice.cookieconsent.js',
     'js/solstice.cookies.js',
     'js/solstice.js',

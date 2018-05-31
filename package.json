@@ -26,7 +26,7 @@
   "dependencies": {
     "Yamm": "github:geedmo/yamm3",
     "bootstrap": "^3.3.7",
-    "cookieconsent": "^3.0.6",
+    "cookieconsent": "github:chrisguindon/cookieconsent",
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
