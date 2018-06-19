@@ -70,7 +70,6 @@ window.addEventListener("load", function() {
       }
     },
     onInitialise: function(status, options) {
-      console.log(status);
       setTimeout(function() {
         document.getElementsByClassName("cc-revoke")[0].style.display = "block";
       });
