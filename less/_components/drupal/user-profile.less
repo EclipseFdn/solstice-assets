@@ -28,10 +28,6 @@
     margin-top:0;
     a {
       font-weight:bold;
-      color:@brand-primary;
-      &:visited {
-        color:@brand-primary;
-      }
     }
   }
 
@@ -58,10 +54,10 @@
     a{
       &:link,
       &:visited{
-        color:#877daf;
+        color:@brand-secondary;
       }
       &:hover{
-        color:@brand-primary;
+        color:lighten(@brand-secondary, 20%);
       }
     }
     font-size:18px;

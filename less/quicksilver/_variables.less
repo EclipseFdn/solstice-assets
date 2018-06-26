@@ -79,6 +79,9 @@
 @text-color:#4c4d4e;
 @hr-border:@gray-mid-light;
 
+//== Input
+@input-border-radius:0;
+
 //==  Mobile menu colors
 
 // Main colors for the menu
@@ -166,6 +169,8 @@
 @project-build-border-color: #c8c8c8;
 @project-build-header-background-color: black;
 
+//== Nav
+@nav-list-link-color:@link-color;
 
 //== Breadcrumbs
 @breadcrumb-padding-vertical:   8px;
@@ -214,21 +219,21 @@
 //== Tabs
 
 // Standard tabs variables
-@solstice-tabs-background: lighten(@gray, 75%);
+@solstice-tabs-background: #cacaca;
 @solstice-tabs-color: @gray;
 @solstice-tabs-font-weight: normal;
-@solstice-tabs-hover: lighten(@gray, 65%);
+@solstice-tabs-hover: darken(#fff, 10%);
 @solstice-tabs-active-hover: @white;
 @solstice-tabs-active-color:@gray;
 @solstice-tabs-hover-color: @gray;
 @solstice-tabs-active-font-weight: normal;
-@solstice-tabs-border: 1px solid lighten(@gray, 75%);
+@solstice-tabs-border: 1px solid #cacaca;
 @solstice-tabs-pane-background-color:transparent;
 
 // Dark tabs variables
-@solstice-tabs-dark-background:lighten(@gray, 70%);
-@solstice-tabs-dark-hover: lighten(@gray, 60%);
-@solstice-tabs-dark-border: 1px solid lighten(@gray, 70%);
+@solstice-tabs-dark-background:lighten(@gray, 60%);
+@solstice-tabs-dark-hover: lighten(@gray, 50%);
+@solstice-tabs-dark-border: 1px solid lighten(@gray, 60%);
 @solstice-tabs-dark-pane-background-color:@white;
 
 //== About Author
@@ -430,11 +435,11 @@
 @section-highlights-items-right-border:1px solid #ccc;
 
 //== Drupal/components/site-login-user-menu.less
-@site-login-user-menu-color: #fff;
-@site-login-user-menu-background: #8a7fb6;
+@site-login-user-menu-color: #2f2f2f;
+@site-login-user-menu-background: #fff;
 
 //== Drupal/components/block.less
-@solstice-block-white-bg-title-color: #8a7fb6;
+@solstice-block-white-bg-title-color: @brand-secondary;
 @solstice-block-white-bg-title-border-color:#d7d7d7;
 
 //== Labels

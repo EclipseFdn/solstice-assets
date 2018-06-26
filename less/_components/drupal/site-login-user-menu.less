@@ -15,7 +15,6 @@
 
 .block-sld-user-menu {
   // offset content padding
-  margin-top: -20px;
   margin-bottom: 20px;
 }
 
@@ -42,36 +41,51 @@
   &.solstice-sub-menu-default {
     background: @site-login-user-menu-background;
     color: @site-login-user-menu-color;
+    border-bottom:1px solid #a5a5a5;
+    padding-top:3px;
     li {
       a {
+        margin-bottom:3px;
         &:link, &:visited {
           color: @site-login-user-menu-color;
         }
         &:hover, &:focus {
-          background: lighten(@site-login-user-menu-background,20%);
+          border-bottom: 3px solid lighten(@gray, 50%);
+          background-color:transparent;
+          margin-bottom:0;
         }
         &:active, &.active {
-          background: darken(@site-login-user-menu-background,20%);
+          border-bottom: 3px solid @brand-primary;
+          background-color:transparent;
+          margin-bottom:0;
         }
         &.item-danger {
-          background: @brand-danger;
+          color: darken(@red, 10%);
+          font-weight: bold;
         }
       }
     }
   }
   &.solstice-sub-menu-secondary{
-    background: @gray;
+    background: #cacaca;
     color: @site-login-user-menu-color;
+    border-bottom: 1px solid #a5a5a5;
+    padding-top:3px;
     li {
       a {
+        margin-bottom:3px;
         &:link, &:visited {
           color: @site-login-user-menu-color;
         }
         &:hover, &:focus {
-          background: lighten(@gray, 20%);
+          border-bottom: 3px solid lighten(@gray, 50%);
+          background-color:transparent;
+          margin-bottom:0;
         }
         &:active, &.active {
-          background: darken(@gray, 20%);
+          border-bottom: 3px solid @brand-primary;
+          background-color:transparent;
+          margin-bottom:0;
         }
       }
     }

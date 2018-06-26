@@ -13,6 +13,22 @@
 
 // Templates
 
+@media print {
+  .sideitem , #copyright {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  #solstice-footer , #copyright , #header-row {
+    padding-top: 0;
+  }
+}
+
 @media (min-width: @screen-sm-min) {
   #main-menu {
     li > a {
