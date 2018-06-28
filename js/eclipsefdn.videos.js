@@ -84,7 +84,7 @@
       // Set the appropriate height for the video
       this.el[i].setAttribute("style","height:" + width * percentage / 100 + "px;");
 
-      if (cookie_value === "" || cookie_value === default_options['cookie']['value']){
+      if (cookie_value === default_options['cookie']['value']){
         // Create a div to wrap the viewo
         var video_container = document.createElement("div");
         video_container.className = "eclipsefdn-video embed-responsive embed-responsive-" + default_options['resolution'];
