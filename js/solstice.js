@@ -112,5 +112,17 @@
   });
 
   eclipseFdnVideos.replace();
+  
+  
+  // Toggle Text of an HTML element
+  var view_more_button_text = $('.toggle-text').html();
+  $('.toggle-text').click(function() {
+    if ($(this).hasClass('toggle-text-close')) {
+      $(this).removeClass('toggle-text-close').html(view_more_button_text);
+    }
+    else {
+      $(this).addClass('toggle-text-close').html($(this).attr('data-toggle-text'));
+    }
+  });
 
 })(jQuery, document);
