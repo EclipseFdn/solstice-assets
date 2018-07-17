@@ -70,9 +70,11 @@ window.addEventListener("load", function() {
       }
     },
     onInitialise: function(status, options) {
-      setTimeout(function() {
-        document.getElementsByClassName("cc-revoke")[0].style.display = "block";
-      });
+      if (!document.getElementsByClassName("toolbar-manage-cookies")) {
+        setTimeout(function() {
+          document.getElementsByClassName("cc-revoke")[0].style.display = "block";
+        });
+      }
     },
     revokeBtn: '<div class="cc-revoke {{classes}}">Cookie settings</div>',
     palette: {
