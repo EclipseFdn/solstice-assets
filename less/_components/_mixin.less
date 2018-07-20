@@ -18,3 +18,11 @@
   -webkit-clip-path: @polygon;
   clip-path: @polygon;
 }
+
+.opacityTransition() {
+  transition: visibility 0s, opacity 0.2s ease-in-out; /* vendorless fallback */
+  -o-transition: visibility 0s, opacity 0.2s ease-in-out; /* opera */
+  -ms-transition: visibility 0s, opacity 0.2s ease-in-out; /* IE 10 betas, not needed in final build. */
+  -moz-transition: visibility 0s, opacity  0.2s ease-in-out; /* Firefox */
+  -webkit-transition: visibility 0s, opacity 0.2s ease-in-out; /*safari and chrome */
+}

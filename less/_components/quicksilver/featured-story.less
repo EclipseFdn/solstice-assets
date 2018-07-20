@@ -103,8 +103,12 @@
       left: 0;
     }
   }
+  a{
+    @media (min-width: @screen-sm-min) {
+      float:right;
+    }
+  }
 }
-
 
 .eclipsefnd-ad {
   &:after {
@@ -121,9 +125,6 @@
     text-align: center;
     text-indent: -9999px; 
     margin:auto;
-    @media (min-width: @screen-sm-min) {
-      float:right;
-    }
   }
 }
 
