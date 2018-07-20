@@ -21,11 +21,6 @@
   }
   li {
     padding-bottom: 0;
-    span{
-      padding:10px 15px;
-      font-weight:bold;
-      display:block;
-    }
     a {
       border-radius: 0;
       &:link, &:visited {
@@ -37,12 +32,14 @@
     background: @site-login-user-menu-background;
     color: @site-login-user-menu-color;
     border-bottom:1px solid #a5a5a5;
+    border-top:1px solid #a5a5a5;
     padding-top:3px;
     li {
       a {
         margin-bottom:3px;
         &:link, &:visited {
           color: @site-login-user-menu-color;
+          background-color:transparent;
         }
         &:hover, &:focus {
           border-bottom: 3px solid lighten(@gray, 50%);

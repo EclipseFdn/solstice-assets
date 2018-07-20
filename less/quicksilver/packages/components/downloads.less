@@ -11,22 +11,14 @@
  * SPDX-License-Identifier: EPL-2.0
 */
 
-.oxygen {
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  color: #69c1bd;
+.photon{
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-1px;
+  color:#cda034
 }
 
 @orange:#f7941e;
-
-.opacityTransition() {
-  transition: visibility 0s, opacity 0.2s ease-in-out; /* vendorless fallback */
-  -o-transition: visibility 0s, opacity 0.2s ease-in-out; /* opera */
-  -ms-transition: visibility 0s, opacity 0.2s ease-in-out; /* IE 10 betas, not needed in final build. */
-  -moz-transition: visibility 0s, opacity  0.2s ease-in-out; /* Firefox */
-  -webkit-transition: visibility 0s, opacity 0.2s ease-in-out; /*safari and chrome */
-}
 
 #tool-platforms {
   @media (max-width: 767px) {
@@ -264,11 +256,11 @@
 .downloads-installer{
   position:relative;
   margin-bottom:10px;
-  top:-20px;
-  @media (max-width: 991px) {
+  top:-20px;  @media (max-width: 991px) {
     border-bottom:2px dotted #e0e0e0;
     padding-bottom:20px;
   }
+
   @media (min-width: 992px) {
     &:after{
       content:"";
@@ -296,7 +288,6 @@
 }
 
 // 5 column grid
-
 .col-xs-5th,
 .col-sm-5th,
 .col-md-5th,
