@@ -115,7 +115,9 @@
   // open the cookie consent popup.
   $('.toolbar-manage-cookies').click(function() {
     $('.cc-window').show();
-    setTimeout($('.cc-window').removeClass('cc-invisible'), 20);
+    setTimeout(function() {
+      $('.cc-window').removeClass('cc-invisible');
+    }, 20);
   });
 
   eclipseFdnVideos.replace();
