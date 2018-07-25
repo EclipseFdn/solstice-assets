@@ -133,5 +133,28 @@
       $(this).addClass('toggle-text-close').html($(this).attr('data-toggle-text'));
     }
   });
+  
+  // Infra 2791 - Send events to Google Analytics
+  $('a[href]').click(function() {
+
+    if (typeof ga !== "function") {
+      return false;
+    }
+
+    // Get the file name out of the href attribute
+    var eventLabel = $(this).attr('href').split('/').pop();
+
+    // Get the file extension
+    var fileExtension = eventLabel.split('.').pop();
+
+    // Quit here if the extension of the clicked file isn't part of the following list
+    // and if the Google Analytics is not loaded
+    if ($.inArray(fileExtension, ['pdf','jpg', 'png', 'zip', '.dmg', '.gz']) === -1) {
+      return false;
+    }
+
+    // Send the event to Google Analytics
+    ga('send', 'event', 'solstice-event-tracker', window.location.href, eventLabel);
+  });
 
 })(jQuery, document);
