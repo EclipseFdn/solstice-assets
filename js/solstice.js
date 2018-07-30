@@ -9,8 +9,7 @@
  *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
  * 
  * SPDX-License-Identifier: EPL-2.0
-*/
-
+ */
 (function($, document) {
 
   $(window).on("load", function() {
@@ -93,21 +92,23 @@
   $('.solstice-collapse').click(function() {
     $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
   });
-  
+
   feather.replace();
-  
+
   $('.featured-highlights-item').matchHeight();
   $('.featured-story-block').matchHeight();
-  $('.news-list-match-height .media-link').matchHeight({byRow: false});
+  $('.news-list-match-height .media-link').matchHeight({
+    byRow: false
+  });
 
   // Focus on the Google search bar when dropdown menu is being shown
-  $('.main-menu-search').on('shown.bs.dropdown', function () {
+  $('.main-menu-search').on('shown.bs.dropdown', function() {
     $('.gsc-input').focus();
   });
-  
+
   // Hide search on ESC key.
   // @todo: Find a way to make it work when focus is on an input field.
-  $(document).bind('keydown', '27', function (e) {
+  $(document).bind('keydown', '27', function(e) {
     $('.eclipse-search a').dropdown("toggle");
   });
 
@@ -121,37 +122,39 @@
   });
 
   eclipseFdnVideos.replace();
-  
-  
+
+
   // Toggle Text of an HTML element
   var view_more_button_text = $('.toggle-text').html();
   $('.toggle-text').click(function() {
     if ($(this).hasClass('toggle-text-close')) {
       $(this).removeClass('toggle-text-close').html(view_more_button_text);
-    }
-    else {
+    } else {
       $(this).addClass('toggle-text-close').html($(this).attr('data-toggle-text'));
     }
   });
-  
+
   // Infra 2791 - Send events to Google Analytics
   $('a[href]').click(function() {
-
     if (typeof ga === "function") {
       // Get the file name out of the href attribute
-      var eventLabel = $(this).attr('href').split('/').pop();
+      var fileName = $(this).attr('href').split('/').pop();
 
       // Get the file extension
-      var fileExtension = eventLabel.split('.').pop();
+      var fileExtension = fileName.split('.').pop();
 
       // Quit here if the extension of the clicked file isn't part of the following list
       // and if the Google Analytics is not loaded
-      if ($.inArray(fileExtension, ['pdf','jpg', 'png', 'zip', 'dmg', 'gz']) >= 1) {
+      var tracker = ga.getAll()[0].get('name');
+      if (tracker && $.inArray(fileExtension, ['pdf', 'jpg', 'png', 'zip', 'dmg', 'gz']) !== -1) {
         // Send the event to Google Analytics
-        ga('send', 'event', 'solstice-event-tracker', window.location.href, eventLabel);
+        ga(tracker + '.send', 'event', {
+          'eventCategory': 'solstice-event-tracker',
+          'eventAction': window.location.href,
+          'eventLabel': fileName
+        });
       }
     }
-
   });
 
 })(jQuery, document);
