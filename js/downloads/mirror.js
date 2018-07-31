@@ -1,5 +1,5 @@
 /**
- * Checksum ajax call
+ * mirror.js 
  *
  * Copyright (c) 2015 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials

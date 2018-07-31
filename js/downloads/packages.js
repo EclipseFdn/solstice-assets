@@ -1,5 +1,5 @@
 /**
- * downloads.js
+ * packages.js
  *
  * Copyright (c) 2015 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
