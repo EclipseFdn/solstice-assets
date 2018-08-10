@@ -54,7 +54,7 @@
     margin:auto;
     a {
       font-weight:bold;
-      color:@brand-primary;
+      color:@brand-secondary;
     }
   }
   .content-last-updated{
@@ -82,11 +82,17 @@
       font-weight:bold;
       &:link,
       &:visited{
-        color:@blue-dark;
+        color:@brand-secondary;
       }
       &:hover,
       &:active{
-        color:@brand-warning;
+        color:@brand-secondary;
+      }
+      .label {
+        position:relative;
+        top:-2px;
+        background-color:@brand-secondary;
+        border-radius:0;
       }
     }
   }
