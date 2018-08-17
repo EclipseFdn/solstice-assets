@@ -59,51 +59,46 @@
 @main-menu-dropdown-link-color: #333;
 @main-menu-dropdown-link-active-color: @brand-quinary;
 @main-menu-dropdown-link-hover-color: @brand-quinary;
+@main-menu-link-size:14px;
+@main-menu-link-transform:uppercase;
+
+@header-background: #fff;
+@header-toolbar-color:@brand-secondary;
+@header-toolbar-color-hover:lighten(@brand-secondary, 20%);
+
+@body-bg: #fff;
 
 //== Breadcrumbs
 
 @breadcrumb-font-size:12px;
+@breadcrumb-color:#afafaf;
+@breadcrumb-active-color:#fff;
 
 //==  Mobile menu colors
 
 // Default dropdown link colors
-@mobile-menu-background: @white;
+//@mobile-menu-background: @brand-primary;
 @mobile-menu-hover: #ccc;
-@mobile-menu-color:#333;
-@mobile-menu-nav-background:@white;
+@mobile-menu-color:#f9f9f9;
+@mobile-menu-nav-background:#333;
 @navbar-toggle-icon-background: #333;
 
 
 // Colors for active link
 @mobile-menu-open-active-background: @brand-primary;
-@mobile-menu-open-active-color: #fff;
+@mobile-menu-open-active-color: #a5a5a5;
 
 
 // Default dropdown link colors
-@mobile-menu-dropdown-menu-background: #fff;
-@mobile-menu-dropdown-menu-color: @brand-primary;
-@mobile-menu-dropdown-menu-hover: @brand-quaternary;
-@mobile-menu-dropdown-menu-hover-background: #f5f5f5;
-@mobile-menu-dropdown-menu-active-background: lighten(@brand-primary, 40%);
+@mobile-menu-dropdown-menu-background: #f9f9f9;
+@mobile-menu-dropdown-menu-color: #333;
+@mobile-menu-dropdown-menu-hover: #333;
+@mobile-menu-dropdown-menu-hover-background: darken(@mobile-menu-dropdown-menu-background, 20%);
+@mobile-menu-dropdown-menu-active-background: darken(@mobile-menu-dropdown-menu-background, 20%);
 @mobile-menu-dropdown-menu-active-color: #000;
 @mobile-menu-dropdown-menu-active-hover: #000;
-@mobile-menu-dropdown-menu-active-hover-background: #bfe7ff;
+@mobile-menu-dropdown-menu-active-hover-background: @mobile-menu-dropdown-menu-background;
 
-
-//== Footer
-
-@footer-background: @white;
-@footer-working-group-background: url('../../../images/template/footer-working-group-separator.png') center repeat-y;
-@footer-color: #333;
-@footer-border-top: none;
-@footer-h2-color: #333;
-@footer-h2-font-weight: 600;
-@footer-h2-font-size: 21px;
-
-@footer-link-color: #333;
-@footer-link-font-weight:400;
-@footer-link-hover: @brand-primary;
-@footer-nav-link-padding: 6px 15px 6px 16px;
 
 //== News and Blogs
 
@@ -112,7 +107,7 @@
 //== IWG Members
 
 @iwg-members-readmore-background-size:cover;
-@iwg-members-readmore-background: @brand-quinary;
+@iwg-members-readmore-background: transparent;
 @iwg-members-readmore-border: none;
 @iwg-members-heading-border-color: @brand-quinary;
 
@@ -132,3 +127,12 @@
 @highlight-background:@brand-secondary;
 @highlight-h3-color:@white;
 @highlight-h3-color-hover:@white;
+
+@highlight-background-hover:darken(@brand-secondary, 10%);
+@highlight-icon-color: #fff;
+@highlight-vertical-borders:1px solid darken(@brand-secondary, 10%);
+@highlight-border-top:none;
+@highlight-border-bottom:4px solid darken(@brand-secondary, 10%);
+@highlight-margin-bottom:3em;
+@highlight-vertical-borders:1px solid darken(@brand-secondary, 10%);
+
