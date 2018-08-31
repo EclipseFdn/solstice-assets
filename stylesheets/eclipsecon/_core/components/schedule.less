@@ -29,23 +29,27 @@
 
 .eclipsecon-taxonomy-term-tracks {
   &:hover {
-    cursor:pointer;
-    a {
-      color:@brand-tertiary;
-      border-bottom:1px solid @brand-tertiary;
-    }
+    border-bottom:1px solid @brand-tertiary;
   }
-  .field-name-field-track-icon {
-    margin-bottom:10px;
-  }
-  a {
+  border-bottom:1px solid #fff;
+  p {
+    margin-top:10px;
     text-transform:uppercase;
     font-weight:normal;
     color:@brand-primary;
   }
+  padding:5px;
+  &.disabled {
+    background: #ece9e9;
+    color: #898989 !important;
+    color: #898989 !important;
+  }
 }
 
 .eclipsecon-schedule-tracks {
+  i {
+    font-size:2.5em
+  }
   text-align:center;
   ul {
     border-bottom:1px solid #eee;
@@ -56,14 +60,20 @@
     }
     li {
       padding:0;
-      width:49%;
-      @media screen and (min-width: 1200px) {
-        width:33%;
+      width:32%;
+      @media screen and (min-width: @screen-md-min) {
+        width:12%;
       }
       cursor:pointer;
       margin-bottom:30px;
       display:inline-grid;
     }
+  }
+  #schedule-view-all-reset-filter {
+    display:block;
+    margin:auto;
+    margin-bottom:10px;
+    text-align:center;
   }
 }
 
