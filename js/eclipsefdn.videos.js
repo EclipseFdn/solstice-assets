@@ -93,6 +93,11 @@
         // Replace the original element with the embeded video
         this.el[i].parentNode.replaceChild(video_container, this.el[i]);
       }
+      else {
+        var video_id = this.el[i].getAttribute("href").replace('https://www.youtube.com/watch?v=','');
+        this.el[i].innerHTML = '<img class="img-responsive" src="//img.youtube.com/vi/'+ video_id +'/maxresdefault.jpg">';
+        this.el[i].setAttribute("class","eclipsefdn-video eclipsefdn-video-with-js");
+      }
     }
   };
 
