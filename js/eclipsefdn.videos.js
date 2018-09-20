@@ -44,62 +44,73 @@
    * @param {Object} options Videos attributes
    */
   eclipseFdnVideos.replace = function (options) {
+    
+    document.onreadystatechange = function () {
+      if (document.readyState == 'interactive') {
 
-    // Go through the parameters of Options if its defined and is an object
-    if (typeof(options) !== 'undefined' && typeof(options) === 'object') {
-      for (var optionName in default_options) {
-        if (optionName === "cookie" && typeof(options["cookie"]) !== "object") {
-          continue;
+        // Go through the parameters of Options if its defined and is an object
+        if (typeof(options) !== 'undefined' && typeof(options) === 'object') {
+          for (var optionName in default_options) {
+            if (optionName === "cookie" && typeof(options["cookie"]) !== "object") {
+              continue;
+            }
+            if (typeof(options[optionName]) === 'undefined' || typeof(options[optionName]) !== 'string') {
+              continue;
+            }
+            if (optionName === "resolution" && options["cookie"] !== "16by9" || options["cookie"] !== "4by3") {
+              continue;
+            }
+            default_options[optionName] = options[optionName];
+          }
         }
-        if (typeof(options[optionName]) === 'undefined' || typeof(options[optionName]) !== 'string') {
-          continue;
+    
+        // Select all the videos containing the selector Class
+        this.el = document.querySelectorAll(default_options['selector']);
+    
+        var cookie_value = "";
+        if (typeof(default_options['cookie']['name']) !== 'undefined') {
+          // Get the cookie consent value
+          var value = "; " + document.cookie;
+          var parts = value.split("; " + default_options['cookie']['name'] + "=");
+          if (parts.length >= 2) {
+            cookie_value = parts.pop().split(";").shift();
+          }
         }
-        if (optionName === "resolution" && options["cookie"] !== "16by9" || options["cookie"] !== "4by3") {
-          continue;
+    
+        for (var i = 0; i < this.el.length; i++) {
+    
+          // Give the proper height to the element
+          var width = this.el[i].offsetWidth;
+          var resolution_sizes = default_options['resolution'].split("by");
+          var percentage = resolution_sizes[1] / resolution_sizes[0] * 100;
+          
+          // Set the appropriate height for the video
+          this.el[i].setAttribute("style","height:" + width * percentage / 100 + "px;");
+          
+          // Making sure the url is formatted as we expect it to be
+          var link = this.el[i].getAttribute("href").replace(/http(s|):\/\/(www|)(\.|)(youtube\.com\/watch\?v=|youtu\.be\/)/i, "//www.youtube.com/watch?v=");
+    
+          if (cookie_value === default_options['cookie']['value']){
+            // Create a div to wrap the viewo
+            var video_container = document.createElement("div");
+            video_container.className = "eclipsefdn-video embed-responsive embed-responsive-" + default_options['resolution'];
+            video_container.innerHTML = '<iframe src="' + link.replace(/watch\?v\=/i, "embed/") + '"></iframe>';
+    
+            // Replace the original element with the embeded video
+            this.el[i].parentNode.replaceChild(video_container, this.el[i]);
+          }
+          else {
+            this.el[i].setAttribute("class","eclipsefdn-video eclipsefdn-video-with-js");
+            if (this.el[i].getElementsByTagName('img').length != 1) {
+              var video_id = link.replace("//www.youtube.com/watch?v=","");
+              this.el[i].innerHTML = '<img class="img-responsive" src="//img.youtube.com/vi/'+ video_id +'/maxresdefault.jpg">';
+            }
+          }
         }
-        default_options[optionName] = options[optionName];
-      }
+      };
+  
     }
-
-    // Select all the videos containing the selector Class
-    this.el = document.querySelectorAll(default_options['selector']);
-
-    var cookie_value = "";
-    if (typeof(default_options['cookie']['name']) !== 'undefined') {
-      // Get the cookie consent value
-      var value = "; " + document.cookie;
-      var parts = value.split("; " + default_options['cookie']['name'] + "=");
-      if (parts.length >= 2) {
-        cookie_value = parts.pop().split(";").shift();
-      }
-    }
-
-    for (var i = 0; i < this.el.length; i++) {
-
-      // Give the proper height to the element
-      var width = this.el[i].offsetWidth;
-      var resolution_sizes = default_options['resolution'].split("by");
-      var percentage = resolution_sizes[1] / resolution_sizes[0] * 100;
-      
-      // Set the appropriate height for the video
-      this.el[i].setAttribute("style","height:" + width * percentage / 100 + "px;");
-
-      if (cookie_value === default_options['cookie']['value']){
-        // Create a div to wrap the viewo
-        var video_container = document.createElement("div");
-        video_container.className = "eclipsefdn-video embed-responsive embed-responsive-" + default_options['resolution'];
-        video_container.innerHTML = '<iframe src="' + this.el[i].getAttribute("href").replace(/watch\?v\=/i, "embed/") + '"></iframe>';
-
-        // Replace the original element with the embeded video
-        this.el[i].parentNode.replaceChild(video_container, this.el[i]);
-      }
-      else {
-        var video_id = this.el[i].getAttribute("href").replace('https://www.youtube.com/watch?v=','');
-        this.el[i].innerHTML = '<img class="img-responsive" src="//img.youtube.com/vi/'+ video_id +'/maxresdefault.jpg">';
-        this.el[i].setAttribute("class","eclipsefdn-video eclipsefdn-video-with-js");
-      }
-    }
-  };
+  }
 
   return eclipseFdnVideos;
 
