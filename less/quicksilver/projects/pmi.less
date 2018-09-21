@@ -19,8 +19,12 @@
     float: none;
     > a {
       color: @bugzilla-menu-link-color;
+      background-color:@brand-secondary;
       > i {
         color: @brand-info;
+      }
+      &:hover {
+        background-color:lighten(@brand-secondary, 10%);
       }
     }
   }
@@ -116,19 +120,18 @@ form.node-form div.tabledrag-toggle-weight-wrapper {
     tr {
       td + td + td {
         a.release-review-link {
-          &:before {
-            font-family: FontAwesome;
-            font-size: 1.1em;
-            color: lighten(@brand-primary, 25%);
-            content: "\f06e";
-            padding-left: 6%;
-          }
           span {
             display: none;
           }
         }
       }
     }
+  }
+}
+
+.field-name-field-project-update-sites {
+  input {
+    background-color:transparent;
   }
 }
 
@@ -354,9 +357,9 @@ form.node-form div.tabledrag-toggle-weight-wrapper {
      font-size:18px;
      a {
        font-weight: bold;
-       color:@brand-primary;
+       color:@brand-secondary;
        &:visited {
-         color:@brand-primary;
+         color:@brand-secondary;
        }
      }
    }
@@ -374,6 +377,9 @@ form.node-form div.tabledrag-toggle-weight-wrapper {
     }
     .label {
       vertical-align: 2px;
+    }
+    a:visited {
+      color:#fff;
     }
   }
 
