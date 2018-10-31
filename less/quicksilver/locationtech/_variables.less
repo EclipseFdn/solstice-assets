@@ -26,6 +26,7 @@
 
 //==  Header
 @header-background: @brand-primary;
+@header-row-padding-bottom:0;
 
 //==  Slideshow
 @slideshow-background-image: url('../../../images/locationtech/slideshow-bg.jpg');
@@ -128,21 +129,12 @@
 
 @news-blog-date-bg: @brand-quinary;
 
-//== IWG Members
-
-@iwg-members-readmore-background-size:cover;
-@iwg-members-readmore-background: url('../../../images/locationtech/more-members-bg.jpg');
-@iwg-members-readmore-border: 2px solid @brand-quinary;
-@iwg-members-heading-border-color: @brand-quinary;
-
-//== IWG
-
 @page-header-logo-border-top: 1px solid @gray;
 @page-header-logo-border-bottom:none;
 
 //== Button transparent
 
 @btn-transparent-background:@brand-primary;
-@btn-transparent-color-hover: @brand-primary;
-@btn-transparent-color-hover-background:@brand-quaternary;
-@btn-transparent-color-hover-border-color:@brand-quinary;
+@btn-transparent-color-hover: @white;
+@btn-transparent-color-hover-background:darken(@brand-primary, 10%);
+@btn-transparent-color-hover-border-color:@white;
