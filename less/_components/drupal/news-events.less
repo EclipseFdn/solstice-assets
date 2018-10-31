@@ -103,6 +103,13 @@
   }
 }
 
+.views-row-last {
+  .solstice-news-layout.layout_b,.layout_b.video{
+    border-bottom:none;
+    margin-bottom:0;
+  }
+}
+
 .page-blog {
   .solstice-news-layout.layout_b:nth-child(odd){
     background-color:@news-layout-b-odd-background-color;
@@ -112,7 +119,7 @@
 
 .solstice-news-layout.layout_b{
   border-bottom:@news-layout-b-odd-border-bottom;
-  margin-bottom:20px;
+  margin-bottom:@news-layout-b-margin-bottom;
   .solstice-well{
     padding:@news-layout-b-solstice-well-padding;
   }
