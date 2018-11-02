@@ -33,21 +33,16 @@
 }
 
 .feed-icon {
-  position: absolute;
-  top: 4px;
-  right: 0;
+  position: @feed-icon-position;
+  top: @feed-icon-top;
+  right: @feed-icon-right;
+  //padding-right:@feed-icon-padding-right;
   &:link , &:visited {
-    color: @brand-warning;
+    color: @feed-icon-visited-color;
   }
 
   &:hover {
-    color: @brand-primary;
-  }
-}
-
-.front{
-  .feed-icon{
-    padding-right:15px;
+    color: @feed-icon-hover-color;
   }
 }
 
