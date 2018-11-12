@@ -17,7 +17,7 @@
 
 @brand-primary:         #F19001; // orange
 @brand-tertiary:       #F19001; // orange
-@brand-secondary:        #2C8EBC; // bleu
+@brand-secondary:        #217196; // bleu
 @brand-quaternary:      #B27800;
 @brand-quinary:         @brand-secondary;
 @brand-info:            @brand-tertiary;
@@ -26,31 +26,34 @@
 
 //==  Slideshow
 @slideshow-background-image: url('../../../images/openmdm/slideshow-bg.jpg');
-@slideshow-background-color: @white;
-//@slideshow-content-background: rgba(255, 255, 255, 0.85);
-@slideshow-content-padding: 60px 40px 60px 40px;
 @slideshow-secondary-background: url('../../../images/openmdm/slideshow-bg.jpg');
-@slideshow-link-color: @brand-primary;
-@slideshow-link-color-hover: darken(@brand-primary, 10%);
-@slideshow-text-color: #333;
-@slideshow-h2-fw: 300;
+@slideshow-text-color:#333;
 @slideshow-h2-color:@brand-secondary;
-@slideshow-h2-link-color: @brand-secondary;
-@slideshow-h2-link-fw: 700;
-@slideshow-h2-link-color-hover: darken(@brand-secondary, 20%);
-@slideshow-p-font-size: 1.4em;
-@slideshow-secondary-background: @brand-primary;
-@slideshow-secondary-text-color: @brand-primary;
-@slideshow-secondary-link-color: @brand-primary;
-@slideshow-secondary-link-color-hover: darken(@slideshow-secondary-link-color, 20%);
-@slideshow-secondary-text-color: @brand-primary;
-@slideshow-secondary-h2-fw: 300;
-@slideshow-secondary-h2-color:@brand-primary;
-@slideshow-secondary-h2-link-color: @brand-primary;
-@slideshow-secondary-h2-link-fw: 700;
-@slideshow-secondary-h2-link-color-hover: darken(@slideshow-secondary-h2-link-color, 20%);
-@slideshow-secondary-p-font-size: 1.25em;
-@slideshow-frontpage-border-bottom: 4px solid darken(@brand-secondary, 10%);
+@slideshow-frontpage-border-top:1px solid #ccc;
+@slideshow-content-text-align:left;
+
+//== Solstice Highlight
+@highlight-background:@brand-secondary;
+@highlight-h3-color:@white;
+@highlight-h3-color-hover:@white;
+@highlight-border-top:none;
+@highlight-border-bottom:4px solid darken(@brand-secondary, 10%);
+@highlight-border-bottom:3em;
+@highlight-vertical-borders:1px solid darken(@brand-secondary, 10%);
+@highlight-background-hover:darken(@brand-secondary, 10%);
+@highlight-icon-color:@white;
+@highlight-mobile-border-bottom:1px solid darken(@brand-secondary, 10%);
+
+// Header
+@header-background:@white;
+@header-toolbar-color:#333;
+@header-toolbar-color-hover:lighten(@header-toolbar-color, 20%);
+@header-row-padding-bottom:0;
+
+//== Breadcrumb
+@breadcrumb-color:#e2e2e2;
+@breadcrumb-hover:@breadcrumb-color;
+@breadcrumb-active-color:#fff;
 
 // Default Menu
 @main-menu-link-color: #333;
@@ -59,10 +62,6 @@
 @main-menu-dropdown-link-color: #333;
 @main-menu-dropdown-link-active-color: @brand-quinary;
 @main-menu-dropdown-link-hover-color: @brand-quinary;
-
-//== Breadcrumbs
-
-@breadcrumb-font-size:12px;
 
 //==  Mobile menu colors
 
@@ -80,14 +79,17 @@
 
 
 // Default dropdown link colors
-@mobile-menu-dropdown-menu-background: #fff;
-@mobile-menu-dropdown-menu-color: @brand-primary;
-@mobile-menu-dropdown-menu-hover: @brand-quaternary;
+@mobile-menu-dropdown-menu-background: #f7f7f7;
+@mobile-menu-dropdown-menu-color: #333;
+@mobile-menu-dropdown-menu-hover: #333;
 @mobile-menu-dropdown-menu-hover-background: #f5f5f5;
-@mobile-menu-dropdown-menu-active-background: lighten(@brand-primary, 40%);
-@mobile-menu-dropdown-menu-active-color: #000;
-@mobile-menu-dropdown-menu-active-hover: #000;
-@mobile-menu-dropdown-menu-active-hover-background: #bfe7ff;
+@mobile-menu-dropdown-menu-active-background: darken(@mobile-menu-dropdown-menu-background, 15%);
+@mobile-menu-dropdown-menu-active-color: #333;
+@mobile-menu-dropdown-menu-active-hover: #333;
+@mobile-menu-dropdown-menu-active-hover-background: @mobile-menu-dropdown-menu-background;
+@mobile-menu-dropdown-menu-border-bottom:1px solid #e8e8e8;
+@mobile-main-menu-link-border-bottom:none;
+@mobile-menu-logo-max-width:80px;
 
 
 //== Footer
@@ -116,6 +118,8 @@
 @iwg-members-readmore-border: none;
 @iwg-members-heading-border-color: @brand-quinary;
 
+@iwg-members-readmore-background:transparent;
+
 //== IWG
 
 @page-header-logo-border-top: 1px solid #ccc;
@@ -127,8 +131,3 @@
 @btn-transparent-color-hover: @white;
 @btn-transparent-color-hover-background:darken(@brand-primary, 10%);
 @btn-transparent-color-hover-border-color:@white;
-
-//== Solstice Highlight
-@highlight-background:@brand-secondary;
-@highlight-h3-color:@white;
-@highlight-h3-color-hover:@white;
