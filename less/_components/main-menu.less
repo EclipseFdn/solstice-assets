@@ -58,7 +58,7 @@
       background: @mobile-menu-nav-background;
       & > li {
         &.open {
-          & .dropdown-toggle {
+          & .dropdown-toggle, & a.dropdown-toggle {
             color: @mobile-menu-open-active-color;
             background: @mobile-menu-open-active-background;
           }
@@ -75,6 +75,7 @@
           background: @mobile-menu-dropdown-menu-background;
           padding: 0;
           border-radius:0;
+          border-bottom:@mobile-menu-dropdown-menu-border-bottom;
           > li {
             &.active {
               a {
@@ -302,7 +303,7 @@
 
 // Set a max-high on mobile logo
 .logo-eclipse-default-mobile{
-  max-height:50px;
+  max-width:@mobile-menu-logo-max-width;
 }
 @media (min-width: @screen-sm-min) {
   .alternate-layout {
