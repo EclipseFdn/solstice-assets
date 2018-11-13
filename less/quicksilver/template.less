@@ -35,8 +35,57 @@
       padding:0 0 2px;
       margin:10px 15px;
       &:hover {
-        border-bottom:1px solid @main-menu-link-active-color;
-        padding-bottom:1px;
+        text-decoration:underline;
+      }
+    }
+    li .dropdown-menu {
+      &:before {
+        border-right: 1px solid @brand-primary;
+        border-left: 1px solid @brand-primary;
+        background-color: @brand-primary;
+        display: block;
+        content: "";
+        height: 5px;
+        width: 100%;
+        position: relative;
+        top: -4px;
+      }
+      p {
+        color: @main-menu-dropdown-link-color;
+      }
+
+      a {
+        color: darken(@main-menu-dropdown-link-color, 15%);
+        &:hover {
+          color: @main-menu-dropdown-link-color;
+        }
+      }
+
+      .gsc-input-box {
+        .textfield-underline !important;
+        width: 95%;
+        margin: 0 !important;
+      }
+
+      .gsc-input-box-focus , .gsc-input-box:hover {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+      }
+    }
+    li > .dropdown-menu {
+      li.first {
+        margin-top:20px;
+      }
+      li.last {
+        margin-bottom:20px;
+      }
+      li {
+        margin-right:30px;
+        margin-left:30px;
+      }
+      a {
+        margin:0;
       }
     }
     li.dropdown.eclipse-more {
@@ -57,41 +106,6 @@
         padding-top: 0;
         outline: 1px solid rgba(0, 0, 0, 0.15);
         outline-offset: -1px;
-        &:before {
-          border-right: 1px solid @brand-primary;
-          border-left: 1px solid @brand-primary;
-          background-color: @brand-primary;
-          display: block;
-          content: "";
-          height: 5px;
-          width: 100%;
-          position: relative;
-          top: -4px;
-        }
-
-        p {
-          color: @main-menu-dropdown-link-color;
-        }
-
-        a {
-          color: darken(@main-menu-dropdown-link-color, 15%);
-          &:hover {
-            color: @main-menu-dropdown-link-color;
-            border:none;
-          }
-        }
-
-        .gsc-input-box {
-          .textfield-underline !important;
-          width: 95%;
-          margin: 0 !important;
-        }
-
-        .gsc-input-box-focus , .gsc-input-box:hover {
-          border-top: none !important;
-          border-left: none !important;
-          border-right: none !important;
-        }
       }
     }
   }

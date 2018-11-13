@@ -17,66 +17,61 @@
 
 @brand-primary:         #1F3963;
 @brand-tertiary:       #030303;
-@brand-secondary:        #E5F0F8;
+@brand-secondary:        #030303;
 @brand-quaternary:      #88AAD8;
-@brand-quinary:         #f0f6ff;
+@brand-quinary:         @brand-primary;
 @brand-info:            @brand-tertiary;
 @brand-info-light:      #dbe3f8;
 @brand-warning:         #f7941e;
 
 //==  Slideshow
 @slideshow-background-image: url('../../../images/science/slideshow-bg.jpg');
-@slideshow-background-color: @brand-primary;
-//@slideshow-content-background: rgba(255, 255, 255, 0.85);
-@slideshow-content-padding: 60px 40px 60px 40px;
 @slideshow-secondary-background: url('../../../images/science/slideshow-bg.jpg');
 @slideshow-link-color: @white;
-@slideshow-link-color-hover: lighten(@brand-quaternary, 50%);
+@slideshow-link-color-hover: @white;
 @slideshow-text-color: @white;
-@slideshow-h2-fw: 300;
 @slideshow-h2-color:@white;
 @slideshow-h2-link-color: @white;
-@slideshow-h2-link-fw: 700;
-@slideshow-h2-link-color-hover: @brand-quaternary;
-@slideshow-p-font-size: 1.4em;
-@slideshow-secondary-background: @brand-primary;
-@slideshow-secondary-text-color: @brand-primary;
-@slideshow-secondary-link-color: @brand-primary;
-@slideshow-secondary-link-color-hover: darken(@slideshow-secondary-link-color, 20%);
-@slideshow-secondary-text-color: @brand-primary;
-@slideshow-secondary-h2-fw: 300;
-@slideshow-secondary-h2-color:@brand-primary;
-@slideshow-secondary-h2-link-color: @brand-primary;
-@slideshow-secondary-h2-link-fw: 700;
-@slideshow-secondary-h2-link-color-hover: darken(@slideshow-secondary-h2-link-color, 20%);
-@slideshow-secondary-p-font-size: 1.25em;
-@slideshow-frontpage-border-bottom: 4px solid @brand-quaternary;
+@slideshow-h2-link-color-hover: @white;
+@slideshow-frontpage-border-top:1px solid #ccc;
+@slideshow-content-text-align:left;
 
+// Header
+@header-background:@white;
+@header-toolbar-color:#333;
+@header-toolbar-color-hover:lighten(@header-toolbar-color, 20%);
+@header-row-padding-bottom:0px;
 
 //== Footer
-
-@footer-background:no-repeat center center @brand-quinary;
-@footer-color: #a8a7a9;
-@footer-hover-color: @brand-secondary;
-@footer-border-top: 1px solid @brand-primary;
-
-//== News and Blogs
-
-@news-blog-date-bg: #444444;
+@footer-background: @white;
 
 //== IWG Members
 
-
 @iwg-members-readmore-background: #4069b2;
-@iwg-members-readmore-border: 1px solid #ccc;
 @iwg-members-heading-border-color: #ccc;
+@iwg-members-readmore-border: none;
+@iwg-members-readmore-background:transparent;
 
 //== Button transparent
 
 @btn-transparent-background:@brand-primary;
-@btn-transparent-color-hover: @brand-primary;
-@btn-transparent-color-hover-background:@brand-quinary;
-@btn-transparent-color-hover-border-color:@brand-quinary;
+@btn-transparent-color-hover: @white;
+@btn-transparent-color-hover-background:darken(@brand-primary, 10%);
+@btn-transparent-color-hover-border-color:@white;
+
+// Default Menu
+@main-menu-link-color: #333;
+@main-menu-link-active-color: darken(@main-menu-link-color, 10%);
+@main-menu-link-hover-color: darken(@main-menu-link-color, 10%);
+@main-menu-dropdown-link-color: #333;
+@main-menu-dropdown-link-active-color: darken(@main-menu-link-color, 10%);
+@main-menu-dropdown-link-hover-color: darken(@main-menu-link-color, 10%);
+
+//== Breadcrumb
+@breadcrumb-bg:@brand-primary;
+@breadcrumb-color:#e2e2e2;
+@breadcrumb-hover:@breadcrumb-color;
+@breadcrumb-active-color:#fff;
 
 //==  Mobile menu colors
 
@@ -102,3 +97,6 @@
 @mobile-menu-dropdown-menu-active-color: #000;
 @mobile-menu-dropdown-menu-active-hover: #000;
 @mobile-menu-dropdown-menu-active-hover-background: #bfe7ff;
+
+//== Nav
+@navbar-padding-horizontal:0;
