@@ -29,13 +29,13 @@
 
 .btn-white {
   background: #fff;
-  border: 1px solid #0b0a0f;
   color: #0b0a0f;
   &:hover {
-    background: transparent;
+    background: darken(#fff, 15%);
+    color:#0b0a0f;
   }
   &:visited {
-    color:#333;
+    color:#0b0a0f;
   }
 }
 
@@ -77,14 +77,16 @@
 
 // Simple button
 .btn-simple {
-  border: 1px solid #ccc;
-  text-transform: capitalize;
+  background: transparent;
+  box-shadow:0px 0px 0px 3px #fff inset;
+  color: #fff;
   &:visited {
-    color:inherit;
+    color:#fff;
   }
   &:hover , &:active {
-    border: 1px solid @gray-light;
-    background: @gray-lighter;
+    background: transparent;
+    color:darken(#fff, 15%);
+    box-shadow:0px 0px 0px 3px darken(#fff, 15%) inset;
   }
 }
 
@@ -126,6 +128,20 @@
   &:hover {
     text-decoration:none;
     background:#2d2252;
+    color:  #fff;
+  }
+}
+
+.btn-purple {
+  color:#fff;
+  background:#2d2252;
+  border-color:#2d2252;
+  &:visited {
+    color:#fff;
+  }
+  &:hover {
+    background:darken(#2d2252, 15%);
+    border-color:#2d2252;
     color:  #fff;
   }
 }
