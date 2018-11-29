@@ -49,18 +49,22 @@
     }
   }
   
-  a {
-    position:absolute;
+  a.hidden-item {
     opacity:0;
-    display:table;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    background-color:rgba(0,0,0,0.8);
     &:hover {
       opacity:1;
       text-decoration:none;
     }
+  }
+  
+  a {
+    position:absolute;
+    display:table;
     z-index:9;
     top:0;
     left:0;
@@ -68,7 +72,6 @@
     @media (max-width: 1200px) {
       height:205px;
     }
-    background-color:rgba(0,0,0,0.8);
     width:100%;
     padding: 20px;
     white-space: normal;
