@@ -25,15 +25,15 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "Yamm": "github:geedmo/yamm3",
-    "bootstrap": "^3.4.0",
+    "bootstrap": "^3.4.1",
     "cookieconsent": "github:chrisguindon/cookieconsent#cguindon/master/fix-getcookie",
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
-    "laravel-mix": "2.1.11",
-    "less": "^3.0.2",
-    "less-loader": "^4.1.0",
-    "napa": "^3.0.0"
+    "laravel-mix": "4.0.14",
+    "napa": "^3.0.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0"
   }
 }
