@@ -4,7 +4,7 @@
   "main": "webpack.min.js",
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
-  "version": "0.0.43",
+  "version": "0.0.44",
   "bugs": {
     "url": "https://github.com/EclipseFdn/solstice-assets/issues"
   },
