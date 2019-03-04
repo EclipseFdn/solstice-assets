@@ -90,3 +90,35 @@ main {
     display:inherit;
   }
 }
+
+.featured-story{
+  &.featured-jakarta-developer-survey {
+    background-image:url(../../../images/jakarta/banner_jakarta_dev_survey_bg.jpg);
+    background-repeat-x: repeat;
+    background-position: bottom left;
+    @media (max-width: 992px) {
+      background-position:-28px 180px;
+      background-color:#fff;
+    }
+    @media (max-width: 590px) {
+      background-position:-108px 180px;
+      background-color:#fff;
+    }
+  }
+  .featured-ad-content-jakarta {
+    p {
+      margin-bottom:0px;
+      color:#fff;
+    }
+    .feather {
+      color:#fff;
+    }
+  }
+  .featured-story-block-content {
+    background-color:transparent;
+    background-image:url(../../../images/jakarta/banner_jakarta_dev_survey.jpg);
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    padding-bottom:20px;
+  }
+}
