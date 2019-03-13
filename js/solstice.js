@@ -95,9 +95,8 @@
 
   feather.replace();
 
-  $('.featured-highlights-item').matchHeight();
-  $('.featured-story-block').matchHeight();
-  $('.news-list-match-height .media-link').matchHeight({
+  $('.match-height-item-by-row').matchHeight();
+  $('.match-height-item').matchHeight({
     byRow: false
   });
 
