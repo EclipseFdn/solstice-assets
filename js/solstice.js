@@ -95,6 +95,11 @@
 
   feather.replace();
 
+  $('.match-height-item-by-row').matchHeight();
+  $('.match-height-item').matchHeight({
+    byRow: false
+  });
+  
   $('.featured-highlights-item').matchHeight();
   $('.featured-story-block').matchHeight();
   $('.news-list-match-height .media-link').matchHeight({
