@@ -121,7 +121,14 @@
   });
 
   eclipseFdnVideos.replace();
-
+  
+  // Make the whole block-list clickable
+  $('.block-list').click(function() {
+    $link = $(this).find('h4 a');
+    if(typeof $link !== 'undefined') {
+      $link[0].click();
+    }
+  });
 
   // Toggle Text of an HTML element
   var view_more_button_text = $('.toggle-text').html();

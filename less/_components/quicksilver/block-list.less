@@ -1,0 +1,100 @@
+/*
+ * Copyright (c) 2018 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
+ *   Eric Poirier <eric.poirier@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+.block-summary-top-shape {
+  &:before {
+    z-index:2;
+    content:"";
+    display:block;
+    position:relative;
+    top: -50px;
+    width:100%;
+    .clip-path-shape(polygon(100% 57%, 0 100%, 100% 100%));
+    background-color: #f9f9f9;
+    height: 50px;
+  }
+  
+}
+
+.block-summary-title {
+  h2 {
+    .margin-bottom-20;
+    .margin-top-0;
+    .text-center;
+  }
+  .feather {
+    margin-bottom: 0;
+    height: 50px;
+    stroke: @featured-block-list-icon-color;
+    width: 50px;
+  }
+}
+
+.block-summary-item {
+  background-color: @featured-block-list-media-link-bg-color;
+  margin-bottom: 30px;
+  padding: 30px;
+  cursor:pointer;
+  &:hover {
+    background-color: @featured-block-list-media-link-bg-color-hover;
+  }
+  
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    color: @featured-block-list-media-heading-color;
+    font-size: @featured-block-list-media-heading-size;
+    font-weight: @featured-block-list-media-heading-weight;
+    display:block;
+    a {
+      color: @featured-block-list-media-link-color;
+      &:visited , &:focus {
+        color: @featured-block-list-media-link-color;
+      }
+      &:hover {
+        color: @featured-block-list-media-link-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    color: @featured-block-list-media-text-color;
+    display:block;
+  }
+}
+
+
+
+.block-summary-more {
+  .text-center;
+  a {
+    color: @featured-block-list-links-color;
+  }
+  li:last-child {
+    border-left: 1px solid @featured-block-list-links-color;
+    padding-left: 10px;
+  }
+  .fa-rss {
+    color: @brand-warning;
+    font-size: 18px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+
