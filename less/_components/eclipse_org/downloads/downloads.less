@@ -1,0 +1,326 @@
+/*
+ * Copyright (c) 2018 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+.photon{
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+    color:#cda034
+}
+@media (max-width:767px){
+    #tool-platforms{
+        border-top:none;
+        margin-top:-50px;
+        padding-top:75px
+    }
+}
+@media (min-width:768px){
+    .jetty-spacing{
+        margin-left:9.7%
+    }
+}
+.downloads-container{
+    overflow:hidden
+}
+.downloads-container h2{
+    font-size:16px
+}
+.downloads-container h2 span.downloads-title{
+    color:#545454;
+    padding:6px 30px;
+    position:relative;
+    border:1px solid #bdbdbd
+}
+.downloads-header .h1-container{
+    margin-top:30px;
+    margin-bottom:20px;
+    border-left:5px solid #f7941e;
+    padding-left:10px;
+    text-align:left
+}
+@media (min-width:768px){
+    .downloads-header .h1-container{
+        margin-top:60px
+    }
+}
+@media (min-width:992px){
+    .downloads-header .h1-container{
+        margin-top:75px
+    }
+}
+.downloads-content-padding{
+    padding-top:20px
+}
+.downloads-section-all-projects{
+    text-align:center
+}
+.downloads-section{
+    background-color:#f9f9f9;
+    border-top:1px solid #adadad;
+    padding:30px 0;
+    text-align:center
+}
+@media (max-width:767px){
+    .downloads-section:first-child{
+        border-top:none
+    }
+}
+.downloads-logo{
+    width:160px;
+    height:50px;
+    margin:0 auto 15px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex
+}
+.downloads-logo img{
+    max-width:100%;
+    max-height:auto;
+    margin:0 auto
+}
+.downloads-items{
+    margin-bottom:20px;
+    padding:30px 15px;
+    position:relative
+}
+.downloads-items .small{
+    font-size:12px
+}
+.downloads-items .downloads-items-hover-box{
+    opacity:0;
+    visibility:hidden;
+    position:absolute;
+    background-color:hsla(0,0%,96%,.95);
+    border-radius:300px;
+    -webkit-box-shadow:0 0 4px 1px #ccc;
+    box-shadow:0 0 4px 1px #ccc;
+    top:-20px;
+    width:230px;
+    left:0;
+    height:230px;
+    z-index:777;
+    padding:25px;
+    transition:visibility 0s,opacity .2s ease-in-out;
+    -o-transition:visibility 0s,opacity .2s ease-in-out;
+    -ms-transition:visibility 0s,opacity .2s ease-in-out;
+    -moz-transition:visibility 0s,opacity .2s ease-in-out;
+    -webkit-transition:visibility 0s,opacity .2s ease-in-out
+}
+@media (min-width:992px){
+    .downloads-items:hover .downloads-items-hover-box{
+        transition:visibility 0s,opacity .2s ease-in-out;
+        -o-transition:visibility 0s,opacity .2s ease-in-out;
+        -ms-transition:visibility 0s,opacity .2s ease-in-out;
+        -moz-transition:visibility 0s,opacity .2s ease-in-out;
+        -webkit-transition:visibility 0s,opacity .2s ease-in-out;
+        opacity:1;
+        visibility:visible
+    }
+}
+.downloads-items-close{
+    cursor:pointer
+}
+.downloads-items-hover-box-text{
+    font-size:.8em
+}
+.downloads-items-hover-box-links{
+    font-size:.8em;
+    margin:0 0 5px
+}
+.downloads-items-hover-box-links a{
+    color:#8b82b0;
+    text-transform:uppercase
+}
+.downloads-items-header{
+    font-size:18px;
+    font-weight:700;
+    margin-top:5px
+}
+.downloads-items-header:after{
+    content:"";
+    position:relative;
+    display:block;
+    width:50px;
+    height:3px;
+    border-bottom:2px solid;
+    margin:0 auto;
+    top:5px
+}
+@media (max-width:1200px){
+    .downloads-items-header{
+        cursor:pointer
+    }
+}
+.downloads-menu-container{
+    height:46px;
+    width:100%
+}
+.downloads-menu{
+    font-size:14px;
+    width:100%;
+    z-index:999
+}
+.downloads-menu ul{
+    margin-bottom:0;
+    line-height:1
+}
+.downloads-menu ul li{
+    line-height:1;
+    padding:16px 15px
+}
+.downloads-menu ul li.active,.downloads-menu ul li:hover{
+    background-color:rgba(0,0,0,.1)
+}
+.downloads-menu a,.downloads-menu a:hover{
+    color:#6f6f6f;
+    text-decoration:none
+}
+.downloads-bar-ad{
+    color:#fff;
+    border-bottom:1px solid #ddd;
+    background-color:#3f7b96
+}
+.downloads-bar-ad p{
+    color:#fff;
+    padding:15px 0;
+    margin:0;
+    font-weight:300
+}
+@media (max-width:991px){
+    .downloads-bar-ad p{
+        text-align:center;
+        padding:15px 0 5px
+    }
+}
+@media (min-width:1200px){
+    .downloads-bar-ad p{
+        font-size:16px
+    }
+}
+.downloads-bar-ad .btn{
+    margin-top:8px;
+    z-index:999
+}
+@media (min-width:992px){
+    .downloads-bar-ad .btn{
+        position:absolute
+    }
+}
+@media (max-width:991px){
+    .downloads-bar-ad .btn{
+        margin-bottom:15px
+    }
+}
+.downloads-bar-ad-white-shape{
+    background-repeat:no-repeat;
+    background-position:100% 0;
+    padding-right:0
+}
+.downloads-bar-ad-white-content{
+    text-align:center;
+    position:relative
+}
+@media (min-width:1200px){
+    .downloads-bar-ad-white-content{
+        padding-left:0
+    }
+}
+@media (min-width:992px){
+    .downloads-bar-ad-white-content{
+        text-align:left
+    }
+}
+.grey-link{
+    color:#9692a8;
+    font-weight:300
+}
+.downloads-installer{
+    position:relative;
+    margin-bottom:10px;
+    top:-20px
+}
+@media (max-width:991px){
+    .downloads-installer{
+        border-bottom:2px dotted #e0e0e0;
+        padding-bottom:20px
+    }
+}
+@media (min-width:992px){
+    .downloads-installer:after{
+        content:"";
+        height:170px;
+        width:3px;
+        border-right:2px dotted #e0e0e0;
+        position:absolute;
+        top:20px;
+        right:0
+    }
+}
+@media (min-width:992px) and (min-width:1200px){
+    .downloads-installer:after{
+        right:45px
+    }
+}
+.downloads-all-projects-items{
+    padding:30px 15px 0
+}
+@media (min-width:768px){
+    .featured-ad,.featured-story-block{
+        min-height:270px
+    }
+}
+.col-lg-5th,.col-lg-10th,.col-md-5th,.col-md-10th,.col-sm-5th,.col-sm-10th,.col-xs-5th,.col-xs-10th{
+    position:relative;
+    min-height:1px;
+    padding-right:10px;
+    padding-left:10px
+}
+.col-xs-5th,.col-xs-10th{
+    width:20%;
+    float:left
+}
+@media (min-width:992px){
+    .jetty-margin{
+        margin-left:9.7%
+    }
+}
+@media (min-width:768px){
+    .col-sm-5th{
+        width:20%;
+        float:left
+    }
+    .col-sm-10th{
+        width:40%;
+        float:left
+    }
+}
+@media (min-width:992px){
+    .col-md-5th{
+        width:20%;
+        float:left
+    }
+    .col-md-10th{
+        width:40%;
+        float:left
+    }
+}
+@media (min-width:1200px){
+    .col-lg-5th{
+        width:20%;
+        float:left
+    }
+    .col-lg-10th{
+        width:40%;
+        float:left
+    }
+}
