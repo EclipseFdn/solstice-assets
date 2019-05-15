@@ -24,9 +24,9 @@
   },
   "readmeFilename": "README.md",
   "dependencies": {
-    "Yamm": "git+https://github.com/geedmo/yamm3.git",
+    "Yamm": "git+https://github.com/geedmo/yamm3.git#d604f9ad80b46f361f38d06eb9157dbbbb91229a",
     "bootstrap": "^3.4.1",
-    "cookieconsent": "github:chrisguindon/cookieconsent#cguindon/master/fix-getcookie",
+    "cookieconsent": "git+https://github.com/chrisguindon/cookieconsent.git#cguindon/master/fix-getcookie",
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
