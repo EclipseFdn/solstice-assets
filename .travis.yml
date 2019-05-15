@@ -1,8 +1,14 @@
-sudo: true
-dist: trusty
+language: node_js
+node_js:
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+  - "10"
+  - "11"
+  - "12"
 
 install:
-  - sudo apt-get --yes install autoconf libtool nasm
   - npm install
   - npm run drupal
 
