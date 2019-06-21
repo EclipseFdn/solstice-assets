@@ -34,8 +34,8 @@
     border-bottom:1px solid #a5a5a5;
     border-top:1px solid #a5a5a5;
     padding-top:3px;
-    li {
-      a {
+    .nav > li {
+      > a {
         margin-bottom:3px;
         &:link, &:visited {
           color: @site-login-user-menu-color;
@@ -63,8 +63,8 @@
     color: @site-login-user-menu-color;
     border-bottom: 1px solid #a5a5a5;
     padding-top:3px;
-    li {
-      a {
+    .nav > li {
+      > a {
         margin-bottom:3px;
         &:link, &:visited {
           color: @site-login-user-menu-color;
@@ -80,6 +80,16 @@
           margin-bottom:0;
         }
       }
+    }
+  }
+  .solstice-sub-menu-dropdown {
+    margin-top: 0;
+    border-top: 1px solid #a5a5a5;
+    font-size: 12px;
+    font-weight: 300;
+    min-width: 200px;
+    a:hover{
+      color:#7b7b7b;
     }
   }
 }
