@@ -90,5 +90,35 @@
       }
     }
   }
+  &.alternate {
+    text-align:@jumbotron-alternate-text-align;
+    h1 {
+      @media (min-width: @screen-md-min) {
+        font-size:@jumbotron-alternate-h1-size;
+      }
+      @media (max-width: @screen-sm-max) {
+        font-size: @jumbotron-alternate-h1-mobile-size;
+      }
+      font-weight:@jumbotron-alternate-h1-weight;
+      margin-bottom:10px;
+      margin-top:0;
+      color:@brand-primary;
+      &:after {
+        display:none;
+      }
+    }
+    
+    p {
+      font-weight:@jumbotron-alternate-p-weight;
+      @media (min-width: @screen-md-min) {
+        font-size:@jumbotron-alternate-p-size;
+      }
+      @media (max-width: @screen-sm-max) {
+        font-size:@jumbotron-alternate-p-mobile-size;
+      }
+    }
+    .featured-jumbotron-alternate-highlight {
+      color:@brand-primary;
+    }
+  }
 }
-
