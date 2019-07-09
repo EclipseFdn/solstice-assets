@@ -28,9 +28,9 @@
     margin-top:0;
     a {
       font-weight:bold;
-      color:@brand-secondary;
+      color:@solstice-user-profile-h3-link-color;
       &:hover {
-        color:darken(@brand-secondary, 10%);
+        color:@solstice-user-profile-h3-link-color-hover;
       }
     }
   }
@@ -58,10 +58,11 @@
     a{
       &:link,
       &:visited{
-        color:@brand-secondary;
+        color:@solstice-user-profile-social-link-color @brand-secondary;
       }
       &:hover{
         color:lighten(@brand-secondary, 20%);
+        color:@solstice-user-profile-social-link-color-hover;
       }
     }
     font-size:18px;
