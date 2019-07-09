@@ -15,7 +15,12 @@
 
 /* Custom buttons */
 .btn {
-  text-transform: @btn-text-transform;
+  & {
+    text-transform: @btn-text-transform;
+    font-weight: @btn-font-weight;
+    font-size: @btn-font-size;
+  }
+  
   &:visited, &:focus {
     color:@white;
   }
