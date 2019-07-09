@@ -42,6 +42,9 @@
     a {
       color:@brand-secondary;
       border-bottom:1px solid @brand-secondary;
+      &:hover {
+        text-decoration:none;
+      }
     }
   }
   .field-name-field-track-icon {
@@ -52,10 +55,21 @@
     font-weight:normal;
     color:@brand-primary;
   }
+  p{
+    text-transform:uppercase;
+    font-weight:normal;
+    color:@brand-primary;
+  }
 }
 
 .eclipsecon-schedule-tracks {
   text-align:center;
+  i {
+    font-size:35px;
+  }
+  p {
+    
+  }
   ul {
     border-bottom:1px solid #eee;
     margin-left:0px;
@@ -67,12 +81,16 @@
       padding:0;
       width:49%;
       @media screen and (min-width: 1200px) {
-        width:33%;
+        width:12%;
       }
       cursor:pointer;
       margin-bottom:30px;
       display:inline-grid;
     }
+  }
+  #schedule-view-all-reset-filter {
+    display:block;
+    margin:0 auto 30px;
   }
 }
 
@@ -130,6 +148,12 @@
     &:visited {
       color:@brand-primary;
     }
+  }
+}
+
+.eclipsecon-schedule-items-track-icon {
+  a {
+    color: inherit;
   }
 }
 
