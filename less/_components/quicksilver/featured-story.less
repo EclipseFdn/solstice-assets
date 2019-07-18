@@ -20,6 +20,22 @@
   @media (max-width: @screen-xs-max) {
     text-align:center;
   }
+  
+  .featured-story-block-content{
+    position: initial;
+    &:before {
+      background-color:#fff;
+      background-size:cover;
+      content:"";
+      display:block;
+      min-height:100%;
+      position:absolute;
+      top:0;
+      width:65vw;
+      z-index:-1;
+      left:0;
+    }
+  }
 }
 
 .featured-story-description {
