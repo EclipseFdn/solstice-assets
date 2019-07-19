@@ -23,6 +23,9 @@
   
   .featured-story-block-content{
     position: initial;
+    @media (max-width: @screen-xs-max) {
+      margin-bottom:30px;
+    }
     &:before {
       background-color:#fff;
       background-size:cover;
@@ -31,9 +34,12 @@
       min-height:100%;
       position:absolute;
       top:0;
-      width:65vw;
+      width:100%;
       z-index:-1;
       left:0;
+      @media (min-width: @screen-sm-min) {
+        width:65vw;
+      }
     }
   }
 }
@@ -64,12 +70,12 @@
   background-repeat:no-repeat;
   background-color:@featured-story-bg-color;
   @media (min-width: @screen-sm-min) {
-    padding-right:100px;
     padding-bottom:50px;
   }
   h2 {
     color:@featured-story-h2-color;
-    margin-top:0;
+    margin-top:30px;
+    font-size:42px;
   }
   p {
     font-size:@featured-story-p-size;
@@ -91,7 +97,7 @@
     .featured-ad-content{
       z-index:2;
       width:100%;
-      position:absolute;
+      position:relative;
       right:15px;
       img {
         float:right;
