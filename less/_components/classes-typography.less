@@ -142,16 +142,35 @@ blockquote{
 // Example: eclipse.org/community/eclipse_newsletter/
 .heading-underline {
   position:relative;
-  font-size:2em;
+  font-size: @heading-underline-font-size;
   text-transform: uppercase;
-  font-weight:200;
-  margin:50px 0 20px;
+  font-weight: @heading-underline-weight;
+  margin: @heading-underline-margin;
   &:after {
-    border-bottom:4px solid #f7941d;
+    border-bottom: @heading-underline-border;
     content:"";
     display:block;
     width:100px;
+    margin: 15px 0 0;
+  }
+
+  &.heading-underline-extended:after {
+    width: 300px;
+    max-width: 75%;
+    height: @heading-underline-thickness;
+      
+    @media (min-width: 769px) {
+      width: 400px;
+    }
+  }
+  &.text-center:after {
     margin:10px auto 0;
+  }
+  &.text-left:after {
+    margin: 15px 0 0;
+  }
+  &.text-right:after {
+    margin: 15px 0 0 auto;
   }
 }
 
