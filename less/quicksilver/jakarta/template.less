@@ -90,3 +90,53 @@ main {
     display:inherit;
   }
 }
+
+.download-highlights-item {
+  padding:0 30px;
+  @media (max-width: @screen-sm-max) {
+    padding:30px;
+  }
+}
+
+.jakarta-download-community {
+  background-image:url("/images/download/community.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  h2 {
+    color:@white;
+  }
+}
+
+.header-download-bg-img {
+  background-image:url("/images/download/header.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.heading-underline {
+  text-transform:none;
+}
+
+.jakarta-download-participation {
+  background-image:url("/images/download/donate.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  .featured-donate-icon {
+    background-color: #fff;
+    border-radius: 200px;
+    height: 300px;
+    width: 300px;
+    display: block;
+    padding: 40px;
+    padding-left: 58px;
+    @media (max-width: @screen-sm-max) {
+      margin:30px auto 0;
+    }
+  }
+  @media (max-width: @screen-sm-max) {
+    text-align:center;
+    .heading-underline:after {
+      margin:15px auto 0;
+    }
+  }
+}
