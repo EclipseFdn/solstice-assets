@@ -23,8 +23,10 @@
   
   .featured-story-block-content{
     position: initial;
-    @media (max-width: @screen-xs-max) {
-      margin-bottom:30px;
+    margin-bottom:30px;
+    @media (min-width: @screen-sm-min) {
+      margin-bottom:0;
+      padding-right:35px;
     }
     &:before {
       background-color:#fff;
