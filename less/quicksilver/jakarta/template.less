@@ -14,8 +14,12 @@
 
 // Templates
 
-main {
+main, #featured-footer {
   border-bottom:1px solid @brand-secondary;
+}
+
+main {
+  line-height: 1.5;
 }
 
 @media (min-width: @screen-sm-min) {
@@ -32,19 +36,8 @@ main {
     }
   }
 }
-
-.featured-footer-newsletter {
-  margin-top:0;
-  margin-bottom:0;
-  padding:100px 30px;
-}
-
 .news-list .news-list-col {
   padding-bottom:0;
-}
-
-main {
-  line-height: 1.5;
 }
 
 .events {
@@ -60,21 +53,6 @@ main {
         top:15px;
       }
     }
-  }
-}
-
-.jakarta-newsletter-default-padding {
-  padding:30px 30px;
-}
-
-.jakarta-newsletter {
-  .feather {
-    width:48px;
-    height:48px;
-  }
-  h2 {
-    margin-top:0;
-    margin-bottom:25px;
   }
 }
 
