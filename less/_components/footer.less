@@ -134,7 +134,6 @@ footer#solstice-footer {
 .footer-min{
   background:@eclipse-highlight-grey;
   border-top: 1px solid darken(@eclipse-highlight-grey, 25%);
-  position: absolute;
   width:100%;
   bottom:0px;
   a{
@@ -160,9 +159,14 @@ footer#solstice-footer {
 }
 
 body.solstice-footer-min{
-  margin-bottom:36px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   position:static;
   @media screen and ( max-width: @screen-xs-max) {
     margin-bottom:51px;
+  }
+  main {
+    flex: 1 0 auto;
   }
 }
