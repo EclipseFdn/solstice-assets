@@ -22,6 +22,7 @@ mix.less('less/quicksilver/jakarta/styles.less', 'dist/css/jakarta.css');
 mix.less('less/quicksilver/eclipse-ide/styles.less', 'dist/css/eclipse-ide.css');
 mix.less('less/quicksilver/locationtech/styles.less', 'dist/css/locationtech.css');
 mix.less('less/quicksilver/polarsys/styles.less', 'dist/css/polarsys.css');
+mix.less('less/quicksilver/polarsys/papyrus_ic/drupal.less', 'dist/css/papyrus_ic.css');
 mix.less('less/solstice/_barebone/styles.less', 'dist/css/barebone.css');
 mix.less('less/solstice/_barebone/footer.less', 'dist/css/barebone-footer.css');
 mix.less('less/solstice/table.less', 'dist/css/table.css');
