@@ -102,7 +102,7 @@
             let img = document.createElement('img');
 
             a.setAttribute('href', url);
-            img.setAttribute('name', name);
+            img.setAttribute('alt', name);
             img.setAttribute('src', logo);
 
             a.appendChild(img);
