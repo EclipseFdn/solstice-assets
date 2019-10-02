@@ -103,7 +103,7 @@
 
             a.setAttribute('href', url);
             img.setAttribute('alt', name);
-            img.setAttribute('src', logo);
+            img.setAttribute('src', "https://iot.eclipse.org/assets/images/adopters/" + logo);
 
             a.appendChild(img);
             li.appendChild(a);
