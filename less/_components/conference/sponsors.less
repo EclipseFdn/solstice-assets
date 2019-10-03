@@ -42,12 +42,23 @@
   }
 }
 
-
 // Top Sponsors - Front page sponsor list
-
-.view-eclipsecon-sponsors-block-2{
-  .wrapper-sponsor-level:first-child{
-    margin-right:45px;
+@media (min-width: @screen-md-min) {
+  .view-eclipsecon-sponsors-block-2{
+    .wrapper-sponsor-level:first-child{
+      margin-right:45px;
+    }
+  }
+  
+  .view-eclipsecon-sponsors-block-3 {
+    .wrapper-sponsor-level {
+      &:first-child {
+        margin-right: 45px;
+      }
+      &:last-child{
+        margin-right:0
+      }
+    }
   }
 }
 
