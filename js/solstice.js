@@ -123,7 +123,7 @@
   eclipseFdnVideos.replace();
   
   // Make the whole block-list clickable
-  $('.block-summary').click(function() {
+  $('.block-summary-item').click(function() {
     $link = $(this).find('h4 a');
     if(typeof $link !== 'undefined') {
       $link[0].click();
