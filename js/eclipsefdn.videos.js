@@ -102,8 +102,16 @@
           else {
             this.el[i].setAttribute("class","eclipsefdn-video eclipsefdn-video-with-js");
             if (this.el[i].getElementsByTagName('img').length != 1) {
-              var video_id = link.replace("//www.youtube.com/watch?v=","");
-              this.el[i].innerHTML = '<img class="img-responsive" src="//img.youtube.com/vi/'+ video_id +'/maxresdefault.jpg">';
+              var video_id = "";
+              if (link.includes('//www.youtube.com/watch?v=')) {
+                video_id = link.replace("//www.youtube.com/watch?v=","");
+              }
+              if (link.includes('//www.youtube.com/embed/')) {
+                video_id = link.replace("//www.youtube.com/embed/","");
+              }
+              if (video_id !== "") {
+                this.el[i].innerHTML = '<img class="img-responsive" src="//img.youtube.com/vi/'+ video_id +'/maxresdefault.jpg">';
+              }
             }
           }
         }
