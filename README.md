@@ -12,6 +12,10 @@ Install dependencies, build assets and watch for changes:
 npm install && npm run drupal && npm run watch
 ```
 
+## Regarding namespacing
+
+Starting in 2020, we have started to use namespacing to reduce the impact that components can have on each other, as well as other frameworks. To remain consistent across multiple look and feels, new components should be namespaced using `eclipsefdn`.  
+
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the [EclipseFdn/solstice-assets](https://github.com/EclipseFdn/solstice-assets) repository
