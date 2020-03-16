@@ -1,0 +1,81 @@
+/*
+ * Copyright (c) 2020 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Eric Poirier <eric.poirier@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+.event-timeline {
+  @media screen and (min-width: 768px) {
+    position: relative;
+    padding-top: 20px;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      border: 1px solid @timeline-border-color;
+      right: 40px;
+      top: 0;
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    padding: 20px 0;
+    &:before {
+      left: calc(50% - 1px);
+      right: auto;
+    }
+  }
+  
+  .timeline-item{
+    @media screen and (min-width: 768px) {
+      position: relative;
+      padding: 10px 30px 10px 10px;
+      clear: both;
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+      }
+      &:before {
+        top: calc(50% - 7px);
+        right: -19%;
+        width: 15px;
+        height: 15px;
+        border: 3px solid @timeline-border-color;
+        border-radius: 100px;
+        background-color: @timeline-circle-bg-color;
+      }
+      width: 44%;
+      &:nth-of-type(2n) {
+        padding: 10px 10px 10px 30px;
+        float: right;
+  
+        &:before {
+          right: auto;
+          left: -19%;
+        }
+      }
+    }
+    a {
+      font-size: @timeline-link-font-size;
+      color: @timeline-link-color;
+      &:visited {
+        color: @timeline-link-color;
+      }
+    }
+  }
+  .timeline-date {
+    color: @timeline-date-color;
+    font-size: @timeline-date-font-size;
+  }
+}
