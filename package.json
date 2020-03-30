@@ -34,6 +34,7 @@
     "laravel-mix": "4.0.14",
     "less": "^3.10.1",
     "less-loader": "^5.0.0",
+    "lightbox2": "^2.11.1",
     "napa": "^3.0.0",
     "owl.carousel": "^2.3.4"
   }
