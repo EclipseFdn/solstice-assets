@@ -42,6 +42,7 @@ mix.scripts([
     './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
     './node_modules/feather-icons/dist/feather.min.js',
     './node_modules/cookieconsent/src/cookieconsent.js',
+    './node_modules/owl.carousel/dist/owl.carousel.min.js',
     'js/eclipsefdn.videos.js',
     'js/solstice.cookieconsent.js',
     'js/solstice.cookies.js',
