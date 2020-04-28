@@ -49,23 +49,23 @@
     });
 
     href_hash && $('ul.nav a[href="' + href_hash + '"]').tab('show');
-    
+
     // render RSS feeds if they exist
     renderRSSFeeds();
-    
+
     $(".solstice-slider").owlCarousel({
       responsive: {
         0: {
-            items: 1
+          items: 1
         },
         768: {
-            items: 2
+          items: 2
         },
         992: {
-            items: 3
+          items: 3
         },
         1170: {
-            items: 3
+          items: 3
         }
       },
       pagination: true,
@@ -117,10 +117,30 @@
 
   feather.replace();
 
-  $('.match-height-item-by-row').matchHeight();
-  $('.match-height-item').matchHeight({
-    byRow: false
-  });
+
+  function matchHeightItems() {
+    $('.match-height-item-by-row').matchHeight();
+    $('.match-height-item').matchHeight({
+      byRow: false
+    });
+  }
+  matchHeightItems();
+  
+  function blockSumaryItem() {
+    // Make the whole block-list clickable
+    $('.block-summary-item').click(function() {
+      $link = $(this).find('h4 a');
+      if (typeof $link !== 'undefined') {
+        $link[0].click();
+      }
+    });
+  }
+  blockSumaryItem();
+  
+  $("body").on("shown.ef.news", function(e) {
+    matchHeightItems();
+    blockSumaryItem();
+  })
 
   // Focus on the Google search bar when dropdown menu is being shown
   $('.main-menu-search').on('shown.bs.dropdown', function() {
@@ -143,14 +163,6 @@
   });
 
   eclipseFdnVideos.replace();
-  
-  // Make the whole block-list clickable
-  $('.block-summary-item').click(function() {
-    $link = $(this).find('h4 a');
-    if(typeof $link !== 'undefined') {
-      $link[0].click();
-    }
-  });
 
   // Toggle Text of an HTML element
   var view_more_button_text = $('.toggle-text').html();
@@ -171,7 +183,8 @@
       // Get the file extension
       var fileExtension = fileName.split('.').pop();
 
-      // Quit here if the extension of the clicked file isn't part of the following list
+      // Quit here if the extension of the clicked file isn't part of the
+      // following list
       // and if the Google Analytics is not loaded
       var tracker = ga.getAll()[0].get('name');
       if (tracker && $.inArray(fileExtension, ['pdf', 'jpg', 'png', 'zip', 'dmg', 'gz', 'exe', 'doc', 'odt', 'rtf', '7z', 'arj', 'deb', 'pkg', 'rar', 'rpm', 'z', 'tar', 'xml', 'csv', 'xls', 'xlr', 'ods', 'rss']) !== -1) {
@@ -186,59 +199,61 @@
   });
 
 
-	async function renderRSSFeeds() {
-		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-		$('.solstice-rss-feed').each(function(item) {
-			var $t = $(this);
-			$.ajax({
-		        type: "GET",
-		        url: $t.attr('data-src'),
-		        dataType: "xml",
-		        success: async function (data) {
-		        	var rssLimit = $t.attr('data-limit');
-					if (rssLimit < 0) {
-						// set max to a high number to stop long page unresponsiveness
-						rssLimit = 100;
-					}
-		        	// get container and ensure is empty
-		            var $container = $t.find('ul');
-		            $container.empty();
-		            
-		            // build the list using the entries retrieved from the atom-based feed
-		            var $template = $t.find('.template li').first();
-					var rssCount = 0;
-		    	    $(data).find("entry").each(function () {
-		    	    	// convert XML to HTML element for ease of consumption
-		    	        var $el = $(this);
-		    	        // validate item has a proper heading
-		    	        var itemTitle = $el.find("> title").text().trim();
-		    	        if (itemTitle == "") {
-		    	        	return;
-		    	        }
-		    	    	// stop if we reach the limit
-		    	    	if (rssCount++ >= rssLimit) {
-		    	    		return false;
-		    	    	}
-		    	        // create a copy of template to use as base of rss item
-		    	        var $item = $template.clone();
-		    	        // update the title el of the rss item
-		    	        var $title = $item.find('p a');
-		    	        $title.attr('href', $el.find("> link").attr('href'));
-		    	        $title.text(itemTitle);
+  async function renderRSSFeeds() {
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    $('.solstice-rss-feed').each(function(item) {
+      var $t = $(this);
+      $.ajax({
+        type: "GET",
+        url: $t.attr('data-src'),
+        dataType: "xml",
+        success: async function(data) {
+          var rssLimit = $t.attr('data-limit');
+          if (rssLimit < 0) {
+            // set max to a high number to stop long page
+            // unresponsiveness
+            rssLimit = 100;
+          }
+          // get container and ensure is empty
+          var $container = $t.find('ul');
+          $container.empty();
 
-		    	        // add the date of the RSS item post
-		    	        var d = new Date($el.find("> updated").text());
-		    	        $item.find('p small').text(months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' ' + d.toLocaleTimeString());
-		    	        
-		    	        // add the item to the RSS feed container
-		    	        $container.append($item);
-		    	    });
-		    	    //remove loading image
-		    	    $t.find('p.solstice-loading').remove();
-		    	    // display the updated container
-		    	    $container.show();
-		        }
-			});
-		});
-	}
+          // build the list using the entries retrieved from the
+          // atom-based feed
+          var $template = $t.find('.template li').first();
+          var rssCount = 0;
+          $(data).find("entry").each(function() {
+            // convert XML to HTML element for ease of consumption
+            var $el = $(this);
+            // validate item has a proper heading
+            var itemTitle = $el.find("> title").text().trim();
+            if (itemTitle == "") {
+              return;
+            }
+            // stop if we reach the limit
+            if (rssCount++ >= rssLimit) {
+              return false;
+            }
+            // create a copy of template to use as base of rss item
+            var $item = $template.clone();
+            // update the title el of the rss item
+            var $title = $item.find('p a');
+            $title.attr('href', $el.find("> link").attr('href'));
+            $title.text(itemTitle);
+
+            // add the date of the RSS item post
+            var d = new Date($el.find("> updated").text());
+            $item.find('p small').text(months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' ' + d.toLocaleTimeString());
+
+            // add the item to the RSS feed container
+            $container.append($item);
+          });
+          // remove loading image
+          $t.find('p.solstice-loading').remove();
+          // display the updated container
+          $container.show();
+        }
+      });
+    });
+  }
 })(jQuery, document);
