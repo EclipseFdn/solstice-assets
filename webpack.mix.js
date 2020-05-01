@@ -46,6 +46,7 @@ mix.scripts([
     'js/eclipsefdn.videos.js',
     'js/solstice.cookieconsent.js',
     'js/solstice.cookies.js',
+    'js/solstice.eventsmodal.js',
     'js/solstice.js',
     'js/solstice.donate.js'
 ], 'dist/js/solstice.js');
