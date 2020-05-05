@@ -198,3 +198,43 @@ blockquote{
   line-height: 1.3333333;
   border-radius: 0;
 }
+
+.icon-backdrop {
+  & {
+    width: 100%;
+    position: relative;
+    display: inline-block;    
+    background-color: #fff;
+    text-align: center;
+  }
+  i {
+    & {
+      font-size: 25vw;
+      padding-top: 33%;
+    }
+    @media(min-width: 768px) {
+      & {
+        font-size: 12vw;
+      padding-top: 18%;
+      }
+    }
+    @media(min-width: 1200px) {
+      & {
+        font-size: 9em;
+      }
+    }
+  }
+  i:before {
+    color: @brand-primary;
+  }
+  .icon-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .ratio {
+    margin-top: 100%;
+  }
+}
