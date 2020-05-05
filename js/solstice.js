@@ -52,24 +52,27 @@
 
     // render RSS feeds if they exist
     renderRSSFeeds();
-
-    $(".solstice-slider").owlCarousel({
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        992: {
-          items: 3
-        },
-        1170: {
-          items: 3
-        }
-      },
-      pagination: true,
-      responsiveRefreshRate: 100
+    // render each of the sliders, using optional data attributes for settings
+    $(".solstice-slider").each(function() {
+    	var $t = $(this);
+    	$t.owlCarousel({
+	      responsive: {
+	        0: {
+	          items: $t.data('slider-xs-count') || 1
+	        },
+	        768: {
+	          items: $t.data('slider-sm-count') || 2
+	        },
+	        992: {
+	          items: $t.data('slider-md-count') || 3
+	        },
+	        1170: {
+	          items: $t.data('slider-lg-count') || 3
+	        }
+	      },
+	      pagination: true,
+	      responsiveRefreshRate: 100
+	    });
     });
   });
 
