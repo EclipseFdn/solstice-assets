@@ -1,0 +1,62 @@
+/*
+ * Copyright (c) 2020 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Eric Poirier <eric.poirier@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+
+.featured-section{
+  padding: @featured-section-padding;
+  background-position: @featured-section-background-position;
+  font-size:@featured-section-font-size;
+  h2{
+    font-size: @featured-section-h2-font-size;
+    margin:@featured-section-h2-margin;
+    color: @featured-section-h2-color;
+    text-transform: @featured-section-h2-transform-text;
+  }
+  p{
+    margin:@featured-section-p-margin;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+  .feather {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* White background */
+.featured-section-row-lighter-bg{
+  background:@featured-section-row-lighter-bg;
+  color:@featured-section-row-lighter-color;
+  h2, h3, h4, p, li {
+    color:@featured-section-row-lighter-color;
+  }
+}
+
+/* Light Gray background*/
+.featured-section-row-light-bg{
+  background:@featured-section-row-light-bg;
+  color:@featured-section-row-light-color;
+  h2, h3, h4, p, li {
+    color:@featured-section-row-light-color;
+  }
+}
+
+/* Dark background */
+.featured-section-row-dark-bg{
+  background:@featured-section-row-dark-bg;
+  color:@featured-section-row-dark-color;
+  h2, h3, h4, p, li {
+    color:@featured-section-row-dark-color;
+  }
+}
