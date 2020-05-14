@@ -15,8 +15,11 @@
       var $init = $(event.relatedTarget);
       var $modal = $(this);
       $modal.find('h4.modal-title').text($init.attr('data-title'));
-      $modal.find('.modal-presenter').text($init.attr('data-presenter'));
-      $modal.find('.modal-time').text($init.attr('data-time'));
       $modal.find('.modal-body').html($init.find('.modal-content')[0].innerHTML);
+      $modal.find('.modal-body').prepend('<div class="alert alert-warning"><p><span id="modal-presenter">' 
+      + $init.attr('data-presenter') 
+      + '</span><br><span id="modal-time">' 
+      + $init.attr('data-time') 
+      + '</span></p></div>');
   });
 })(jQuery, document);
