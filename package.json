@@ -29,7 +29,7 @@
     "cookieconsent": "^3.1.0",
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
-    "jquery": "3.3.1",
+    "jquery": "^3.5.1",
     "jquery-eclipsefdn-api": "0.0.32",
     "jquery-match-height": "^0.7.2",
     "laravel-mix": "4.0.14",
