@@ -53,7 +53,7 @@
   .view-eclipsecon-sponsors-block-3 {
     .wrapper-sponsor-level {
       &:first-child {
-        margin-right: 45px;
+        margin-right: @eclipsecon-sponsors-first-child-margin-right;
       }
       &:last-child{
         margin-right:0
@@ -66,6 +66,8 @@
   background-color:@eclipsecon-sponsors-header-block-background-color;
   border-top:@eclipsecon-sponsors-header-block-border-top;
   border-bottom:@eclipsecon-sponsors-header-block-border-bottom;
+  border-right:@eclipsecon-sponsors-header-block-border-right;
+  border-left:@eclipsecon-sponsors-header-block-border-left;
   h3{
     font-size:@eclipsecon-sponsors-header-block-h3-font-size;
     font-weight:@eclipsecon-sponsors-header-block-h3-font-weight;
@@ -99,7 +101,7 @@
       }
       li{
         @media (min-width: @screen-md-min) {
-          padding:0 35px 0 0;
+          padding:@eclipsecon-sponsors-li-padding;
           &.views-row-last{
             padding:0;
           }
