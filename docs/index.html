@@ -253,8 +253,11 @@
         <ol>
           <li><a href="#section-block-box">Block-box</a></li>
           <li><a href="#section-breadcrumbs">Breadcrumbs</a></li>
+          <li><a href="#section-bordered-box">Bordered box</a></li>
           <li><a href="#section-btncfa">Call For Action Button link</a></li>
           <li><a href="#section-dragdrop">Marketplace Drag and Drop install</a></li>
+          <li><a href="#section-content-nav">Content navigation tabs</a></li>
+          <li><a href="#section-section-highlight">Section Highlights</a></li>
           <li><a href="#section-headernav">Header Nav</a></li>
           <li><a href="#section-headerrow">Header Row</a></li>
           <li><a href="#section-highlight">Block Highlight</a></li>
@@ -272,6 +275,66 @@
             <p>Content goes here...</p>
           </div>
         </div>
+        <hr/>
+        
+        <h3 id="section-bordered-box">Bordered box</h3>
+        <div class="margin-top-30 margin-bottom-30">
+          <h4>Sample using light theme</h4>
+          <div class="bordered-box bordered-box-light">
+            <div class="box-header background-secondary" data-mh="bb-head">
+             <h2>Sample heading</h2>
+            </div>
+            <div class="box-body">
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+          
+        <h4>Sample using standard theme</h4>
+        <div class="margin-top-30 margin-bottom-30">
+          <div class="bordered-box">
+            <!-- Clearfix needed here to adjust for cols -->
+            <div class="box-header background-secondary clearfix">
+              <div class="col-xs-24 col-sm-18" data-mh="bb-head-2"><h2>Distinguishing text, or header</h2></div>
+              <div class="col-xs-24 col-sm-6 background-primary vertical-align" data-mh="bb-head-2">Sample Callout</div>  
+            </div>
+            <div class="box-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Some more text</p>
+            </div>
+          </div>
+        </div>
+        
+        <h5>Code sample: </h5>
+        <pre>
+&lt;div class="margin-top-30 margin-bottom-30"&gt;
+  &lt;h4&gt;Sample using light theme&lt;/h4&gt;
+  &lt;div class="bordered-box bordered-box-light"&gt;
+    &lt;div class="box-header background-secondary" data-mh="bb-head"&gt;
+     &lt;h2&gt;Sample heading&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class="box-body"&gt;
+     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  
+&lt;div class="margin-top-30 margin-bottom-30"&gt;
+  &lt;h4&gt;Sample using standard theme&lt;/h4&gt;
+  &lt;div class="bordered-box"&gt;
+    &lt;!-- Clearfix needed here to adjust for cols --&gt;
+    &lt;div class="box-header background-secondary clearfix"&gt;
+      &lt;div class="col-xs-24 col-sm-18" data-mh="bb-head-2"&gt;&lt;h2&gt;Distinguishing text, or header&lt;/h2&gt;&lt;/div&gt;
+      &lt;div class="col-xs-24 col-sm-6 background-primary vertical-align" data-mh="bb-head-2"&gt;Sample Callout&lt;/div&gt;  
+    &lt;/div&gt;
+    &lt;div class="box-body"&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+      &lt;p&gt;Some more text&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+        
         <hr/>
         <h3 id="section-breadcrumbs">Breadcrumbs</h3>
         <p>The <code>$App Class</code> should generate a breadcrumb for you.</p>
@@ -312,6 +375,341 @@
         </div>
         <h4>HTML Output</h4>
         <pre>&lt;div class=&quot;header_nav&quot;&gt;&lt;div class=&quot;col-xs-24 col-md-10 vcenter&quot;&gt;&lt;a href=&quot;http://www.eclipse.org&quot; title=&quot;The Eclipse Foundation&quot; target=&quot;_self&quot;&gt;&lt;img src=&quot;//eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-800x188.png&quot; alt=&quot;The Eclipse Foundation&quot; class=&quot;img-responsive  header_nav_logo&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;col-xs-24 col-md-14 vcenter&quot;&gt;&lt;ul class=&quot;clearfix&quot;&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;/downloads/&quot; title=&quot;Download: Eclipse Distribution, Update Site, Dropins&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-download&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Download&lt;p&gt;Eclipse Distribution, Update Site, Dropins&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;/users/&quot; title=&quot;Geting Involved: CVS, Workspace Setup, Wiki, Committers&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-users&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Geting Involved&lt;p&gt;CVS, Workspace Setup, Wiki, Committers&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;http://help.eclipse.org/luna/index.jsp&quot; title=&quot;Documentation: Tutorials, Examples, Videos, Online Reference&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-book&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Documentation&lt;p&gt;Tutorials, Examples, Videos, Online Reference&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;/forums/&quot; title=&quot;Support: Bug Tracker, Newsgroup Professional Support&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-support&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Support&lt;p&gt;Bug Tracker, Newsgroup Professional Support&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+        <hr/>
+        
+        <h3 id="section-content-nav">Content navigation tabs</h3>
+        <!-- Toggle used for expanding/collapsing pill menu @mobile -->
+        <div class="row content-nav-tab-toggle">
+          <div class="visible-xs">
+            <div class="vertical-align">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-member-levels">
+                <p class="nav-label"><strong>Explore Members</strong></p>
+                <div class="hamburger-wrapper">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="navbar-collapse collapse" id="navbar-member-levels">
+            <ul class="nav nav-tabs solstice-tabs content-nav-tab" role="tablist">
+              <li role="presentation" class="active">
+                <a class="background-grey" href="#tab-one" data-toggle="tab" aria-controls="tab-one" role="tab">
+                  Tab one
+                </a>
+              </li>
+              <li role="presentation" class="">
+                <a class="background-grey" href="#tab-two" data-toggle="tab" aria-controls="tab-two" role="tab">
+                  Tab two
+                </a>
+              </li>
+              <li role="presentation" class="">
+                <a class="background-grey" href="#tab-three" data-toggle="tab" aria-controls="tab-three" role="tab">
+                  Tab three
+                </a>
+              </li>
+              <li role="presentation">
+                <a class="background-grey alt-tab-toggle" href="#showalltabs" id="showalltabs" data-content-target="#tabs-content">
+                  All Tabs
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-nav-tab-body tab-content padding-40" id="tabs-content">
+          <div role="tabpanel" class="tab-pane tab-pane active" id="tab-one">
+            <h2 class="h3 margin-top-0">One</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div role="tabpanel" class="tab-pane tab-pane" id="tab-two">
+            <h2 class="h3 margin-top-0">Two</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div role="tabpanel" class="tab-pane tab-pane" id="tab-three">
+            <h2 class="h3 margin-top-0">Three</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        
+        <h4>Code sample: </h4>
+        <pre>
+        
+&lt;div class="row content-nav-tab-toggle"&gt;
+ &lt;div class="visible-xs"&gt;
+   &lt;div class="vertical-align"&gt;
+     &lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-member-levels"&gt;
+       &lt;p class="nav-label"&gt;&lt;strong&gt;Explore Members&lt;/strong&gt;&lt;/p&gt;
+       &lt;div class="hamburger-wrapper"&gt;
+         &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+         &lt;span class="icon-bar"&gt;&lt;/span&gt;
+         &lt;span class="icon-bar"&gt;&lt;/span&gt;
+         &lt;span class="icon-bar"&gt;&lt;/span&gt;
+       &lt;/div&gt;
+     &lt;/button&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="navbar-collapse collapse" id="navbar-member-levels"&gt;
+    &lt;ul class="nav nav-tabs solstice-tabs content-nav-tab" role="tablist"&gt;
+      &lt;li role="presentation" class="active"&gt;
+        &lt;a class="background-grey" href="#tab-one" data-toggle="tab" aria-controls="tab-one" role="tab"&gt;
+          Tab one
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li role="presentation" class=""&gt;
+        &lt;a class="background-grey" href="#tab-two" data-toggle="tab" aria-controls="tab-two" role="tab"&gt;
+          Tab two
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li role="presentation" class=""&gt;
+        &lt;a class="background-grey" href="#tab-three" data-toggle="tab" aria-controls="tab-three" role="tab"&gt;
+          Tab three
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li role="presentation"&gt;
+        &lt;a class="background-grey alt-tab-toggle" href="#showalltabs" id="showalltabs" data-content-target="#tabs-content"&gt;
+        All Tabs
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content-nav-tab-body tab-content padding-40" id="tabs-content"&gt;
+  &lt;div role="tabpanel" class="tab-pane tab-pane active" id="tab-one"&gt;
+    &lt;h2 class="h3 margin-top-0"&gt;One&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div role="tabpanel" class="tab-pane tab-pane" id="tab-two"&gt;
+    &lt;h2 class="h3 margin-top-0"&gt;Two&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div role="tabpanel" class="tab-pane tab-pane" id="tab-three"&gt;
+    &lt;h2 class="h3 margin-top-0"&gt;Three&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;  
+        </pre>
+        
+        <hr/>
+        
+        <h3 id="section-section-highlight">Section Highlights</h3>
+        <h4 class="margin-top-30">Standard highlights</h4>
+        <div class="container margin-bottom-20">
+          <div class="row section-highlights">
+            <div class="featured-highlights-item match-height-item-by-row col-sm-8">
+              <i data-feather="check" stroke-width="1"></i>
+              <h3>Governance</h3>
+              <p>Eclipse Working Groups allow for individuals and organizations to collaborate under a vendor neutral governance model</p>
+              <p>
+                <a href="about.php#wg-neutral">Learn more</a>
+              </p>
+            </div>
+            <div class="featured-highlights-item match-height-item-by-row col-sm-8">
+              <i data-feather="briefcase" stroke-width="1">©</i>
+              <h3>Intellectual Property Management</h3>
+              <p>The Eclipse Foundation implements the best IP Management required for open source development</p>
+              <p>
+                <a href="about.php#wg-ip">Learn more</a>
+              </p>
+            </div>
+            <div class="featured-highlights-item match-height-item-by-row col-sm-8">
+              <i data-feather="repeat" stroke-width="1"></i>
+              <h3>Development Process</h3>
+              <p>Eclipse Working Groups  use the proven Eclipse Development process that facilitates open development across distributed teams</p>
+              <p>
+                <a href="about.php#wg-process">Learn more</a>
+              </p>
+            </div>
+            <div class="featured-highlights-item match-height-item-by-row col-sm-8">
+              <i data-feather="cloud" stroke-width="1"></i>
+              <h3>Infrastructure</h3>
+              <p>The Eclipse Foundation hosts an open source development forge that is essential to any open collaboration</p>
+              <p>
+                <a href="about.php#wg-infra">Learn more</a>
+              </p>
+            </div>
+            <div class="featured-highlights-item match-height-item-by-row col-sm-8">
+              <i data-feather="user" stroke-width="1"></i>
+              <h3>Ecosystem Development</h3>
+              <p>Eclipse Foundation staff are available to help build a community for
+                the collaboration through events, online webinars, and other community
+                programs</p>
+              <p>
+                <a href="about.php#wg-eco">Learn more</a>
+              </p>
+            </div>
+            <div class="featured-highlights-item match-height-item-by-row col-sm-8">
+              <i data-feather="book" stroke-width="1"></i>
+              <h3>Research@Eclipse</h3>
+              <p>The Eclipse Foundation participates in many government funded industry research projects</p>
+              <p>
+                <a href="/org/research">Learn more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <h5>Code sample:</h5>
+        <pre>
+         
+&lt;div class="container margin-bottom-20"&gt;
+ &lt;div class="row section-highlights"&gt;
+   &lt;div class="featured-highlights-item match-height-item-by-row col-sm-8"&gt;
+     &lt;i data-feather="check" stroke-width="1"&gt;&lt;/i&gt;
+     &lt;h3&gt;Governance&lt;/h3&gt;
+     &lt;p&gt;Eclipse Working Groups allow for individuals and organizations to collaborate under a vendor neutral governance model&lt;/p&gt;
+     &lt;p&gt;
+       &lt;a href="about.php#wg-neutral"&gt;Learn more&lt;/a&gt;
+     &lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class="featured-highlights-item match-height-item-by-row col-sm-8"&gt;
+     &lt;i data-feather="briefcase" stroke-width="1"&gt;©&lt;/i&gt;
+     &lt;h3&gt;Intellectual Property Management&lt;/h3&gt;
+     &lt;p&gt;The Eclipse Foundation implements the best IP Management required for open source development&lt;/p&gt;
+     &lt;p&gt;
+       &lt;a href="about.php#wg-ip"&gt;Learn more&lt;/a&gt;
+     &lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class="featured-highlights-item match-height-item-by-row col-sm-8"&gt;
+     &lt;i data-feather="repeat" stroke-width="1"&gt;&lt;/i&gt;
+     &lt;h3&gt;Development Process&lt;/h3&gt;
+     &lt;p&gt;Eclipse Working Groups  use the proven Eclipse Development process that facilitates open development across distributed teams&lt;/p&gt;
+     &lt;p&gt;
+       &lt;a href="about.php#wg-process"&gt;Learn more&lt;/a&gt;
+     &lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class="featured-highlights-item match-height-item-by-row col-sm-8"&gt;
+     &lt;i data-feather="cloud" stroke-width="1"&gt;&lt;/i&gt;
+     &lt;h3&gt;Infrastructure&lt;/h3&gt;
+     &lt;p&gt;The Eclipse Foundation hosts an open source development forge that is essential to any open collaboration&lt;/p&gt;
+     &lt;p&gt;
+       &lt;a href="about.php#wg-infra"&gt;Learn more&lt;/a&gt;
+     &lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class="featured-highlights-item match-height-item-by-row col-sm-8"&gt;
+     &lt;i data-feather="user" stroke-width="1"&gt;&lt;/i&gt;
+     &lt;h3&gt;Ecosystem Development&lt;/h3&gt;
+     &lt;p&gt;Eclipse Foundation staff are available to help build a community for
+       the collaboration through events, online webinars, and other community
+       programs&lt;/p&gt;
+     &lt;p&gt;
+       &lt;a href="about.php#wg-eco"&gt;Learn more&lt;/a&gt;
+     &lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class="featured-highlights-item match-height-item-by-row col-sm-8"&gt;
+     &lt;i data-feather="book" stroke-width="1"&gt;&lt;/i&gt;
+     &lt;h3&gt;Research@Eclipse&lt;/h3&gt;
+     &lt;p&gt;The Eclipse Foundation participates in many government funded industry research projects&lt;/p&gt;
+     &lt;p&gt;
+       &lt;a href="/org/research"&gt;Learn more&lt;/a&gt;
+     &lt;/p&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+         
+         </pre>
+         <h4 class="margin-top-30">Inverted highlights</h4>
+         <div class="row section-highlights">
+          <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
+            <div class="circle-icon margin-auto">
+              <i class="fa fa-file-code-o"></i>
+            </div>
+            <h3 class="fw-700">Sit Amet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
+            <div class="circle-icon margin-auto">
+              <i class="fa fa-lock"></i>
+            </div>
+            <h3 class="fw-700">Consectetur</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
+            <div class="circle-icon margin-auto">
+              <i class="fa fa-lightbulb-o "></i>
+            </div>
+            <h3 class="fw-700">Magna</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
+            <div class="circle-icon margin-auto">
+              <i class="fa fa-balance-scale"></i>
+            </div>
+            <h3 class="fw-700">Tempor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
+            <div class="circle-icon margin-auto">
+              <i class="fa fa-handshake-o"></i>
+            </div>
+            <h3 class="fw-700">Lorem</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
+            <div class="circle-icon margin-auto">
+              <i class="fa fa-comments"></i>
+            </div>
+            <h3 class="fw-700">Adipiscing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+         
+        <h5>Code sample:</h5>
+        <pre>
+         
+ &lt;div class="row section-highlights"&gt;
+  &lt;div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item"&gt;
+    &lt;div class="circle-icon margin-auto"&gt;
+      &lt;i class="fa fa-file-code-o"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class="fw-700"&gt;Sit Amet&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item"&gt;
+    &lt;div class="circle-icon margin-auto"&gt;
+      &lt;i class="fa fa-lock"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class="fw-700"&gt;Consectetur&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item"&gt;
+    &lt;div class="circle-icon margin-auto"&gt;
+      &lt;i class="fa fa-lightbulb-o "&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class="fw-700"&gt;Magna&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item"&gt;
+    &lt;div class="circle-icon margin-auto"&gt;
+      &lt;i class="fa fa-balance-scale"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class="fw-700"&gt;Tempor&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item"&gt;
+    &lt;div class="circle-icon margin-auto"&gt;
+      &lt;i class="fa fa-handshake-o"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class="fw-700"&gt;Lorem&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item"&gt;
+    &lt;div class="circle-icon margin-auto"&gt;
+      &lt;i class="fa fa-comments"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h3 class="fw-700"&gt;Adipiscing&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+         
+        </pre>
         <hr/>
         <h3 id="section-headerrow">Header row</h3>
         <p>@TODO</p>
