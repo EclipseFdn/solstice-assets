@@ -13,28 +13,30 @@
 
 let mix = require('laravel-mix');
 mix.options({uglify: {uglifyOptions: {compress: false, output: {comments: true}}}});
-mix.setPublicPath('dist');
+mix.setPublicPath('docs/dist');
 mix.setResourceRoot('../');
 
+// Copy the logo from src'
+mix.copy('images/logo/eclipse-foundation-white-orange.svg', 'docs/dist/images/logo/eclipse-foundation-white-orange.svg');
+
 // Default CSS
-mix.less('less/quicksilver/styles.less', 'dist/css/quicksilver.css');
-mix.less('less/quicksilver/jakarta/styles.less', 'dist/css/jakarta.css');
-mix.less('less/quicksilver/eclipse-ide/styles.less', 'dist/css/eclipse-ide.css');
-mix.less('less/quicksilver/locationtech/styles.less', 'dist/css/locationtech.css');
-mix.less('less/quicksilver/polarsys/styles.less', 'dist/css/polarsys.css');
-mix.less('less/quicksilver/polarsys/papyrus_ic/drupal.less', 'dist/css/papyrus_ic.css');
-mix.less('less/solstice/_barebone/styles.less', 'dist/css/barebone.css');
-mix.less('less/solstice/_barebone/footer.less', 'dist/css/barebone-footer.css');
-mix.less('less/solstice/table.less', 'dist/css/table.css');
-mix.less('less/solstice/styles.less', 'dist/css/solstice.css');
+mix.less('less/quicksilver/styles.less', 'docs/dist/css/quicksilver.css');
+mix.less('less/quicksilver/jakarta/styles.less', 'docs/dist/css/jakarta.css');
+mix.less('less/quicksilver/eclipse-ide/styles.less', 'docs/dist/css/eclipse-ide.css');
+mix.less('less/quicksilver/locationtech/styles.less', 'docs/dist/css/locationtech.css');
+mix.less('less/quicksilver/polarsys/styles.less', 'docs/dist/css/polarsys.css');
+mix.less('less/quicksilver/polarsys/papyrus_ic/drupal.less', 'docs/dist/css/papyrus_ic.css');
+mix.less('less/solstice/_barebone/styles.less', 'docs/dist/css/barebone.css');
+mix.less('less/solstice/_barebone/footer.less', 'docs/dist/css/barebone-footer.css');
+mix.less('less/solstice/table.less', 'docs/dist/css/table.css');
+mix.less('less/solstice/styles.less', 'docs/dist/css/solstice.css');
 
 // Copy cookieconsent files
- mix.copy('node_modules/cookieconsent/build/cookieconsent.min.css', 'dist/css/vendor/cookieconsent.min.css');
- mix.copy('node_modules/cookieconsent/src/cookieconsent.js', 'dist/js/vendor/cookieconsent.min.js');
+ mix.copy('node_modules/cookieconsent/build/cookieconsent.min.css', 'docs/dist/css/vendor/cookieconsent.min.css');
+ mix.copy('node_modules/cookieconsent/src/cookieconsent.js', 'docs/dist/js/vendor/cookieconsent.min.js');
 
 // Drupal sites
-mix.less('less/solstice/drupal.less', 'dist/css/drupal-solstice.css');
-
+mix.less('less/solstice/drupal.less', 'docs/dist/css/drupal-solstice.css');
 // JavaScript
 mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
@@ -49,4 +51,4 @@ mix.scripts([
     'js/solstice.eventsmodal.js',
     'js/solstice.js',
     'js/solstice.donate.js'
-], 'dist/js/solstice.js');
+], 'docs/dist/js/solstice.js');
