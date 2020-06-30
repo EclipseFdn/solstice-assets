@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) 2018 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Martin Lowe <martin.lowe@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+.content-nav-tab-toggle button > * {
+  display: inline-block;
+}
+.content-nav-tab-toggle {
+  background: @content-nav-tab-mobile-toggle-bg-color;
+  color: @content-nav-tab-mobile-toggle-color;
+}
+.content-nav-tab-toggle .hamburger-wrapper {
+  position: relative;
+  top: 2px;
+  left: 6px;
+}
+.content-nav-tab-toggle .nav-label {
+  display: inline-block;
+  font-size: @content-nav-tab-mobile-toggle-font-size;
+  text-align: right;
+  padding-right: 0;
+  margin: 0;
+}
+
+.content-nav-tab li.active a,.content-nav-tab li.active a:focus,.content-nav-tab li.active a:hover {
+  background-color: @content-nav-tab-active-tab-bg-color;
+}
+@media (min-width: @screen-sm-min)  {
+  .content-nav-tab-toggle {
+    margin-top: 20px;
+  }
+}
+
+// Works with bootstrap nav-tabs, so we override mobile view and leave other bps alone
+@media (max-width: @screen-xs-max)  {
+  .content-nav-tab {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 2px;
+  }
+  
+  .content-nav-tab li {
+    & {
+      display: block;
+      width: 100%;
+      margin: 1px 0;
+      font-weight: 600;
+    }
+    a {
+      background-color: @content-nav-tab-mobile-tab-bg-color;
+      margin-right: 0;
+      border: none;
+      color: @content-nav-tab-mobile-tab-color;
+    }
+    &.active a, &.active a:focus, &.active a:hover {
+      border: none;
+      background-color: @content-nav-tab-mobile-active-tab-bg-color;
+      color: @content-nav-tab-mobile-active-tab-color;
+    }
+    a:hover {
+      background-color: @content-nav-tab-mobile-tab-hover-bg-color;
+      color: @content-nav-tab-mobile-tab-hover-color;
+    }
+  }
+  .content-nav-tab-toggle .icon-bar {
+    background: @content-nav-tab-mobile-toggle-color;
+    height: 3px;
+  }
+  .content-nav-tab.nav-tabs {
+    border: none;
+  }
+  .content-nav-tab-body.tab-content {
+    border: none;
+  }
+}

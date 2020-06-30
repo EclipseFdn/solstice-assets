@@ -176,6 +176,23 @@
       $(this).addClass('toggle-text-close').html($(this).attr('data-toggle-text'));
     }
   });
+  
+  $("a.alt-tab-toggle").click(function(e) {
+    // get current element that triggered update
+    var $t = $(e.target);
+    console.log($t)
+    // trigger click event on tab to properly transition
+    var $tabControl = $("ul.nav.nav-tabs [aria-controls=\""+$t.attr("href").substring(1)+"\"]");
+    $tabControl.trigger("click");
+    // scroll to the top of the tab
+    var $tgt = $($t.attr("href"));
+    if ($tgt != undefined && $tgt.length != 0){
+      $("html, body").animate(
+        { scrollTop: $tgt.offset().top },
+        800
+      );
+    }
+  });
 
   // Infra 2791 - Send events to Google Analytics
   $('a[href]').click(function() {
@@ -200,8 +217,6 @@
       }
     }
   });
-
-
   async function renderRSSFeeds() {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     $('.solstice-rss-feed').each(function(item) {
