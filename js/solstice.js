@@ -180,7 +180,6 @@
   $("a.alt-tab-toggle").click(function(e) {
     // get current element that triggered update
     var $t = $(e.target);
-    console.log($t)
     // trigger click event on tab to properly transition
     var $tabControl = $("ul.nav.nav-tabs [aria-controls=\""+$t.attr("href").substring(1)+"\"]");
     $tabControl.trigger("click");
@@ -194,6 +193,19 @@
     }
   });
 
+  // on tab navigation click
+  $("li[role=\"presentation\"] a").click(function() {
+    var $t = $(this);
+    if ($t.data("content-target") !== undefined) {
+      if ($t.attr("id") === "showalltabs" && !$($t.data("content-target")).hasClass("content-nav-tab-all")) {
+        $($t.data("content-target")).addClass("content-nav-tab-all");
+      } else if($t.attr("id") !== "showalltabs"){
+        $($t.data("content-target")).removeClass("content-nav-tab-all");
+      }
+    }
+    return true;
+  });
+  
   // Infra 2791 - Send events to Google Analytics
   $('a[href]').click(function() {
     if (typeof ga === "function") {
