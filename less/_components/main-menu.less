@@ -166,18 +166,32 @@
         }
       }
     }
+    li.dropdown {
+      &.eclipse-more .dropdown-menu {
+        width: 600px;
+        right: initial;
+        left: 0;
+      }
 
-   li.dropdown .dropdown-menu {
-      left: auto;
-      right: auto;
+      &.open > a { 
+        text-decoration: underline;
+      }
+
+      .dropdown-menu {
+        left: auto;
+        right: auto;
+      }
+
+      .dropdown-menu:before {
+        column-span: all;
+      }
+
+      .dropdown-menu.bi-col {
+        left: 0; 
+        right: 0; 
+        column-count: 2;
+      }
     }
-
-    li.dropdown.eclipse-more .dropdown-menu {
-      width: 600px;
-      right: initial;
-      left: 0;
-    }
-
     .navbar-right li.dropdown:last-child .dropdown-menu {
       left: initial;
       right: 0;
