@@ -61,3 +61,37 @@
     color:@white;
   }
 }
+
+.downloads-eclipse-installer-alert {
+  background-color:#3e4d78;
+  padding:10px;
+  color:#fff;
+  font-size:12px;
+  font-weight:400;
+  position:relative;
+  margin-bottom:25px;
+  p {
+    color:#fff;
+    margin-bottom:0;
+  }
+  &:after {
+    content:"";
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 10px solid #3e4d78;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .downloads-eclipse-installer-alert {
+    margin-top:20px;
+  }
+}
