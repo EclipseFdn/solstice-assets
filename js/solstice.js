@@ -50,8 +50,6 @@
 
     href_hash && $('ul.nav a[href="' + href_hash + '"]').tab('show');
 
-    // render RSS feeds if they exist
-    renderRSSFeeds();
     // render each of the sliders, using optional data attributes for settings
     $(".solstice-slider").each(function() {
     	var $t = $(this);

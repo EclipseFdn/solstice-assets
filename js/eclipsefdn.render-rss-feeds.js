@@ -11,6 +11,11 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 (function($, document) {
+  $(document).ready(function() {
+    // render RSS feeds if they exist
+    renderRSSFeeds();
+  });
+  
   async function renderRSSFeeds() {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     $('.solstice-rss-feed').each(function(item) {
