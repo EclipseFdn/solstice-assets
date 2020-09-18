@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-2.0.
  * 
  * Contributors:
- *   Martin Lowe <martin.lowe@eclipse-foundation.org>
+ *  Martin Lowe <martin.lowe@eclipse-foundation.org>
  *  Christopher Guindon <chris.guindon@eclipse-foundation.org>
  * 
  * SPDX-License-Identifier: EPL-2.0
