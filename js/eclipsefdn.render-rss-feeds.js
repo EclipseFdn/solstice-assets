@@ -1,22 +1,18 @@
 /*!
- * Copyright (c) 2018 Eclipse Foundation, Inc.
+ * Copyright (c) 2020 Eclipse Foundation, Inc.
  * 
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
  * 
  * Contributors:
- *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
+ *   Martin Lowe <martin.lowe@eclipse-foundation.org>
+ *  Christopher Guindon <chris.guindon@eclipse-foundation.org>
  * 
  * SPDX-License-Identifier: EPL-2.0
  */
 (function($, document) {
   $(document).ready(function() {
-    // render RSS feeds if they exist
-    renderRSSFeeds();
-  });
-  
-  async function renderRSSFeeds() {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     $('.solstice-rss-feed').each(function(item) {
       var $t = $(this);
@@ -24,7 +20,7 @@
         type: "GET",
         url: $t.attr('data-src'),
         dataType: "xml",
-        success: async function(data) {
+        success: function(data) {
           var rssLimit = $t.attr('data-limit');
           if (rssLimit < 0) {
             // set max to a high number to stop long page
@@ -72,5 +68,5 @@
         }
       });
     });
-  }
+  });
 })(jQuery, document);
