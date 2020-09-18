@@ -46,6 +46,7 @@ mix.scripts([
     './node_modules/cookieconsent/src/cookieconsent.js',
     './node_modules/owl.carousel/dist/owl.carousel.min.js',
     'js/eclipsefdn.videos.js',
+    'js/eclipsefdn.render-rss-feeds.js',
     'js/solstice.cookieconsent.js',
     'js/solstice.cookies.js',
     'js/solstice.eventsmodal.js',
