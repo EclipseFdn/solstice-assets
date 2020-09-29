@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Eclipse Foundation, Inc.
+ * Copyright (c) 2018-2020 Eclipse Foundation, Inc.
  * 
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
@@ -13,10 +13,15 @@
 */
 
 .featured-footer{
+  background-size:cover;
+  background-position:bottom;
   padding:@featured-footer-padding;
   text-align:@featured-footer-text-align;
+  background:@featured-footer-light-bg;
   h2 {
-    margin-top:10px;
+    margin-top:@featured-footer-h2-margin-top;
+    font-weight: @featured-footer-h2-weight;
+    color:@featured-footer-h2-color;
   }
   .feather {
     width:@featured-footer-icon-size;
@@ -25,5 +30,19 @@
   .textfield-underline {
     text-align: @featured-footer-text-align;
     width:300px;
+  }
+  &.featured-story-light {
+    background-image:@featured-footer-light-bg-img;
+    border-bottom:@featured-footer-light-border-top;
+    border-top:@featured-footer-light-border-bottom;
+  }
+  &.featured-story-dark {
+    background: @featured-footer-dark-bg;
+    border-bottom:@featured-footer-dark-border-top;
+    border-top:@featured-footer-dark-border-bottom;
+    color: @featured-footer-dark-text-color;
+    h2 {
+      color:@featured-footer-dark-h2-color;
+    }
   }
 }

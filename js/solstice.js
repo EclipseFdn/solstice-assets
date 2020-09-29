@@ -22,7 +22,14 @@
   });
 
   $(document).ready(function() {
+    $(".eclipsefdn-featured-footer").eclipseFdnApi({
+      type: "featuredFooter"
+    });
 
+    $(".eclipsefdn-featured-story").eclipseFdnApi({
+      type: "featuredStory"
+    });
+    
     var href_hash = window.location.hash;
     // Add a class if right column is non-existant.
     if ($("#rightcolumn").length == 0) {
