@@ -22,14 +22,6 @@
   });
 
   $(document).ready(function() {
-    $(".eclipsefdn-featured-footer").eclipseFdnApi({
-      type: "featuredFooter"
-    });
-
-    $(".eclipsefdn-featured-story").eclipseFdnApi({
-      type: "featuredStory"
-    });
-    
     var href_hash = window.location.hash;
     // Add a class if right column is non-existant.
     if ($("#rightcolumn").length == 0) {
@@ -98,6 +90,14 @@
     } else {
       $('.scrollup').fadeOut();
     }
+  });
+
+  $(".eclipsefdn-featured-footer").eclipseFdnApi({
+    type: "featuredFooter"
+  });
+
+  $(".eclipsefdn-featured-story").eclipseFdnApi({
+    type: "featuredStory"
   });
 
   // scroll back to the top of the page.
