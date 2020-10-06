@@ -4,7 +4,7 @@
   "main": "webpack.min.js",
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
-  "version": "0.0.120",
+  "version": "0.0.121",
   "bugs": {
     "url": "https://github.com/EclipseFdn/solstice-assets/issues"
   },
@@ -32,7 +32,7 @@
     "jquery": "^3.5.1",
     "jquery-eclipsefdn-api": "0.0.36",
     "jquery-match-height": "^0.7.2",
-    "laravel-mix": "5.0.4",
+    "laravel-mix": "^5.0.5",
     "less": "^3.10.1",
     "less-loader": "^5.0.0",
     "lightbox2": "^2.11.1",
