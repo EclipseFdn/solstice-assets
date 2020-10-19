@@ -7,9 +7,9 @@
     }
 
     .sidebar-item {
-      margin-bottom:20px;
       background-color: #3f7b96;
-      padding:17px 0 10px;
+      padding:10px 0 10px;
+
       &.active {
         background-color: #3f7b96;
         a {
@@ -23,6 +23,11 @@
         background-color: darken(#3f7b96, 15%);
       }
     }
+
+    .sidebar-item:not(:last-child) {
+        border-bottom: solid #27607a 1px;
+    }
+
     .sidebar-sub-items {
       background-color:#fff;
       margin-top:-20px;
