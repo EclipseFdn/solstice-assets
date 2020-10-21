@@ -22,13 +22,6 @@
   });
 
   $(document).ready(function() {
-    function matchHeightItems() {
-      $('.match-height-item-by-row').matchHeight();
-      $('.match-height-item').matchHeight({
-        byRow: false
-      });
-    }
-    matchHeightItems();
     var href_hash = window.location.hash;
     // Add a class if right column is non-existant.
     if ($("#rightcolumn").length == 0) {
@@ -131,7 +124,18 @@
   });
 
   feather.replace();
-  
+
+  $(window).load(function() {
+    // run matchheight after images are loaded
+    function matchHeightItems() {
+      $('.match-height-item-by-row').matchHeight();
+      $('.match-height-item').matchHeight({
+        byRow: false
+      });
+    }
+    matchHeightItems();
+  });
+
   function blockSumaryItem() {
     // Make the whole block-list clickable
     $('.block-summary-item').click(function() {
