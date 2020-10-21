@@ -125,7 +125,7 @@
 
   feather.replace();
 
-  $(window).load(function() {
+  $(window).on("load", function() {
     // run matchheight after images are loaded
     function matchHeightItems() {
       $('.match-height-item-by-row').matchHeight();
@@ -237,9 +237,9 @@
     }
   });
 
-  $(window).load(function() {
-    // have a try to force update when ready
-    $.fn.matchHeight._update();
-  });
+  // $(window).load(function() {
+  //   // have a try to force update when ready
+  //   $.fn.matchHeight._update();
+  // });
 
 })(jQuery, document);
