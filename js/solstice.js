@@ -22,6 +22,13 @@
   });
 
   $(document).ready(function() {
+    function matchHeightItems() {
+      $('.match-height-item-by-row').matchHeight();
+      $('.match-height-item').matchHeight({
+        byRow: false
+      });
+    }
+    matchHeightItems();
     var href_hash = window.location.hash;
     // Add a class if right column is non-existant.
     if ($("#rightcolumn").length == 0) {
@@ -124,15 +131,6 @@
   });
 
   feather.replace();
-
-
-  function matchHeightItems() {
-    $('.match-height-item-by-row').matchHeight();
-    $('.match-height-item').matchHeight({
-      byRow: false
-    });
-  }
-  matchHeightItems();
   
   function blockSumaryItem() {
     // Make the whole block-list clickable
