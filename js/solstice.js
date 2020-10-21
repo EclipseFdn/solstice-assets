@@ -125,14 +125,15 @@
 
   feather.replace();
 
+  function matchHeightItems() {
+    $('.match-height-item-by-row').matchHeight();
+    $('.match-height-item').matchHeight({
+      byRow: false
+    });
+  }
+
   $(window).on("load", function() {
     // run matchheight after images are loaded
-    function matchHeightItems() {
-      $('.match-height-item-by-row').matchHeight();
-      $('.match-height-item').matchHeight({
-        byRow: false
-      });
-    }
     matchHeightItems();
   });
 
