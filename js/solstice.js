@@ -149,8 +149,6 @@
     matchHeightItems();
 
     // For news with data-mh
-    $('[data-mh]').matchHeight({ remove: true });
-    $.fn.matchHeight._maintainScroll = true;
     $.fn.matchHeight._applyDataApi();
 
     blockSumaryItem();
