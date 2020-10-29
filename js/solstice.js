@@ -150,6 +150,10 @@
   
   $("body").on("shown.ef.news", function(e) {
     matchHeightItems();
+
+    // For news with data-mh
+    $.fn.matchHeight._applyDataApi();
+
     blockSumaryItem();
   })
 
