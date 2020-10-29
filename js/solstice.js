@@ -238,9 +238,4 @@
     }
   });
 
-  // $(window).load(function() {
-  //   // have a try to force update when ready
-  //   $.fn.matchHeight._update();
-  // });
-
 })(jQuery, document);
