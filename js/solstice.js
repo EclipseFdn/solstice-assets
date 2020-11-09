@@ -125,15 +125,18 @@
 
   feather.replace();
 
-
   function matchHeightItems() {
     $('.match-height-item-by-row').matchHeight();
     $('.match-height-item').matchHeight({
       byRow: false
     });
   }
-  matchHeightItems();
-  
+
+  $(window).on("load", function() {
+    // run matchheight after images are loaded
+    matchHeightItems();
+  });
+
   function blockSumaryItem() {
     // Make the whole block-list clickable
     $('.block-summary-item').click(function() {
@@ -147,6 +150,10 @@
   
   $("body").on("shown.ef.news", function(e) {
     matchHeightItems();
+
+    // For news with data-mh
+    $.fn.matchHeight._applyDataApi();
+
     blockSumaryItem();
   })
 
@@ -234,4 +241,5 @@
       }
     }
   });
+
 })(jQuery, document);
