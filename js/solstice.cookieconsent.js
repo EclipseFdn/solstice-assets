@@ -70,8 +70,7 @@ window.addEventListener("load", function() {
       }
     },
     onInitialise: function(status, options) {
-      var toolbar = document.getElementsByClassName("toolbar-manage-cookies");
-      if (toolbar.length <= 0) {
+      if (!document.getElementsByClassName("toolbar-manage-cookies").length) {
         setTimeout(function() {
           document.getElementsByClassName("cc-revoke")[0].style.display = "block";
         });
