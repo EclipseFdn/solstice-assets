@@ -3,36 +3,36 @@
     margin-top:50px;
 
     a, a:hover {
-        color: #fff;
+        color: @white;
     }
 
     .sidebar-item {
-      background-color: #3f7b96;
+      background-color: @main-sidebar-bg;
       padding:10px 0 10px;
 
       &.active {
-        background-color: #3f7b96;
+        background-color: @main-sidebar-bg;
         a {
-          color:#fff;
+          color:@white;
         }
         &:hover {
-          background-color: darken(#3f7b96, 15%);
+          background-color: darken(@main-sidebar-bg, 15%);
         }
       }
       &:hover:not(.active) {
-        background-color: darken(#3f7b96, 15%);
+        background-color: darken(@main-sidebar-bg, 15%);
       }
     }
 
     .sidebar-item:not(:last-child) {
-        border-bottom: solid #27607a 1px;
+        border-bottom: solid @main-sidebar-list-border 1px;
     }
 
     .sidebar-sub-items {
-      background-color:#fff;
+      background-color:@white;
       margin-bottom: 20px;
       a {
-        color:  #27607a;
+        color:  @main-sidebar-list-border;
         &:hover {
           font-weight:bold;
         }
