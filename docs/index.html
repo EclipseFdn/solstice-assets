@@ -43,6 +43,24 @@
               <ul class="list-inline">
                 <li><a href="https://accounts.eclipse.org/user/register"><i class="fa fa-user fa-fw"></i> Create account</a></li>
                 <li><a href="https://accounts.eclipse.org/user/login/?takemeback=https%3A%2F%2Fwww.eclipse.org%2Feclipse.org-common%2Fthemes%2Fsolstice%2Fdocs%2F"><i class="fa fa-sign-in fa-fw"></i> Log in</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome, Test User <span class="caret"></span></a>
+                  <ul class="dropdown-menu toolbar-dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="https://www.eclipse.org/user/webdev"><i class="fa fa-user"></i> View Profile</a></li>
+                    <li><a href="https://accounts.eclipse.org/user/edit" class="" data-tab-destination="tab-profile"><i class="fa fa-edit"></i> Edit Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a class="toolbar-manage-cookies dropdown-toggle"><i class="fa fa-wrench"></i> Manage Cookies</a></li>
+                    <li class="divider"></li>
+                    <li><a href="https://accounts.eclipse.org/user/logout"><i class="fa fa-sign-out"></i> Log out</a></li>
+                  </ul>
+                </li>
+                <li class="language-selector dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true"><i class="fa fa-globe"></i> <span>English</span>
+                  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">English</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -276,27 +294,27 @@
           </div>
         </div>
         <hr/>
-        
         <h3 id="section-bordered-box">Bordered box</h3>
         <div class="margin-top-30 margin-bottom-30">
           <h4>Sample using light theme</h4>
           <div class="bordered-box bordered-box-light">
             <div class="box-header background-secondary" data-mh="bb-head">
-             <h2>Sample heading</h2>
+              <h2>Sample heading</h2>
             </div>
             <div class="box-body">
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
         </div>
-          
         <h4>Sample using standard theme</h4>
         <div class="margin-top-30 margin-bottom-30">
           <div class="bordered-box">
             <!-- Clearfix needed here to adjust for cols -->
             <div class="box-header background-secondary clearfix">
-              <div class="col-xs-24 col-sm-18" data-mh="bb-head-2"><h2>Distinguishing text, or header</h2></div>
-              <div class="col-xs-24 col-sm-6 background-primary vertical-align" data-mh="bb-head-2">Sample Callout</div>  
+              <div class="col-xs-24 col-sm-18" data-mh="bb-head-2">
+                <h2>Distinguishing text, or header</h2>
+              </div>
+              <div class="col-xs-24 col-sm-6 background-primary vertical-align" data-mh="bb-head-2">Sample Callout</div>
             </div>
             <div class="box-body">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -304,7 +322,6 @@
             </div>
           </div>
         </div>
-        
         <h5>Code sample: </h5>
         <pre>
 &lt;div class="margin-top-30 margin-bottom-30"&gt;
@@ -334,7 +351,6 @@
   &lt;/div&gt;
 &lt;/div&gt;
         </pre>
-        
         <hr/>
         <h3 id="section-breadcrumbs">Breadcrumbs</h3>
         <p>The <code>$App Class</code> should generate a breadcrumb for you.</p>
@@ -376,7 +392,6 @@
         <h4>HTML Output</h4>
         <pre>&lt;div class=&quot;header_nav&quot;&gt;&lt;div class=&quot;col-xs-24 col-md-10 vcenter&quot;&gt;&lt;a href=&quot;http://www.eclipse.org&quot; title=&quot;The Eclipse Foundation&quot; target=&quot;_self&quot;&gt;&lt;img src=&quot;//eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-800x188.png&quot; alt=&quot;The Eclipse Foundation&quot; class=&quot;img-responsive  header_nav_logo&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;col-xs-24 col-md-14 vcenter&quot;&gt;&lt;ul class=&quot;clearfix&quot;&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;/downloads/&quot; title=&quot;Download: Eclipse Distribution, Update Site, Dropins&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-download&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Download&lt;p&gt;Eclipse Distribution, Update Site, Dropins&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;/users/&quot; title=&quot;Geting Involved: CVS, Workspace Setup, Wiki, Committers&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-users&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Geting Involved&lt;p&gt;CVS, Workspace Setup, Wiki, Committers&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;http://help.eclipse.org/luna/index.jsp&quot; title=&quot;Documentation: Tutorials, Examples, Videos, Online Reference&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-book&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Documentation&lt;p&gt;Tutorials, Examples, Videos, Online Reference&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;col-xs-24 col-md-12&quot;&gt;&lt;a class=&quot;row&quot; href=&quot;/forums/&quot; title=&quot;Support: Bug Tracker, Newsgroup Professional Support&quot; target=&quot;_self&quot;&gt;&lt;i class=&quot;col-xs-3 col-md-6 fa fa-support&quot;&gt;&lt;/i&gt;&lt;span class=&quot;col-xs-21 c col-md-17&quot;&gt;Support&lt;p&gt;Bug Tracker, Newsgroup Professional Support&lt;/p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;</pre>
         <hr/>
-        
         <h3 id="section-content-nav">Content navigation tabs</h3>
         <!-- Toggle used for expanding/collapsing pill menu @mobile -->
         <div class="row content-nav-tab-toggle">
@@ -394,28 +409,27 @@
             </div>
           </div>
         </div>
-  
         <div class="row">
           <div class="navbar-collapse collapse" id="navbar-member-levels">
             <ul class="nav nav-tabs solstice-tabs content-nav-tab" role="tablist">
               <li role="presentation" class="active">
                 <a class="background-grey" href="#tab-one" data-toggle="tab" aria-controls="tab-one" role="tab">
-                  Tab one
+                Tab one
                 </a>
               </li>
               <li role="presentation" class="">
                 <a class="background-grey" href="#tab-two" data-toggle="tab" aria-controls="tab-two" role="tab">
-                  Tab two
+                Tab two
                 </a>
               </li>
               <li role="presentation" class="">
                 <a class="background-grey" href="#tab-three" data-toggle="tab" aria-controls="tab-three" role="tab">
-                  Tab three
+                Tab three
                 </a>
               </li>
               <li role="presentation">
                 <a class="background-grey alt-tab-toggle" href="#showalltabs" id="showalltabs" data-content-target="#tabs-content">
-                  All Tabs
+                All Tabs
                 </a>
               </li>
             </ul>
@@ -435,7 +449,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
-        
         <h4>Code sample: </h4>
         <pre>
         
@@ -496,9 +509,7 @@
   &lt;/div&gt;
 &lt;/div&gt;  
         </pre>
-        
         <hr/>
-        
         <h3 id="section-section-highlight">Section Highlights</h3>
         <h4 class="margin-top-30">Standard highlights</h4>
         <div class="container margin-bottom-20">
@@ -540,7 +551,8 @@
               <h3>Ecosystem Development</h3>
               <p>Eclipse Foundation staff are available to help build a community for
                 the collaboration through events, online webinars, and other community
-                programs</p>
+                programs
+              </p>
               <p>
                 <a href="about.php#wg-eco">Learn more</a>
               </p>
@@ -555,7 +567,6 @@
             </div>
           </div>
         </div>
-        
         <h5>Code sample:</h5>
         <pre>
          
@@ -615,8 +626,8 @@
 &lt;/div&gt;
          
          </pre>
-         <h4 class="margin-top-30">Inverted highlights</h4>
-         <div class="row section-highlights">
+        <h4 class="margin-top-30">Inverted highlights</h4>
+        <div class="row section-highlights">
           <div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 match-height-item-by-row featured-highlights-item">
             <div class="circle-icon margin-auto">
               <i class="fa fa-file-code-o"></i>
@@ -660,7 +671,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
-         
         <h5>Code sample:</h5>
         <pre>
          
