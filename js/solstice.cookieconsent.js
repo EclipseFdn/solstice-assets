@@ -74,8 +74,7 @@ window.addEventListener("load", function() {
         setTimeout(function() {
           document.getElementsByClassName("cc-revoke")[0].style.display = "block";
         });
-      }
-      else{
+      } else {
         document.getElementsByClassName("cc-revoke")[0].style.display = "none";
       }
     },
