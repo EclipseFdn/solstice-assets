@@ -39,12 +39,6 @@
   justify-content: center;
 }
 
-@media (min-width: @screen-md-min) {
-  .vertical-align-md {
-    .vertical-align;
-  }
-}
-
 // Float
 .float-right {
   float: right;
@@ -102,19 +96,6 @@
   }
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-
-  .flex-grow {
-    flex-grow: 1;
-  }
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .centered-container {
     width: 100%;
     position: absolute;
@@ -129,6 +110,7 @@
     justify-content: left;
   }
 }
+
 @media (max-width: @screen-xs-max) {
   .justify-left-mobile {
     justify-content: left;
