@@ -13,9 +13,10 @@
 (function($, document) {
   $('#eclipsefdn-modal-event-session').on('show.bs.modal', function (event) {
       var $init = $(event.relatedTarget);
+      var $parent = $init.parent();
       var $modal = $(this);
       $modal.find('h4.modal-title').text($init.attr('data-title'));
-      $modal.find('.modal-body').html($init.find('.modal-content')[0].innerHTML);
+      $modal.find('.modal-body').html($parent.find('.modal-content')[0].innerHTML);
       $modal.find('.modal-body').prepend('<div class="alert alert-warning"><p><span id="modal-presenter">' 
       + $init.attr('data-presenter') 
       + '</span><br><span id="modal-time">' 
