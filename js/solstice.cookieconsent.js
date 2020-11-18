@@ -75,6 +75,9 @@ window.addEventListener("load", function() {
           document.getElementsByClassName("cc-revoke")[0].style.display = "block";
         });
       }
+      else{
+        document.getElementsByClassName("cc-revoke")[0].style.display = "none";
+      }
     },
     revokeBtn: '<div class="cc-revoke {{classes}}">Cookie settings</div>',
     palette: {
