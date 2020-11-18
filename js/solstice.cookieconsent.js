@@ -70,12 +70,13 @@ window.addEventListener("load", function() {
       }
     },
     onInitialise: function(status, options) {
-      var toolbar = document.getElementsByClassName("toolbar-manage-cookies");
-      if (toolbar.length <= 0) {
-        setTimeout(function() {
+      setTimeout(function() {
+        if (!document.getElementsByClassName("toolbar-manage-cookies").length) {
           document.getElementsByClassName("cc-revoke")[0].style.display = "block";
-        });
-      }
+        } else {
+          document.getElementsByClassName("cc-revoke")[0].style.display = "none";
+        }
+      });
     },
     revokeBtn: '<div class="cc-revoke {{classes}}">Cookie settings</div>',
     palette: {
