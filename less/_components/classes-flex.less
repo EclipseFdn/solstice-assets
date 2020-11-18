@@ -1,0 +1,59 @@
+/*
+ * Copyright (c) 2018 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+// Classes styles: Flex
+// css classes for Flex layout.
+
+.display-flex {
+  display: flex;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+@media (min-width: @screen-md-min) {
+  .vertical-align-md {
+    .vertical-align;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+
+  .flex-grow {
+    flex-grow: 1;
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+@media (min-width: @screen-sm-min) {
+  .justify-left-desktop {
+    justify-content: left;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .justify-left-mobile {
+    justify-content: left;
+  }
+  .flex-column-mobile {
+    flex-direction: column;
+  }
+}
