@@ -33,6 +33,12 @@
   float: none;
 }
 
+.vertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // Float
 .float-right {
   float: right;
@@ -97,4 +103,16 @@
     left: 50%;
     transform: translate(-50%);
     min-height: 100px;
+}
+
+@media (min-width: @screen-sm-min) {
+  .justify-left-desktop {
+    justify-content: left;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .justify-left-mobile {
+    justify-content: left;
+  }
 }
