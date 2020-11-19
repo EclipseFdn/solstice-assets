@@ -1,0 +1,76 @@
+/*!
+ * Copyright (c) 2020 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Eric Poirier <eric.poirier@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+
+
+#sidebar-menu {
+  margin-top:50px;
+  .sidebar-menu-item {
+    margin-bottom:@sidebar-menu-item-margin-bottom;
+    background-color: @sidebar-menu-item-bg-color;
+    padding-top:17px;
+    padding-bottom:10px;
+    &.active {
+      background-color: @sidebar-menu-item-active-bg-color;
+      a {
+        color:@sidebar-menu-item-active-a-color;
+      }
+      &:hover {
+        background-color: @sidebar-menu-item-active-a-bg-color-hover;
+      }
+    }
+    &:hover:not(.active) {
+      background-color: @sidebar-menu-item-bg-color-hover;
+      a {
+        color:@sidebar-menu-item-a-color;
+      }
+    }
+  }
+  .sidebar-menu-sub-items {
+    background-color:@sidebar-menu-sub-items-bg-color;
+    margin-top:@sidebar-menu-sub-items-margin-top;
+    border:@sidebar-menu-sub-items-border;
+    a {
+      &:hover {
+        font-weight:bold;
+      }
+    }
+  }
+  .sidebar-menu-sub-item {
+    padding:0 0 8px 15px;
+    margin-bottom:0;
+    a.active {
+      .sidebar-text {
+        font-weight:bold;
+      }
+    }
+    &:first-child {
+      margin-top:15px;
+    }
+    &:last-child {
+      margin-bottom:15px;
+    }
+  }
+  a {
+    display: block;
+    color:@sidebar-menu-a-color;
+    .sidebar-menu-icon {
+      width:@sidebar-menu-a-icon-width;
+      height:@sidebar-menu-a-icon-height;
+      stroke-width: 1;
+      margin:@sidebar-menu-a-icon-margin;
+    }
+    .sidebar-menu-text {
+      padding:10px 0 0;
+    }
+  }
+}
