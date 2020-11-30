@@ -1,0 +1,61 @@
+
+.collapsible-menu {
+    margin-top:10px;
+
+    a, a:hover {
+        color: @main-sidebar-color;
+    }
+
+    .collapsible-menu-item {
+      background-color: @main-sidebar-bg;
+      padding:10px 0 10px;
+
+      &.active {
+        background-color: @main-sidebar-bg;
+        a {
+          color:@main-sidebar-color;
+        }
+        &:hover {
+          background-color: darken(@main-sidebar-bg, 15%);
+        }
+      }
+      &:hover:not(.active) {
+        background-color: darken(@main-sidebar-bg, 15%);
+      }
+    }
+
+    .collapsible-menu-item:not(:last-child) {
+        border-bottom: solid @main-sidebar-list-border 1px;
+    }
+
+    .collapsible-menu-sub-items {
+      background-color:@white;
+      a {
+        color:  @main-sidebar-bg;
+        &:hover {
+          font-weight:bold;
+        }
+      }
+    }
+    .collapsible-menu-sub-item {
+      padding:0 0 8px 15px;
+      margin-bottom:0;
+      a.active {
+        .collapsible-menu-text {
+          font-weight:bold;
+        }
+      }
+      &:first-child {
+        margin-top:15px;
+      }
+      &:last-child {
+        margin-bottom:15px;
+      }
+    }
+    a {
+      display: block;
+      .collapsible-menu-text {
+        padding:0 0;
+      }
+    }
+}
