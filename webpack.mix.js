@@ -52,5 +52,6 @@ mix.scripts([
     'js/solstice.cookies.js',
     'js/solstice.eventsmodal.js',
     'js/solstice.js',
-    'js/solstice.donate.js'
+    'js/solstice.donate.js',
+    'js/eclipsefdn.adopters.js'
 ], 'docs/dist/js/solstice.js');
