@@ -119,7 +119,7 @@
     } else {
       url = opts.src_root + opts.src_projects_prefix;
       if (opts.project_id !== undefined && opts.project_id.trim() !== '') {
-        url += opts.project_id;
+        url += '/' + opts.project_id;
       }
       if (opts.working_group !== undefined && opts.working_group.trim() !== '') {
         url += '?working_group=' + opts.working_group;
