@@ -138,6 +138,7 @@
       // add the title
       const h2 = document.createElement('h2');
       h2.textContent = project.name;
+      h2.setAttribute('id', project.project_id);
       for (var i = 0; i < el.length; i++) {
         el[i].append(h2);
       }
