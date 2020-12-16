@@ -65,6 +65,7 @@
     console.log(opts)
     fireCall(opts, function(response) {
       createProjectList(response, opts, document.querySelectorAll(opts.selector));
+      scrollToAnchor();
     });
   }
 
@@ -78,6 +79,7 @@
     // create callback on ready
     fireCall(opts, function(response) {
       createWGProjectsList(response, opts, document.querySelectorAll(opts.selector));
+      scrollToAnchor();
     });
   }
 
@@ -202,6 +204,15 @@
         ul.setAttribute('class', opts['ul_classes']);
       }
       el[i].append(ul);
+    }
+  }
+
+  // Function to scroll when there is anchor in url
+  function scrollToAnchor() {
+    if (location.hash) {
+      var projectId = location.hash.replace('#', '');
+      var element = document.getElementById(`${projectId}`);
+      element.scrollIntoView();
     }
   }
 
