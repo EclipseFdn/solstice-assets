@@ -197,7 +197,14 @@
     <!-- /#breadcrumb -->
     <main>
       <div class="container">
-        <div class="row">  
+        <div class="row">
+          <p>Sample code used for this page:</p>
+          <pre>  &lt;div class="eclipsefdn-adopters"&gt;&lt;/div&gt;
+  &lt;script&gt;
+    eclipseFdnAdopters.getWGList({working_group: "internet-things-iot", ul_classes: "text-center list-inline"});
+  &lt;/script&gt;</pre>
+          <p>For more information about adopters, please refer to <a href="https://github.com/EclipseFdn/eclipsefdn-project-adopters">https://github.com/EclipseFdn/eclipsefdn-project-adopters</a></p>
+
           <div class="eclipsefdn-adopters"></div>
         </div>
       </div>
@@ -300,7 +307,6 @@
     </footer>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="dist/js/solstice.js"></script>
-    <!-- <script src="dist/js/eclipsefdn.adopters.js"></script> -->
     <script>
         eclipseFdnAdopters.getWGList({src_root: "https://api.eclipse.org/adopters", working_group: "internet-things-iot", ul_classes: "text-center list-inline"})
     </script>
