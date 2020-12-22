@@ -23,9 +23,6 @@ mix.copy('images/logo/eclipse-foundation-white-orange.svg', 'docs/dist/images/lo
 mix.less('less/quicksilver/styles.less', 'docs/dist/css/quicksilver.css');
 mix.less('less/quicksilver/jakarta/styles.less', 'docs/dist/css/jakarta.css');
 mix.less('less/quicksilver/eclipse-ide/styles.less', 'docs/dist/css/eclipse-ide.css');
-mix.less('less/quicksilver/locationtech/styles.less', 'docs/dist/css/locationtech.css');
-mix.less('less/quicksilver/polarsys/styles.less', 'docs/dist/css/polarsys.css');
-mix.less('less/quicksilver/polarsys/papyrus_ic/drupal.less', 'docs/dist/css/papyrus_ic.css');
 mix.less('less/solstice/_barebone/styles.less', 'docs/dist/css/barebone.css');
 mix.less('less/solstice/_barebone/footer.less', 'docs/dist/css/barebone-footer.css');
 mix.less('less/solstice/table.less', 'docs/dist/css/table.css');
