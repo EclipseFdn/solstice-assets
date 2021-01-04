@@ -62,7 +62,6 @@
    */
   eclipseFdnAdopters.getList = function(options) {
     var opts = getMergedOptions(options);
-    console.log(opts)
     fireCall(opts, function(response) {
       createProjectList(response, opts, document.querySelectorAll(opts.selector));
       scrollToAnchor();
