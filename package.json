@@ -13,10 +13,10 @@
     "url": "git://github.com/eclipsefdn/solstice-assets.git"
   },
   "scripts": {
-    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "NODE_ENV=development webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "drupal": "napa && cp -R node_modules/drupal-bootstrap/starterkits /tmp/starterkits && rm -rf node_modules/drupal-bootstrap/* && mv /tmp/starterkits node_modules/drupal-bootstrap/"
   },
   "napa": {
@@ -30,13 +30,16 @@
     "feather-icons": "^4.7.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
-    "jquery-eclipsefdn-api": "0.0.42",
+    "jquery-eclipsefdn-api": "0.0.44",
     "jquery-match-height": "^0.7.2",
-    "laravel-mix": "^5.0.5",
-    "less": "^3.10.1",
-    "less-loader": "^5.0.0",
+    "laravel-mix": "^6.0.6",
     "lightbox2": "^2.11.1",
     "napa": "^3.0.0",
     "owl.carousel": "^2.3.4"
+  },
+  "devDependencies": {
+    "less": "^3.12.2",
+    "less-loader": "^7.2.1",
+    "postcss": "^8.2.2"
   }
 }
