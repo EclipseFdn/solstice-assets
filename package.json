@@ -35,9 +35,7 @@
     "laravel-mix": "^6.0.6",
     "lightbox2": "^2.11.1",
     "napa": "^3.0.0",
-    "owl.carousel": "^2.3.4"
-  },
-  "devDependencies": {
+    "owl.carousel": "^2.3.4",
     "less": "^3.12.2",
     "less-loader": "^7.2.1",
     "postcss": "^8.2.2"
