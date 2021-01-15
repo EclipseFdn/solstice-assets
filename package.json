@@ -24,7 +24,11 @@
   },
   "readmeFilename": "README.md",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-class-properties": "^7.12.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "@geedmo/yamm3": "^1.3.1",
+    "babel-preset-env": "^1.7.0",
     "bootstrap": "^3.4.1",
     "cookieconsent": "^3.1.0",
     "feather-icons": "^4.7.0",
@@ -33,11 +37,12 @@
     "jquery-eclipsefdn-api": "0.0.44",
     "jquery-match-height": "^0.7.2",
     "laravel-mix": "^6.0.6",
+    "less": "^3.12.2",
+    "less-loader": "^7.2.1",
     "lightbox2": "^2.11.1",
     "napa": "^3.0.0",
     "owl.carousel": "^2.3.4",
-    "less": "^3.12.2",
-    "less-loader": "^7.2.1",
     "postcss": "^8.2.2"
-  }
+  },
+  "browserslist": "> 0.25%, not dead"
 }

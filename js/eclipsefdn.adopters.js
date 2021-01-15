@@ -11,25 +11,10 @@
  * SPDX-License-Identifier: EPL-2.0
 */
 
-(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['efa'], factory(root));
-  }
-  else if (typeof exports === 'object') {
-    module.exports = factory(require('efa'));
-  }
-  else {
-    root.eclipseFdnAdopters = factory(root, root.efa);
-  }
-})(this, function(efa) {
-
-  'use strict';
-
-  // Define object
-  var eclipseFdnAdopters = {};
-  var precompiledRegex = /<([^>]*?)>;(\s?[\w-]*?="(?:\\"|[^"])*";){0,}\s?rel="next"/;
+class EclipseFdnAdopters {
+  precompiledRegex = /<([^>]*?)>;(\s?[\w-]*?="(?:\\"|[^"])*";){0,}\s?rel="next"/;
   // Default settings
-  var default_options = {
+  default_options = {
     project_id: '',
     selector: '.eclipsefdn-adopters',
     ul_classes: '',
@@ -39,13 +24,13 @@
     src_projects_prefix: '/projects'
   };
 
-  function getMergedOptions(options) {
+  getMergedOptions(options) {
     // Default settings copy
-    var opts = JSON.parse(JSON.stringify(default_options));
+    var opts = JSON.parse(JSON.stringify(this.default_options));
 
     // Go through the parameters of Options if its defined and is an object
     if (typeof (options) !== 'undefined' && typeof (options) === 'object') {
-      for (var optionName in default_options) {
+      for (var optionName in this.default_options) {
         if (typeof (options[optionName]) === 'undefined' || (typeof (options[optionName]) !== 'string' && typeof (options[optionName]) !== 'boolean')) {
           continue;
         }
@@ -60,11 +45,12 @@
    * @public
    * @param {Object} options Videos attributes
    */
-  eclipseFdnAdopters.getList = function(options) {
-    var opts = getMergedOptions(options);
-    fireCall(opts, function(response) {
-      createProjectList(response, opts, document.querySelectorAll(opts.selector));
-      scrollToAnchor();
+
+  getList = function(options) {
+    var opts = this.getMergedOptions(options);
+    this.fireCall(opts, function(response) {
+      this.createProjectList(response, opts, document.querySelectorAll(opts.selector));
+      this.scrollToAnchor();
     });
   }
 
@@ -73,16 +59,19 @@
    * @public
    * @param {Object} options Videos attributes
    */
-  eclipseFdnAdopters.getWGList = function(options) {
-    var opts = getMergedOptions(options);
+
+  getWGList = function(options) {
+    var t = this;
+    var opts = this.getMergedOptions(options);
     // create callback on ready
-    fireCall(opts, function(response) {
-      createWGProjectsList(response, opts, document.querySelectorAll(opts.selector));
-      scrollToAnchor();
+    this.fireCall(opts, function(response) {
+      t.createWGProjectsList(response, opts, document.querySelectorAll(opts.selector));
+      t.scrollToAnchor();
     });
   }
 
-  function fireCall(opts, callback, currentData = []) {
+  fireCall(opts, callback, currentData = []) {
+    var t = this;
     var xhttp = new XMLHttpRequest();
     // create callback on ready
     xhttp.onreadystatechange = function() {
@@ -96,11 +85,11 @@
         // check the link header as long as its set
         var linkHeader = xhttp.getResponseHeader('Link');
         if (linkHeader !== null) {
-          var match = linkHeader.match(precompiledRegex);
+          var match = linkHeader.match(t.precompiledRegex);
           // if there is no match, then there is no next and we are on the last page and should process data through callback
           if (match !== null) {
             opts.next = match[1];
-            fireCall(opts, callback, json);
+            t.fireCall(opts, callback, json);
           } else {
             callback(json);
           }
@@ -131,7 +120,7 @@
     xhttp.send();
   }
 
-  function createWGProjectsList(json_object, opts, el) {
+  createWGProjectsList(json_object, opts, el) {
     for (const project of json_object) {
       var projectOpts = JSON.parse(JSON.stringify(opts));
       projectOpts.project_id = project.project_id;
@@ -141,7 +130,7 @@
       h2.textContent = project.name;
       h2.setAttribute('id', project.project_id);
       for (var i = 0; i < el.length; i++) {
-        el[i].append(h2);
+        el[i].appendChild(h2);
       }
       const headerAnchor = document.createElement('a');
       headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10 uppercase');
@@ -149,11 +138,11 @@
       headerAnchor.textContent = project.project_id;
       h2.appendChild(headerAnchor);
 
-      createProjectList(json_object, projectOpts, el);
+      this.createProjectList(json_object, projectOpts, el);
     }
   }
 
-  function createProjectList(json_object, opts, el) {
+  createProjectList(json_object, opts, el) {
     const ul = document.createElement('ul');
     if (typeof json_object !== 'undefined') {
       for (const project of json_object) {
@@ -202,18 +191,17 @@
       if (opts['ul_classes'] !== '') {
         ul.setAttribute('class', opts['ul_classes']);
       }
-      el[i].append(ul);
+      el[i].appendChild(ul);
     }
   }
 
   // Function to scroll when there is anchor in url
-  function scrollToAnchor() {
+  scrollToAnchor() {
     if (location.hash) {
       var projectId = location.hash.replace('#', '');
       var element = document.getElementById(`${projectId}`);
       element.scrollIntoView();
     }
   }
-
-  return eclipseFdnAdopters;
-});
+}
+var eclipseFdnAdopters = new EclipseFdnAdopters();
