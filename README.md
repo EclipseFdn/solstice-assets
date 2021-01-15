@@ -39,6 +39,26 @@ Have a bug or a feature request? Please search for existing and closed issues. I
 - <https://twitter.com/@ericpoir>
 - <https://github.com/ericpoirier>
 
+## Browser Support
+
+We transpile our code via the Babel plugin to ensure compatibility with older browsers where possible using polyfills. We target support for the latest 5 versions of the following browsers:
+
+- Firefox
+- Chrome
+- Opera (mini and standard)
+- Safari (iOS and desktop)
+- Edge
+
+In addition, we also support the following browser versions:
+
+- IE 11
+- KaiOS 2.5
+- Opera Mobile 59
+- Baidu 7.12
+- Latest Android browser versions (Chrome, Firefox, QQ, UC, and base Android)
+
+In development, we test in modern browsers to ensure the general use-case is met and make best efforts to fix any issues that arise with supported browsers.
+
 ## Trademarks
 
 * Jakarta and Jakarta EE are Trademarks of the Eclipse Foundation, Inc.
