@@ -27,9 +27,8 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-syntax-class-properties": "^7.12.1",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-env": "^7.12.11",
     "@geedmo/yamm3": "^1.3.1",
-    "babel-preset-env": "^1.7.0",
     "bootstrap": "^3.4.1",
     "browserslist": "^4.16.1",
     "cookieconsent": "^3.1.0",
@@ -45,6 +44,5 @@
     "napa": "^3.0.0",
     "owl.carousel": "^2.3.4",
     "postcss": "^8.2.2"
-  },
-  "browserslist": "> 0.25%, not dead"
+  }
 }
