@@ -220,7 +220,7 @@
   
   // Infra 2791 - Send events to Google Analytics
   $('a[href]').click(function() {
-    if (typeof ga === "function") {
+    if (typeof ga === "function" && typeof ga.getAll  === "function") {
       // Get the file name out of the href attribute
       var fileName = $(this).attr('href').split('/').pop();
 
