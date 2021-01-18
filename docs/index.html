@@ -182,22 +182,16 @@
               <div class="row">
                 <div class="col-sm-offset-8 col-sm-8">
                   <form id="form-discover-search" class="form-inline form-search-projects custom-search-form margin-bottom-10" role="form" action="https://projects.eclipse.org/">
-                    <input id="discover-search-box" class="textfield-underline form-control text-center" type="text" size="25" name="combine" placeholder="Search projects">
-                    <button class="btn btn-primary" type="submit">
-                       <i class="fa fa-search"></i> Search
-                     </button>
+                    <div class="input-group">
+                      <input id="discover-search-box" type="text" size="25" name="combine" class="form-control text-center" placeholder="Search projects">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div><!-- /input-group -->
                   </form>
-                </div>
-               </div>
 
-               <br>
-              <a href="//projects.eclipse.org">Original one: List of projects</a>
-              <br>
-              <br>
+              <a id="project-list-link" href="//projects.eclipse.org">List of projects</a>
 
-              <a style="color: white;" href="//projects.eclipse.org">with White color: List of projects</a>
-              <br><br>
-              <a class="btn btn-primary" href="//projects.eclipse.org">List of projects</a>
             </div>
           </div>
         </div>
