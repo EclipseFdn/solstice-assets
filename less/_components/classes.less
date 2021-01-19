@@ -83,28 +83,19 @@ img.desaturate {
   border-color: @brand-warning;
 }
 
-.textfield-underline {
-  border-top:none;
-  border-left:none;
-  border-right:none;
-  border-bottom:1px solid inherit;
-  background-color:transparent;
-  border-radius:0;
-  box-shadow:none;
-  margin:10px auto;
-  color: inherit;
-  // Do not group these rules
-  &:-moz-placeholder { /* Firefox 18- */
-    color: inherit;
+// Example: project page search
+.input-group {
+  .btn {
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: unset;
   }
-  &::-moz-placeholder {  /* Firefox 19+ */
-    color: inherit;
-  }
-  &:-ms-input-placeholder {
-    color: inherit;
-  }
-  &::-webkit-input-placeholder {
-    color: inherit;
+  .form-control {
+    height: 39px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 5px;
   }
 }
 
