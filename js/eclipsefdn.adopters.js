@@ -47,10 +47,11 @@ class EclipseFdnAdopters {
    */
 
   getList = function(options) {
+    var t = this;
     var opts = this.getMergedOptions(options);
     this.fireCall(opts, function(response) {
-      this.createProjectList(response, opts, document.querySelectorAll(opts.selector));
-      this.scrollToAnchor();
+      t.createProjectList(response, opts, document.querySelectorAll(opts.selector));
+      t.scrollToAnchor();
     });
   }
 
