@@ -47,7 +47,7 @@ class EclipseFdnAdopters {
    */
 
   getList = function(options) {
-   var t = this;
+    var t = this;
     var opts = this.getMergedOptions(options);
     this.fireCall(opts, function(response) {
       t.createProjectList(response, opts, document.querySelectorAll(opts.selector));
