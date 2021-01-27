@@ -1,0 +1,16 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"useBuiltIns": "usage",
+				"corejs": 3,
+				"targets": "last 5 version, > 0.2%, not dead, IE 11"
+			}
+		]
+	],
+	"plugins": [
+		"@babel/plugin-proposal-class-properties",
+		"@babel/proposal-object-rest-spread"
+	]
+}

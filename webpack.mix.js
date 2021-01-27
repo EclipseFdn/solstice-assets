@@ -35,7 +35,7 @@ mix.less('less/solstice/styles.less', 'docs/dist/css/solstice.css');
 // Drupal sites
 mix.less('less/solstice/drupal.less', 'docs/dist/css/drupal-solstice.css');
 // JavaScript
-mix.babel([
+mix.js([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
