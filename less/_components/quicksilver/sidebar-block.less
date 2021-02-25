@@ -12,40 +12,40 @@
 */
 
 
-#sidebar-menu {
+#sidebar-block {
   margin-top:50px;
-  .sidebar-menu-item {
-    margin-bottom:@sidebar-menu-item-margin-bottom;
-    background-color: @sidebar-menu-item-bg-color;
+  .sidebar-block-item {
+    margin-bottom:@sidebar-block-item-margin-bottom;
+    background-color: @sidebar-block-item-bg-color;
     padding-top:17px;
     padding-bottom:10px;
     &.active {
-      background-color: @sidebar-menu-item-active-bg-color;
+      background-color: @sidebar-block-item-active-bg-color;
       a {
-        color:@sidebar-menu-item-active-a-color;
+        color:@sidebar-block-item-active-a-color;
       }
       &:hover {
-        background-color: @sidebar-menu-item-active-a-bg-color-hover;
+        background-color: @sidebar-block-item-active-a-bg-color-hover;
       }
     }
     &:hover:not(.active) {
-      background-color: @sidebar-menu-item-bg-color-hover;
+      background-color: @sidebar-block-item-bg-color-hover;
       a {
-        color:@sidebar-menu-item-a-color;
+        color:@sidebar-block-item-a-color;
       }
     }
   }
-  .sidebar-menu-sub-items {
-    background-color:@sidebar-menu-sub-items-bg-color;
-    margin-top:@sidebar-menu-sub-items-margin-top;
-    border:@sidebar-menu-sub-items-border;
+  .sidebar-block-sub-items {
+    background-color:@sidebar-block-sub-items-bg-color;
+    margin-top:@sidebar-block-sub-items-margin-top;
+    border:@sidebar-block-sub-items-border;
     a {
       &:hover {
         font-weight:bold;
       }
     }
   }
-  .sidebar-menu-sub-item {
+  .sidebar-block-sub-item {
     padding:0 0 8px 15px;
     margin-bottom:0;
     a.active {
@@ -62,15 +62,15 @@
   }
   a {
     display: block;
-    color:@sidebar-menu-a-color;
-    .sidebar-menu-icon {
-      width:@sidebar-menu-a-icon-width;
-      height:@sidebar-menu-a-icon-height;
+    color:@sidebar-block-a-color;
+    .sidebar-block-icon {
+      width:@sidebar-block-a-icon-width;
+      height:@sidebar-block-a-icon-height;
       stroke-width: 1;
-      margin:@sidebar-menu-a-icon-margin;
+      margin:@sidebar-block-a-icon-margin;
     }
-    .sidebar-menu-text {
-      padding:10px 0 0;
+    .sidebar-block-text {
+      padding:2px 0 0;
     }
   }
 }
