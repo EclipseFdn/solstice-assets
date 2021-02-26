@@ -16,6 +16,8 @@
   margin-top:50px;
   .sidebar-block-item {
     margin-bottom:@sidebar-block-item-margin-bottom;
+    margin-right:0;
+    margin-left:0;
     background-color: @sidebar-block-item-bg-color;
     padding-top:17px;
     padding-bottom:10px;
@@ -38,6 +40,8 @@
   .sidebar-block-sub-items {
     background-color:@sidebar-block-sub-items-bg-color;
     margin-top:@sidebar-block-sub-items-margin-top;
+    margin-right:0;
+    margin-left:0;
     border:@sidebar-block-sub-items-border;
     a {
       &:hover {
@@ -54,10 +58,10 @@
       }
     }
     &:first-child {
-      margin-top:15px;
+      padding-top:15px;
     }
     &:last-child {
-      margin-bottom:15px;
+      padding-bottom:15px;
     }
   }
   a {
