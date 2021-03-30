@@ -52,4 +52,4 @@ mix.babel([
     'js/solstice.donate.js',
     'js/eclipsefdn.adopters.js',
     'js/eclipsefdn.ads.js'
-], 'docs/dist/js/solstice.js');
+], 'docs/dist/js/solstice.js');TEST
