@@ -88,8 +88,9 @@
     }
   }
   .wrapper-sponsor-level{
-    display:inline-block;
+    display:@eclipsecon-sponsors-wrapper-sponsor-level-display;
     vertical-align:top;
+    margin-bottom:@eclipsecon-sponsors-wrapper-sponsor-level-margin-bottom;
     @media (max-width: @screen-sm-max) {
       width:100%;
     }
@@ -187,6 +188,8 @@
     }
   }
 }
+
+
 
 /* Support Sponsors */
 .view-eclipsecon-support-sponsors .view-footer a{
