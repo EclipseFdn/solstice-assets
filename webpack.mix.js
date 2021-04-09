@@ -34,6 +34,8 @@ mix.less('less/solstice/styles.less', 'docs/dist/css/solstice.css');
 
 // Drupal sites
 mix.less('less/solstice/drupal.less', 'docs/dist/css/drupal-solstice.css');
+mix.less('less/quicksilver/newsletter/drupal.less', 'docs/dist/css/newsletter.css');
+
 // JavaScript
 mix.babel([
     './node_modules/jquery/dist/jquery.min.js',
