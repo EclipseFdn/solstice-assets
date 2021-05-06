@@ -1,9 +1,19 @@
 
 @card-image-max-height: 250px;
+@card-container-padding: 15px;
+@card-panel-body-padding: 1em;
+@card-panel-body-padding-top: 20px;
+@card-panel-heading-padding: 0;
+@card-panel-border-radius: 1em;
+@card-panel-box-shadow: 4px 6px 9px 0px rgba(0,0,0,0.31);
+@card-panel-footer-font-size: 1.5em;
+@card-panel-footer-font-weight: 700;
+@card-panel-body-padding-top-none: 0px;
+@brand-primary-visited: darken(@brand-primary, 10); 
 
 .card-container {
     & {
-      padding: 15px;
+      padding: @card-container-padding;
     }
     // handle linked cards
     a .card-panel {
@@ -14,12 +24,12 @@
     }
     .card-panel {
       & {
-        border-radius: 1em;
+        border-radius: @card-panel-border-radius;
         border: none;
         overflow:hidden;
         padding: 0;
         height:100%;
-        box-shadow: 4px 6px 9px 0px rgba(0,0,0,0.31);
+        box-shadow: @card-panel-box-shadow;
       }
   
       &.horizontal-card {
@@ -38,7 +48,7 @@
           .panel-heading .cover-image {
             height: 100%;
             width: auto;
-            max-height: 250px;
+            max-height: @card-image-max-height;
             max-width: 100%;
           }
           .panel-body {
@@ -57,17 +67,17 @@
       }
 
       .panel-body {
-        padding: 1em;
-        padding-top: 20px;
+        padding: @card-panel-body-padding;
+        padding-top: @card-panel-body-padding-top;
       }
       .panel-heading{
-        padding: 0;
+        padding: @card-panel-heading-padding;
       }
       .panel-heading img{
         min-width: 100%;
       }
       &.horizontal-card .panel-body, .panel-heading + .panel-body {
-        padding-top: 0px;
+        padding-top: @card-panel-body-padding-top-none;
       }
   
       .panel-footer {
@@ -76,13 +86,13 @@
       }
       .panel-footer a:not(.btn) {
         & {
-          font-size: 1.5em;
-          font-weight: 700;
+          font-size: @card-panel-footer-font-size;
+          font-weight: @card-panel-footer-font-weight;
           text-transform: uppercase;
           font-style: italic;
         }
         &.brand-primary:visited {
-          color: darken(@brand-primary, 10);
+          color: @brand-primary-visited;
         }
       }
     }
