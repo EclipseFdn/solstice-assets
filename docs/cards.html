@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5WLCZXC');
+    </script>
+    <!-- End Google Tag Manager -->    
+    <meta name="author" content="Christopher Guindon"/>
+    <meta name="keywords" content="eclipse,project,plug-ins,plugins,java,ide,swt,refactoring,free java ide,tools,platform,open source,development environment,development,ide"/>
+    <link rel="shortcut icon" href="https://eclipse.org/eclipse.org-common/themes/solstice/public/images/favicon.ico"/>
+    <title>Eclipse - The Eclipse Foundation open source community website | The Eclipse Foundation</title>
+    <link rel="stylesheet" href="dist/css/quicksilver.css?v1.0"/>
+    <meta property="og:description" content="The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks."/>
+    <meta property="og:image" content="images/logo/eclipse-foundation-200x200.png"/>
+    <meta property="og:title" content="Eclipse - The Eclipse Foundation open source community website | The Eclipse Foundation"/>
+    <meta property="og:image:width" content="200"/>
+    <meta property="og:image:height" content="200"/>
+    <meta itemprop="name" content="Eclipse - The Eclipse Foundation open source community website | The Eclipse Foundation"/>
+    <meta itemprop="description" content="The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks."/>
+    <meta itemprop="image" content="images/logo/eclipse-foundation-400x400.png"/>
+    <meta name="twitter:site" content="@EclipseFdn"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Eclipse - The Eclipse Foundation open source community website | The Eclipse Foundation"/>
+    <meta name="twitter:url" content="https://www.eclipse.org/eclipse.org-common/themes/solstice/docs/"/>
+    <meta name="twitter:description" content="The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks."/>
+    <meta name="twitter:image" content="images/logo/eclipse-foundation-400x400.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" type="text/css"/>
+  </head>
+  <body id="body_solstice">
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="header-wrapper header-default-bg-img" id="header-wrapper">
+      <div class="clearfix toolbar-container-wrapper">
+        <div class="container">
+          <div class="text-right toolbar-row row hidden-print">
+            <div class="col-md-24 row-toolbar-col">
+              <ul class="list-inline">
+                <li><a href="https://accounts.eclipse.org/user/register"><i class="fa fa-user fa-fw"></i> Create account</a></li>
+                <li><a href="https://accounts.eclipse.org/user/login/?takemeback=https%3A%2F%2Fwww.eclipse.org%2Feclipse.org-common%2Fthemes%2Fsolstice%2Fdocs%2F"><i class="fa fa-sign-in fa-fw"></i> Log in</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome, Test User <span class="caret"></span></a>
+                  <ul class="dropdown-menu toolbar-dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="https://www.eclipse.org/user/webdev"><i class="fa fa-user"></i> View Profile</a></li>
+                    <li><a href="https://accounts.eclipse.org/user/edit" class="" data-tab-destination="tab-profile"><i class="fa fa-edit"></i> Edit Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a class="toolbar-manage-cookies dropdown-toggle"><i class="fa fa-wrench"></i> Manage Cookies</a></li>
+                    <li class="divider"></li>
+                    <li><a href="https://accounts.eclipse.org/user/logout"><i class="fa fa-sign-out"></i> Log out</a></li>
+                  </ul>
+                </li>
+                <li class="language-selector dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true"><i class="fa fa-globe"></i> <span>English</span>
+                  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">English</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row" id="header-row">
+          <div class="col-sm-5 col-md-4" id="header-left">
+            <div class="wrapper-logo-default"><a href="https://www.eclipse.org/"><img class="logo-eclipse-default hidden-xs" alt="logo" width="160" src="dist/images/logo/eclipse-foundation-white-orange.svg"/></a></div>
+          </div>
+          <div class="col-sm-19 col-md-20 reset margin-top-10" id="main-menu-wrapper">
+            <div class="navbar yamm" id="main-menu">
+              <div class="navbar-collapse collapse reset float-right" id="navbar-main-menu">
+                <ul class="nav navbar-nav">
+                  <li><a href="https://www.eclipse.org/membership/" target="_self">Members</a></li>
+                  <li><a href="https://www.eclipse.org/org/workinggroups/" target="_self">Working Groups</a></li>
+                  <li><a href="https://www.eclipse.org/projects/" target="_self">Projects</a></li>
+                  <li class="dropdown visible-xs">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://marketplace.eclipse.org">Marketplace</a></li>
+                      <li><a href="http://events.eclipse.org">Events</a></li>
+                      <li><a href="http://www.planeteclipse.org/">Planet Eclipse</a></li>
+                      <li><a href="https://www.eclipse.org/community/eclipse_newsletter/">Newsletter</a></li>
+                      <li><a href="https://www.youtube.com/user/EclipseFdn">Videos</a></li>
+                      <li><a href="https://blogs.eclipse.org">Blogs</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown visible-xs">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Participate <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+                      <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+                      <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+                      <li><a href="https://wiki.eclipse.org/">Wiki</a></li>
+                      <li><a href="https://wiki.eclipse.org/IRC">IRC</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown visible-xs">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Eclipse IDE <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="https://www.eclipse.org/downloads">Download</a></li>
+                      <li><a href="https://help.eclipse.org">Documentation</a></li>
+                      <li><a href="https://www.eclipse.org/getting_started">Getting Started / Support</a></li>
+                      <li><a href="https://www.eclipse.org/contribute/">How to Contribute</a></li>
+                      <li><a href="https://www.eclipse.org/ide/">IDE and Tools</a></li>
+                      <li><a href="https://www.eclipse.org/forums/index.php/f/89/">Newcomer Forum</a></li>
+                    </ul>
+                  </li>
+                  <!-- More -->
+                  <li class="dropdown eclipse-more hidden-xs">
+                    <a data-toggle="dropdown" class="dropdown-toggle" role="button">More<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <!-- Content container to add padding -->
+                        <div class="yamm-content">
+                          <div class="row">
+                            <ul class="col-sm-8 list-unstyled">
+                              <li>
+                                <p><strong>Community</strong></p>
+                              </li>
+                              <li><a href="http://marketplace.eclipse.org">Marketplace</a></li>
+                              <li><a href="http://events.eclipse.org">Events</a></li>
+                              <li><a href="http://www.planeteclipse.org/">Planet Eclipse</a></li>
+                              <li><a href="https://www.eclipse.org/community/eclipse_newsletter/">Newsletter</a></li>
+                              <li><a href="https://www.youtube.com/user/EclipseFdn">Videos</a></li>
+                              <li><a href="https://blogs.eclipse.org">Blogs</a></li>
+                            </ul>
+                            <ul class="col-sm-8 list-unstyled">
+                              <li>
+                                <p><strong>Participate</strong></p>
+                              </li>
+                              <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+                              <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+                              <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+                              <li><a href="https://wiki.eclipse.org/">Wiki</a></li>
+                              <li><a href="https://wiki.eclipse.org/IRC">IRC</a></li>
+                            </ul>
+                            <ul class="col-sm-8 list-unstyled">
+                              <li>
+                                <p><strong>Eclipse IDE</strong></p>
+                              </li>
+                              <li><a href="https://www.eclipse.org/downloads">Download</a></li>
+                              <li><a href="https://help.eclipse.org">Documentation</a></li>
+                              <li><a href="https://www.eclipse.org/getting_started">Getting Started / Support</a></li>
+                              <li><a href="https://www.eclipse.org/contribute/">How to Contribute</a></li>
+                              <li><a href="https://www.eclipse.org/ide/">IDE and Tools</a></li>
+                              <li><a href="https://www.eclipse.org/forums/index.php/f/89/">Newcomer Forum</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <div class="wrapper-logo-mobile"><a class="navbar-brand visible-xs" href="https://www.eclipse.org/"><img class="logo-eclipse-default-mobile img-responsive" alt="logo" width="160" src="dist/images/logo/eclipse-foundation-white-orange.svg"/></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron featured-jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-20 col-md-offset-2 col-sm-18 col-sm-offset-3">
+              <h1> How to use the Eclipse Solstice theme</h1>
+              <p>The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation.</p>
+
+
+              <div class="row">
+                <div class="col-sm-offset-8 col-sm-8">
+                  <form id="form-discover-search" class="form-inline form-search-projects custom-search-form margin-bottom-10" role="form" action="https://projects.eclipse.org/">
+                    <div class="input-group">
+                      <input id="discover-search-box" type="text" size="25" name="combine" class="form-control text-center" via.placeholder="Search projects">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" aria-label="Search Projects" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </form>
+
+              <a href="https://projects.eclipse.org/">View All Projects</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="default-breadcrumbs hidden-print breadcrumbs-default-margin" id="breadcrumb">
+      <div class="container">
+        <h3 class="sr-only">Breadcrumbs</h3>
+        <div class="row">
+          <div class="col-sm-24">
+            <ol class="breadcrumb">
+              <li><a href="/">Home</a></li>
+              <li class="active">Eclipse Solstice</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /#breadcrumb -->
+    <main>
+      <div class="novaContent container legacy-page" id="novaContent">
+        <!-- Cards start-->
+        <div class="row">
+          <div class="col-xs-24">
+            <h2>Standard Layout Cards</h2>
+            <div class="row">
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel horizontal-card panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img cover-image" src="https://via.placehold.it/500" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default">
+                  <div class="panel-body">
+                    <img class="img img-responsive margin-auto" src="https://via.placehold.it/125" />
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-24">
+            <h2>Standard Image Cards</h2>
+            <div class="row">
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img cover-image" src="https://via.placehold.it/400" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default">
+                  <div class="panel-body">
+                    <img class="img img-responsive margin-auto" src="https://via.placehold.it/125" />
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-24">
+            <h2>Horizontal cards</h2>
+            <div class="row">
+                <div class="card-container col-xs-24 match-height-item-by-row">
+                  <div class="card-panel horizontal-card panel panel-default">
+                    <div class="panel-heading" aria-hidden="true">
+                      <img class="img cover-image" src="https://via.placehold.it/500" />
+                    </div>
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                        Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container col-xs-24 match-height-item-by-row">
+                  <div class="card-panel horizontal-card panel panel-default">
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      </p>
+                    </div>
+                    <div class="panel-footer text-center">
+                      <a class="btn btn-primary" href="">Sample button</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-24">
+            <h2>Card text alignments</h2>
+            <div class="row">
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default text-center">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-24">
+            <h2>Card links support</h2>
+            <div class="row">
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <a href="#">
+                  <div class="card-panel panel panel-default">
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default text-center">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                  <div class="panel-footer">
+                    <a class="btn btn-primary" href="">Sample button</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default text-center">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                  <div class="panel-footer margin-bottom-15">
+                    <a class="brand-primary" href="#">Sample button</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-24">
+              <h2>Card background colors</h2>
+              <div class="row">
+                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                  <div class="card-panel panel panel-default">
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                  <div class="card-panel panel panel-default background-primary">
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                  <div class="card-panel panel panel-default background-secondary">
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                  <div class="card-panel panel panel-default background-tertiary">
+                    <div class="panel-body">
+                      <h3 class="fw-700">Lorem Ipsum</h3>
+                      <p>
+                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cards end -->
+      </div>
+    </main>
+    <p id="back-to-top">
+      <a class="visible-xs" href="#top">Back to the top</a>
+    </p>
+    <!-- Sign Up to our Newsletter -->
+    <div class="eclipsefdn-featured-story featured-footer" data-publish-target="eclipse_org"><div class="container featured-container"></div></div>
+    <footer id="solstice-footer">
+      <div class="container">
+        <div class="row">
+          <section class="col-sm-6 hidden-print" id="footer-eclipse-foundation">
+            <h2 class="section-title">Eclipse Foundation</h2>
+            <ul class="nav">
+              <li><a href="https://www.eclipse.org/org/">About Us</a></li>
+              <li><a href="https://www.eclipse.org/org/foundation/contact.php">Contact Us</a></li>
+              <li><a href="https://www.eclipse.org/donate">Donate</a></li>
+              <li><a href="https://www.eclipse.org/org/documents/">Governance</a></li>
+              <li><a href="https://www.eclipse.org/artwork/">Logo and Artwork</a></li>
+              <li><a href="https://www.eclipse.org/org/foundation/directors.php">Board of Directors</a></li>
+            </ul>
+          </section>
+          <section class="col-sm-6 hidden-print" id="footer-legal">
+            <h2 class="section-title">Legal</h2>
+            <ul class="nav">
+              <li><a href="https://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+              <li><a href="https://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+              <li><a href="https://www.eclipse.org/legal/copyright.php">Copyright Agent</a></li>
+              <li><a href="https://www.eclipse.org/legal/epl-2.0/">Eclipse Public License</a></li>
+              <li><a href="https://www.eclipse.org/legal/">Legal Resources </a></li>
+            </ul>
+          </section>
+          <section class="col-sm-6 hidden-print" id="footer-useful-links">
+            <h2 class="section-title">Useful Links</h2>
+            <ul class="nav">
+              <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+              <li><a href="https://help.eclipse.org/">Documentation</a></li>
+              <li><a href="https://www.eclipse.org/contribute/">How to Contribute</a></li>
+              <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+              <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+              <li><a href="https://marketplace.eclipse.org">Marketplace</a></li>
+            </ul>
+          </section>
+          <section class="col-sm-6 hidden-print" id="footer-other">
+            <h2 class="section-title">Other</h2>
+            <ul class="nav">
+              <li><a href="https://www.eclipse.org/ide/">IDE and Tools</a></li>
+              <li><a href="https://www.eclipse.org/projects">Community of Projects</a></li>
+              <li><a href="https://www.eclipse.org/org/workinggroups/">Working Groups</a></li>
+              <li><a href="https://www.eclipse.org/org/research/">Research@Eclipse</a></li>
+              <li><a href="https://status.eclipse.org">Service Status</a></li>
+            </ul>
+          </section>
+          <div class="col-sm-24 margin-top-20">
+            <div class="row">
+              <div id="copyright" class="col-md-16">
+                <p id="copyright-text">Copyright &copy; Eclipse Foundation, Inc. All Rights Reserved.</p>
+              </div>
+              <div class="col-md-8 social-media">
+                <ul class="list-inline">
+                  <li>
+                    <a class="social-media-link fa-stack fa-lg" href="https://twitter.com/EclipseFdn">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-media-link fa-stack fa-lg" href="https://plus.google.com/+Eclipse">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-media-link fa-stack fa-lg" href="https://www.facebook.com/eclipse.org">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-media-link fa-stack fa-lg" href="https://www.youtube.com/user/EclipseFdn">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-media-link fa-stack fa-lg" href="https://www.linkedin.com/company/eclipse-foundation">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="scrollup">Back to the top</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="dist/js/solstice.js"></script>
+  </body>
+</html>
