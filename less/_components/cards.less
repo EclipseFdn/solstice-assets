@@ -11,6 +11,14 @@
 @card-panel-body-padding-top-none: 0px;
 @brand-primary-visited: darken(@brand-primary, 10); 
 
+@glyph-highlight-background-color: @brand-secondary;
+@glyph-highlight-container-padding: 10px 10px 5px 10px;
+@glyph-highlight-width: 75px;
+@glyph-highlight-height: 75px;
+@glyph-highlight-left-pos-mod: 90%;
+@glyph-highlight-font-color: @white;
+@glyph-highlight-font-size: 3em;
+
 .card-container {
     & {
       padding: @card-container-padding;
@@ -22,6 +30,37 @@
     a .card-panel:hover {
       text-decoration: underline; 
     }
+
+    .glyph-highlight {
+      & {
+        position: absolute;
+        left: calc(@glyph-highlight-left-pos-mod - @glyph-highlight-width);
+        top: 10px;
+        text-align: center;
+      }
+      .glyph-container {
+        width: @glyph-highlight-width;
+        height: @glyph-highlight-height;
+        font-size: @glyph-highlight-font-size;
+        color: @glyph-highlight-font-color;
+        background-color: @glyph-highlight-background-color;
+        padding: @glyph-highlight-container-padding;
+      }
+      .glyph-container img {
+        vertical-align: text-bottom;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .glyph-bottom {
+        height: 0;
+        width: 0;
+        border-left: calc(@glyph-highlight-width / 2) solid transparent;
+        border-right: calc(@glyph-highlight-width / 2) solid transparent;
+        border-bottom: calc(@glyph-highlight-width / 2) solid transparent;
+        border-top: calc(@glyph-highlight-width / 4) solid @glyph-highlight-background-color;
+      }
+    }
+    
     .card-panel {
       & {
         border-radius: @card-panel-border-radius;
@@ -38,34 +77,44 @@
             float: left;
             min-height: 100%;
           }
-          .panel-heading ~ .panel-body {
+          .panel-body, .panel-footer {
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+          }
+          .panel-heading ~ .panel-body, .panel-heading ~ .panel-footer {
             width: 67%;
+            float: right;
           }
           .panel-heading {
             width: 33%;
             overflow-x: hidden;
           }
           .panel-heading .cover-image {
-            height: 100%;
+            height: @card-image-max-height;
             width: auto;
-            max-height: @card-image-max-height;
+            max-height: 100%;
             max-width: 100%;
           }
-          .panel-body {
-            width: 70%;
-          }
-          .panel-footer {
-            width: 30%;
+          .panel-heading .cover-image.unbound {
+            height: 100%;
           }
         }
       }
-
       img.cover-image {
         object-fit: cover;
         width: 100%;
+        min-width: 100%;
         height: @card-image-max-height;
       }
+      img.cover-image.rounded {
+        border-radius: @card-panel-border-radius;
+      }
 
+      & > * {
+        border: none;
+        background-color: inherit;
+      }
       .panel-body {
         padding: @card-panel-body-padding;
         padding-top: @card-panel-body-padding-top;
@@ -73,17 +122,10 @@
       .panel-heading{
         padding: @card-panel-heading-padding;
       }
-      .panel-heading img{
-        min-width: 100%;
-      }
       &.horizontal-card .panel-body, .panel-heading + .panel-body {
         padding-top: @card-panel-body-padding-top-none;
       }
   
-      .panel-footer {
-        border: none;
-        background-color: inherit;
-      }
       .panel-footer a:not(.btn) {
         & {
           font-size: @card-panel-footer-font-size;
@@ -94,6 +136,13 @@
         &.brand-primary:visited {
           color: @brand-primary-visited;
         }
+      }
+
+      &.with-glyph .panel-heading + .panel-body{
+        margin-top: 0; 
+      }
+      &.with-glyph .panel-body{
+        margin-top: calc(@glyph-highlight-height - @card-panel-body-padding-top - (@glyph-highlight-width / 4)); 
       }
     }
   }

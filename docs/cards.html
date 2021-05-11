@@ -213,41 +213,17 @@
     <!-- /#breadcrumb -->
     <main>
       <div class="novaContent container legacy-page" id="novaContent">
-        <!-- Cards start-->
-        <div class="row">
-          <div class="col-xs-24">
-            <h2>Standard Layout Cards</h2>
-            <div class="row">
-              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
-                <div class="card-panel horizontal-card panel panel-default">
-                  <div class="panel-heading" aria-hidden="true">
-                    <img class="img cover-image" src="/images/template/placeholders/500x500.png" />
+        <!-- Cards start-->  
+        <!--
+                <div class="glyph-highlight">
+                  <div class="glyph-container">
+                    <span class="padding-20">
+                      <i class="fa fa-globe"></i>
+                    </span>
                   </div>
-                  <div class="panel-body">
-                    <h3 class="fw-700">Lorem Ipsum</h3>
-                    <p>
-                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
-                    </p>
-                  </div>
+                  <div class="glyph-bottom"></div>
                 </div>
-              </div>
-              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
-                <div class="card-panel panel panel-default">
-                  <div class="panel-body">
-                    <img class="img img-responsive margin-auto" src="/images/template/placeholders/250x250.png" />
-                    <h3 class="fw-700">Lorem Ipsum</h3>
-                    <p>
-                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
+        -->
         <div class="row">
           <div class="col-xs-24">
             <h2>Standard Image Cards</h2>
@@ -255,7 +231,21 @@
               <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
                 <div class="card-panel panel panel-default">
                   <div class="panel-heading" aria-hidden="true">
-                    <img class="img cover-image" src="/images/template/placeholders/500x500.png" />
+                    <img class="img cover-image" src="dist/images/template/placeholders/500x500.png" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img cover-image rounded" src="dist/images/template/placeholders/500x500.png" />
                   </div>
                   <div class="panel-body">
                     <h3 class="fw-700">Lorem Ipsum</h3>
@@ -269,7 +259,7 @@
               <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
                 <div class="card-panel panel panel-default">
                   <div class="panel-body">
-                    <img class="img img-responsive margin-auto" src="/images/template/placeholders/250x250.png" />
+                    <img class="img img-responsive margin-auto" src="dist/images/template/placeholders/250x250.png" />
                     <h3 class="fw-700">Lorem Ipsum</h3>
                     <p>
                       Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
@@ -285,22 +275,60 @@
         <div class="row">
           <div class="col-xs-24">
             <h2>Horizontal cards</h2>
+            <p>Note that mixing horizontal cards with an unbound cover-image and match-height is not currently supported as there are gaps created when the match-height equalizes the 2 sections. There is no known reason that the sections would have the gap, but it has not yet been resolved.</p>
             <div class="row">
-                <div class="card-container col-xs-24 match-height-item-by-row">
-                  <div class="card-panel horizontal-card panel panel-default">
-                    <div class="panel-heading" aria-hidden="true">
-                      <img class="img cover-image" src="/images/template/placeholders/500x500.png" />
-                    </div>
-                    <div class="panel-body">
-                      <h3 class="fw-700">Lorem Ipsum</h3>
-                      <p>
-                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                        Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
-                      </p>
-                    </div>
+              <div class="card-container col-xs-24">
+                <div class="card-panel horizontal-card panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img cover-image" src="dist/images/template/placeholders/500x500.png" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                  <div class="panel-footer text-center">
+                    <a class="btn btn-primary" href="">Sample button</a>
                   </div>
                 </div>
-                <div class="card-container col-xs-24 match-height-item-by-row">
+              </div>
+              <div class="card-container col-xs-24">
+                <div class="card-panel horizontal-card panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img cover-image rounded" src="dist/images/template/placeholders/500x500.png" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                  <div class="panel-footer text-center">
+                    <a class="btn btn-primary" href="">Sample button</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24">
+                <div class="card-panel horizontal-card panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img img-responsive margin-auto" src="dist/images/template/placeholders/250x250.png" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                      Quis do cupidatat qui quis nostrud laboris nulla incididunt laborum sit sit qui id cupidatat.
+                    </p>
+                  </div>
+                  <div class="panel-footer text-center">
+                    <a class="btn btn-primary" href="">Sample button</a>
+                  </div>
+                </div>
+              </div>
+                <div class="card-container col-xs-24">
                   <div class="card-panel horizontal-card panel panel-default">
                     <div class="panel-body">
                       <h3 class="fw-700">Lorem Ipsum</h3>
@@ -392,53 +420,145 @@
         </div>
         
         <div class="row">
-            <div class="col-xs-24">
-              <h2>Card background colors</h2>
-              <div class="row">
-                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
-                  <div class="card-panel panel panel-default">
-                    <div class="panel-body">
-                      <h3 class="fw-700">Lorem Ipsum</h3>
-                      <p>
-                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                      </p>
-                    </div>
+          <div class="col-xs-24">
+            <h2>Card background colors</h2>
+            <div class="row">
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
                   </div>
                 </div>
-                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
-                  <div class="card-panel panel panel-default background-primary">
-                    <div class="panel-body">
-                      <h3 class="fw-700">Lorem Ipsum</h3>
-                      <p>
-                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                      </p>
-                    </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default background-primary">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
                   </div>
                 </div>
-                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
-                  <div class="card-panel panel panel-default background-secondary">
-                    <div class="panel-body">
-                      <h3 class="fw-700">Lorem Ipsum</h3>
-                      <p>
-                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                      </p>
-                    </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default background-secondary">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
                   </div>
                 </div>
-                <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
-                  <div class="card-panel panel panel-default background-tertiary">
-                    <div class="panel-body">
-                      <h3 class="fw-700">Lorem Ipsum</h3>
-                      <p>
-                        Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
-                      </p>
-                    </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="card-panel panel panel-default background-tertiary">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Cards end -->
+        </div><div class="row">
+          <div class="col-xs-24">
+            <h2>Glyph highlight cards</h2>
+            <div class="row">
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="glyph-highlight">
+                  <div class="glyph-container">
+                    <i class="fa fa-microchip"></i>
+                  </div>
+                  <div class="glyph-bottom"></div>
+                </div>
+                <div class="card-panel with-glyph panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img img-responsive margin-auto" src="dist/images/template/placeholders/250x250.png" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-12 match-height-item-by-row">
+                <div class="glyph-highlight">
+                  <div class="glyph-container">
+                    <i class="fa fa-globe"></i>
+                  </div>
+                  <div class="glyph-bottom"></div>
+                </div>
+                <div class="card-panel with-glyph panel panel-default">
+                  <div class="panel-heading" aria-hidden="true">
+                    <img class="img cover-image rounded" src="dist/images/template/placeholders/500x500.png" />
+                  </div>
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-8 match-height-item-by-row">
+                <div class="glyph-highlight">
+                  <div class="glyph-container">
+                    <img class="img margin-auto" src="dist/images/template/placeholders/sample-custom-50.png" />
+                  </div>
+                  <div class="glyph-bottom"></div>
+                </div>
+                <div class="card-panel with-glyph panel panel-default">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-8 match-height-item-by-row">
+                <div class="glyph-highlight">
+                  <div class="glyph-container">
+                    <img class="img margin-auto" src="dist/images/template/placeholders/sample-custom-256.png" />
+                  </div>
+                  <div class="glyph-bottom"></div>
+                </div>
+                <div class="card-panel with-glyph panel panel-default">
+                  <div class="panel-body margin-top-20">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container col-xs-24 col-sm-8 match-height-item-by-row">
+                <div class="glyph-highlight">
+                  <div class="glyph-container">
+                    <i class="fa fa-globe"></i>
+                  </div>
+                  <div class="glyph-bottom"></div>
+                </div>
+                <div class="card-panel with-glyph panel panel-default">
+                  <div class="panel-body">
+                    <h3 class="fw-700">Lorem Ipsum</h3>
+                    <p>
+                      Esse incididunt ipsum nulla consectetur tempor elit. Mollit adipisicing esse labore consectetur irure ut reprehenderit sit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cards end -->
       </div>
     </main>
     <p id="back-to-top">
