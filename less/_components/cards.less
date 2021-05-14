@@ -1,24 +1,15 @@
-
-@card-image-max-height: 250px;
-@card-container-padding: 15px;
-@card-panel-body-padding: 1em;
-@card-panel-body-padding-top: 20px;
-@card-panel-heading-padding: 0;
-@card-panel-border-radius: 1em;
-@card-panel-box-shadow: 4px 6px 9px 0px rgba(0,0,0,0.31);
-@card-panel-footer-font-size: 1.5em;
-@card-panel-footer-font-weight: 700;
-@card-panel-body-padding-top-none: 0px;
-@brand-primary-visited: darken(@brand-primary, 10); 
-
-@glyph-highlight-background-color: @brand-secondary;
-@glyph-highlight-container-padding: 10px 10px 5px 10px;
-@glyph-highlight-width: 75px;
-@glyph-highlight-height: 75px;
-@glyph-highlight-left-pos-mod: 90%;
-@glyph-highlight-font-color: @white;
-@glyph-highlight-font-size: 3em;
-
+/*
+ * Copyright (c) 2021 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Martin Lowe <martin.lowe@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
 .card-container {
     & {
       padding: @card-container-padding;
@@ -103,7 +94,6 @@
       }
       img.cover-image {
         object-fit: cover;
-        width: 100%;
         min-width: 100%;
         height: @card-image-max-height;
       }
@@ -132,9 +122,6 @@
           font-weight: @card-panel-footer-font-weight;
           text-transform: uppercase;
           font-style: italic;
-        }
-        &.brand-primary:visited {
-          color: @brand-primary-visited;
         }
       }
 
