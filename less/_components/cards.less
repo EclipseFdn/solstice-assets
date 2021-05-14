@@ -116,19 +116,22 @@
         padding-top: @card-panel-body-padding-top-none;
       }
   
+      .panel-footer a {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
       .panel-footer a:not(.btn) {
-        & {
-          font-size: @card-panel-footer-font-size;
-          font-weight: @card-panel-footer-font-weight;
-          text-transform: uppercase;
-          font-style: italic;
-        }
+        font-size: @card-panel-footer-font-size;
+        font-weight: @card-panel-footer-font-weight;
+        text-transform: uppercase;
+        font-style: italic;
       }
 
       &.with-glyph .panel-heading + .panel-body{
         margin-top: 0; 
       }
-      &.with-glyph .panel-body{
+      &.with-glyph .panel-body, &.with-glyph.horizontal-card .panel-body {
         margin-top: calc(@glyph-highlight-height - @card-panel-body-padding-top - (@glyph-highlight-width / 4)); 
       }
     }
