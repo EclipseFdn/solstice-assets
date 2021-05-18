@@ -18,6 +18,7 @@ mix.setResourceRoot('../');
 
 // Copy the logo from src'
 mix.copy('images/logo/eclipse-foundation-white-orange.svg', 'docs/dist/images/logo/eclipse-foundation-white-orange.svg');
+mix.copy('images/template/placeholders', 'docs/dist/images/template/placeholders');
 
 // Default CSS
 mix.less('less/quicksilver/styles.less', 'docs/dist/css/quicksilver.css');

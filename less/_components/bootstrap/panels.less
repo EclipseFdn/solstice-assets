@@ -14,3 +14,42 @@
 .panel-secondary {
   .panel-variant(@brand-secondary; @panel-primary-text; @brand-secondary; @brand-secondary);
 }
+
+.panel-container-shadow {
+  margin-bottom:20px;
+  @media (min-width: 768px) {
+    width: 19.666667%;
+  }
+}
+
+.panel-shadow {
+  & {
+    border-radius: 1em;
+    border: none;
+    overflow:hidden;
+    padding: 0;
+    height:100%;
+    text-decoration: none;
+    box-shadow: 4px 6px 9px 0px rgba(0,0,0,0.31);
+    
+  }
+  &:hover {
+    text-decoration: underline
+  }
+  .panel-heading{
+    padding: 0;
+    background-color:transparent;
+    border-color:transparent;
+  }
+  .img {
+    border-radius: 1em;
+    width: 100%;
+  }
+  .panel-body {
+      padding: 15px 15px 0 15px;
+      p {
+        margin-bottom:0;
+      }
+  }
+
+}
