@@ -1,4 +1,4 @@
-# solstice-assets
+# solstice-assets TEST
 
 Assets for the Eclipse Foundation look and feel called Solstice. 
 
