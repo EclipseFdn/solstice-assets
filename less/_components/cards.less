@@ -1,0 +1,145 @@
+/*
+ * Copyright (c) 2021 Eclipse Foundation, Inc.
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * Contributors:
+ *   Martin Lowe <martin.lowe@eclipse-foundation.org>
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+*/
+.card-container {
+    & {
+      padding: @card-container-padding;
+    }
+    // handle linked cards
+    a .card-panel {
+      text-decoration: none;
+    }
+    a .card-panel:hover {
+      text-decoration: underline; 
+    }
+
+    .glyph-highlight {
+      & {
+        position: absolute;
+        left: calc(@glyph-highlight-left-pos-mod - @glyph-highlight-width);
+        top: 10px;
+        text-align: center;
+      }
+      .glyph-container {
+        width: @glyph-highlight-width;
+        height: @glyph-highlight-height;
+        font-size: @glyph-highlight-font-size;
+        color: @glyph-highlight-font-color;
+        background-color: @glyph-highlight-background-color;
+        padding: @glyph-highlight-container-padding;
+      }
+      .glyph-container img {
+        vertical-align: text-bottom;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .glyph-bottom {
+        height: 0;
+        width: 0;
+        border-left: calc(@glyph-highlight-width / 2) solid transparent;
+        border-right: calc(@glyph-highlight-width / 2) solid transparent;
+        border-bottom: calc(@glyph-highlight-width / 2) solid transparent;
+        border-top: calc(@glyph-highlight-width / 4) solid @glyph-highlight-background-color;
+      }
+    }
+    
+    .card-panel {
+      & {
+        border-radius: @card-panel-border-radius;
+        border: none;
+        overflow:hidden;
+        padding: 0;
+        height:100%;
+        box-shadow: @card-panel-box-shadow;
+      }
+  
+      &.horizontal-card {
+        @media (min-width: @screen-sm-min) {
+          & > * {
+            float: left;
+            min-height: 100%;
+          }
+          .panel-body, .panel-footer {
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+          }
+          .panel-heading ~ .panel-body, .panel-heading ~ .panel-footer {
+            width: 67%;
+            float: right;
+          }
+          .panel-heading {
+            width: 33%;
+            overflow-x: hidden;
+          }
+          .panel-heading .cover-image {
+            height: @card-image-max-height;
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+          }
+          .panel-heading .cover-image.unbound {
+            height: 100%;
+          }
+        }
+      }
+      img.cover-image {
+        object-fit: cover;
+        min-width: 100%;
+        height: @card-image-max-height;
+      }
+      img.cover-image.rounded {
+        border-radius: @card-panel-border-radius;
+      }
+
+      & > * {
+        border: none;
+        background-color: inherit;
+      }
+      .panel-body {
+        padding: @card-panel-body-padding;
+        padding-top: @card-panel-body-padding-top;
+      }
+      .panel-heading{
+        padding: @card-panel-heading-padding;
+      }
+      &.horizontal-card .panel-body, .panel-heading + .panel-body {
+        padding-top: @card-panel-body-padding-top;
+      }
+
+      .panel-body p {
+        margin-top: 20px;
+      }
+      .panel-body h3 + p {
+        margin-top: 0px;
+      }
+  
+      .panel-footer a {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .panel-footer a:not(.btn) {
+        font-size: @card-panel-footer-font-size;
+        font-weight: @card-panel-footer-font-weight;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+
+      &.with-glyph .panel-heading + .panel-body{
+        margin-top: 0; 
+      }
+      &.with-glyph .panel-body, &.with-glyph.horizontal-card .panel-body {
+        margin-top: calc(@glyph-highlight-height - @card-panel-body-padding-top - (@glyph-highlight-width / 4)); 
+      }
+    }
+  }
