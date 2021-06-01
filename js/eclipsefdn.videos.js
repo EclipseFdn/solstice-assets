@@ -94,7 +94,7 @@
             // Create a div to wrap the viewo
             var video_container = document.createElement("div");
             video_container.className = "eclipsefdn-video embed-responsive embed-responsive-" + default_options['resolution'];
-            video_container.innerHTML = '<iframe src="' + link.replace(/watch\?v\=/i, "embed/") + '"></iframe>';
+            video_container.innerHTML = '<iframe src="' + link.replace(/watch\?v\=/i, "embed/") + '" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" ></iframe>';
     
             // Replace the original element with the embeded video
             this.el[i].parentNode.replaceChild(video_container, this.el[i]);
