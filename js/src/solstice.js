@@ -1,16 +1,23 @@
 /*!
  * Copyright (c) 2018 Eclipse Foundation, Inc.
- * 
+ *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
- * 
+ *
  * Contributors:
  *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
- * 
+ *
  * SPDX-License-Identifier: EPL-2.0
  */
-(function($, document) {
+
+import jQuery from 'jquery';
+import feather from 'feather-icons'
+import matchHeight from 'jquery-match-height'
+import eclipseFdnApi from './jquery.eclipsefdn-api'
+import eclipseFdnVideos  from './eclipsefdn.videos'
+
+const solstice = (function($, document) {
 
   $(window).on("load", function() {
     if (window.location.hash && $(window.location.hash).hasClass("tab-pane")) {
@@ -147,7 +154,7 @@
     });
   }
   blockSumaryItem();
-  
+
   $("body").on("shown.ef.news", function(e) {
     matchHeightItems();
 
@@ -177,7 +184,7 @@
     }, 20);
   });
 
-  eclipseFdnVideos.replace();
+  //eclipseFdnVideos();
 
   // Toggle Text of an HTML element
   var view_more_button_text = $('.toggle-text').html();
@@ -188,7 +195,7 @@
       $(this).addClass('toggle-text-close').html($(this).attr('data-toggle-text'));
     }
   });
-  
+
   $("a.alt-tab-toggle").click(function(e) {
     // get current element that triggered update
     var $t = $(e.target);
@@ -217,7 +224,7 @@
     }
     return true;
   });
-  
+
   // Infra 2791 - Send events to Google Analytics
   $('a[href]').click(function() {
     if (typeof ga === "function" && typeof ga.getAll  === "function") {
@@ -243,3 +250,5 @@
   });
 
 })(jQuery, document);
+
+export default solstice;
