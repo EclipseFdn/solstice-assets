@@ -11,14 +11,16 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import jQuery from 'jquery';
+import jquery from 'jquery';
 import feather from 'feather-icons'
 import matchHeight from 'jquery-match-height'
-import eclipseFdnApi from './jquery.eclipsefdn-api'
-import eclipseFdnVideos  from './eclipsefdn.videos'
+import eclipseFdnApi from './eclipsefdnApi/jquery.eclipsefdn-api'
+import eclipseFdnVideos from './privacy/eclipseFdnVideos'
+import cookieconsent from 'cookieconsent'
+import eclipsefdnCookieConsent from './privacy/eclipsefdnCookieConsent'
+import 'owl.carousel';
 
 const solstice = (function($, document) {
-
   $(window).on("load", function() {
     if (window.location.hash && $(window.location.hash).hasClass("tab-pane")) {
       window.scrollTo(0, 0);
@@ -29,6 +31,7 @@ const solstice = (function($, document) {
   });
 
   $(document).ready(function() {
+
     var href_hash = window.location.hash;
     // Add a class if right column is non-existant.
     if ($("#rightcolumn").length == 0) {

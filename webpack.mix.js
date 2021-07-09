@@ -82,6 +82,9 @@ mix.babel([
 ], 'docs/dist/js/solstice.js');
 */
 
+// Required for babel-preset-react-app
+
+
 mix.webpackConfig({
   resolve: {
     alias: {
@@ -89,5 +92,12 @@ mix.webpackConfig({
     },
   },
 });
+
+
+// './node_modules/jquery-eclipsefdn-api/dist/jquery.eclipsefdn-api.min.js',
+// 'js/eclipsefdn.render-rss-feeds.js',
+// 'js/solstice.cookies.js',
+// 'js/solstice.eventsmodal.js',
+// 'js/solstice.donate.js',
 
 mix.js(['js/main.js'], 'docs/dist/js/solstice.js');
