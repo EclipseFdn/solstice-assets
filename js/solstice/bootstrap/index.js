@@ -11,14 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-// API
-import './api'
-
-// Google Tag & Analytics
-import './ga'
-
-// Privacy
-import './privacy'
-
-// Solstice
-import './solstice'
+import './eclipsefdn.eventsmodal'
+import './eclipsefdn.tables'
+import './eclipsefdn.tabs'
+import './eclipsefdn.toggle'

@@ -11,6 +11,8 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
+import jQuery from 'jquery';
+
 const eclipseFdnRenderRSS = (function($, document) {
 
   $(document).ready(function() {

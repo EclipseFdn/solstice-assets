@@ -11,14 +11,9 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-// API
-import './api'
-
 // Google Tag & Analytics
-import './ga'
+import './eclipsefdn.form-abandonment'
+import './eclipsefdn.event-tracker';
 
-// Privacy
-import './privacy'
-
-// Solstice
-import './solstice'
+// This file is only used on some sites such as wiki.eclipse.org
+//import './eclipsefdn.google-tag-manager';

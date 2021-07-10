@@ -10,6 +10,9 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
+
+import jQuery from 'jquery';
+
 const eclipseFdnBootstrapTabs = (function ($, document) {
   $('.nav-tabs a').click(function (e) {
     $(this).tab('show');

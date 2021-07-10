@@ -11,14 +11,9 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-// API
-import './api'
+import eclipseFdnAdopters from './eclipsefdn.adopters';
+import './eclipsefdn.render-rss';
+import './jquery.eclipsefdn.api';
+//import './eclipsefdn.igc'
 
-// Google Tag & Analytics
-import './ga'
-
-// Privacy
-import './privacy'
-
-// Solstice
-import './solstice'
+export {eclipseFdnAdopters};
