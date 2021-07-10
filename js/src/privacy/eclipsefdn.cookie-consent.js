@@ -10,6 +10,8 @@
  *
  * SPDX-License-Identifier: EPL-2.0
 */
+import cookieconsent from 'cookieconsent'
+
 const eclipseFdnCookieConsent = window.addEventListener("load", function() {
   /**
    * Override revokeChoice()

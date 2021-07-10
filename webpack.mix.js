@@ -60,31 +60,6 @@ mix.less(
   'docs/dist/css/newsletter.css'
 );
 
-// JavaScript
-/*
-mix.babel([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
-    './node_modules/jquery-eclipsefdn-api/dist/jquery.eclipsefdn-api.min.js',
-    './node_modules/feather-icons/dist/feather.min.js',
-    './node_modules/cookieconsent/src/cookieconsent.js',
-    './node_modules/owl.carousel/dist/owl.carousel.min.js',
-    'js/eclipsefdn.videos.js',
-    'js/eclipsefdn.render-rss-feeds.js',
-    'js/solstice.cookieconsent.js',
-    'js/solstice.cookies.js',
-    'js/solstice.eventsmodal.js',
-    'js/solstice.js',
-    'js/solstice.donate.js',
-    'js/eclipsefdn.adopters.js',
-    'js/eclipsefdn.ads.js'
-], 'docs/dist/js/solstice.js');
-*/
-
-// Required for babel-preset-react-app
-
-
 mix.webpackConfig({
   resolve: {
     alias: {
@@ -92,12 +67,5 @@ mix.webpackConfig({
     },
   },
 });
-
-
-// './node_modules/jquery-eclipsefdn-api/dist/jquery.eclipsefdn-api.min.js',
-// 'js/eclipsefdn.render-rss-feeds.js',
-// 'js/solstice.cookies.js',
-// 'js/solstice.eventsmodal.js',
-// 'js/solstice.donate.js',
 
 mix.js(['js/main.js'], 'docs/dist/js/solstice.js');
