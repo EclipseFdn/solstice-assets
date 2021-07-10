@@ -234,5 +234,7 @@ class EclipseFdnAdopters {
     }
   }
 }
+
 var eclipseFdnAdopters = new EclipseFdnAdopters();
+window.eclipseFdnAdopters = eclipseFdnAdopters;
 export default eclipseFdnAdopters;

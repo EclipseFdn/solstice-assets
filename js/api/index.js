@@ -11,9 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import eclipseFdnAdopters from './eclipsefdn.adopters';
+import './eclipsefdn.adopters';
 import './eclipsefdn.render-rss';
 import './jquery.eclipsefdn.api';
 //import './eclipsefdn.igc'
-
-export {eclipseFdnAdopters};

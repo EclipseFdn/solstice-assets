@@ -11,7 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import jquery from 'jquery';
+import jQuery from 'jquery';
 
 const eclipseFdnSolsticeSidebar = (function ($, document) {
   $(document).ready(function () {

@@ -136,4 +136,5 @@ const eclipseFdnVideos = (function (root, factory) {
   return eclipseFdnVideos;
 });
 
+window.eclipseFdnVideos.replace();
 export default eclipseFdnVideos;

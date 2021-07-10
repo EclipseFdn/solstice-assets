@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
-import jquery from 'jquery';
+import jQuery from 'jquery';
 
 const eclipseFdnScrollUp = (function ($, document) {
   // scroll button.

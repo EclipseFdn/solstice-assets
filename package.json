@@ -1,7 +1,7 @@
 {
   "name": "eclipsefdn-solstice-assets",
   "description": "Solstice is a responsive look and feel for eclipse.org.",
-  "main": "main.js",
+  "main": "js/main.js",
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
   "version": "0.0.156",

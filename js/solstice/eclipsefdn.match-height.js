@@ -11,8 +11,8 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import jquery from 'jquery';
-import matchHeight from 'jquery-match-height'
+import jQuery from 'jquery';
+import 'jquery-match-height'
 
 const eclipseFdnMatchHeight = (function($, document) {
 
