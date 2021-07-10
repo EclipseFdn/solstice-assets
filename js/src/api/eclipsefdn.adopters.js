@@ -9,7 +9,7 @@
  *   Eric Poirier <eric.poirier@eclipse-foundation.org>
  *
  * SPDX-License-Identifier: EPL-2.0
-*/
+ */
 
 class EclipseFdnAdopters {
   precompiledRegex = /<([^>]*?)>;(\s?[\w-]*?="(?:\\"|[^"])*";){0,}\s?rel="next"/;
@@ -22,7 +22,7 @@ class EclipseFdnAdopters {
     logo_white: false,
     working_group: '',
     src_root: 'https://api.eclipse.org/adopters',
-    src_projects_prefix: '/projects'
+    src_projects_prefix: '/projects',
   };
 
   getMergedOptions(options) {
@@ -30,9 +30,13 @@ class EclipseFdnAdopters {
     var opts = JSON.parse(JSON.stringify(this.default_options));
 
     // Go through the parameters of Options if its defined and is an object
-    if (typeof (options) !== 'undefined' && typeof (options) === 'object') {
+    if (typeof options !== 'undefined' && typeof options === 'object') {
       for (var optionName in this.default_options) {
-        if (typeof (options[optionName]) === 'undefined' || (typeof (options[optionName]) !== 'string' && typeof (options[optionName]) !== 'boolean')) {
+        if (
+          typeof options[optionName] === 'undefined' ||
+          (typeof options[optionName] !== 'string' &&
+            typeof options[optionName] !== 'boolean')
+        ) {
           continue;
         }
         opts[optionName] = options[optionName];
@@ -47,14 +51,18 @@ class EclipseFdnAdopters {
    * @param {Object} options Videos attributes
    */
 
-  getList = function(options) {
+  getList = function (options) {
     var t = this;
     var opts = this.getMergedOptions(options);
-    this.fireCall(opts, function(response) {
-      t.createProjectList(response, opts, document.querySelectorAll(opts.selector));
+    this.fireCall(opts, function (response) {
+      t.createProjectList(
+        response,
+        opts,
+        document.querySelectorAll(opts.selector)
+      );
       t.scrollToAnchor();
     });
-  }
+  };
 
   /**
    * Replace the adopters container
@@ -62,21 +70,25 @@ class EclipseFdnAdopters {
    * @param {Object} options Videos attributes
    */
 
-  getWGList = function(options) {
+  getWGList = function (options) {
     var t = this;
     var opts = this.getMergedOptions(options);
     // create callback on ready
-    this.fireCall(opts, function(response) {
-      t.createWGProjectsList(response, opts, document.querySelectorAll(opts.selector));
+    this.fireCall(opts, function (response) {
+      t.createWGProjectsList(
+        response,
+        opts,
+        document.querySelectorAll(opts.selector)
+      );
       t.scrollToAnchor();
     });
-  }
+  };
 
   fireCall(opts, callback, currentData = []) {
     var t = this;
     var xhttp = new XMLHttpRequest();
     // create callback on ready
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         // merge new data with current
         var json = JSON.parse(this.responseText);
@@ -98,9 +110,10 @@ class EclipseFdnAdopters {
         } else {
           callback(json);
         }
-
       } else if (this.readyState == 4) {
-        console.log('Error while retrieving adopters data, could not complete operation');
+        console.log(
+          'Error while retrieving adopters data, could not complete operation'
+        );
       }
     };
 
@@ -113,7 +126,10 @@ class EclipseFdnAdopters {
       if (opts.project_id !== undefined && opts.project_id.trim() !== '') {
         url += '/' + opts.project_id;
       }
-      if (opts.working_group !== undefined && opts.working_group.trim() !== '') {
+      if (
+        opts.working_group !== undefined &&
+        opts.working_group.trim() !== ''
+      ) {
         url += '?working_group=' + opts.working_group;
       }
     }
@@ -135,8 +151,14 @@ class EclipseFdnAdopters {
         el[i].appendChild(h2);
       }
       const headerAnchor = document.createElement('a');
-      headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10 uppercase');
-      headerAnchor.setAttribute('href', 'https://projects.eclipse.org/projects/' + project.project_id);
+      headerAnchor.setAttribute(
+        'class',
+        'btn btn-xs btn-secondary margin-left-10 uppercase'
+      );
+      headerAnchor.setAttribute(
+        'href',
+        'https://projects.eclipse.org/projects/' + project.project_id
+      );
       headerAnchor.textContent = project.project_id;
       h2.appendChild(headerAnchor);
 
@@ -169,7 +191,10 @@ class EclipseFdnAdopters {
           if (typeof adopter['logo'] !== 'undefined') {
             logo = adopter['logo'];
           }
-          if (opts['logo_white'] === true && typeof adopter['logo_white'] !== 'undefined') {
+          if (
+            opts['logo_white'] === true &&
+            typeof adopter['logo_white'] !== 'undefined'
+          ) {
             logo = adopter['logo_white'];
           }
 
@@ -180,7 +205,10 @@ class EclipseFdnAdopters {
 
           a.setAttribute('href', url);
           img.setAttribute('alt', name);
-          img.setAttribute('src', opts.src_root + '/assets/images/adopters/' + logo);
+          img.setAttribute(
+            'src',
+            opts.src_root + '/assets/images/adopters/' + logo
+          );
           img.setAttribute('class', 'adopters-img');
 
           a.appendChild(img);

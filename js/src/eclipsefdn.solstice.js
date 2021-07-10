@@ -14,13 +14,14 @@
 import jquery from 'jquery';
 import feather from 'feather-icons'
 import matchHeight from 'jquery-match-height'
-import eclipseFdnApi from './eclipsefdnApi/jquery.eclipsefdn-api'
-import eclipseFdnVideos from './privacy/eclipseFdnVideos'
+import eclipseFdnApi from './api/jquery.eclipsefdn.api'
+import eclipseFdnVideos from './privacy/eclipsefdn.videos'
 import cookieconsent from 'cookieconsent'
-import eclipsefdnCookieConsent from './privacy/eclipsefdnCookieConsent'
+import eclipseFdnCookieConsent from './privacy/eclipsefdn.cookie-consent'
+import eclipseFdnRenderRSS from './api/eclipsefdn.render-rss'
 import 'owl.carousel';
 
-const solstice = (function($, document) {
+const eclipseFdnSolstice = (function($, document) {
   $(window).on("load", function() {
     if (window.location.hash && $(window.location.hash).hasClass("tab-pane")) {
       window.scrollTo(0, 0);
@@ -187,7 +188,7 @@ const solstice = (function($, document) {
     }, 20);
   });
 
-  //eclipseFdnVideos();
+  window.eclipseFdnVideos.replace();
 
   // Toggle Text of an HTML element
   var view_more_button_text = $('.toggle-text').html();
