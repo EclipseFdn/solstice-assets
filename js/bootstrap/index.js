@@ -12,6 +12,8 @@
  */
 
 import 'bootstrap';
+import 'jquery';
+
 import './eclipsefdn.eventsmodal'
 import './eclipsefdn.search'
 import './eclipsefdn.tables'
