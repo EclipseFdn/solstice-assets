@@ -1,5 +1,5 @@
 /**
- * downloads.js
+ * packages.js
  *
  * Copyright (c) 2015 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
@@ -10,18 +10,8 @@
  * Contributors:
  *    Christopher Guindon (Eclipse Foundation)- initial API and implementation
  */
-(function( jQuery, window, document ) {
-  // Reposition hover boxes so they are always centered
-  $(window).on('load resize', function(){
-    var itemBoxWidth = $('.downloads-items').width() + 30;
-    var hoverBoxWidth = 230;
-    var spacing = (itemBoxWidth - hoverBoxWidth) / 2;
-    $('.downloads-items-hover-box').each(function() {
-      $(this).css({ "left": spacing });
-    });
-  });
+const eclipseFdnEclipseDownloadsPackages = (function( jQuery, window, document ) {
 
-  // [Bug 496502] New: Eclipse Packages Platform Selection Drop-down does not update links/change anything
   jQuery(document).ready(function($) {
     function getUrlVars() {
         var vars = {};
@@ -31,17 +21,24 @@
         return vars;
     }
 
-    var release = getUrlVars()["release"];
+    $('#collapseEinstaller').on('show.bs.collapse', function () {
+      $("html, body").animate({ scrollTop: $('#collapseEinstaller1').offset().top }, 1000);
+    });
+
+    $('#collapseEinstaller').on('hidden.bs.collapse', function () {
+        $("html, body").animate({ scrollTop: $('body').offset().top }, 1000);
+      });
+
     $("#osSelect").change(function() {
+      var release = getUrlVars()["release"];
       var src = '?osType=' + $("option:selected", this).val();
-      if(release != "undefined"){
+      if (release !== undefined && release !== null) {
         src += "&release=" + release;
       }
       window.location = src;
     });
   });
+
 })( jQuery, window, document );
 
-
-
-
+export default eclipseFdnEclipseDownloadsPackages;
