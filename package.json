@@ -5,7 +5,6 @@
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
   "version": "0.0.158",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/EclipseFdn/solstice-assets/issues"
   },
