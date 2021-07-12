@@ -20,5 +20,8 @@ import './ga'
 // Privacy
 import './privacy'
 
-// Solstice with Bootstrap
+// Solstice
 import './solstice'
+
+// Bootstrap
+import './bootstrap'

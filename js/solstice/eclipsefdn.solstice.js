@@ -15,9 +15,6 @@
 import jQuery from 'jquery';
 import feather from 'feather-icons';
 
-import 'bootstrap';
-import './bootstrap'
-
 const eclipseFdnSolstice = (function ($, document) {
   // This code will prevent unexpected menu close when
   // using some components (like accordion, forms, etc).

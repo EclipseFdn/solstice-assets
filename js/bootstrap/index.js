@@ -11,6 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
+import 'bootstrap';
 import './eclipsefdn.eventsmodal'
 import './eclipsefdn.search'
 import './eclipsefdn.tables'
