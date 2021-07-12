@@ -10,7 +10,7 @@
  * Contributors:
  *    Christopher Guindon (Eclipse Foundation)- initial API and implementation
  */
-(function( jQuery, window, document ) {
+const eclipseFdnEclipseDownloadsPackages = (function( jQuery, window, document ) {
 
   jQuery(document).ready(function($) {
     function getUrlVars() {
@@ -40,3 +40,5 @@
   });
 
 })( jQuery, window, document );
+
+export default eclipseFdnEclipseDownloadsPackages;

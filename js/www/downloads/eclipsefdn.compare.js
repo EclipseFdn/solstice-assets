@@ -10,7 +10,7 @@
  * Contributors:
  *    Christopher Guindon (Eclipse Foundation)- initial API and implementation
  */
-$(document).ready(function() {
+const eclipseFdnEclipseDownloadsCompare = $(document).ready(function() {
 
   var default_caption = 'Compare';
   var reset_button = '<input class="button" id="btn-reset" type="reset" value="Reset"/>';
@@ -53,3 +53,5 @@ $(document).ready(function() {
     }
   });
 });
+
+export default eclipseFdnEclipseDownloadsCompare;

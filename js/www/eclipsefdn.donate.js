@@ -7,7 +7,7 @@
  *
  *  Under EPL-v2 License
  */
-(function ($, document) {
+const eclipseFdnEclipseDonate = (function ($, document) {
   $(document).ready(function () {
     // If the page loads and the recognition checkbox is already checked
     if ($('input.recognition-checkbox').is(':checked')) {
@@ -137,3 +137,5 @@
     });
   });
 })(jQuery, document);
+
+export default eclipseFdnEclipseDonate;

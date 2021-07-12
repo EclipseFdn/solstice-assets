@@ -1,5 +1,5 @@
 /**
- * mirror.js 
+ * mirror.js
  *
  * Copyright (c) 2015 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
@@ -10,7 +10,7 @@
  * Contributors:
  *    Christopher Guindon (Eclipse Foundation)- initial API and implementation
  */
-(function( jQuery, window, document ) {
+const eclipseFdnEclipseDownloadsMirror = (function( jQuery, window, document ) {
   jQuery(document).ready(function($) {
     $(".btn-ajax-checksum").click(function() {
       var location = $(this).attr('href');
@@ -27,7 +27,7 @@
         beforeSend: function(){
           $(location + ' p').html('<i class="fa fa-spinner fa-spin"></i>');
         },
-        success: function(response){ 
+        success: function(response){
           $(location + ' p').html(response.replace(/\s/g, '&nbsp;'));
         },
         error: function(){
@@ -37,7 +37,7 @@
     });
 
     $('.mirror-continent').slice(1).hide();
-    $('#show_all_mirrors').click( function(e) { 
+    $('#show_all_mirrors').click( function(e) {
       e.preventDefault();
       if ($('.mirror-section-2').is(":visible")) {
         $('.mirror-continent').slice(1).hide();
@@ -56,10 +56,12 @@
       }
       return FALSE;
     });
-    
+
     $('.close-choose-mirror-well').click(function() {
       $('.collapse.in').collapse('hide');
     });
-    
+
   });
 })( jQuery, window, document );
+
+export default eclipseFdnEclipseDownloadsMirror;

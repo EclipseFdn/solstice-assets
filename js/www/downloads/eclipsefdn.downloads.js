@@ -10,7 +10,8 @@
  * Contributors:
  *    Christopher Guindon (Eclipse Foundation)- initial API and implementation
  */
-(function( jQuery, window, document ) {
+
+ const eclipseFdnEclipseDownloads = (function( jQuery, window, document ) {
   // Reposition hover boxes so they are always centered
   $(window).on('load resize', function(){
     var itemBoxWidth = $('.downloads-items').width() + 30;
@@ -41,6 +42,8 @@
     });
   });
 })( jQuery, window, document );
+
+export default eclipseFdnEclipseDownloads;
 
 
 
