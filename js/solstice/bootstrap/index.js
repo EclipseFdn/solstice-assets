@@ -12,6 +12,7 @@
  */
 
 import './eclipsefdn.eventsmodal'
+import './eclipsefdn.search'
 import './eclipsefdn.tables'
 import './eclipsefdn.tabs'
 import './eclipsefdn.toggle'

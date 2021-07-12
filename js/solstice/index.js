@@ -11,6 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
+import './eclipsefdn.featured-stories'
 import './eclipsefdn.solstice'
 import './eclipsefdn.match-height';
 import './eclipsefdn.scrollup';
