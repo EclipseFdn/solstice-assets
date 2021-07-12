@@ -29,6 +29,27 @@ const eclipseFdnCookieConsent = window.addEventListener('load', function () {
   };
 
   /**
+   * Add custom button to show cookie consent banner
+   * when needed.
+   */
+  document.getElementsByClassName('toolbar-manage-cookies')[0].addEventListener(
+    'click',
+    function (event) {
+      // If the clicked element doesn't have the right selector, bail
+      if (!event.target.classList.contains('toolbar-manage-cookies')) {
+        return;
+      }
+      // Log the clicked element in the console
+      const ccWindow = document.getElementsByClassName('cc-window');
+      ccWindow[0].style.display = '';
+      setTimeout(function () {
+        ccWindow[0].classList.remove('cc-invisible');
+      }, 20);
+    },
+    false
+  );
+
+  /**
    * Remove Cookies
    *
    * Remove cookies except whitelist
@@ -52,6 +73,22 @@ const eclipseFdnCookieConsent = window.addEventListener('load', function () {
       }
     }
   };
+
+  /**
+   * Helper function that hides the cc-revoke
+   * when it's not needed
+   */
+  function hideShowCCRevokeButton(){
+    // This button is not needed when a .toolbar-manage-cookies link is present
+    // on the page.
+    if (!document.getElementsByClassName('toolbar-manage-cookies').length) {
+      document.getElementsByClassName('cc-revoke')[0].style.display =
+        'block';
+    } else {
+      document.getElementsByClassName('cc-revoke')[0].style.display =
+        'none';
+    }
+  }
 
   /**
    * Initialise cookieconsent
@@ -83,31 +120,12 @@ const eclipseFdnCookieConsent = window.addEventListener('load', function () {
         this.removeCookies();
       }
     },
+    onPopupClose: function() {
+      hideShowCCRevokeButton();
+    },
     onInitialise: function (status, options) {
       setTimeout(function () {
-        if (!document.getElementsByClassName('toolbar-manage-cookies').length) {
-          document.getElementsByClassName('cc-revoke')[0].style.display =
-            'block';
-        } else {
-          document.getElementsByClassName('cc-revoke')[0].style.display =
-            'none';
-            document.getElementsByClassName('toolbar-manage-cookies')[0].addEventListener(
-              'click',
-              function (event) {
-                // If the clicked element doesn't have the right selector, bail
-                if (!event.target.matches('.toolbar-manage-cookies')) {
-                  return;
-                }
-                // Log the clicked element in the console
-                const ccWindow = document.getElementsByClassName('cc-window');
-                ccWindow[0].style.display = '';
-                setTimeout(function () {
-                  ccWindow[0].classList.remove('cc-invisible');
-                }, 20);
-              },
-              false
-            );
-        }
+        hideShowCCRevokeButton();
       });
     },
     revokeBtn: '<div class="cc-revoke {{classes}}">Cookie settings</div>',
