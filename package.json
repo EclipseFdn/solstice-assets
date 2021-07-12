@@ -5,6 +5,7 @@
   "author": "Christopher Guindon",
   "license": "EPL-2.0",
   "version": "0.0.157",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/EclipseFdn/solstice-assets/issues"
   },
@@ -40,6 +41,7 @@
     "jquery": "^3.5.1",
     "jquery-match-height": "^0.7.2",
     "laravel-mix": "^6.0.25",
+    "laravel-mix-transpile-node-modules": "^2.0.1",
     "less": "^3.13.1",
     "less-loader": "^7.3.0",
     "lightbox2": "^2.11.1",
