@@ -30,9 +30,12 @@ const eclipseFdnCookieConsent = window.addEventListener('load', function () {
 
   /**
    * Add custom button to show cookie consent banner
-   * when needed.
+   * when it exist.
    */
-  document.getElementsByClassName('toolbar-manage-cookies')[0].addEventListener(
+  const missing = {
+    addEventListener: function() {},
+  };
+  (document.getElementsByClassName('toolbar-manage-cookies')[0] || missing).addEventListener(
     'click',
     function (event) {
       // If the clicked element doesn't have the right selector, bail
