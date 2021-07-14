@@ -16,7 +16,7 @@ import 'jquery-match-height'
 
 const eclipseFdnMatchHeight = (function($, document) {
 
-  function matchHeightItems() {
+  const matchHeightItems = () => {
     $('.match-height-item-by-row').matchHeight();
     $('.match-height-item').matchHeight({
       byRow: false
@@ -28,24 +28,10 @@ const eclipseFdnMatchHeight = (function($, document) {
     matchHeightItems();
   });
 
-  function blockSumaryItem() {
-    // Make the whole block-list clickable
-    $('.block-summary-item').click(function() {
-      $link = $(this).find('h4 a');
-      if (typeof $link !== 'undefined') {
-        $link[0].click();
-      }
-    });
-  }
-  blockSumaryItem();
-
   $("body").on("shown.ef.news", function(e) {
     matchHeightItems();
-
     // For news with data-mh
     $.fn.matchHeight._applyDataApi();
-
-    blockSumaryItem();
   })
 
 })(jQuery, document);
