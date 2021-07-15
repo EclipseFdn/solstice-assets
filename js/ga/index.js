@@ -12,7 +12,7 @@
  */
 
 // Google Tag & Analytics
-import './eclipsefdn.form-abandonment'
+//import './eclipsefdn.form-abandonment'
 import './eclipsefdn.event-tracker';
 
 // This file is only used on some sites such as wiki.eclipse.org
