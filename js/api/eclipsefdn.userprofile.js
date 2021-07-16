@@ -41,7 +41,7 @@ class EclipseFdnUserProfile {
      * @param {Object} options Videos attributes
      */
   
-    getdata = function(options) {
+    getData = function(options) {
         
       var t = this;
       var opts = this.getMergedOptions(options);
