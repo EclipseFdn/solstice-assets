@@ -65,7 +65,7 @@ class EclipseFdnUserProfile {
         }
         callback(json);
       } else if (this.readyState == 4) {
-        console.log('Error while retrieving adopters data, could not complete operation');
+        console.log('Error while retrieving user profile data, could not complete operation');
       }
     };
 
