@@ -1,13 +1,13 @@
 /*
  * Copyright (c) 2018 Eclipse Foundation, Inc.
- * 
+ *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0.
- * 
+ *
  * Contributors:
  *   Christopher Guindon <chris.guindon@eclipse-foundation.org>
- * 
+ *
  * SPDX-License-Identifier: EPL-2.0
 */
 
@@ -172,5 +172,34 @@ body.solstice-footer-min{
   position:static;
   main {
     flex: 1 0 auto;
+  }
+}
+
+
+footer#solstice-footer.footer-darker {
+  background: @footer-darker-background;
+  color: @footer-darker-color;
+  h2 {
+    color: @footer-darker-color;
+  }
+  a:link,
+  a:active,
+  a:visited,
+  a:focus {
+    color: @footer-darker-link-color;
+    font-weight: @footer-link-font-weight;
+  }
+
+  a:hover {
+    color:@footer-darker-link-hover;
+  }
+
+  .nav {
+    a {
+      &:hover {
+        background: none;
+        color: @footer-darker-link-hover;
+      }
+    }
   }
 }
