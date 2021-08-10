@@ -175,29 +175,30 @@ body.solstice-footer-min{
   }
 }
 
-footer#solstice-footer.footer-dark {
-  background: #000000;
-  color: #fff;
+
+footer#solstice-footer.footer-darker {
+  background: @footer-darker-background;
+  color: @footer-darker-color;
   h2 {
-    color: #fff;
+    color: @footer-darker-color;
   }
   a:link,
   a:active,
   a:visited,
   a:focus {
-    color: #fff;
+    color: @footer-darker-link-color;
     font-weight: @footer-link-font-weight;
   }
 
   a:hover {
-    color: rgba(255, 255, 255, 0.788);
+    color:@footer-darker-link-hover;
   }
 
   .nav {
     a {
       &:hover {
         background: none;
-        color: rgba(255, 255, 255, 0.788);
+        color: @footer-darker-link-hover;
       }
     }
   }
