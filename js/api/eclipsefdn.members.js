@@ -38,13 +38,15 @@ function getMembers(url = '', members = []) {
   );
 }
 
+export default getMembers;
+
 // @todo: This is currently being called on every page load for testing.
 getMembers('https://api.eclipse.org/public/member')
   .then((members) => {
     // all members have been loaded
     members.sort((a, b) => a.name.localeCompare(b.name));
+    const template = require('./templates/member.mustache');
     members.map((p) => {
-      const template = require('./templates/member.mustache');
       const rendered = template(p);
       if (document.getElementById('wg-members-' + p.membership_level.level)) {
         document.getElementById(
@@ -52,10 +54,12 @@ getMembers('https://api.eclipse.org/public/member')
         ).innerHTML += rendered;
       }
     });
-    $('.eclipsefdn-project-list').trigger('shown.ef.news');
     return members;
   })
   .then(() => {
+    // match-height
     $('body').trigger('shown.ef.news');
   })
   .catch(console.error);
+
+
