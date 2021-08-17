@@ -11,7 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-var parse = require('parse-link-header');
+import parse from 'parse-link-header';
 
 function getMembers(url = '', members = []) {
   return new Promise((resolve, reject) =>
@@ -41,6 +41,7 @@ function getMembers(url = '', members = []) {
 export default getMembers;
 
 // @todo: This is currently being called on every page load for testing.
+// This is an example and will not be included in the final contribution
 getMembers('https://api.eclipse.org/public/member')
   .then((members) => {
     // all members have been loaded
