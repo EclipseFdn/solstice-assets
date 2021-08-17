@@ -46,8 +46,10 @@
     "less-loader": "^7.3.0",
     "lightbox2": "^2.11.1",
     "mustache": "^4.0.1",
+    "mustache-loader": "^1.4.3",
     "napa": "^3.0.0",
     "owl.carousel": "^2.3.4",
+    "parse-link-header": "^1.0.1",
     "postcss": "^8.3.5"
   }
 }
