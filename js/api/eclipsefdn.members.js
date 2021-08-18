@@ -31,12 +31,6 @@ const getMembers = (url = '', members = []) => {
               getMembers(url, members).then(resolve).catch(reject);
             } else {
               members.sort((a, b) => a.name.localeCompare(b.name));
-              // const template = require('./templates/member.mustache');
-
-              members.map((p) => {
-                // p.render = () => template(p);
-              });
-
               resolve(members);
             }
           })
@@ -47,33 +41,3 @@ const getMembers = (url = '', members = []) => {
 };
 
 export default getMembers;
-
-// This is an implementation example and is not expected be included in the final
-// contribution.
-import 'jquery';
-import 'jquery-match-height';
-
-(function (document, $) {
-  document.addEventListener('DOMContentLoaded', function () {
-    $('.eclipsefdn-members-list').each(function (index, element) {
-      var level = $(element).attr('data-ml-level');
-      if (level) {
-        getMembers(
-          'https://api.eclipse.org/public/member?level=' +
-            level +
-            '&pagesize=100'
-        )
-          .then((members) => {
-            const template = require('./templates/member.mustache');
-            this.innerHTML = template({
-              items: members,
-            });
-          })
-          .then(() => {
-            $.fn.matchHeight._applyDataApi();
-          })
-          .catch(console.error);
-      }
-    });
-  });
-})(document, $);
