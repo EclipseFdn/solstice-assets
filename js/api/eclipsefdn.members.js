@@ -12,7 +12,6 @@
  */
 
 import parse from 'parse-link-header';
-import { fetch } from 'whatwg-fetch';
 
 const getMembers = (url = '', members = []) => {
   return new Promise((resolve, reject) =>

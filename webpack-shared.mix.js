@@ -1,11 +1,12 @@
 let mix = require('laravel-mix');
 
 mix.webpackConfig({
+  entry: ['whatwg-fetch'],
   module: {
     rules: [
       {
         test: /\.mustache$/,
-        loader: 'mustache-loader'
+        loader: 'mustache-loader',
       },
     ],
   },
