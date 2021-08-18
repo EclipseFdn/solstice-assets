@@ -12,6 +12,7 @@
  */
 
 import parse from 'parse-link-header';
+import 'isomorphic-fetch';
 
 const getMembers = (url = '', members = []) => {
   return new Promise((resolve, reject) =>

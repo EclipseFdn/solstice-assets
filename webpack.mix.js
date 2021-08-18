@@ -11,8 +11,11 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
+
+require('./webpack-solstice-assets.mix');
 let mix = require('laravel-mix');
-require('./webpack-shared.mix');
+
+mix.EclipseFdnSolsticeAssets();
 
 // Paths
 mix.setPublicPath('docs/dist');
