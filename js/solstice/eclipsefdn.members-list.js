@@ -14,22 +14,31 @@
 import 'jquery';
 import 'jquery-match-height';
 import getMembers from '../api/eclipsefdn.members';
+import template from './templates/member.mustache';
 
-$('.eclipsefdn-members-list').each(function (index, element) {
-  const level = $(element).attr('data-ml-level');
-  let url = 'https://api.eclipse.org/public/member?pagesize=100';
-  if (level) {
-    url += '&level=' + level;
-  }
-  getMembers(url)
-    .then((members) => {
-      const template = require('./templates/member.mustache');
-      this.innerHTML = template({
-        items: members,
-      });
-    })
-    .then(() => {
-      $.fn.matchHeight._applyDataApi();
-    })
-    .catch(console.error);
-});
+const EclipseFdnMembersList = (() => {
+  $('.eclipsefdn-members-list').each(function (index, element) {
+    let url = 'https://api.eclipse.org/public/member?pagesize=100';
+
+    const level = $(element).attr('data-ml-level');
+    if (level) {
+      url += '&level=' + level;
+    }
+
+    const wg = $(element).attr('data-ml-wg');
+    if (wg) {
+      url += '&working_group=' + wg;
+    }
+
+    getMembers(url)
+      .then((members) => {
+        this.innerHTML = template({
+          items: members,
+        });
+        $.fn.matchHeight._applyDataApi();
+      })
+      .catch(console.error);
+  });
+})();
+
+export default EclipseFdnMembersList;
