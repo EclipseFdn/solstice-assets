@@ -1,0 +1,16 @@
+{{#items}}
+<div class="col-xs-24 col-sm-12 col-md-8 margin-bottom-20 m-card">
+  <div class="bordered-box text-center">
+    <div class="box-header background-light-grey vertical-align" data-mh="m-header">
+      <h3 class="h4 margin-0"><a href="/membership/showMember.php?member_id={{id}}" title="{{name}}">{{name}}</a></h3>
+    </div>
+    <div class="box-body vertical-align" style="height: 160px">
+      <div class="image-container">
+        <a href="/membership/showMember.php?member_id={{id}}" title="{{name}}">
+        <img src="{{logos.small}}" class="img-responsive margin-auto" alt="{{name}} logo">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{{/items}}

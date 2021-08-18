@@ -12,9 +12,9 @@
  */
 
 let mix = require('laravel-mix');
-mix.options({
-  uglify: { uglifyOptions: { compress: false, output: { comments: true } } },
-});
+require('./webpack-shared.mix');
+
+// Paths
 mix.setPublicPath('docs/dist');
 mix.setResourceRoot('../');
 
@@ -60,12 +60,6 @@ mix.less(
   'docs/dist/css/newsletter.css'
 );
 
-mix.webpackConfig({
-  resolve: {
-    alias: {
-      jquery: 'jquery/src/jquery',
-    },
-  },
-});
-
 mix.js(['js/main.js'], 'docs/dist/js/solstice.js');
+
+mix.js(['js/solstice/eclipsefdn.members-list.js'], 'docs/dist/js/eclipsefdn.members-list.js');

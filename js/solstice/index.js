@@ -15,6 +15,7 @@ import './eclipsefdn.block-summary-item'
 import './eclipsefdn.featured-stories'
 import './eclipsefdn.solstice'
 import './eclipsefdn.match-height';
+import './eclipsefdn.members-list';
 import './eclipsefdn.scrollup';
 import './eclipsefdn.sidebar';
 import './eclipsefdn.solstice-slider';

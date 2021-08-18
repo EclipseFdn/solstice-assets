@@ -32,7 +32,7 @@ const eclipseFdnMatchHeight = (function($, document) {
     matchHeightItems();
     // For news with data-mh
     $.fn.matchHeight._applyDataApi();
-  })
+  });
 
 })(jQuery, document);
 
