@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
-import jQuery from 'jquery';
+import $ from 'jquery';
 import 'owl.carousel';
 
 const eclipseFdnSolsticeSlider = (function ($, document) {
@@ -38,6 +38,6 @@ const eclipseFdnSolsticeSlider = (function ($, document) {
 	    });
     });
   });
-})(jQuery, document);
+})($, document);
 
 export default eclipseFdnSolsticeSlider;

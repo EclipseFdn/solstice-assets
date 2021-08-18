@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
-import 'jquery';
+import $ from 'jquery';
 
 const eclipseFdnEventTracker = (function ($) {
   // Infra 2791 - Send events to Google Analytics

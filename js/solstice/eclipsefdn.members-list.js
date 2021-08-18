@@ -11,7 +11,7 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import 'jquery';
+import $ from 'jquery';
 import 'jquery-match-height';
 import getMembers from '../api/eclipsefdn.members';
 import template from './templates/member.mustache';
