@@ -61,3 +61,5 @@ mix.less(
 );
 
 mix.js(['js/main.js'], 'docs/dist/js/solstice.js');
+
+mix.js(['js/solstice/eclipsefdn.members-list.js'], 'docs/dist/js/eclipsefdn.members-list.js');

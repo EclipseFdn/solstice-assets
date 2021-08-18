@@ -1,4 +1,3 @@
-
 /*!
  * Copyright (c) 2021 Eclipse Foundation, Inc.
  *
@@ -12,33 +11,30 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import 'jquery';
+import $ from 'jquery';
 import 'jquery-match-height';
-import getMembers from '../api/eclipsefdn.members'
+import getMembers from '../api/eclipsefdn.members';
 
-const EclipseFdnMembersList = (function (document, $) {
-  document.addEventListener('DOMContentLoaded', function () {
-    $('.eclipsefdn-members-list').each(function (index, element) {
-      var level = $(element).attr('data-ml-level');
-      if (level) {
-        getMembers(
-          'https://api.eclipse.org/public/member?level=' +
-            level +
-            '&pagesize=100'
-        )
-          .then((members) => {
-            const template = require('./templates/member.mustache');
-            this.innerHTML = template({
-              items: members,
-            });
-          })
-          .then(() => {
-            $.fn.matchHeight._applyDataApi();
-          })
-          .catch(console.error);
-      }
-    });
+const EclipseFdnMembersList = () => {
+  $('.eclipsefdn-members-list').each(function (index, element) {
+    const level = $(element).attr('data-ml-level');
+    let url = 'https://api.eclipse.org/public/member?pagesize=100';
+    if (level) {
+      url += '&level=' + level;
+    }
+    getMembers(
+      url
+    )
+      .then((members) => {
+        const template = require('./templates/member.mustache');
+        this.innerHTML = template({
+          items: members,
+        });
+      })
+      .then(() => {
+        $.fn.matchHeight._applyDataApi();
+      })
+      .catch(console.error);
   });
-})(document, $);
-
-export default EclipseFdnMembersList;
+};
+EclipseFdnMembersList();
