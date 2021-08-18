@@ -12,9 +12,9 @@
  */
 
 import parse from 'parse-link-header';
-import fetch from 'whatwg-fetch';
+import { fetch } from 'whatwg-fetch';
 
-function getMembers(url = '', members = []) {
+const getMembers = (url = '', members = []) => {
   return new Promise((resolve, reject) =>
     fetch(url)
       .then((response) => {
@@ -44,34 +44,36 @@ function getMembers(url = '', members = []) {
       })
       .catch(reject)
   );
-}
+};
 
 export default getMembers;
 
-// This is an implementation example and will not be included in the final
+// This is an implementation example and is not expected be included in the final
 // contribution.
 import 'jquery';
 import 'jquery-match-height';
 
 (function (document, $) {
   document.addEventListener('DOMContentLoaded', function () {
-    function getMembersList(level = 'sd') {
-      getMembers(
-        'https://api.eclipse.org/public/member?level=' + level + '&pagesize=100'
-      )
-        .then((members) => {
-          const template = require('./templates/member.mustache');
-          document.getElementById('wg-members-' + level).innerHTML = template({
-            items: members,
-          });
-        })
-        .then(() => {
-          $.fn.matchHeight._applyDataApi();
-        })
-        .catch(console.error);
-    }
-    getMembersList('sd');
-    getMembersList('ap');
-    getMembersList('as');
+    $('.eclipsefdn-members-list').each(function (index, element) {
+      var level = $(element).attr('data-ml-level');
+      if (level) {
+        getMembers(
+          'https://api.eclipse.org/public/member?level=' +
+            level +
+            '&pagesize=100'
+        )
+          .then((members) => {
+            const template = require('./templates/member.mustache');
+            this.innerHTML = template({
+              items: members,
+            });
+          })
+          .then(() => {
+            $.fn.matchHeight._applyDataApi();
+          })
+          .catch(console.error);
+      }
+    });
   });
 })(document, $);
