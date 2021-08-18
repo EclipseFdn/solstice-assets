@@ -50,6 +50,7 @@
     "napa": "^3.0.0",
     "owl.carousel": "^2.3.4",
     "parse-link-header": "^1.0.1",
-    "postcss": "^8.3.5"
+    "postcss": "^8.3.5",
+    "whatwg-fetch": "^3.6.2"
   }
 }

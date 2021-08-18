@@ -13,6 +13,8 @@
 
 import parse from 'parse-link-header';
 
+import { fetch } from 'whatwg-fetch';
+
 function getMembers(url = '', members = []) {
   return new Promise((resolve, reject) =>
     fetch(url)
@@ -29,6 +31,13 @@ function getMembers(url = '', members = []) {
               const { url } = linkHeader.next;
               getMembers(url, members).then(resolve).catch(reject);
             } else {
+              members.sort((a, b) => a.name.localeCompare(b.name));
+              // const template = require('./templates/member.mustache');
+
+              members.map((p) => {
+                // p.render = () => template(p);
+              });
+
               resolve(members);
             }
           })
@@ -40,27 +49,30 @@ function getMembers(url = '', members = []) {
 
 export default getMembers;
 
-// @todo: This is currently being called on every page load for testing.
-// This is an example and will not be included in the final contribution
-getMembers('https://api.eclipse.org/public/member')
-  .then((members) => {
-    // all members have been loaded
-    members.sort((a, b) => a.name.localeCompare(b.name));
-    const template = require('./templates/member.mustache');
-    members.map((p) => {
-      const rendered = template(p);
-      if (document.getElementById('wg-members-' + p.membership_level.level)) {
-        document.getElementById(
-          'wg-members-' + p.membership_level.level
-        ).innerHTML += rendered;
-      }
-    });
-    return members;
-  })
-  .then(() => {
-    // match-height
-    $('body').trigger('shown.ef.news');
-  })
-  .catch(console.error);
+// This is an implementation example and will not be included in the final
+// contribution.
+import 'jquery';
+import 'jquery-match-height';
 
-
+(function (document, $, window) {
+  document.addEventListener('DOMContentLoaded', function () {
+    function getMembersList(level = 'sd') {
+      getMembers(
+        'https://api.eclipse.org/public/member?level=' + level + '&pagesize=100'
+      )
+        .then((members) => {
+          const template = require('./templates/member.mustache');
+          document.getElementById('wg-members-' + level).innerHTML = template({
+            items: members,
+          });
+        })
+        .then(() => {
+          $.fn.matchHeight._applyDataApi();
+        })
+        .catch(console.error);
+    }
+    getMembersList('sd');
+    getMembersList('ap');
+    getMembersList('as');
+  });
+})(document, $, window);
