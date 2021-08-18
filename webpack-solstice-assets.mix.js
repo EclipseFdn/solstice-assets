@@ -5,7 +5,7 @@ mix.transpileNodeModules(['eclipsefdn-solstice-assets']);
 class EclipseFdnSolsticeAssets {
 
   register() {
-      console.log('mix.SolsticeAssets() was called.');
+      console.log('Loading eclipsefdn-solstice-assets default configurations.');
   }
 
   webpackConfig(config) {
