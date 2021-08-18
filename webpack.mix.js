@@ -12,9 +12,9 @@
  */
 
 let mix = require('laravel-mix');
-mix.options({
-  uglify: { uglifyOptions: { compress: false, output: { comments: true } } },
-});
+require('./webpack-shared.mix');
+
+// Paths
 mix.setPublicPath('docs/dist');
 mix.setResourceRoot('../');
 
@@ -59,21 +59,5 @@ mix.less(
   'less/quicksilver/newsletter/drupal.less',
   'docs/dist/css/newsletter.css'
 );
-
-mix.webpackConfig({
-  module: {
-    rules: [
-      {
-        test: /\.mustache$/,
-        loader: 'mustache-loader'
-      },
-    ],
-  },
-  resolve: {
-    alias: {
-      jquery: 'jquery/src/jquery',
-    },
-  },
-});
 
 mix.js(['js/main.js'], 'docs/dist/js/solstice.js');
