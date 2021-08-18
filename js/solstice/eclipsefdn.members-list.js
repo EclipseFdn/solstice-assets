@@ -11,30 +11,25 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import $ from 'jquery';
+import 'jquery';
 import 'jquery-match-height';
 import getMembers from '../api/eclipsefdn.members';
 
-const EclipseFdnMembersList = () => {
-  $('.eclipsefdn-members-list').each(function (index, element) {
-    const level = $(element).attr('data-ml-level');
-    let url = 'https://api.eclipse.org/public/member?pagesize=100';
-    if (level) {
-      url += '&level=' + level;
-    }
-    getMembers(
-      url
-    )
-      .then((members) => {
-        const template = require('./templates/member.mustache');
-        this.innerHTML = template({
-          items: members,
-        });
-      })
-      .then(() => {
-        $.fn.matchHeight._applyDataApi();
-      })
-      .catch(console.error);
-  });
-};
-EclipseFdnMembersList();
+$('.eclipsefdn-members-list').each(function (index, element) {
+  const level = $(element).attr('data-ml-level');
+  let url = 'https://api.eclipse.org/public/member?pagesize=100';
+  if (level) {
+    url += '&level=' + level;
+  }
+  getMembers(url)
+    .then((members) => {
+      const template = require('./templates/member.mustache');
+      this.innerHTML = template({
+        items: members,
+      });
+    })
+    .then(() => {
+      $.fn.matchHeight._applyDataApi();
+    })
+    .catch(console.error);
+});
