@@ -12,8 +12,7 @@
  */
 
 import parse from 'parse-link-header';
-
-import { fetch } from 'whatwg-fetch';
+import fetch from 'whatwg-fetch';
 
 function getMembers(url = '', members = []) {
   return new Promise((resolve, reject) =>
@@ -54,7 +53,7 @@ export default getMembers;
 import 'jquery';
 import 'jquery-match-height';
 
-(function (document, $, window) {
+(function (document, $) {
   document.addEventListener('DOMContentLoaded', function () {
     function getMembersList(level = 'sd') {
       getMembers(
@@ -75,4 +74,4 @@ import 'jquery-match-height';
     getMembersList('ap');
     getMembersList('as');
   });
-})(document, $, window);
+})(document, $);
