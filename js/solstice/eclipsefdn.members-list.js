@@ -27,13 +27,11 @@ const EclipseFdnMembersList = (() => {
       });
     }
 
-
     const wg = $(element).attr('data-ml-wg');
-
     if (wg) {
       url += '&working_group=' + wg;
     }
-    console.log(url);
+
     getMembers(url)
       .then((members) => {
         this.innerHTML = template({
