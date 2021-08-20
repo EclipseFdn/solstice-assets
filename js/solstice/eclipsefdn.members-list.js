@@ -22,14 +22,18 @@ const EclipseFdnMembersList = (() => {
 
     const level = $(element).attr('data-ml-level');
     if (level) {
-      url += '&level=' + level;
+      level.split(',').forEach(element => {
+        url += '&level[]=' + element.trim();
+      });
     }
 
+
     const wg = $(element).attr('data-ml-wg');
+
     if (wg) {
       url += '&working_group=' + wg;
     }
-
+    console.log(url);
     getMembers(url)
       .then((members) => {
         this.innerHTML = template({
