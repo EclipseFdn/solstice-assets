@@ -25,6 +25,12 @@ const eclipseFdnScrollUp = (function ($, document) {
     } else {
       $('.scrollup').fadeOut();
     }
+
+    if (window.HubSpotConversations && $('.scrollup').css('bottom') !== '100px') {
+      $('.scrollup').css('bottom', '100px');
+    } else if (!window.HubSpotConversations && $('.scrollup').css('bottom') !== '50px') {
+      $('.scrollup').css('bottom', '50px');
+    }
   });
 
   // scroll back to the top of the page.
