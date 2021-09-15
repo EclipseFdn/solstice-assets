@@ -2,8 +2,6 @@
 
 Assets for the Eclipse Foundation look and feel called Solstice. 
 
-[![Build Status](https://travis-ci.org/EclipseFdn/solstice-assets.svg?branch=master)](https://travis-ci.org/EclipseFdn/solstice-assets)
-
 ## Getting started
 
 Install dependencies, build assets and watch for changes:
