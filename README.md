@@ -2,6 +2,12 @@
 
 Assets for the Eclipse Foundation look and feel called Solstice. 
 
+---
+**NOTE**
+
+This project was migrated to [Eclipse Gitlab](https://gitlab.eclipse.org/eclipsefdn/it/webdev/solstice-assets) on October 12, 2021.
+
+
 ## Getting started
 
 Install dependencies, build assets and watch for changes:
