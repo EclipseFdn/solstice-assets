@@ -12,7 +12,7 @@
  */
 
 import './eclipsefdn.adopters';
-import './eclipsefdn.members';
+//import './eclipsefdn.members';
 import './eclipsefdn.render-rss';
 import './jquery.eclipsefdn.api';
 //import './eclipsefdn.igc'

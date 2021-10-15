@@ -11,12 +11,10 @@
  * SPDX-License-Identifier: EPL-2.0
  */
 
-import $ from 'jquery';
-import 'jquery-match-height';
-import getMembers from '../api/eclipsefdn.members';
+import getMembers from '../../api/eclipsefdn.members';
 import template from './templates/member.mustache';
 
-const EclipseFdnMembersList = (() => {
+const EclipseFdnMembersList = (($) => {
   $('.eclipsefdn-members-list').each(function (index, element) {
     let url = 'https://api.eclipse.org/public/member?pagesize=100';
 
@@ -41,6 +39,6 @@ const EclipseFdnMembersList = (() => {
       })
       .catch(console.error);
   });
-})();
+})($);
 
 export default EclipseFdnMembersList;
